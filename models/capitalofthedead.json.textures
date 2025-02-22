@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "capital_of_the_dead"
+      },
+      "name": "default"
+    }
+  }
+}

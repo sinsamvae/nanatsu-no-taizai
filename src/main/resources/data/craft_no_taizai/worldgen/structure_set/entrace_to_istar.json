@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "craft_no_taizai:entrace_to_istar",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 150,
+    "separation": 60,
+    "salt": 604105488
+  }
+}

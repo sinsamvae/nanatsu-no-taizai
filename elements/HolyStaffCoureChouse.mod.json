@@ -1,0 +1,62 @@
+{
+  "_fv": 69,
+  "_type": "animateditem",
+  "definition": {
+    "renderType": 0,
+    "texture": "triple-staff-texture",
+    "name": "Holy Staff Coure Chouse",
+    "idle": "idle",
+    "rarity": "COMMON",
+    "displaySettings": "holystaffcourechouse.item.json",
+    "leftArm": "",
+    "rightArm": "",
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:SacredTreasure"
+      }
+    ],
+    "firstPersonArms": false,
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "enableArmPose": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": true,
+    "damageVsEntity": 11.0,
+    "specialInformation": {
+      "fixedValue": [
+        "§cRightClick Use Super Concentration"
+      ]
+    },
+    "hasGlow": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "CoureChouseRightclicked"
+    },
+    "onItemInUseTick": {
+      "name": "CoureChouseAnimatedPlayerFinishesUsingItem"
+    },
+    "isFood": false,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "animation": "none",
+    "normal": "holystaffcourechouse.geo.json",
+    "armPoseList": [],
+    "disableSwing": false
+  }
+}

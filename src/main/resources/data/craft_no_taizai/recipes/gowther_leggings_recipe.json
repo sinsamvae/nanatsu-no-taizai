@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ab",
+    "cd"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_leggings"
+    },
+    "b": {
+      "item": "minecraft:black_dye"
+    },
+    "c": {
+      "item": "minecraft:iron_boots"
+    },
+    "d": {
+      "item": "minecraft:purple_dye"
+    }
+  },
+  "result": {
+    "item": "craft_no_taizai:gowther_armor_leggings",
+    "count": 1
+  }
+}

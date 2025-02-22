@@ -1,0 +1,9 @@
+{
+  "parent": "craft_no_taizai:custom/mug",
+  "textures": {
+    "all": "craft_no_taizai:block/empty_cup",
+    "particle": "craft_no_taizai:block/empty_cup",
+    "1": "craft_no_taizai:block/empty_cup"
+  },
+  "render_type": "cutout"
+}

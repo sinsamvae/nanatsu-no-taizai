@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "craft_no_taizai:dragon_icon"
+    },
+    "title": {
+      "translate": "advancements.defeat_meliodas.title"
+    },
+    "description": {
+      "translate": "advancements.defeat_meliodas.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat_meliodas_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "craft_no_taizai:defeat_merlin"
+}

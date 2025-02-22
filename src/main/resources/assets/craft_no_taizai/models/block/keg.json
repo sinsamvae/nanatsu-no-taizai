@@ -1,0 +1,9 @@
+{
+  "parent": "craft_no_taizai:custom/keg",
+  "textures": {
+    "all": "craft_no_taizai:block/keg",
+    "particle": "craft_no_taizai:block/keg",
+    "1": "craft_no_taizai:block/keg"
+  },
+  "render_type": "cutout"
+}

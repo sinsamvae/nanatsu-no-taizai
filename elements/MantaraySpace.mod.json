@@ -1,0 +1,15 @@
+{
+  "_fv": 69,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "SPACE",
+    "keyBindingName": "Move",
+    "keyBindingCategoryKey": "gameplay",
+    "onKeyPressed": {
+      "name": "MantaraySpaceOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "MantaraySpaceOnKeyReleased"
+    }
+  }
+}

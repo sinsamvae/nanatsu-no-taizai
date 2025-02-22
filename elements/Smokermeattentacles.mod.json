@@ -1,0 +1,22 @@
+{
+  "_fv": 69,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Campfire cooking",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "FOOD",
+    "xpReward": 2.0,
+    "cookingTime": 725,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "campfireCookingInputStack": {
+      "value": "CUSTOM:Tentacles"
+    },
+    "campfireCookingReturnStack": {
+      "value": "CUSTOM:Cookedtentacles"
+    },
+    "name": "smokermeattentacles",
+    "namespace": "mod"
+  }
+}

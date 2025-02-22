@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "b b",
+    "c c"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:blue_wool"
+    },
+    "b": {
+      "item": "minecraft:light_blue_wool"
+    },
+    "c": {
+      "item": "minecraft:yellow_concrete_powder"
+    }
+  },
+  "result": {
+    "item": "craft_no_taizai:king_outfit_leggings",
+    "count": 1
+  }
+}

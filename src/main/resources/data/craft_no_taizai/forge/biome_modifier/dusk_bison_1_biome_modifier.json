@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": {
+    "type": "forge:any"
+  },
+  "spawners": {
+    "type": "craft_no_taizai:dusk_bison_1",
+    "weight": 13,
+    "minCount": 2,
+    "maxCount": 3
+  }
+}

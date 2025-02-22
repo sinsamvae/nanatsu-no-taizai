@@ -1,0 +1,16 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "2": "glow_filled_cup"
+      },
+      "name": "default"
+    },
+    "apple_mug": {
+      "map": {
+        "2": "apple_mug"
+      },
+      "name": "apple_mug"
+    }
+  }
+}

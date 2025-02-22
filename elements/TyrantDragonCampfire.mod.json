@@ -1,0 +1,22 @@
+{
+  "_fv": 69,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Campfire cooking",
+    "recipeRetstackSize": 1,
+    "group": "food",
+    "cookingBookCategory": "FOOD",
+    "xpReward": 9.0,
+    "cookingTime": 330,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "campfireCookingInputStack": {
+      "value": "CUSTOM:TyrantDragonMeat"
+    },
+    "campfireCookingReturnStack": {
+      "value": "CUSTOM:TyrantDragonCookedMeat"
+    },
+    "name": "tyrant_dragon_campfire",
+    "namespace": "minecraft"
+  }
+}

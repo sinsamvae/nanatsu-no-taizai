@@ -1,0 +1,28 @@
+{
+  "_fv": 69,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Heavy Metal",
+    "icon": "air",
+    "color": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "mobEffectCategory": "NEUTRAL",
+    "renderStatusInInventory": false,
+    "renderStatusInHUD": false,
+    "isCuredByMilk": false,
+    "isProtectedByTotem": true,
+    "isCuredbyHoney": false,
+    "onStarted": {
+      "name": "HeavyMetalEffectStartedapplied"
+    },
+    "onActiveTick": {
+      "name": "HeavyMetalOnEffectActiveTick"
+    },
+    "onExpired": {
+      "name": "HeavyMetalEffectExpires"
+    }
+  }
+}

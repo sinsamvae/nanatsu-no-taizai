@@ -1,0 +1,162 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "black.png",
+          "use1Xscale": true,
+          "x": -235,
+          "y": -134
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_would_you_like_to_enter_the_cave",
+          "text": {
+            "fixedValue": "You are way to fragile!"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 198,
+          "y": 68
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_1",
+          "image": "button_1.png",
+          "hoveredImage": "button_1_hover.png",
+          "onClick": {
+            "name": "JennaGuiAcceptButton"
+          },
+          "x": 184,
+          "y": 132
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_yes",
+          "text": {
+            "fixedValue": ".Accept"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 195,
+          "y": 137
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_remember_who_yourre_facing",
+          "text": {
+            "fixedValue": "Remember who your're facing!"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 198,
+          "y": 79
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_the_legnedary_ten_commandments",
+          "text": {
+            "fixedValue": "The legnedary Ten Commandments"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 198,
+          "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_youll_need_to_get_into_fighting",
+          "text": {
+            "fixedValue": "You'll need to get into fighting shape"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 198,
+          "y": 99
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_do_you_accept",
+          "text": {
+            "fixedValue": "Do you Accept"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 198,
+          "y": 110
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_2",
+          "image": "button_2.png",
+          "hoveredImage": "button_2_hover.png",
+          "onClick": {
+            "name": "JennaGuiDenyButton"
+          },
+          "x": 184,
+          "y": 157
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_deny",
+          "text": {
+            "fixedValue": ".Deny"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 195,
+          "y": 160
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "group": "food",
+  "category": "food",
+  "experience": 1,
+  "cookingtime": 300,
+  "ingredient": {
+    "item": "craft_no_taizai:troll_ear"
+  },
+  "result": "craft_no_taizai:cook_troll_ear"
+}

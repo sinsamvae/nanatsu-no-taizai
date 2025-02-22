@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/galland_spear",
+  "textures": {
+    "0": "craft_no_taizai:block/galland-spear-texture",
+    "particle": "craft_no_taizai:item/galland-spear-texture"
+  }
+}

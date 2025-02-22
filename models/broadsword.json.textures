@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "defyrus_sword_texture"
+      },
+      "name": "default"
+    }
+  }
+}

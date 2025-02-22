@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ab"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_chestplate"
+    },
+    "b": {
+      "item": "minecraft:gray_dye"
+    }
+  },
+  "result": {
+    "item": "craft_no_taizai:escanor_armor_chestplate",
+    "count": 1
+  }
+}

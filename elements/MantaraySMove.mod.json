@@ -1,0 +1,15 @@
+{
+  "_fv": 69,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "S",
+    "keyBindingName": "Move",
+    "keyBindingCategoryKey": "movement",
+    "onKeyPressed": {
+      "name": "MantaraySMoveOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "MantaraySMoveOnKeyReleased"
+    }
+  }
+}

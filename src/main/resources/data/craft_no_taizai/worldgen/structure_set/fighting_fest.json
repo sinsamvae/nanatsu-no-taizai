@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "craft_no_taizai:fighting_fest",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 160,
+    "separation": 110,
+    "salt": 634862938
+  }
+}

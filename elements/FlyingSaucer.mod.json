@@ -1,0 +1,40 @@
+{
+  "_fv": 69,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Shield",
+    "renderType": 1,
+    "blockingRenderType": 1,
+    "texture": "flying-saucer-texture",
+    "customModelName": "flying_saucer:default",
+    "blockingModelName": "flying_saucer_block:default",
+    "name": "Flying Saucer",
+    "specialInformation": {
+      "fixedValue": [
+        "§cBlocking Has Chance Reflect DMG"
+      ]
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:SacredTreasure"
+      }
+    ],
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 15,
+    "damageVsEntity": 4.0,
+    "usageCount": 0,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [],
+    "immuneToFire": false,
+    "blockDropsTier": "WOOD",
+    "blocksAffected": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onItemInInventoryTick": {
+      "name": "FlyingSaucerToolInInventoryTick"
+    }
+  }
+}

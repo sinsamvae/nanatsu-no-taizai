@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "long_axe"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "craft_no_taizai:block/loscobblestone",
+    "up": "craft_no_taizai:block/loscobblestone",
+    "north": "craft_no_taizai:block/loscobblestone",
+    "east": "craft_no_taizai:block/loscobblestone",
+    "south": "craft_no_taizai:block/loscobblestone",
+    "west": "craft_no_taizai:block/loscobblestone",
+    "particle": "craft_no_taizai:block/loscobblestone"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,14 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "desert",
+    "forest",
+    "swamp"
+  ],
+  "spawners": {
+    "type": "craft_no_taizai:earth_crawler",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 3
+  }
+}

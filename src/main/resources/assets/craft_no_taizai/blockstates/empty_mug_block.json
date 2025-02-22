@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "craft_no_taizai:block/empty_mug_block"
+    },
+    "facing=east": {
+      "model": "craft_no_taizai:block/empty_mug_block",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "craft_no_taizai:block/empty_mug_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "craft_no_taizai:block/empty_mug_block",
+      "y": 270
+    }
+  }
+}

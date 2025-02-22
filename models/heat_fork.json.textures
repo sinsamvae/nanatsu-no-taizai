@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "missing": "fork_heat_texture"
+      },
+      "name": "default"
+    }
+  }
+}

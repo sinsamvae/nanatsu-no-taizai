@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/chastifol",
+  "textures": {
+    "2": "craft_no_taizai:block/spear-texture_1",
+    "particle": "craft_no_taizai:item/spear-texture_1"
+  }
+}

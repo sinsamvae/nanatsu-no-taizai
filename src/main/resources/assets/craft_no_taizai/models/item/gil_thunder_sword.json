@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/meliodas_sowrd_2",
+  "textures": {
+    "0": "craft_no_taizai:block/meliodas-sword-2",
+    "particle": "craft_no_taizai:item/meliodas-sword-2"
+  }
+}

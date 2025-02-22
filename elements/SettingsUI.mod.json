@@ -1,0 +1,259 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_damage_indicator_var",
+          "text": {
+            "fixedValue": "",
+            "name": "DamageIndicatorVar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 167,
+          "y": 111
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_restart",
+          "image": "restart.png",
+          "hoveredImage": "restarthover.png",
+          "onClick": {
+            "name": "OpenStatsOnKeyPressed"
+          },
+          "x": 86,
+          "y": 66
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_back",
+          "text": {
+            "fixedValue": "Back"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 85,
+          "y": 63
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "settings_gui.png",
+          "use1Xscale": false,
+          "x": 84,
+          "y": 62
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_statplusbutton",
+          "image": "statplusbutton.png",
+          "hoveredImage": "statplusbuttonoutline.png",
+          "onClick": {
+            "name": "DamageindicatorButton"
+          },
+          "x": 151,
+          "y": 109
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_statplusbutton1",
+          "image": "statplusbutton.png",
+          "hoveredImage": "statplusbuttonoutline.png",
+          "onClick": {
+            "name": "DisplayHealthButton"
+          },
+          "x": 151,
+          "y": 135
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_dis_play_enitiy_health",
+          "text": {
+            "fixedValue": "",
+            "name": "DisPlayEnitiyHealth"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 167,
+          "y": 137
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_overarrow",
+          "image": "overarrow.png",
+          "hoveredImage": "overarrow2hover.png",
+          "onClick": {
+            "name": "LowerSpeed"
+          },
+          "x": 162,
+          "y": 66
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_speed_percentage",
+          "text": {
+            "fixedValue": "",
+            "name": "SpeedPercentage"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 179,
+          "y": 71
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_overarrow1",
+          "image": "overarrow.png",
+          "hoveredImage": "overarrow2hover.png",
+          "onClick": {
+            "name": "IncreaseSpeed"
+          },
+          "x": 240,
+          "y": 66
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty",
+          "text": {
+            "fixedValue": "<"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 167,
+          "y": 69
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty1",
+          "text": {
+            "fixedValue": ">"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 246,
+          "y": 69
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_overarrow2",
+          "image": "overarrow.png",
+          "hoveredImage": "overarrow2hover.png",
+          "onClick": {
+            "name": "LowerPower"
+          },
+          "x": 162,
+          "y": 88
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_overarrow3",
+          "image": "overarrow.png",
+          "hoveredImage": "overarrow2hover.png",
+          "onClick": {
+            "name": "IncreasePower"
+          },
+          "x": 240,
+          "y": 88
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_power_percentage",
+          "text": {
+            "fixedValue": "",
+            "name": "PowerPercentage"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 179,
+          "y": 91
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty2",
+          "text": {
+            "fixedValue": "<"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 167,
+          "y": 91
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty3",
+          "text": {
+            "fixedValue": ">"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 247,
+          "y": 91
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

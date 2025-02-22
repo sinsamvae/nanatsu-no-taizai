@@ -1,0 +1,24 @@
+{
+  "_fv": 69,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.ICE"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": ""
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 5.0,
+    "knockback": 5,
+    "entityModel": "ModelBuster_Ice1",
+    "customModelTexture": "buster_ice.png",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5,
+    "onFlyingTick": {
+      "name": "BusterIceWhileProjectileFlyingTick"
+    }
+  }
+}

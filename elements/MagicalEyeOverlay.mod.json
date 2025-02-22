@@ -1,0 +1,89 @@
+{
+  "_fv": 69,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_magic_eye_battle_power_mob",
+          "text": {
+            "fixedValue": "",
+            "name": "MagicEyeReturnBP"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "CENTER",
+          "x": 98,
+          "y": 81
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_maigc_eye_return_str",
+          "text": {
+            "fixedValue": "",
+            "name": "MagicEyeReturnStr"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "CENTER",
+          "x": 98,
+          "y": 144
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_magic_eye_return_dex",
+          "text": {
+            "fixedValue": "",
+            "name": "MagicEyeReturnDex"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "CENTER",
+          "x": 275,
+          "y": 81
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_magic_eye_return_max_mana",
+          "text": {
+            "fixedValue": "",
+            "name": "MagicEyeReturnMaxMana"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "CENTER",
+          "x": 275,
+          "y": 145
+        }
+      }
+    ],
+    "baseTexture": "drole_eye.png",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "TrueMagicEye"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

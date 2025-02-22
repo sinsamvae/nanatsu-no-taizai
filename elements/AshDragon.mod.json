@@ -1,0 +1,30 @@
+{
+  "_fv": 69,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.FIRE"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 5.0,
+    "knockback": 5,
+    "entityModel": "Modelashdragon",
+    "customModelTexture": "red-dragon-texture1.png",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5,
+    "onHitsBlock": {
+      "name": "CruelSunProjectileHitsBlock"
+    },
+    "onHitsEntity": {
+      "name": "CruelSunProjectileHitsLivingEntity"
+    },
+    "onFlyingTick": {
+      "name": "AshDragonProjectileHitsPlayer"
+    }
+  }
+}

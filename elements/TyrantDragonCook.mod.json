@@ -1,0 +1,22 @@
+{
+  "_fv": 69,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "recipeRetstackSize": 1,
+    "group": "food",
+    "cookingBookCategory": "FOOD",
+    "xpReward": 7.0,
+    "cookingTime": 265,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "CUSTOM:TyrantDragonMeat"
+    },
+    "smeltingReturnStack": {
+      "value": "CUSTOM:TyrantDragonCookedMeat"
+    },
+    "name": "tyrant_dragon_cook",
+    "namespace": "minecraft"
+  }
+}

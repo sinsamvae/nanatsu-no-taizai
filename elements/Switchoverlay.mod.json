@@ -1,0 +1,158 @@
+{
+  "_fv": 69,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_r_cool_down_var",
+          "text": {
+            "fixedValue": "",
+            "name": "RCoolDownVar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "RCoolDownText"
+          },
+          "anchorPoint": "CENTER",
+          "x": 180,
+          "y": 119
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_ability_display",
+          "text": {
+            "fixedValue": "",
+            "name": "AbilityDisplay"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "SelflessnessReturn"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 4,
+          "y": 205
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_skill_cd",
+          "text": {
+            "fixedValue": "",
+            "name": "SkillCD"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "CoolDownReturn"
+          },
+          "anchorPoint": "CENTER",
+          "x": 180,
+          "y": 119
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_combo_star_var",
+          "text": {
+            "fixedValue": "",
+            "name": "ComboStarVar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplayComboStarHit"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 4,
+          "y": 219
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_lost_vayne_var",
+          "text": {
+            "fixedValue": "",
+            "name": "LostVayneVar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "LostVayneOverlay"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 4,
+          "y": 219
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_rhitta_count",
+          "text": {
+            "fixedValue": "",
+            "name": "RhittaCount"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "RhittaReturn"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 4,
+          "y": 219
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_reveng_counter_var",
+          "text": {
+            "fixedValue": "",
+            "name": "RevengCounterVar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Revengecounterimage"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 4,
+          "y": 218
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

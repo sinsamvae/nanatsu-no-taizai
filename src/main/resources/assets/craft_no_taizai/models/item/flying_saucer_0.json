@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/flying_saucer_block",
+  "textures": {
+    "1": "craft_no_taizai:block/flying-saucer-texture",
+    "particle": "craft_no_taizai:item/flying-saucer-texture"
+  }
+}

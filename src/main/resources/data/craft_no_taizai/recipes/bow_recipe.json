@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aab",
+    "ac ",
+    "b c"
+  ],
+  "key": {
+    "a": {
+      "item": "craft_no_taizai:carbon_steel"
+    },
+    "b": {
+      "item": "minecraft:string"
+    },
+    "c": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "craft_no_taizai:bow",
+    "count": 1
+  }
+}

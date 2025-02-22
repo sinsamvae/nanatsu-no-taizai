@@ -1,0 +1,50 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"idle": {
+			"loop": true,
+			"animation_length": 3,
+			"bones": {
+				"reapers scythe": {
+					"rotation": {
+						"vector": ["math.sin(query.anim_time * 120) * 6", 0, "math.cos(query.anim_time * 100) * 4"]
+					},
+					"position": {
+						"vector": [0, "math.sin(query.anim_time * 90) * 1", 0]
+					}
+				}
+			}
+		},
+		"attack": {
+			"animation_length": 0.3333,
+			"bones": {
+				"reapers scythe": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.125": {
+							"vector": [-8, 0, 0]
+						},
+						"0.1667": {
+							"vector": [-16, 0, 0]
+						},
+						"0.2083": {
+							"vector": [-37, 0, 0]
+						},
+						"0.25": {
+							"vector": [-100, 0, 0]
+						},
+						"0.2917": {
+							"vector": [-115, 0, 0]
+						},
+						"0.3333": {
+							"vector": [-120, 0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

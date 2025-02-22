@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "gloxiana_spear_texture2"
+      },
+      "name": "default"
+    }
+  }
+}

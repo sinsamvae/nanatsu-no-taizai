@@ -1,0 +1,26 @@
+{
+  "_fv": 69,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Seven Deadly Sins Opening",
+    "rarity": "EPIC",
+    "texture": "sds_disc",
+    "description": "Seven Deadly Sins Opening",
+    "creativeTabs": [
+      {
+        "value": "TOOLS"
+      }
+    ],
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "glowCondition": {
+      "fixedValue": true
+    },
+    "music": {
+      "value": "CUSTOM:sds_opening"
+    },
+    "lengthInTicks": 5280,
+    "analogOutput": 0
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:grass_block",
+    "minecraft:stone",
+    "minecraft:air",
+    "craft_no_taizai:purgatory_block",
+    "craft_no_taizai:purgatory_brick",
+    "craft_no_taizai:capital_of_the_dead_ground",
+    "craft_no_taizai:capitalofthe_dead_block"
+  ]
+}

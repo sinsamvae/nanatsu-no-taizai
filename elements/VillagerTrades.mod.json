@@ -1,0 +1,130 @@
+{
+  "_fv": 69,
+  "_type": "villagertrade",
+  "definition": {
+    "tradeEntries": [
+      {
+        "villagerProfession": {
+          "value": "FARMER"
+        },
+        "entries": [
+          {
+            "price1": {
+              "value": "Items.PUMPKIN_SEEDS"
+            },
+            "countPrice1": 3,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:AgaveSeeds"
+            },
+            "countOffer": 2,
+            "level": 1,
+            "maxTrades": 10,
+            "xp": 3,
+            "priceMultiplier": 0.03
+          },
+          {
+            "price1": {
+              "value": "Items.WHEAT_SEEDS"
+            },
+            "countPrice1": 2,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:AgaveSeeds"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 10,
+            "xp": 2,
+            "priceMultiplier": 0.03
+          },
+          {
+            "price1": {
+              "value": "Items.TORCHFLOWER_SEEDS"
+            },
+            "countPrice1": 3,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:AgaveSeeds"
+            },
+            "countOffer": 2,
+            "level": 1,
+            "maxTrades": 10,
+            "xp": 3,
+            "priceMultiplier": 0.03
+          },
+          {
+            "price1": {
+              "value": "Items.MELON_SEEDS"
+            },
+            "countPrice1": 2,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:AgaveSeeds"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 10,
+            "xp": 2,
+            "priceMultiplier": 0.03
+          },
+          {
+            "price1": {
+              "value": "Items.BEETROOT_SEEDS"
+            },
+            "countPrice1": 3,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:AgaveSeeds"
+            },
+            "countOffer": 2,
+            "level": 1,
+            "maxTrades": 10,
+            "xp": 3,
+            "priceMultiplier": 0.03
+          }
+        ]
+      },
+      {
+        "villagerProfession": {
+          "value": "WEAPONSMITH"
+        },
+        "entries": [
+          {
+            "price1": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice1": 9,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:BritanniaCoins"
+            },
+            "countOffer": 4,
+            "level": 3,
+            "maxTrades": 10,
+            "xp": 12,
+            "priceMultiplier": 0.060000000000000005
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "birch_forest",
+    "dark_forest",
+    "forest",
+    "flower_forest",
+    "old_growth_birch_forest"
+  ],
+  "spawners": {
+    "type": "craft_no_taizai:mutilator_rabbits",
+    "weight": 15,
+    "minCount": 2,
+    "maxCount": 3
+  }
+}

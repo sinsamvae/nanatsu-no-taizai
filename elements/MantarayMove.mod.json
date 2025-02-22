@@ -1,0 +1,15 @@
+{
+  "_fv": 69,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "W",
+    "keyBindingName": "Move",
+    "keyBindingCategoryKey": "gameplay",
+    "onKeyPressed": {
+      "name": "MantarayMoveOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "MantarayMoveOnKeyReleased"
+    }
+  }
+}

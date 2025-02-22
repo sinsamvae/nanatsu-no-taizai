@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "abc",
+    " d "
+  ],
+  "key": {
+    "a": {
+      "item": "craft_no_taizai:fragment_of_eternal_darkness"
+    },
+    "b": {
+      "item": "craft_no_taizai:dragon_handle"
+    },
+    "c": {
+      "item": "craft_no_taizai:fragment_of_eternal_darkness_3"
+    },
+    "d": {
+      "item": "craft_no_taizai:fragment_of_eternal_darkness_2"
+    }
+  },
+  "result": {
+    "item": "craft_no_taizai:coffin_of_eternal_darkness",
+    "count": 1
+  }
+}

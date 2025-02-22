@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "group": "food",
+  "category": "food",
+  "experience": 9,
+  "cookingtime": 330,
+  "ingredient": {
+    "item": "craft_no_taizai:tyrant_dragon_meat"
+  },
+  "result": "craft_no_taizai:tyrant_dragon_cooked_meat"
+}

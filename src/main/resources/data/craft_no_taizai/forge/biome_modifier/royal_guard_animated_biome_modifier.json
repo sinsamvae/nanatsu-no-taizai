@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": {
+    "type": "forge:any"
+  },
+  "spawners": {
+    "type": "craft_no_taizai:royal_guard_animated",
+    "weight": 25,
+    "minCount": 2,
+    "maxCount": 3
+  }
+}

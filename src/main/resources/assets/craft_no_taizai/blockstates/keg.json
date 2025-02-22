@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "craft_no_taizai:block/keg"
+    },
+    "facing=east": {
+      "model": "craft_no_taizai:block/keg",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "craft_no_taizai:block/keg",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "craft_no_taizai:block/keg",
+      "y": 270
+    }
+  }
+}

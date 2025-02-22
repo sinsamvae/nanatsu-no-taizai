@@ -1,0 +1,22 @@
+{
+  "_fv": 69,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Campfire cooking",
+    "recipeRetstackSize": 1,
+    "group": "food",
+    "cookingBookCategory": "FOOD",
+    "xpReward": 2.0,
+    "cookingTime": 225,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "campfireCookingInputStack": {
+      "value": "CUSTOM:EarthCrawlerTail"
+    },
+    "campfireCookingReturnStack": {
+      "value": "CUSTOM:EarthCrawlerTailCooked"
+    },
+    "name": "earth_crawler_camp_fire",
+    "namespace": "minecraft"
+  }
+}

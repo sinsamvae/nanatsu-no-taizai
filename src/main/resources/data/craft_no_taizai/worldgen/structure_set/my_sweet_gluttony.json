@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "craft_no_taizai:my_sweet_gluttony",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 250,
+    "separation": 100,
+    "salt": 1472048483
+  }
+}

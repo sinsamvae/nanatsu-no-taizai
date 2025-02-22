@@ -1,0 +1,8 @@
+{
+  "parent": "block/fence_side",
+  "textures": {
+    "texture": "craft_no_taizai:block/area_wood",
+    "particle": "craft_no_taizai:block/area_wood"
+  },
+  "render_type": "solid"
+}

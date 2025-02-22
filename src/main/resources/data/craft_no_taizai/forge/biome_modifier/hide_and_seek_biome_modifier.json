@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "craft_no_taizai:sleeping_forest",
+  "spawners": {
+    "type": "craft_no_taizai:hide_and_seek",
+    "weight": 25,
+    "minCount": 2,
+    "maxCount": 3
+  }
+}

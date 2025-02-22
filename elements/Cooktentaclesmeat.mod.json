@@ -1,0 +1,22 @@
+{
+  "_fv": 69,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "recipeRetstackSize": 1,
+    "group": "food",
+    "cookingBookCategory": "FOOD",
+    "xpReward": 2.0,
+    "cookingTime": 225,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "CUSTOM:Tentacles"
+    },
+    "smeltingReturnStack": {
+      "value": "CUSTOM:Cookedtentacles"
+    },
+    "name": "cooktentaclesmeat",
+    "namespace": "minecraft"
+  }
+}

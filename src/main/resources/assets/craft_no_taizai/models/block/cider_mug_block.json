@@ -1,0 +1,9 @@
+{
+  "parent": "craft_no_taizai:custom/glowmug",
+  "textures": {
+    "all": "craft_no_taizai:block/apple_mug",
+    "particle": "craft_no_taizai:block/apple_mug",
+    "2": "craft_no_taizai:block/apple_mug"
+  },
+  "render_type": "cutout"
+}

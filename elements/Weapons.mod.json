@@ -1,0 +1,11 @@
+{
+  "_fv": 69,
+  "_type": "tab",
+  "definition": {
+    "name": "Craft No Taizai Weapons",
+    "icon": {
+      "value": "CUSTOM:DragonHandle"
+    },
+    "showSearch": false
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/electric",
+  "textures": {
+    "2": "craft_no_taizai:block/pink_thunder",
+    "particle": "craft_no_taizai:item/pink_thunder"
+  }
+}

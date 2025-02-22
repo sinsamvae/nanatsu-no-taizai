@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "craft_no_taizai:rank"
+    },
+    "title": {
+      "translate": "advancements.diamond_rank.title"
+    },
+    "description": {
+      "translate": "advancements.diamond_rank.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "diamond_rank_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "craft_no_taizai:plaatinum"
+}

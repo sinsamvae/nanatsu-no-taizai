@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "craft_no_taizai:block/area_wood",
+    "up": "craft_no_taizai:block/area_wood",
+    "north": "craft_no_taizai:block/area_wood",
+    "east": "craft_no_taizai:block/area_wood",
+    "south": "craft_no_taizai:block/area_wood",
+    "west": "craft_no_taizai:block/area_wood",
+    "particle": "craft_no_taizai:block/area_wood"
+  },
+  "render_type": "solid"
+}

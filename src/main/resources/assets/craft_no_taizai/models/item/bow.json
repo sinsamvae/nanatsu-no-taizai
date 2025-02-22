@@ -1,0 +1,6 @@
+{
+  "parent": "craft_no_taizai:displaysettings/bow.item",
+  "textures": {
+    "layer0": "craft_no_taizai:item/bow"
+  }
+}

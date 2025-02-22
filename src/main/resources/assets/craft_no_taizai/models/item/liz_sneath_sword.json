@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/lis_nneathed_sword",
+  "textures": {
+    "2": "craft_no_taizai:block/lizsneathedsword",
+    "particle": "craft_no_taizai:item/lizsneathedsword"
+  }
+}

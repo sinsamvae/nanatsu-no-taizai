@@ -1,0 +1,22 @@
+{
+  "_fv": 69,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Campfire cooking",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "FOOD",
+    "xpReward": 2.0,
+    "cookingTime": 700,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "campfireCookingInputStack": {
+      "value": "CUSTOM:UncookedDusk"
+    },
+    "campfireCookingReturnStack": {
+      "value": "CUSTOM:CookedDuskMeat"
+    },
+    "name": "smoker_dusk_meat",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "craft_no_taizai:block/fairykingtop",
+    "up": "craft_no_taizai:block/fairykinglog",
+    "north": "craft_no_taizai:block/fairykinglog",
+    "east": "craft_no_taizai:block/fairykinglog",
+    "south": "craft_no_taizai:block/fairykinglog",
+    "west": "craft_no_taizai:block/fairykinglog",
+    "particle": "craft_no_taizai:block/fairykingtop"
+  },
+  "render_type": "solid"
+}

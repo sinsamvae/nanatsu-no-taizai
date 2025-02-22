@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "craft_no_taizai:block/capitalofthedeadlight",
+    "up": "craft_no_taizai:block/capitalofthedeadlight",
+    "north": "craft_no_taizai:block/capitalofthedeadlight",
+    "east": "craft_no_taizai:block/capitalofthedeadlight",
+    "south": "craft_no_taizai:block/capitalofthedeadlight",
+    "west": "craft_no_taizai:block/capitalofthedeadlight",
+    "particle": "craft_no_taizai:block/capitalofthedeadlight"
+  },
+  "render_type": "translucent"
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "item": "craft_no_taizai:bear_icon"
+    },
+    "title": {
+      "translate": "advancements.defeat_king.title"
+    },
+    "description": {
+      "translate": "advancements.defeat_king.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat_king_0": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

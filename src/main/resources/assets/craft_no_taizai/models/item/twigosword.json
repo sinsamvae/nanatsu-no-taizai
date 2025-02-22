@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/twigosword",
+  "textures": {
+    "0": "craft_no_taizai:block/twigosword",
+    "particle": "craft_no_taizai:item/twigosword"
+  }
+}

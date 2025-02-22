@@ -1,0 +1,12 @@
+{
+  "type": "craft_no_taizai:structure_feature",
+  "config": {
+    "structure": "craft_no_taizai:purgatory_2",
+    "ignored_blocks": [
+      "minecraft:air",
+      "minecraft:cave_air",
+      "minecraft:structure_block",
+      "minecraft:structure_block"
+    ]
+  }
+}

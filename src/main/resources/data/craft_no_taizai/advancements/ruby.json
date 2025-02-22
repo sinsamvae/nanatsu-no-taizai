@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "craft_no_taizai:rank"
+    },
+    "title": {
+      "translate": "advancements.ruby.title"
+    },
+    "description": {
+      "translate": "advancements.ruby.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "ruby_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "craft_no_taizai:emerald_advancement"
+}

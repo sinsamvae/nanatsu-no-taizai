@@ -1,0 +1,123 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_1",
+          "image": "button_1.png",
+          "hoveredImage": "button_1_hover.png",
+          "onClick": {
+            "name": "ZaneriAccept"
+          },
+          "x": 191,
+          "y": 119
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_2",
+          "image": "button_2.png",
+          "hoveredImage": "button_2_hover.png",
+          "onClick": {
+            "name": "ZaneriDeny"
+          },
+          "x": 192,
+          "y": 142
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_if_youre_ready",
+          "text": {
+            "fixedValue": "If you're ready,"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 195,
+          "y": 64
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_you_will_have_to_go_through_trai",
+          "text": {
+            "fixedValue": "you will now go through the Power Trail."
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 195,
+          "y": 78
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_accept",
+          "text": {
+            "fixedValue": ".Accept"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 204,
+          "y": 123
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_deny",
+          "text": {
+            "fixedValue": ".Deny"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 203,
+          "y": 144
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_be_warn_this_trail_is_tuf",
+          "text": {
+            "fixedValue": "Be warned that this trail is tough."
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 194,
+          "y": 94
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

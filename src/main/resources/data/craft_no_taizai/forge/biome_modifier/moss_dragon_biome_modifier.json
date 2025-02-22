@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "swamp",
+  "spawners": {
+    "type": "craft_no_taizai:moss_dragon",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 3
+  }
+}

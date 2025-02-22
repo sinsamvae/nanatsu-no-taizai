@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "missing": "pink_knight_sword"
+      },
+      "name": "default"
+    }
+  }
+}

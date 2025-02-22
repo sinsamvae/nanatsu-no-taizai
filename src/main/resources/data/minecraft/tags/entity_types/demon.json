@@ -1,0 +1,33 @@
+{
+  "replace": false,
+  "values": [
+    "craft_no_taizai:red_demon_geckolib",
+    "craft_no_taizai:gray_demon_entity",
+    "craft_no_taizai:muramo_demon_form",
+    "craft_no_taizai:jericho_demon_form",
+    "craft_no_taizai:andre_demon_form",
+    "craft_no_taizai:guila_demonanimated",
+    "craft_no_taizai:gray_demon_hendrickson_animated",
+    "craft_no_taizai:albion",
+    "craft_no_taizai:albion_fat",
+    "craft_no_taizai:albion_tall",
+    "craft_no_taizai:tall_albion",
+    "zombie",
+    "zombie_villager",
+    "husk",
+    "drowned",
+    "zombified_piglin",
+    "zoglin",
+    "zombie_horse",
+    "skeleton",
+    "skeleton_horse",
+    "stray",
+    "wither",
+    "wither_skeleton",
+    "phantom",
+    "craft_no_taizai:blue_demon",
+    "craft_no_taizai:galand",
+    "craft_no_taizai:galand_over",
+    "craft_no_taizai:galand_story_2"
+  ]
+}

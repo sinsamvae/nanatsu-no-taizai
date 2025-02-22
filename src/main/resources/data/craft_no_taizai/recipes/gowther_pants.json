@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "a a",
+    "b b"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:purple_wool"
+    },
+    "b": {
+      "item": "minecraft:gray_wool"
+    }
+  },
+  "result": {
+    "item": "craft_no_taizai:gowther_outfit_leggings",
+    "count": 1
+  }
+}

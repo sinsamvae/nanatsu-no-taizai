@@ -1,0 +1,43 @@
+{
+  "_fv": 69,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Special",
+    "renderType": 1,
+    "blockingRenderType": 0,
+    "texture": "staff-of-imprisonment-texture",
+    "customModelName": "staff-of-imprisonment:default",
+    "blockingModelName": "Normal blocking",
+    "name": "Staff Of Imprisonment",
+    "specialInformation": {
+      "fixedValue": [
+        "§cRight Click Use Ability"
+      ]
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:SacredTreasure"
+      }
+    ],
+    "efficiency": 2.0,
+    "attackSpeed": 1.0,
+    "enchantability": 15,
+    "damageVsEntity": 7.0,
+    "usageCount": 0,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [],
+    "immuneToFire": false,
+    "blockDropsTier": "NETHERITE",
+    "blocksAffected": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "StaffOfImprisonmentLivingEntityIsHitWithTool"
+    },
+    "onItemInInventoryTick": {
+      "name": "StaffOfImprisonmentToolInInventoryTick"
+    }
+  }
+}

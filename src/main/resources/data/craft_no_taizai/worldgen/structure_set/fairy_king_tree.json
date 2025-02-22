@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "craft_no_taizai:fairy_king_tree",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 80,
+    "separation": 45,
+    "salt": 650180557
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "item": "craft_no_taizai:capital_of_the_dead_ground"
+    },
+    "title": {
+      "translate": "advancements.capitalofthedeadadvancement.title"
+    },
+    "description": {
+      "translate": "advancements.capitalofthedeadadvancement.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "capitalofthedeadadvancement_0": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "craft_no_taizai:capitalofthe_dead"
+      }
+    }
+  }
+}

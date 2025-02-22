@@ -1,0 +1,86 @@
+{
+  "_fv": 69,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "purgatory_fire_particles_1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PurgatoryFrame1"
+          },
+          "anchorPoint": "BOTTOM_CENTER",
+          "x": 12,
+          "y": 21
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "purgatory_fire_particles_2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PurgatoryFrame2"
+          },
+          "anchorPoint": "BOTTOM_CENTER",
+          "x": 8,
+          "y": 24
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "purgatory_fire_particles_3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PurgatoryFrame3"
+          },
+          "anchorPoint": "BOTTOM_CENTER",
+          "x": 33,
+          "y": 32
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "purgatory_fire_particles_4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PurgatoryFrame4"
+          },
+          "anchorPoint": "BOTTOM_CENTER",
+          "x": -46,
+          "y": 17
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "purgatory_fire_particles_5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PurgatoryFrame5"
+          },
+          "anchorPoint": "BOTTOM_CENTER",
+          "x": 7,
+          "y": -7
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "PurgatoryFireVar"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

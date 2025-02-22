@@ -1,0 +1,9 @@
+{
+  "parent": "block/door_top_left",
+  "textures": {
+    "particle": "craft_no_taizai:block/doortop",
+    "bottom": "craft_no_taizai:block/doortop",
+    "top": "craft_no_taizai:block/doortop"
+  },
+  "render_type": "solid"
+}

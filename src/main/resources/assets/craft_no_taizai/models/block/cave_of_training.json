@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "craft_no_taizai:block/cave_of_training",
+    "up": "craft_no_taizai:block/cave_of_training",
+    "north": "craft_no_taizai:block/cave_of_training",
+    "east": "craft_no_taizai:block/cave_of_training",
+    "south": "craft_no_taizai:block/cave_of_training",
+    "west": "craft_no_taizai:block/cave_of_training",
+    "particle": "craft_no_taizai:block/cave_of_training"
+  },
+  "render_type": "solid"
+}

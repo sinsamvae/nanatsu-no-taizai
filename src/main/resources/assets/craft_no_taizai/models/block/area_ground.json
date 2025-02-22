@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "craft_no_taizai:block/battle",
+    "up": "craft_no_taizai:block/battle",
+    "north": "craft_no_taizai:block/battle",
+    "east": "craft_no_taizai:block/battle",
+    "south": "craft_no_taizai:block/battle",
+    "west": "craft_no_taizai:block/battle",
+    "particle": "craft_no_taizai:block/battle"
+  },
+  "render_type": "solid"
+}

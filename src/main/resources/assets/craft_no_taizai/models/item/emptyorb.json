@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/hyperrecovery",
+  "textures": {
+    "1": "craft_no_taizai:block/empty_orb",
+    "particle": "craft_no_taizai:item/empty_orb"
+  }
+}

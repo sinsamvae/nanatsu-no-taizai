@@ -1,0 +1,9 @@
+{
+  "parent": "craft_no_taizai:custom/goddess_crystal",
+  "textures": {
+    "all": "craft_no_taizai:block/goddess_crystal",
+    "particle": "craft_no_taizai:block/goddess_crystal",
+    "0": "craft_no_taizai:block/goddess_crystal"
+  },
+  "render_type": "solid"
+}

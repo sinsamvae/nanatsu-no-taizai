@@ -1,0 +1,27 @@
+{
+  "_fv": 69,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.AIR"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": ""
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 5.0,
+    "knockback": 5,
+    "entityModel": "ModelKiller_iceberg",
+    "customModelTexture": "icelance.png",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5,
+    "onHitsEntity": {
+      "name": "IceAnchorProjectileHitsLivingEntity"
+    },
+    "onFlyingTick": {
+      "name": "IceAnchorWhileProjectileFlyingTick"
+    }
+  }
+}

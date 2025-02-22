@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "craft_no_taizai:block/air",
+    "up": "craft_no_taizai:block/air",
+    "north": "craft_no_taizai:block/air",
+    "east": "craft_no_taizai:block/air",
+    "south": "craft_no_taizai:block/air",
+    "west": "craft_no_taizai:block/air",
+    "particle": "craft_no_taizai:block/air"
+  },
+  "render_type": "translucent"
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/drill-sword",
+  "textures": {
+    "0": "craft_no_taizai:block/drill-sword-texture",
+    "particle": "craft_no_taizai:item/drill-sword-texture"
+  }
+}

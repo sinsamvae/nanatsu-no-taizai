@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/katana",
+  "textures": {
+    "1": "craft_no_taizai:block/katana",
+    "particle": "craft_no_taizai:item/katana"
+  }
+}

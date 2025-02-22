@@ -1,0 +1,15 @@
+{
+  "_fv": 69,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "LCONTROL",
+    "keyBindingName": "Mana Charge",
+    "keyBindingCategoryKey": "craftnotaizai",
+    "onKeyPressed": {
+      "name": "ManaChargeBindOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "ManaChargeBindOnKeyReleased"
+    }
+  }
+}

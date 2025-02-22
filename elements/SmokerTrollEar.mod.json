@@ -1,0 +1,22 @@
+{
+  "_fv": 69,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smoking",
+    "recipeRetstackSize": 1,
+    "group": "food",
+    "cookingBookCategory": "FOOD",
+    "xpReward": 1.0,
+    "cookingTime": 150,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smokingInputStack": {
+      "value": "CUSTOM:TrollEar"
+    },
+    "smokingReturnStack": {
+      "value": "CUSTOM:CookTrollEar"
+    },
+    "name": "smoker_troll_ear",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,13 @@
+newmtl m_c9ffda1f-8230-a751-490e-6dc3aa7306cf
+Ka 0.0 0.0 0.0
+Kd 0.0 0.0 0.0
+Ks 0.0 0.0 0.0
+map_Kd craft_no_taizai:block/claw-texture
+Ns 100.0
+d 1.0
+newmtl none
+Ka 0.0 0.0 0.0
+Kd 0.0 0.0 0.0
+Ks 0.0 0.0 0.0
+Ns 100.0
+d 1.0

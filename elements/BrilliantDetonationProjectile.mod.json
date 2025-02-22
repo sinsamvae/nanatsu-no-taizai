@@ -1,0 +1,30 @@
+{
+  "_fv": 69,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.FIRE"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "CUSTOM:fire"
+    },
+    "igniteFire": false,
+    "power": 0.0,
+    "damage": 0.0,
+    "knockback": 0,
+    "entityModel": "ModelBrilliant_Detonation",
+    "customModelTexture": "sun_curel.png",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5,
+    "onHitsBlock": {
+      "name": "BrilliantDetonationProjectileHitsBlock"
+    },
+    "onHitsEntity": {
+      "name": "BrilliantDetonationProjectileHitsLivingEntity"
+    },
+    "onFlyingTick": {
+      "name": "DriftBombWhileProjectileFlyingTick"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ab"
+  ],
+  "key": {
+    "a": {
+      "item": "craft_no_taizai:emptyorb"
+    },
+    "b": {
+      "item": "minecraft:glowstone_dust"
+    }
+  },
+  "result": {
+    "item": "craft_no_taizai:lume_orb",
+    "count": 1
+  }
+}

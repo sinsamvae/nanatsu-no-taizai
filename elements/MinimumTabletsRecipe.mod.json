@@ -1,0 +1,25 @@
+{
+  "_fv": 69,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Brewing",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "brewingInputStack": {
+      "value": "POTION:WATER"
+    },
+    "brewingIngredientStack": {
+      "value": "CUSTOM:ChickenMatangoMushRoom"
+    },
+    "brewingReturnStack": {
+      "value": "CUSTOM:MinimumTablets"
+    },
+    "name": "minimum_tablets_recipe",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "forest",
+  "spawners": {
+    "type": "craft_no_taizai:sword_wolf",
+    "weight": 13,
+    "minCount": 2,
+    "maxCount": 3
+  }
+}

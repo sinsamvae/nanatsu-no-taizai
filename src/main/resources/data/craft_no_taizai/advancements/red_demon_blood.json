@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "item": "craft_no_taizai:demon_blood"
+    },
+    "title": {
+      "translate": "advancements.red_demon_blood.title"
+    },
+    "description": {
+      "translate": "advancements.red_demon_blood.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "red_demon_blood_0": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

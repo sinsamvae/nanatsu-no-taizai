@@ -1,0 +1,22 @@
+{
+  "_fv": 69,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smoking",
+    "recipeRetstackSize": 1,
+    "group": "food",
+    "cookingBookCategory": "FOOD",
+    "xpReward": 12.0,
+    "cookingTime": 220,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smokingInputStack": {
+      "value": "CUSTOM:TyrantDragonMeat"
+    },
+    "smokingReturnStack": {
+      "value": "CUSTOM:TyrantDragonCookedMeat"
+    },
+    "name": "tyrant_dragon_smoke",
+    "namespace": "minecraft"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "staff-of-imprisonment-texture"
+      },
+      "name": "default"
+    }
+  }
+}

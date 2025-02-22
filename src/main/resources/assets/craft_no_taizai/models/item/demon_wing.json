@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/demonwings",
+  "textures": {
+    "0": "craft_no_taizai:block/wing-texture",
+    "particle": "craft_no_taizai:item/wing-texture"
+  }
+}

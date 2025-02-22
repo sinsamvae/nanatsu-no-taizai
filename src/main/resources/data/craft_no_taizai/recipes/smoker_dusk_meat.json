@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "experience": 2,
+  "cookingtime": 700,
+  "ingredient": {
+    "item": "craft_no_taizai:uncooked_dusk"
+  },
+  "result": "craft_no_taizai:cooked_dusk_meat"
+}

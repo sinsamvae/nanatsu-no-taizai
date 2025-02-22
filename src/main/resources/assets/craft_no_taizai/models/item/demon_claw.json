@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/demonclaw",
+  "textures": {
+    "0": "craft_no_taizai:block/claw-texture",
+    "particle": "craft_no_taizai:item/claw-texture"
+  }
+}

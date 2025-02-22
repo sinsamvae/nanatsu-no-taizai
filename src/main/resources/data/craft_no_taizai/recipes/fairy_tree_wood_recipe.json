@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a"
+  ],
+  "key": {
+    "a": {
+      "item": "craft_no_taizai:fairy_trees_log"
+    }
+  },
+  "result": {
+    "item": "craft_no_taizai:fairy_tree_wood",
+    "count": 4
+  }
+}

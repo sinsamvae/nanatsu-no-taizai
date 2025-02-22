@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "craft_no_taizai:block/tower_of_trials",
+    "up": "craft_no_taizai:block/tower_of_trials",
+    "north": "craft_no_taizai:block/tower_of_trials",
+    "east": "craft_no_taizai:block/tower_of_trials",
+    "south": "craft_no_taizai:block/tower_of_trials",
+    "west": "craft_no_taizai:block/tower_of_trials",
+    "particle": "craft_no_taizai:block/tower_of_trials"
+  },
+  "render_type": "solid"
+}

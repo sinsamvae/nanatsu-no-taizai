@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "hendrickson_machete_texture"
+      },
+      "name": "default"
+    }
+  }
+}

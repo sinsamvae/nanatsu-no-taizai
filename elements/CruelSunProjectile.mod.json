@@ -1,0 +1,30 @@
+{
+  "_fv": 69,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.FIRE"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "CUSTOM:fire"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 5.0,
+    "knockback": 5,
+    "entityModel": "Modelflame_ball",
+    "customModelTexture": "flame_ball.png",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5,
+    "onHitsBlock": {
+      "name": "CruelSunProjectileHitsBlock"
+    },
+    "onHitsEntity": {
+      "name": "CruelSunProjectileHitsLivingEntity"
+    },
+    "onFlyingTick": {
+      "name": "CruelSunWhileProjectileFlyingTick"
+    }
+  }
+}

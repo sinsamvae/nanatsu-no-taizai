@@ -1,0 +1,507 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "gui.png",
+          "use1Xscale": false,
+          "x": 120,
+          "y": 16
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_displayname",
+          "text": {
+            "fixedValue": "",
+            "name": "Displayname"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 121,
+          "y": 16
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_race_demon",
+          "text": {
+            "fixedValue": "",
+            "name": "RaceVar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 121,
+          "y": 28
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_magic_var",
+          "text": {
+            "fixedValue": "",
+            "name": "MagicVar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 121,
+          "y": 40
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_commandment_var",
+          "text": {
+            "fixedValue": "",
+            "name": "CommandmentVar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "CommandmentReturn"
+          },
+          "x": 121,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_level",
+          "text": {
+            "fixedValue": "",
+            "name": "GetLevel"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 254,
+          "y": 16
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_xp",
+          "text": {
+            "fixedValue": "",
+            "name": "GetXP"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 255,
+          "y": 28
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_tpdev",
+          "text": {
+            "fixedValue": "",
+            "name": "TP"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 255,
+          "y": 40
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_strvar",
+          "text": {
+            "fixedValue": "",
+            "name": "Strvar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 134,
+          "y": 102
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_dexvar",
+          "text": {
+            "fixedValue": "",
+            "name": "Hpvar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 134,
+          "y": 124
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_agility_var",
+          "text": {
+            "fixedValue": "",
+            "name": "AgilityVar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 134,
+          "y": 146
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_manavar",
+          "text": {
+            "fixedValue": "",
+            "name": "Manavar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 134,
+          "y": 164
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_manapower",
+          "text": {
+            "fixedValue": "",
+            "name": "Manapower"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 134,
+          "y": 174
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_statplusbutton",
+          "image": "statplusbutton.png",
+          "hoveredImage": "statplusbuttonoutline.png",
+          "onClick": {
+            "name": "TPStr"
+          },
+          "displayCondition": {
+            "name": "DisplayStatButtons"
+          },
+          "x": 121,
+          "y": 101
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_statplusbutton1",
+          "image": "statplusbutton.png",
+          "hoveredImage": "statplusbuttonoutline.png",
+          "onClick": {
+            "name": "TPSpirt"
+          },
+          "displayCondition": {
+            "name": "DisplayStatButtons"
+          },
+          "x": 121,
+          "y": 122
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_statplusbutton4",
+          "image": "statplusbutton.png",
+          "hoveredImage": "statplusbuttonoutline.png",
+          "onClick": {
+            "name": "TPAgility"
+          },
+          "displayCondition": {
+            "name": "DisplayStatButtons"
+          },
+          "x": 121,
+          "y": 143
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_statplusbutton2",
+          "image": "statplusbutton.png",
+          "hoveredImage": "statplusbuttonoutline.png",
+          "onClick": {
+            "name": "Tpmana"
+          },
+          "displayCondition": {
+            "name": "DisplayStatButtons"
+          },
+          "x": 121,
+          "y": 164
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_statplusbutton3",
+          "image": "statplusbutton.png",
+          "hoveredImage": "statplusbuttonoutline.png",
+          "onClick": {
+            "name": "TpSwitchAmount"
+          },
+          "x": 196,
+          "y": 188
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_uc_var",
+          "text": {
+            "fixedValue": "",
+            "name": "UCVar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 210,
+          "y": 189
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_increase_strength",
+          "text": {
+            "fixedValue": "Increase Strength"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 140,
+          "y": 92
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_increase_defense",
+          "text": {
+            "fixedValue": "Increase Defense"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 140,
+          "y": 116
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_increase_speed",
+          "text": {
+            "fixedValue": "Increase Speed"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 140,
+          "y": 140
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_increase_maxmana_mana_damage",
+          "text": {
+            "fixedValue": "Increase MaxMana & Mana Damage"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 140,
+          "y": 164
+        }
+      },
+      {
+        "type": "entitymodel",
+        "data": {
+          "entityModel": {
+            "name": "ReturnEnitiy"
+          },
+          "scale": 35,
+          "rotationX": 0,
+          "followMouseMovement": true,
+          "x": 246,
+          "y": 149
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_storybook2",
+          "image": "story_icon.png",
+          "hoveredImage": "story_icon_hover.png",
+          "onClick": {
+            "name": "Story"
+          },
+          "x": 313,
+          "y": 11
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_story",
+          "text": {
+            "fixedValue": "Story"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 316,
+          "y": 15
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_skills",
+          "text": {
+            "fixedValue": "Magic"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 319,
+          "y": 46
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_magicorb",
+          "image": "magic_icon.png",
+          "hoveredImage": "magic_icon_hover.png",
+          "onClick": {
+            "name": "OpenMagicMenu"
+          },
+          "x": 315,
+          "y": 42
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_settings",
+          "text": {
+            "fixedValue": "Settings"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 316,
+          "y": 77
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_settings",
+          "image": "settings.png",
+          "hoveredImage": "settings_hover.png",
+          "onClick": {
+            "name": "OpenSettingUi"
+          },
+          "x": 313,
+          "y": 73
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_statplusbutton5",
+          "image": "statplusbutton.png",
+          "hoveredImage": "statplusbuttonoutline.png",
+          "onClick": {
+            "name": "TPHp"
+          },
+          "displayCondition": {
+            "name": "DisplayStatButtons"
+          },
+          "x": 121,
+          "y": 80
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_increase_maxhealth",
+          "text": {
+            "fixedValue": "Increase MaxHealth"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 140,
+          "y": 68
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_health_var",
+          "text": {
+            "fixedValue": "",
+            "name": "HealthVar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 136,
+          "y": 81
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 30,
+      "sy": 30,
+      "ox": 30,
+      "oy": 30,
+      "snapOnGrid": false
+    }
+  }
+}

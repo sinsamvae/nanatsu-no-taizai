@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "group": "food",
+  "category": "food",
+  "experience": 1.3,
+  "cookingtime": 215,
+  "ingredient": {
+    "item": "craft_no_taizai:troll_ear"
+  },
+  "result": "craft_no_taizai:cook_troll_ear"
+}

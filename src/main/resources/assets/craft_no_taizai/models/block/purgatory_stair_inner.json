@@ -1,0 +1,10 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "particle": "craft_no_taizai:block/losstone",
+    "bottom": "craft_no_taizai:block/losstone",
+    "top": "craft_no_taizai:block/losstone",
+    "side": "craft_no_taizai:block/losstone"
+  },
+  "render_type": "solid"
+}

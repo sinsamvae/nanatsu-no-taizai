@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "craft_no_taizai:block/fairywoodtop",
+    "up": "craft_no_taizai:block/fairywoodtop",
+    "north": "craft_no_taizai:block/fairywoodlog",
+    "east": "craft_no_taizai:block/fairywoodlog",
+    "south": "craft_no_taizai:block/fairywoodlog",
+    "west": "craft_no_taizai:block/fairywoodlog",
+    "particle": "craft_no_taizai:block/fairywoodtop"
+  },
+  "render_type": "solid"
+}

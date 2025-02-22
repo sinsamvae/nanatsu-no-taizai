@@ -1,0 +1,9 @@
+{
+  "parent": "craft_no_taizai:custom/alemug",
+  "textures": {
+    "all": "craft_no_taizai:block/red_filled_cup",
+    "particle": "craft_no_taizai:block/red_filled_cup",
+    "1": "craft_no_taizai:block/red_filled_cup"
+  },
+  "render_type": "cutout"
+}

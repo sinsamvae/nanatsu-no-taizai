@@ -1,0 +1,15 @@
+{
+  "parent": "craft_no_taizai:custom/flying_saucer",
+  "textures": {
+    "1": "craft_no_taizai:block/flying-saucer-texture",
+    "particle": "craft_no_taizai:item/flying-saucer-texture"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "craft_no_taizai:item/flying_saucer_0"
+    }
+  ]
+}

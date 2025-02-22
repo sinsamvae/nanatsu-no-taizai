@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/demonsword",
+  "textures": {
+    "1": "craft_no_taizai:block/demon_sword_texture",
+    "particle": "craft_no_taizai:item/demon_sword_texture"
+  }
+}

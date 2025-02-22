@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "experience": 2,
+  "cookingtime": 220,
+  "ingredient": {
+    "item": "craft_no_taizai:tentacles"
+  },
+  "result": "craft_no_taizai:cookedtentacles"
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smoking",
+  "group": "food",
+  "category": "food",
+  "experience": 12,
+  "cookingtime": 220,
+  "ingredient": {
+    "item": "craft_no_taizai:tyrant_dragon_meat"
+  },
+  "result": "craft_no_taizai:tyrant_dragon_cooked_meat"
+}

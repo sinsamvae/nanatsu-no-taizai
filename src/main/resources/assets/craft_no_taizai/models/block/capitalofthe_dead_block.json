@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "craft_no_taizai:block/capitalofthedead",
+    "up": "craft_no_taizai:block/capitalofthedead",
+    "north": "craft_no_taizai:block/capitalofthedead",
+    "east": "craft_no_taizai:block/capitalofthedead",
+    "south": "craft_no_taizai:block/capitalofthedead",
+    "west": "craft_no_taizai:block/capitalofthedead",
+    "particle": "craft_no_taizai:block/capitalofthedead"
+  },
+  "render_type": "translucent"
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smoking",
+  "group": "food",
+  "category": "food",
+  "experience": 2,
+  "cookingtime": 195,
+  "ingredient": {
+    "item": "craft_no_taizai:angle_cure_meat"
+  },
+  "result": "craft_no_taizai:cooked_angle_meat"
+}

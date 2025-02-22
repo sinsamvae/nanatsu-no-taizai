@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "craft_no_taizai:custom/rhitta_block_particle"
+    },
+    "facing=east": {
+      "model": "craft_no_taizai:custom/rhitta_block_particle",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "craft_no_taizai:custom/rhitta_block_particle",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "craft_no_taizai:custom/rhitta_block_particle",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "craft_no_taizai:custom/rhitta_block_particle",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "craft_no_taizai:custom/rhitta_block_particle",
+      "x": 90
+    }
+  }
+}

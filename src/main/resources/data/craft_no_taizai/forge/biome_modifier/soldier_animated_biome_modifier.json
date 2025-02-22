@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": {
+    "type": "forge:any"
+  },
+  "spawners": {
+    "type": "craft_no_taizai:soldier_animated",
+    "weight": 15,
+    "minCount": 2,
+    "maxCount": 3
+  }
+}

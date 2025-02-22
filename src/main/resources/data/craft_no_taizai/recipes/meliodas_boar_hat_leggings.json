@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "a a",
+    "b b"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:green_wool"
+    },
+    "b": {
+      "item": "minecraft:yellow_wool"
+    }
+  },
+  "result": {
+    "item": "craft_no_taizai:meliodas_boar_hat_leggings",
+    "count": 1
+  }
+}

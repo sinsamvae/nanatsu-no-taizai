@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "group": "food",
+  "category": "food",
+  "experience": 2,
+  "cookingtime": 225,
+  "ingredient": {
+    "item": "craft_no_taizai:earth_crawler_tail"
+  },
+  "result": "craft_no_taizai:earth_crawler_tail_cooked"
+}

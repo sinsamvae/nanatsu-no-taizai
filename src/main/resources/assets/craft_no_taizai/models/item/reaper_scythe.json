@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/reaper_scythe",
+  "textures": {
+    "1": "craft_no_taizai:block/reaper-scythe-texture",
+    "particle": "craft_no_taizai:item/reaper-scythe-texture"
+  }
+}

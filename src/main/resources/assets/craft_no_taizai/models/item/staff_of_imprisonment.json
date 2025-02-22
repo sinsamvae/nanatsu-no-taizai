@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/staff-of-imprisonment",
+  "textures": {
+    "0": "craft_no_taizai:block/staff-of-imprisonment-texture",
+    "particle": "craft_no_taizai:item/staff-of-imprisonment-texture"
+  }
+}

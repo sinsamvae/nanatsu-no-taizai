@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ab"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_chestplate"
+    },
+    "b": {
+      "item": "minecraft:purple_dye"
+    }
+  },
+  "result": {
+    "item": "craft_no_taizai:gowther_armor_chestplate",
+    "count": 1
+  }
+}

@@ -1,0 +1,31 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"rise": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 2.5,
+			"bones": {
+				"Diamondpillar": {
+					"position": {
+						"0.0": {
+							"vector": [0, -168.25, 0]
+						},
+						"0.0417": {
+							"vector": [0, -23.25, 0]
+						},
+						"0.0833": {
+							"vector": [0, -9, 0]
+						},
+						"0.125": {
+							"vector": [0, -8, 0]
+						},
+						"0.1667": {
+							"vector": [0, 1, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

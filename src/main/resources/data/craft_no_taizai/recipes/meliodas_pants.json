@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "a a",
+    "b b"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:light_gray_wool"
+    },
+    "b": {
+      "item": "minecraft:lime_wool"
+    }
+  },
+  "result": {
+    "item": "craft_no_taizai:meliodasoutfit_leggings",
+    "count": 1
+  }
+}

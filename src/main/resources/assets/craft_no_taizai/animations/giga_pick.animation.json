@@ -1,0 +1,45 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "rise": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.25,
+      "bones": {
+        "sphere": {
+          "position": {
+            "0.0": {
+              "vector": [
+                0,
+                -27,
+                0
+              ]
+            },
+            "0.0417": {
+              "vector": [
+                0,
+                -15,
+                0
+              ],
+              "easing": "easeOutQuad"
+            },
+            "0.0833": {
+              "vector": [
+                0,
+                -8,
+                0
+              ]
+            },
+            "0.1667": {
+              "vector": [
+                0,
+                -1,
+                0
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "geckolib_format_version": 2
+}

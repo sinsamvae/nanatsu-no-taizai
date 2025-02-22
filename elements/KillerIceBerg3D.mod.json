@@ -1,0 +1,21 @@
+{
+  "_fv": 69,
+  "_type": "particlemodel",
+  "definition": {
+    "particle": "KillerbregParticles",
+    "model": "ModelKiller_iceberg",
+    "rendertype": "Translucent",
+    "modelScale": {
+      "fixedValue": 1.0
+    },
+    "modelRotationX": {
+      "fixedValue": 50.0
+    },
+    "modelRotationY": {
+      "fixedValue": 155.0
+    },
+    "modelRotationZ": {
+      "fixedValue": 30.0
+    }
+  }
+}

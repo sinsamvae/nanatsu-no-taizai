@@ -1,0 +1,43 @@
+{
+  "_fv": 69,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Axe",
+    "renderType": 1,
+    "blockingRenderType": 0,
+    "texture": "reaper-scythe-texture",
+    "customModelName": "reaper_scythe:default",
+    "blockingModelName": "Normal blocking",
+    "name": "Reaper Scythe",
+    "specialInformation": {
+      "fixedValue": [
+        "§cRightClick Summon"
+      ]
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:SacredTreasure"
+      }
+    ],
+    "efficiency": 9.0,
+    "attackSpeed": 1.5,
+    "enchantability": 2,
+    "damageVsEntity": 10.0,
+    "usageCount": 0,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [],
+    "immuneToFire": true,
+    "blockDropsTier": "WOOD",
+    "blocksAffected": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "ReaperScytheRightclicked"
+    },
+    "onItemInInventoryTick": {
+      "name": "ReaperScytheToolInInventoryTick"
+    }
+  }
+}

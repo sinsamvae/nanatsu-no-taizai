@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "craft_no_taizai:fairy_king_forest",
+  "spawners": {
+    "type": "craft_no_taizai:gerheade",
+    "weight": 25,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

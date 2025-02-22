@@ -1,0 +1,12 @@
+{
+  "_fv": 69,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "X",
+    "keyBindingName": "Lock On",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "LockOnOnKeyPressed"
+    }
+  }
+}

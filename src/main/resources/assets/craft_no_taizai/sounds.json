@@ -1,0 +1,266 @@
+{
+  "unsheathed": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:sword_unsheathed_sound_effect_-_high_quality",
+        "stream": false
+      }
+    ]
+  },
+  "intosheath": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:mysterious_sword_into_sheath_sound_effect",
+        "stream": false
+      }
+    ]
+  },
+  "swish": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:fast_swish___sound_effect",
+        "stream": false
+      }
+    ]
+  },
+  "gravity": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:bleach-preview-spiritual-pressure-effect-hd",
+        "stream": false
+      }
+    ]
+  },
+  "lightning": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:lightning_shockwave_cast",
+        "stream": false
+      }
+    ]
+  },
+  "chicken_matango_idle": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:chicken_matango_idle",
+        "stream": false
+      }
+    ]
+  },
+  "chicken_matango_dies": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:chicken_matango_die",
+        "stream": false
+      }
+    ]
+  },
+  "chicken_matango_hurt": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:chicken_matango_hit",
+        "stream": false
+      }
+    ]
+  },
+  "kraken_idle": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:kraken_idle",
+        "stream": false
+      }
+    ]
+  },
+  "kraken_hurt": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:kraken_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "cure_angle_walk": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:cureangle_walk",
+        "stream": false
+      }
+    ]
+  },
+  "cureangle_hurt": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:cureangle_hurt_0",
+        "stream": false
+      }
+    ]
+  },
+  "duskbison_idle": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:duskbison_ambient",
+        "stream": false
+      }
+    ]
+  },
+  "duskbison_hurt": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:duskbison_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "duskbison_death": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:duskbison_death",
+        "stream": false
+      }
+    ]
+  },
+  "troll_idle": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:troll_idle",
+        "stream": false
+      }
+    ]
+  },
+  "albion_idle": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:albion_idle",
+        "stream": false
+      }
+    ]
+  },
+  "claydragon_idle": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:claydragon_idle",
+        "stream": false
+      }
+    ]
+  },
+  "corrupted_holyknight_idle": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:corrupted_holyknight_idle",
+        "stream": false
+      }
+    ]
+  },
+  "dale_2nd_idle": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:dale_2nd_idle",
+        "stream": false
+      }
+    ]
+  },
+  "dale_idle": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:dale_idle",
+        "stream": false
+      }
+    ]
+  },
+  "earth_crawler_idle": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:earth_crawler_idle",
+        "stream": false
+      }
+    ]
+  },
+  "graydemon_idle": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:graydemon_idle",
+        "stream": false
+      }
+    ]
+  },
+  "graydemon_hurt": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:graydemon_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "reddemon_idle": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:red_demon_idle",
+        "stream": false
+      }
+    ]
+  },
+  "fire": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:fire_cast",
+        "stream": false
+      }
+    ]
+  },
+  "sds_opening": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:the_seven_deadly_sins_opening",
+        "stream": true
+      }
+    ]
+  },
+  "tyrant_idle": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:tyrant_idle",
+        "stream": false
+      }
+    ]
+  },
+  "tyrant_death": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:tyrant_death",
+        "stream": false
+      }
+    ]
+  },
+  "wind_effect": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:wind_effect",
+        "stream": false
+      }
+    ]
+  },
+  "tonado": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:tornado_-_sound_effect_hd",
+        "stream": false
+      }
+    ]
+  },
+  "ice_bullet": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:ice_bullet",
+        "stream": false
+      }
+    ]
+  },
+  "killer_iceberg": {
+    "sounds": [
+      {
+        "name": "craft_no_taizai:killer_iceberg",
+        "stream": false
+      }
+    ]
+  }
+}

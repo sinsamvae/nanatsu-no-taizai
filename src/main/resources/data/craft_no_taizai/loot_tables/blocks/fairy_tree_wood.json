@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "craft_no_taizai:blocks/fairy_tree_wood",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "craft_no_taizai:fairy_tree_wood"
+        }
+      ]
+    }
+  ]
+}

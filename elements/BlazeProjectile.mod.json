@@ -1,0 +1,30 @@
+{
+  "_fv": 69,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.FIRE"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "CUSTOM:fire"
+    },
+    "igniteFire": false,
+    "power": 0.0,
+    "damage": 0.0,
+    "knockback": 0,
+    "entityModel": "Modelflame_ball",
+    "customModelTexture": "flame_ball.png",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5,
+    "onHitsBlock": {
+      "name": "BlazeProjectileHitsBlock"
+    },
+    "onHitsEntity": {
+      "name": "BlazeProjectileHitsLivingEntity"
+    },
+    "onFlyingTick": {
+      "name": "BlazeWhileProjectileFlyingTick"
+    }
+  }
+}

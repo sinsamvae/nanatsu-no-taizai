@@ -1,0 +1,9 @@
+{
+  "parent": "craft_no_taizai:custom/glowmug",
+  "textures": {
+    "all": "craft_no_taizai:block/glow_filled_cup",
+    "particle": "craft_no_taizai:block/glow_filled_cup",
+    "2": "craft_no_taizai:block/glow_filled_cup"
+  },
+  "render_type": "cutout"
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/guardspear",
+  "textures": {
+    "1": "craft_no_taizai:block/spear",
+    "particle": "craft_no_taizai:item/guard-spear-texture"
+  }
+}

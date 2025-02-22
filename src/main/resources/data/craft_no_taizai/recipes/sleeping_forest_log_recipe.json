@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a"
+  ],
+  "key": {
+    "a": {
+      "item": "craft_no_taizai:sleeping_forest_wood"
+    }
+  },
+  "result": {
+    "item": "craft_no_taizai:sleeping_forest_plank",
+    "count": 4
+  }
+}

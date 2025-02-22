@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/golgiussword",
+  "textures": {
+    "missing": "craft_no_taizai:block/golgiussword",
+    "particle": "craft_no_taizai:item/golgiussword"
+  }
+}

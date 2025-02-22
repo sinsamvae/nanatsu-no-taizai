@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "craft_no_taizai:item/dragon_sword"
+  }
+}

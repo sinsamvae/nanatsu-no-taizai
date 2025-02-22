@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "craft_no_taizai:fairy_king_forest",
+  "features": "craft_no_taizai:holy_tree_ore",
+  "step": "underground_ores"
+}

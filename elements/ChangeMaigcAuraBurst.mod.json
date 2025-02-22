@@ -1,0 +1,7 @@
+{
+  "_fv": 69,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"event_trigger\" x=\"-355\" y=\"-114\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"variables_set_string\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" has_entity=\"true\" is_player_var=\"true\"/><field name=\"VAR\">global:magic</field><value name=\"VAL\"><block type=\"text\"><field name=\"TEXT\">Aura Burst</field></block></value><value name=\"entity\"><block type=\"get_command_parameter_entity\"><field name=\"param\">Player</field></block></value><next><block type=\"call_procedure\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"0\"/><field name=\"procedure\">SetSkillSlotsNone</field></block></next></block></next></block></xml>"
+  }
+}

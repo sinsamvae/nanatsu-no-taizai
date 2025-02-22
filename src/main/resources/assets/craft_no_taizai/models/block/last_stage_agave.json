@@ -1,0 +1,9 @@
+{
+  "parent": "craft_no_taizai:custom/laststageagave",
+  "textures": {
+    "all": "craft_no_taizai:block/laststageagave",
+    "particle": "craft_no_taizai:block/laststageagave",
+    "0": "craft_no_taizai:block/laststageagave"
+  },
+  "render_type": "cutout"
+}

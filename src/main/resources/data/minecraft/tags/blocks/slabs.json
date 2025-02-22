@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "craft_no_taizai:purgatory_brick_slab",
+    "craft_no_taizai:purgatory_slab",
+    "craft_no_taizai:fairy_tree_slab",
+    "craft_no_taizai:area_wood_slab",
+    "craft_no_taizai:area_slab"
+  ]
+}

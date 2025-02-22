@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/gideonhammer",
+  "textures": {
+    "2": "craft_no_taizai:block/gideon-texture",
+    "particle": "craft_no_taizai:item/gideon-texture"
+  }
+}

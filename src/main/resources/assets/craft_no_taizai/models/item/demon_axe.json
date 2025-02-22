@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/demonaxe",
+  "textures": {
+    "0": "craft_no_taizai:block/dark-glaive",
+    "particle": "craft_no_taizai:item/dark-glaive"
+  }
+}

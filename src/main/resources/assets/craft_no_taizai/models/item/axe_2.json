@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/darksteel_axe",
+  "textures": {
+    "1": "craft_no_taizai:block/axe",
+    "particle": "craft_no_taizai:item/axe"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "craft_no_taizai:teleportation_orb",
+    "minecraft:golden_apple",
+    "minecraft:golden_carrot"
+  ]
+}

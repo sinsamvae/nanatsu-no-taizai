@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "craft_no_taizai:item/door"
+  },
+  "render_type": "translucent"
+}

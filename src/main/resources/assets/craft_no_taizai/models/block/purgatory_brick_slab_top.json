@@ -1,0 +1,10 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "particle": "craft_no_taizai:block/loscobblestone",
+    "bottom": "craft_no_taizai:block/loscobblestone",
+    "top": "craft_no_taizai:block/loscobblestone",
+    "side": "craft_no_taizai:block/loscobblestone"
+  },
+  "render_type": "solid"
+}

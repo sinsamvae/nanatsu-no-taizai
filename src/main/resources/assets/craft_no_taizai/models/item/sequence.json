@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/arthur_sword",
+  "textures": {
+    "0": "craft_no_taizai:block/arthur-sword-texture",
+    "particle": "craft_no_taizai:item/arthur-sword-texture"
+  }
+}

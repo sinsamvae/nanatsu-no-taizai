@@ -1,0 +1,22 @@
+{
+  "_fv": 69,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smoking",
+    "recipeRetstackSize": 1,
+    "group": "food",
+    "cookingBookCategory": "FOOD",
+    "xpReward": 2.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smokingInputStack": {
+      "value": "CUSTOM:EarthCrawlerTail"
+    },
+    "smokingReturnStack": {
+      "value": "CUSTOM:EarthCrawlerTailCooked"
+    },
+    "name": "earth_crawler_smoker",
+    "namespace": "minecraft"
+  }
+}

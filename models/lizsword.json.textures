@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "lizsword",
+        "2": "lizsword"
+      },
+      "name": "default"
+    }
+  }
+}

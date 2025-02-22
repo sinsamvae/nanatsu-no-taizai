@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "craft_no_taizai:slader_animated",
+    "craft_no_taizai:vivian_animated",
+    "craft_no_taizai:gustaf_animated",
+    "craft_no_taizai:green_knight_animated",
+    "craft_no_taizai:red_knight_animated",
+    "craft_no_taizai:earth_crawler",
+    "craft_no_taizai:clay_dragon",
+    "craft_no_taizai:troll",
+    "craft_no_taizai:tyrant_dragon"
+  ]
+}

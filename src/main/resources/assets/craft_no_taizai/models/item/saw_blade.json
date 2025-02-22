@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/saw_blade",
+  "textures": {
+    "1": "craft_no_taizai:block/sawblade2",
+    "particle": "craft_no_taizai:item/sawblade2"
+  }
+}

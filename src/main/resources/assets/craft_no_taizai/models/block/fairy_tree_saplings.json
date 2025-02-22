@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "craft_no_taizai:block/fairy_tree",
+    "particle": "craft_no_taizai:block/fairy_tree"
+  },
+  "render_type": "cutout"
+}

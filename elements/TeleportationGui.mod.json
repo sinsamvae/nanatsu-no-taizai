@@ -1,0 +1,92 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "x",
+          "name": "X",
+          "width": 120,
+          "height": 20,
+          "x": 154,
+          "y": 91
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "z",
+          "name": "Z",
+          "width": 120,
+          "height": 20,
+          "x": 154,
+          "y": 137
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "y",
+          "name": "Y",
+          "width": 120,
+          "height": 20,
+          "x": 154,
+          "y": 114
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "gui.png",
+          "use1Xscale": false,
+          "x": 121,
+          "y": 16
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_slot2",
+          "image": "1button.png",
+          "hoveredImage": "button.png",
+          "onClick": {
+            "name": "TeleportButton"
+          },
+          "x": 182,
+          "y": 67
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_teleport",
+          "text": {
+            "fixedValue": "Teleport"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 193,
+          "y": 70
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 30,
+      "sy": 30,
+      "ox": 30,
+      "oy": 30,
+      "snapOnGrid": false
+    }
+  }
+}

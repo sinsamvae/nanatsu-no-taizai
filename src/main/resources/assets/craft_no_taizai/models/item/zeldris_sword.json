@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/zeldris_sword",
+  "textures": {
+    "0": "craft_no_taizai:block/zeldris_sword",
+    "particle": "craft_no_taizai:item/zeldris_sword"
+  }
+}

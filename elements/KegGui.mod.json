@@ -1,0 +1,191 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_keg",
+          "text": {
+            "fixedValue": "Keg"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 129,
+          "y": 42
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:Agave"
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 158,
+          "y": 74
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 206,
+          "y": 74
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "Items.HONEY_BOTTLE"
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 2,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 256,
+          "y": 74
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_keg_tick",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayKegTick"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 237,
+          "y": 51
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "water_keg.png",
+          "use1Xscale": false,
+          "x": 150,
+          "y": 61
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "water_keg_1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnCubps1"
+          },
+          "x": 150,
+          "y": 61
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "water_key_2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnCubps2"
+          },
+          "x": 150,
+          "y": 61
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "water_keg_3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnCups3"
+          },
+          "x": 150,
+          "y": 61
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "water_keg_full.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnCups4"
+          },
+          "x": 150,
+          "y": 61
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "key_gui2.png",
+          "use1Xscale": false,
+          "x": 123,
+          "y": 37
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "honey_bottle_je1_be2.png",
+          "use1Xscale": false,
+          "x": 257,
+          "y": 75
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "agave.png",
+          "use1Xscale": false,
+          "x": 159,
+          "y": 75
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 13,
+      "oy": 6,
+      "snapOnGrid": false
+    }
+  }
+}

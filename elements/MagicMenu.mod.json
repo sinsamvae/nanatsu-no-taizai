@@ -1,0 +1,1161 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_demon_blood_skills",
+          "text": {
+            "fixedValue": "Demon Blood Skills"
+          },
+          "displayCondition": {
+            "name": "DemonBloodReturn"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 120,
+          "y": 41
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blood",
+          "image": "blood.png",
+          "hoveredImage": "bloodhover.png",
+          "onClick": {
+            "name": "LearnedDemonSkills"
+          },
+          "displayCondition": {
+            "name": "DemonBloodReturn"
+          },
+          "x": 122,
+          "y": 42
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_learned_skills_from_magic_scroll",
+          "text": {
+            "fixedValue": "Learned Skills from Magic Scroll"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 120,
+          "y": 17
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plusbuttonoutline",
+          "image": "skillscroll.png",
+          "hoveredImage": "skillscrollhover.png",
+          "onClick": {
+            "name": "LearnedSkills"
+          },
+          "x": 123,
+          "y": 21
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "gui.png",
+          "use1Xscale": false,
+          "x": 120,
+          "y": 18
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_magic",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayMagic"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 127,
+          "y": 64
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_slot",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplaySlot"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 252,
+          "y": 181
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_ability_1",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayAbility1"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplaySlot1"
+          },
+          "x": 134,
+          "y": 76
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_ability_2",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayAbility2"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplaySlot1"
+          },
+          "x": 134,
+          "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_ability_3",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayAbility3"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplaySlot1"
+          },
+          "x": 134,
+          "y": 103
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_ability_4",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayAbility4"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplaySlot1"
+          },
+          "x": 134,
+          "y": 117
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_ability_5",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayAbility5"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplaySlot1"
+          },
+          "x": 134,
+          "y": 131
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_ability_6",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayAbility6"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplaySlot1"
+          },
+          "x": 134,
+          "y": 145
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_ability_7",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayAbility7"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplaySlot1"
+          },
+          "x": 134,
+          "y": 159
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_ability_8",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayAbility8"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplaySlot1"
+          },
+          "x": 134,
+          "y": 173
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plusbuttonmagic",
+          "image": "plusbuttonover.png",
+          "hoveredImage": "plusbuttonmagic.png",
+          "onClick": {
+            "name": "MagicAbilityslot"
+          },
+          "x": 126,
+          "y": 78
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plusbuttonover",
+          "image": "plusbuttonover.png",
+          "hoveredImage": "plusbuttonmagic.png",
+          "onClick": {
+            "name": "MagicAbilitySlot2"
+          },
+          "x": 126,
+          "y": 91
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plusbuttonover1",
+          "image": "plusbuttonover.png",
+          "hoveredImage": "plusbuttonmagic.png",
+          "onClick": {
+            "name": "MagicAbilitySlot3"
+          },
+          "x": 126,
+          "y": 105
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plusbuttonover2",
+          "image": "plusbuttonover.png",
+          "hoveredImage": "plusbuttonmagic.png",
+          "onClick": {
+            "name": "MagicAbilitySlot4"
+          },
+          "x": 126,
+          "y": 119
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plusbuttonover3",
+          "image": "plusbuttonover.png",
+          "hoveredImage": "plusbuttonmagic.png",
+          "onClick": {
+            "name": "MagicAbilitySlot5"
+          },
+          "x": 126,
+          "y": 133
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plusbuttonover4",
+          "image": "plusbuttonover.png",
+          "hoveredImage": "plusbuttonmagic.png",
+          "onClick": {
+            "name": "MagicAbilitySlot6"
+          },
+          "x": 126,
+          "y": 147
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plusbuttonover5",
+          "image": "plusbuttonover.png",
+          "hoveredImage": "plusbuttonmagic.png",
+          "onClick": {
+            "name": "MagicAbilitySlot7"
+          },
+          "x": 126,
+          "y": 161
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plusbuttonover6",
+          "image": "plusbuttonover.png",
+          "hoveredImage": "plusbuttonmagic.png",
+          "onClick": {
+            "name": "MagicAbilitySlot8"
+          },
+          "x": 126,
+          "y": 175
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_overarrow2",
+          "image": "overarrow.png",
+          "hoveredImage": "overarrow2hover.png",
+          "onClick": {
+            "name": "SlotSwitch"
+          },
+          "x": 288,
+          "y": 21
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_slot",
+          "image": "1button.png",
+          "hoveredImage": "button.png",
+          "onClick": {
+            "name": "ChangeSlot"
+          },
+          "x": 237,
+          "y": 177
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_restart",
+          "image": "restart.png",
+          "hoveredImage": "restarthover.png",
+          "onClick": {
+            "name": "ResetMoveSelect"
+          },
+          "x": 99,
+          "y": 52
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_reset",
+          "text": {
+            "fixedValue": "Reset Moves"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 97,
+          "y": 51
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_ability_9",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayAbility9"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplaySlot2"
+          },
+          "x": 134,
+          "y": 76
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_ability_10",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayAbility10"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplaySlot2"
+          },
+          "x": 134,
+          "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_ability_11",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayAbility11"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplaySlot2"
+          },
+          "x": 134,
+          "y": 103
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_12",
+          "text": {
+            "fixedValue": "",
+            "name": "Display12"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplaySlot2"
+          },
+          "x": 134,
+          "y": 117
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_ability_13",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayAbility13"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplaySlot2"
+          },
+          "x": 134,
+          "y": 131
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_ability_14",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayAbility14"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplaySlot2"
+          },
+          "x": 134,
+          "y": 145
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_ability_15",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayAbility15"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplaySlot2"
+          },
+          "x": 134,
+          "y": 159
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_ability_16",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayAbility16"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplaySlot2"
+          },
+          "x": 134,
+          "y": 173
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_abilty_17",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayAbilty17"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplaySlot3"
+          },
+          "x": 134,
+          "y": 76
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_ability_18",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayAbility18"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplaySlot3"
+          },
+          "x": 134,
+          "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_ability_19",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayAbility19"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplaySlot3"
+          },
+          "x": 134,
+          "y": 103
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_ability_20",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayAbility20"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplaySlot3"
+          },
+          "x": 134,
+          "y": 117
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_ability_21",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayAbility21"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplaySlot3"
+          },
+          "x": 134,
+          "y": 131
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_ability_22",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayAbility22"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplaySlot3"
+          },
+          "x": 134,
+          "y": 145
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_ability_23",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayAbility23"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplaySlot3"
+          },
+          "x": 134,
+          "y": 159
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_ability_24",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayAbility24"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DisplaySlot3"
+          },
+          "x": 134,
+          "y": 173
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_set_slot_button",
+          "text": {
+            "fixedValue": "",
+            "name": "SetSlotButton"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "LearnSkillsDisplay1"
+          },
+          "x": 134,
+          "y": 76
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_magic_scroll_skill_2",
+          "text": {
+            "fixedValue": "",
+            "name": "MagicScrollSkill2"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "LearnSkillsDisplay1"
+          },
+          "x": 134,
+          "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_magic_scroll_skill_3",
+          "text": {
+            "fixedValue": "",
+            "name": "MagicScrollSkill3"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "LearnSkillsDisplay1"
+          },
+          "x": 134,
+          "y": 103
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_magic_scroll_skill_4",
+          "text": {
+            "fixedValue": "",
+            "name": "MagicScrollSkill4"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "LearnSkillsDisplay1"
+          },
+          "x": 134,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_magic_scroll_5",
+          "text": {
+            "fixedValue": "",
+            "name": "MagicScroll5"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "LearnSkillsDisplay1"
+          },
+          "x": 134,
+          "y": 131
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_magic_scroll_6",
+          "text": {
+            "fixedValue": "",
+            "name": "MagicScroll6"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "LearnSkillsDisplay1"
+          },
+          "x": 134,
+          "y": 145
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_magic_scroll_7",
+          "text": {
+            "fixedValue": "",
+            "name": "MagicScroll7"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "LearnSkillsDisplay1"
+          },
+          "x": 134,
+          "y": 159
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_magic_scroll_8",
+          "text": {
+            "fixedValue": "",
+            "name": "MagicScroll8"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "LearnSkillsDisplay1"
+          },
+          "x": 134,
+          "y": 173
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_demon_skill_1",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayDemonSkill1"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "LearnDemonSkillsDisplay"
+          },
+          "x": 134,
+          "y": 76
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_demon_skill_2",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayDemonSkill2"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "LearnDemonSkillsDisplay"
+          },
+          "x": 134,
+          "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_demon_skill_3",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayDemonSkill3"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "LearnDemonSkillsDisplay"
+          },
+          "x": 134,
+          "y": 103
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_demon_skill_4",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayDemonSkill4"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "LearnDemonSkillsDisplay"
+          },
+          "x": 134,
+          "y": 117
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_demon_s_kill_5",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayDemonSKill5"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "LearnDemonSkillsDisplay"
+          },
+          "x": 134,
+          "y": 131
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_berserk_mode",
+          "image": "berserk_mode.png",
+          "hoveredImage": "berserk_mode.png",
+          "onClick": {
+            "name": "DemonKingPage"
+          },
+          "displayCondition": {
+            "name": "DemonKingPowerReturn"
+          },
+          "x": 145,
+          "y": 22
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_demon_king_magic",
+          "text": {
+            "fixedValue": "Demon King Magic"
+          },
+          "displayCondition": {
+            "name": "DemonKingPowerReturn"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 144,
+          "y": 17
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_demon_king_skill",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayDemonKingSkill"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "LearnDemonKingDisplay"
+          },
+          "x": 134,
+          "y": 76
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty",
+          "text": {
+            "fixedValue": ">"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 294,
+          "y": 24
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_page",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnPage"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 252,
+          "y": 24
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_restart1",
+          "image": "restart.png",
+          "hoveredImage": "restarthover.png",
+          "onClick": {
+            "name": "OpenStatsOnKeyPressed"
+          },
+          "x": 317,
+          "y": 18
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_back",
+          "text": {
+            "fixedValue": "Back"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 315,
+          "y": 16
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_goddess_particle_7",
+          "image": "goddess_particle_7.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "PossessionButton"
+          },
+          "displayCondition": {
+            "name": "ReturnPossession"
+          },
+          "x": 145,
+          "y": 43
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_goddess",
+          "text": {
+            "fixedValue": "Goddess"
+          },
+          "displayCondition": {
+            "name": "ReturnPossession"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 144,
+          "y": 41
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_possession_skill",
+          "text": {
+            "fixedValue": "",
+            "name": "PossessionSkill"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "PossessionSwitch"
+          },
+          "x": 135,
+          "y": 76
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_possession_skill_2",
+          "text": {
+            "fixedValue": "",
+            "name": "PossessionSkill2"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "PossessionSwitch"
+          },
+          "x": 134,
+          "y": 89
+        }
+      }
+    ],
+    "onClosed": {
+      "name": "MagicMenuThisGUIIsClosed"
+    },
+    "gridSettings": {
+      "sx": 30,
+      "sy": 30,
+      "ox": 30,
+      "oy": 30,
+      "snapOnGrid": false
+    }
+  }
+}

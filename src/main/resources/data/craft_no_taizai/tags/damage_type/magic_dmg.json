@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "craft_no_taizai:mana_dmg",
+    "craft_no_taizai:earth_magic",
+    "craft_no_taizai:fire_magic",
+    "craft_no_taizai:ice_magic",
+    "craft_no_taizai:lightning_magic",
+    "craft_no_taizai:water_magic",
+    "craft_no_taizai:wind_magic"
+  ]
+}

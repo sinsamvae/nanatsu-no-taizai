@@ -1,0 +1,12 @@
+{
+  "_fv": 69,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "istar training",
+    "description": "will change how much stat incrase ",
+    "category": "MISC",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 2
+  }
+}

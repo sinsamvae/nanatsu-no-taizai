@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "craft_no_taizai:block/area_slab"
+    },
+    "type=top": {
+      "model": "craft_no_taizai:block/area_slab_top"
+    },
+    "type=double": {
+      "model": "craft_no_taizai:block/area_slab_full"
+    }
+  }
+}

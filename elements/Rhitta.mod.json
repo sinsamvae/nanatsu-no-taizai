@@ -1,0 +1,43 @@
+{
+  "_fv": 69,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Axe",
+    "renderType": 1,
+    "blockingRenderType": 0,
+    "texture": "rhitta-texture",
+    "customModelName": "rhitta:default",
+    "blockingModelName": "Normal blocking",
+    "name": "Rhitta",
+    "specialInformation": {
+      "fixedValue": [
+        "§cRightClick Releases Store Up Power"
+      ]
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:SacredTreasure"
+      }
+    ],
+    "efficiency": 4.0,
+    "attackSpeed": 0.8,
+    "enchantability": 2,
+    "damageVsEntity": 10.0,
+    "usageCount": 0,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [],
+    "immuneToFire": true,
+    "blockDropsTier": "STONE",
+    "blocksAffected": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "RhittaRightclicked"
+    },
+    "onItemInUseTick": {
+      "name": "RhittaInMainHand"
+    }
+  }
+}

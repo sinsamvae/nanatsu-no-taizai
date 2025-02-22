@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:glass"
+    },
+    "b": {
+      "item": "craft_no_taizai:carbon_steel"
+    }
+  },
+  "result": {
+    "item": "craft_no_taizai:emptyorb",
+    "count": 1
+  }
+}

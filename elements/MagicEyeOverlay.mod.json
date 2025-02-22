@@ -1,0 +1,106 @@
+{
+  "_fv": 69,
+  "_type": "overlay",
+  "definition": {
+    "priority": "HIGH",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_magic_eye_battle_power_mob",
+          "text": {
+            "fixedValue": "",
+            "name": "MagicEyeReturnBP"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "CENTER",
+          "x": 90,
+          "y": 91
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_maigc_eye_return_str",
+          "text": {
+            "fixedValue": "",
+            "name": "MagicEyeReturnStr"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "CENTER",
+          "x": 268,
+          "y": 91
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_magic_eye_return_dex",
+          "text": {
+            "fixedValue": "",
+            "name": "MagicEyeReturnDex"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "CENTER",
+          "x": 90,
+          "y": 150
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_magic_eye_return_max_mana",
+          "text": {
+            "fixedValue": "",
+            "name": "MagicEyeReturnMaxMana"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "CENTER",
+          "x": 267,
+          "y": 146
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_magic_eye_return_name",
+          "text": {
+            "fixedValue": "",
+            "name": "MagicEyeReturnName"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_CENTER",
+          "x": 169,
+          "y": 6
+        }
+      }
+    ],
+    "baseTexture": "2prupleoverlay.png",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "MagicEyeOverlayReturn"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/jerichosword",
+  "textures": {
+    "missing": "craft_no_taizai:block/pink_knight_sword",
+    "particle": "craft_no_taizai:item/pink_knight_sword"
+  }
+}

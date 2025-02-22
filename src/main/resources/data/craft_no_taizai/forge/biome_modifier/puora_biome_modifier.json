@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "craft_no_taizai:fairy_king_forest",
+  "spawners": {
+    "type": "craft_no_taizai:puora",
+    "weight": 25,
+    "minCount": 1,
+    "maxCount": 2
+  }
+}

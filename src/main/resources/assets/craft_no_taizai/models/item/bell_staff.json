@@ -1,0 +1,6 @@
+{
+  "parent": "craft_no_taizai:displaysettings/bellstaff.item",
+  "textures": {
+    "layer0": "craft_no_taizai:item/bellstaff"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa",
+    "bc",
+    " d"
+  ],
+  "key": {
+    "a": {
+      "item": "craft_no_taizai:carbon_steel"
+    },
+    "b": {
+      "item": "minecraft:iron_block"
+    },
+    "c": {
+      "item": "minecraft:iron_axe"
+    },
+    "d": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "craft_no_taizai:halbert",
+    "count": 1
+  }
+}

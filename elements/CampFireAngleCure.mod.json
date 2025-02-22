@@ -1,0 +1,22 @@
+{
+  "_fv": 69,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Campfire cooking",
+    "recipeRetstackSize": 1,
+    "group": "food",
+    "cookingBookCategory": "FOOD",
+    "xpReward": 2.0,
+    "cookingTime": 230,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "campfireCookingInputStack": {
+      "value": "CUSTOM:AngleCureMeat"
+    },
+    "campfireCookingReturnStack": {
+      "value": "CUSTOM:CookedAngleMeat"
+    },
+    "name": "camp_fire_angle_cure",
+    "namespace": "minecraft"
+  }
+}

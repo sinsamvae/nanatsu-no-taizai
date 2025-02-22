@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "craft_no_taizai:block/sidestonetest",
+    "up": "craft_no_taizai:block/sidestonetest",
+    "north": "craft_no_taizai:block/sidestonetest",
+    "east": "craft_no_taizai:block/sidestonetest",
+    "south": "craft_no_taizai:block/sidestonetest",
+    "west": "craft_no_taizai:block/sidestonetest",
+    "particle": "craft_no_taizai:block/sidestonetest"
+  },
+  "render_type": "solid"
+}

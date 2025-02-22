@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/pink-rapier",
+  "textures": {
+    "1": "craft_no_taizai:block/pink-rapier",
+    "particle": "craft_no_taizai:item/pink-rapier"
+  }
+}

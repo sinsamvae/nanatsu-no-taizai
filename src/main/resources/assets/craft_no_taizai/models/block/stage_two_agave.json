@@ -1,0 +1,9 @@
+{
+  "parent": "craft_no_taizai:custom/stagetwoagave",
+  "textures": {
+    "all": "craft_no_taizai:block/stagetwoagave",
+    "particle": "craft_no_taizai:block/stagetwoagave",
+    "0": "craft_no_taizai:block/stagetwoagave"
+  },
+  "render_type": "cutout"
+}

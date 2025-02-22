@@ -1,0 +1,103 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_slot",
+          "image": "1button.png",
+          "hoveredImage": "button.png",
+          "onClick": {
+            "name": "ChangeCloneAmount"
+          },
+          "x": 181,
+          "y": 93
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_clones",
+          "text": {
+            "fixedValue": "Clones"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 195,
+          "y": 96
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_lost_vayne_var",
+          "text": {
+            "fixedValue": "",
+            "name": "LostVayneVar"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 192,
+          "y": 73
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_slot1",
+          "image": "1button.png",
+          "hoveredImage": "button.png",
+          "onClick": {
+            "name": "DespawnClones"
+          },
+          "x": 181,
+          "y": 126
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_despawn",
+          "text": {
+            "fixedValue": "Despawn"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 193,
+          "y": 129
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "clone_gui.png",
+          "use1Xscale": false,
+          "x": 150,
+          "y": 42
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 30,
+      "sy": 30,
+      "ox": 30,
+      "oy": 30,
+      "snapOnGrid": false
+    }
+  }
+}

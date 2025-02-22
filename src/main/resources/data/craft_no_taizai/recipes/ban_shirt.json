@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "bab",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:red_wool"
+    },
+    "b": {
+      "item": "minecraft:light_gray_wool"
+    }
+  },
+  "result": {
+    "item": "craft_no_taizai:ban_outfit_chestplate",
+    "count": 1
+  }
+}

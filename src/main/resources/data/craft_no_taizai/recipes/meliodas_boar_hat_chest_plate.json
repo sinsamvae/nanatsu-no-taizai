@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "bab",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:white_wool"
+    },
+    "b": {
+      "item": "minecraft:yellow_wool"
+    }
+  },
+  "result": {
+    "item": "craft_no_taizai:meliodas_boar_hat_chestplate",
+    "count": 1
+  }
+}

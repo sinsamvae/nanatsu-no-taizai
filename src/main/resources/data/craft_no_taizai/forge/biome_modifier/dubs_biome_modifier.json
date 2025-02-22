@@ -1,0 +1,13 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "badlands",
+    "desert"
+  ],
+  "spawners": {
+    "type": "craft_no_taizai:dubs",
+    "weight": 15,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

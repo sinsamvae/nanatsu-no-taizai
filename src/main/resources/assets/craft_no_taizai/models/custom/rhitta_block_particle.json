@@ -1,0 +1,6 @@
+{
+  "parent": "craft_no_taizai:displaysettings/rhitta_blocks",
+  "textures": {
+    "particle": "craft_no_taizai:block/rhitta-texture"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "craft_no_taizai:pig_icon"
+    },
+    "title": {
+      "translate": "advancements.defeat_merlin.title"
+    },
+    "description": {
+      "translate": "advancements.defeat_merlin.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat_merlin_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "craft_no_taizai:defeat_gowther"
+}

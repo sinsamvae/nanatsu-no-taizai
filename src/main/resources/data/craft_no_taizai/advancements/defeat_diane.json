@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "craft_no_taizai:serpent_icon"
+    },
+    "title": {
+      "translate": "advancements.defeat_diane.title"
+    },
+    "description": {
+      "translate": "advancements.defeat_diane.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat_diane_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "craft_no_taizai:defeat_king"
+}

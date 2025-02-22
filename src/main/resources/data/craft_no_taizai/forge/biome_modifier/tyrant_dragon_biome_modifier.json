@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": {
+    "type": "forge:any"
+  },
+  "spawners": {
+    "type": "craft_no_taizai:tyrant_dragon",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 2
+  }
+}

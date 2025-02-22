@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "craft_no_taizai:block/perfectcube",
+    "up": "craft_no_taizai:block/perfectcube",
+    "north": "craft_no_taizai:block/perfectcube",
+    "east": "craft_no_taizai:block/perfectcube",
+    "south": "craft_no_taizai:block/perfectcube",
+    "west": "craft_no_taizai:block/perfectcube",
+    "particle": "craft_no_taizai:block/perfectcube"
+  },
+  "render_type": "translucent"
+}

@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": {
+    "type": "forge:any"
+  },
+  "spawners": {
+    "type": "craft_no_taizai:clover",
+    "weight": 15,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

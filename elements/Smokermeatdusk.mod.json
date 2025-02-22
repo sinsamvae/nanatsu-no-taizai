@@ -1,0 +1,22 @@
+{
+  "_fv": 69,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smoking",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "FOOD",
+    "xpReward": 2.0,
+    "cookingTime": 180,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smokingInputStack": {
+      "value": "CUSTOM:UncookedDusk"
+    },
+    "smokingReturnStack": {
+      "value": "CUSTOM:CookedDuskMeat"
+    },
+    "name": "smokermeatdusk",
+    "namespace": "mod"
+  }
+}

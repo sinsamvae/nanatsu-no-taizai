@@ -1,0 +1,352 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "gui.png",
+          "use1Xscale": false,
+          "x": 115,
+          "y": 35
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_magic",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayMagic"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 116,
+          "y": 38
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_slot",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplaySlot"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 238,
+          "y": 184
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_reset",
+          "text": {
+            "fixedValue": "Reset Moves"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 99,
+          "y": 78
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_slot",
+          "text": {
+            "fixedValue": "Slot"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 256,
+          "y": 198
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_slot",
+          "image": "1button.png",
+          "hoveredImage": "button.png",
+          "onClick": {
+            "name": "ChangeSlot"
+          },
+          "x": 237,
+          "y": 195
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_restart",
+          "image": "restart.png",
+          "hoveredImage": "restarthover.png",
+          "onClick": {
+            "name": "ResetMoveSelect"
+          },
+          "x": 99,
+          "y": 73
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plusbuttonmagic",
+          "image": "plusbuttonover.png",
+          "hoveredImage": "plusbuttonmagic.png",
+          "onClick": {
+            "name": "DisasterButton"
+          },
+          "x": 126,
+          "y": 78
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plusbuttonover",
+          "image": "plusbuttonover.png",
+          "hoveredImage": "plusbuttonmagic.png",
+          "onClick": {
+            "name": "DisasterButton2"
+          },
+          "x": 126,
+          "y": 91
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plusbuttonover1",
+          "image": "plusbuttonover.png",
+          "hoveredImage": "plusbuttonmagic.png",
+          "onClick": {
+            "name": "DisasterButton3"
+          },
+          "x": 126,
+          "y": 105
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plusbuttonover2",
+          "image": "plusbuttonover.png",
+          "hoveredImage": "plusbuttonmagic.png",
+          "onClick": {
+            "name": "DisasterButton4"
+          },
+          "x": 126,
+          "y": 119
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plusbuttonover3",
+          "image": "plusbuttonover.png",
+          "hoveredImage": "plusbuttonmagic.png",
+          "onClick": {
+            "name": "DisasterButton5"
+          },
+          "x": 126,
+          "y": 133
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plusbuttonover4",
+          "image": "plusbuttonover.png",
+          "hoveredImage": "plusbuttonmagic.png",
+          "onClick": {
+            "name": "DisasterButton6"
+          },
+          "x": 126,
+          "y": 147
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plusbuttonover5",
+          "image": "plusbuttonover.png",
+          "hoveredImage": "plusbuttonmagic.png",
+          "onClick": {
+            "name": "DisasterButton7"
+          },
+          "x": 126,
+          "y": 161
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plusbuttonover6",
+          "image": "plusbuttonover.png",
+          "hoveredImage": "plusbuttonmagic.png",
+          "onClick": {
+            "name": "DisasterButton8"
+          },
+          "x": 126,
+          "y": 175
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_disaster_skill_display_1",
+          "text": {
+            "fixedValue": "",
+            "name": "DisasterSkillDisplay1"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 135,
+          "y": 76
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_disaster_skill_display_2",
+          "text": {
+            "fixedValue": "",
+            "name": "DisasterSkillDisplay2"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 135,
+          "y": 90
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_disaster_skill_display_3",
+          "text": {
+            "fixedValue": "",
+            "name": "DisasterSkillDisplay3"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 135,
+          "y": 104
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_disaster_skill_display_4",
+          "text": {
+            "fixedValue": "",
+            "name": "DisasterSkillDisplay4"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 135,
+          "y": 118
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_disaster_skill_display_5",
+          "text": {
+            "fixedValue": "",
+            "name": "DisasterSkillDisplay5"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 135,
+          "y": 132
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_disaster_skill_display_6",
+          "text": {
+            "fixedValue": "",
+            "name": "DisasterSkillDisplay6"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 135,
+          "y": 146
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_disaster_skill_display_7",
+          "text": {
+            "fixedValue": "",
+            "name": "DisasterSkillDisplay7"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 135,
+          "y": 160
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_disaster_skill_display_8",
+          "text": {
+            "fixedValue": "",
+            "name": "DisasterSkillDisplay8"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 135,
+          "y": 174
+        }
+      }
+    ],
+    "onClosed": {
+      "name": "MagicMenuThisGUIIsClosed"
+    },
+    "gridSettings": {
+      "sx": 30,
+      "sy": 30,
+      "ox": 30,
+      "oy": 30,
+      "snapOnGrid": false
+    }
+  }
+}

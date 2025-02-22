@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "craft_no_taizai:entrance_to_the_capital_of_the_dead",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 180,
+    "separation": 75,
+    "salt": 347790677
+  }
+}

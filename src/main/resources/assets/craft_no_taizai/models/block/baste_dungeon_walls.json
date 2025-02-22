@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "craft_no_taizai:block/img_1093_2",
+    "up": "craft_no_taizai:block/img_1093_2",
+    "north": "craft_no_taizai:block/img_1093_2",
+    "east": "craft_no_taizai:block/img_1093_2",
+    "south": "craft_no_taizai:block/img_1093_2",
+    "west": "craft_no_taizai:block/img_1093_2",
+    "particle": "craft_no_taizai:block/img_1093_2"
+  },
+  "render_type": "solid"
+}
