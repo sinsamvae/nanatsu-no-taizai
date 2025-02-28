@@ -5,8 +5,8 @@
   },
   "spawners": {
     "type": "craft_no_taizai:zhivago",
-    "weight": 20,
-    "minCount": 4,
-    "maxCount": 4
+    "weight": 15,
+    "minCount": 1,
+    "maxCount": 1
   }
 }

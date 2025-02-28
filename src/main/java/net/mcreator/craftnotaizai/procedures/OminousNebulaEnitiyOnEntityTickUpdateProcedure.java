@@ -42,7 +42,7 @@ public class OminousNebulaEnitiyOnEntityTickUpdateProcedure {
 			return;
 		double damage = 0;
 		if (!(null == (entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null))) {
-			entity.getPersistentData().putDouble("ominousNebula", Math.ceil((0.45
+			entity.getPersistentData().putDouble("ominousNebula", Math.ceil((0.1
 					* ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack
 					* ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack_boost
 					+ 5)

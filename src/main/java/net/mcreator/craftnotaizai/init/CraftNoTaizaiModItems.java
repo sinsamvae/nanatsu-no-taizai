@@ -127,8 +127,10 @@ import net.mcreator.craftnotaizai.item.FoxIconItem;
 import net.mcreator.craftnotaizai.item.FountainOfYouthItem;
 import net.mcreator.craftnotaizai.item.FlyingSaucerItem;
 import net.mcreator.craftnotaizai.item.FairyHelbramArmorItem;
+import net.mcreator.craftnotaizai.item.EstarrosaSwordItem;
 import net.mcreator.craftnotaizai.item.EscanorTavernItem;
 import net.mcreator.craftnotaizai.item.EscanorArmorItem;
+import net.mcreator.craftnotaizai.item.EscanorArmor2Item;
 import net.mcreator.craftnotaizai.item.EmptyorbItem;
 import net.mcreator.craftnotaizai.item.EmptyNeedleItem;
 import net.mcreator.craftnotaizai.item.EmptyMugItem;
@@ -627,6 +629,13 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> FRAUDRIN_STORY_SPAWN_EGG = REGISTRY.register("fraudrin_story_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.FRAUDRIN_STORY, -1, -1, new Item.Properties()));
 	public static final RegistryObject<Item> ZHIVAGO_SPAWN_EGG = REGISTRY.register("zhivago_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.ZHIVAGO, -1, -1, new Item.Properties()));
 	public static final RegistryObject<Item> DELDRY_SPAWN_EGG = REGISTRY.register("deldry_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.DELDRY, -1, -1, new Item.Properties()));
+	public static final RegistryObject<Item> ESCANOR_ARMOR_2_CHESTPLATE = REGISTRY.register("escanor_armor_2_chestplate", () -> new EscanorArmor2Item.Chestplate());
+	public static final RegistryObject<Item> ESCANOR_ARMOR_2_LEGGINGS = REGISTRY.register("escanor_armor_2_leggings", () -> new EscanorArmor2Item.Leggings());
+	public static final RegistryObject<Item> WAILIO_SPAWN_EGG = REGISTRY.register("wailio_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.WAILIO, -1, -1, new Item.Properties()));
+	public static final RegistryObject<Item> CATH_SPAWN_EGG = REGISTRY.register("cath_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.CATH, -1, -1, new Item.Properties()));
+	public static final RegistryObject<Item> KALEIDOSCOPE_ENTITY_SPAWN_EGG = REGISTRY.register("kaleidoscope_entity_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.KALEIDOSCOPE_ENTITY, -1, -1, new Item.Properties()));
+	public static final RegistryObject<Item> ESTARROSA_SWORD = REGISTRY.register("estarrosa_sword", () -> new EstarrosaSwordItem());
+	public static final RegistryObject<Item> DEATHPIERCE_SPAWN_EGG = REGISTRY.register("deathpierce_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.DEATHPIERCE, -1, -1, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

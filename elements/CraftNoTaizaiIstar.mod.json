@@ -7,6 +7,6 @@
     "description": "will change how much stat incrase ",
     "category": "MISC",
     "defaultValueLogic": false,
-    "defaultValueNumber": 2
+    "defaultValueNumber": 1
   }
 }

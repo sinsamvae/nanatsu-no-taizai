@@ -9,6 +9,6 @@ public class PlainsCordsVarProcedure {
 		if (entity == null)
 			return "";
 		String cords = "";
-		return "Coordinates: " + ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).string_cords).substring(70);
+		return "Coordinates: " + ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).string_cords).substring(50);
 	}
 }

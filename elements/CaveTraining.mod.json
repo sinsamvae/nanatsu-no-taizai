@@ -19,7 +19,7 @@
       "falpha": 0.0
     },
     "canRespawnHere": false,
-    "hasFog": true,
+    "hasFog": false,
     "isDark": true,
     "doesWaterVaporize": false,
     "sleepResult": "DENY",
@@ -27,9 +27,6 @@
     "imitateOverworldBehaviour": false,
     "onPlayerEntersDimension": {
       "name": "CaveTrainingPlayerEntersDimension"
-    },
-    "onPlayerLeavesDimension": {
-      "name": "CaveTrainingPlayerLeavesDimension"
     },
     "portalFrame": {
       "value": ""

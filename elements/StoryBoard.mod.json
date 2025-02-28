@@ -87,7 +87,7 @@
           "displayCondition": {
             "name": "Story1"
           },
-          "x": 72,
+          "x": 71,
           "y": 49
         }
       },
@@ -105,8 +105,8 @@
           "displayCondition": {
             "name": "Story1"
           },
-          "x": 74,
-          "y": 64
+          "x": 90,
+          "y": 63
         }
       },
       {
@@ -123,8 +123,8 @@
           "displayCondition": {
             "name": "Story1"
           },
-          "x": 72,
-          "y": 78
+          "x": 85,
+          "y": 79
         }
       },
       {
@@ -141,8 +141,8 @@
           "displayCondition": {
             "name": "Story1"
           },
-          "x": 71,
-          "y": 91
+          "x": 95,
+          "y": 92
         }
       },
       {
@@ -159,7 +159,7 @@
           "displayCondition": {
             "name": "Story1"
           },
-          "x": 70,
+          "x": 66,
           "y": 108
         }
       },
@@ -177,8 +177,8 @@
           "displayCondition": {
             "name": "Story1"
           },
-          "x": 71,
-          "y": 116
+          "x": 77,
+          "y": 122
         }
       },
       {
@@ -186,7 +186,7 @@
         "data": {
           "name": "label_holy_knights_they_were_known_t",
           "text": {
-            "fixedValue": "Holy Knights"
+            "fixedValue": "Holy Knights They were known throughout"
           },
           "color": {
             "value": -16777216,
@@ -195,26 +195,8 @@
           "displayCondition": {
             "name": "Story1"
           },
-          "x": 71,
-          "y": 129
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_this_is_a_tale_of_ancient_times2",
-          "text": {
-            "fixedValue": "They were known throughout"
-          },
-          "color": {
-            "value": -16777216,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "Story1"
-          },
-          "x": 135,
-          "y": 129
+          "x": 115,
+          "y": 135
         }
       },
       {
@@ -231,8 +213,8 @@
           "displayCondition": {
             "name": "Story1"
           },
-          "x": 126,
-          "y": 146
+          "x": 129,
+          "y": 151
         }
       },
       {
@@ -3389,8 +3371,8 @@
           "displayCondition": {
             "name": "Story38"
           },
-          "x": 66,
-          "y": 88
+          "x": 68,
+          "y": 93
         }
       },
       {
@@ -3407,8 +3389,8 @@
           "displayCondition": {
             "name": "Story38"
           },
-          "x": 67,
-          "y": 110
+          "x": 69,
+          "y": 113
         }
       },
       {
@@ -3426,8 +3408,8 @@
           "displayCondition": {
             "name": "Story38"
           },
-          "x": 66,
-          "y": 117
+          "x": 69,
+          "y": 131
         }
       },
       {
@@ -3685,24 +3667,6 @@
       {
         "type": "label",
         "data": {
-          "name": "label_go_to_the_plains_biome",
-          "text": {
-            "fixedValue": "Go To the Plains Biome"
-          },
-          "color": {
-            "value": -13369345,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "Story41"
-          },
-          "x": 69,
-          "y": 109
-        }
-      },
-      {
-        "type": "label",
-        "data": {
           "name": "label_proc_plains_cords_var",
           "text": {
             "fixedValue": "",
@@ -3715,7 +3679,7 @@
           "displayCondition": {
             "name": "Story41"
           },
-          "x": 70,
+          "x": 68,
           "y": 129
         }
       },
@@ -3974,24 +3938,6 @@
       {
         "type": "label",
         "data": {
-          "name": "label_go_to_plains_biome",
-          "text": {
-            "fixedValue": "Go To Desert, Forest or Swamp Biome"
-          },
-          "color": {
-            "value": -13369345,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "Story44"
-          },
-          "x": 70,
-          "y": 119
-        }
-      },
-      {
-        "type": "label",
-        "data": {
           "name": "label_ep_16_deathtrap_maze",
           "text": {
             "fixedValue": "EP 16: Death-Trap Maze"
@@ -4004,7 +3950,7 @@
             "name": "Story45"
           },
           "x": 69,
-          "y": 48
+          "y": 47
         }
       },
       {

@@ -153,9 +153,7 @@ public class Storybutton2Procedure {
 			if (entity instanceof Player _player)
 				_player.closeContainer();
 		}
-		if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Story).equals("Story44")
-				&& (world.getBiome(BlockPos.containing(x, y, z)).is(new ResourceLocation("desert")) || world.getBiome(BlockPos.containing(x, y, z)).is(new ResourceLocation("forest"))
-						|| world.getBiome(BlockPos.containing(x, y, z)).is(new ResourceLocation("swamp")))) {
+		if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Story).equals("Story44")) {
 			{
 				String _setval = "Story45";
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

@@ -16,7 +16,6 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.client.renderer.DimensionSpecialEffects;
 
-import net.mcreator.craftnotaizai.procedures.CaveTrainingPlayerLeavesDimensionProcedure;
 import net.mcreator.craftnotaizai.procedures.CaveTrainingPlayerEntersDimensionProcedure;
 
 @Mod.EventBusSubscriber
@@ -34,7 +33,7 @@ public class CaveTrainingDimension {
 
 				@Override
 				public boolean isFoggyAt(int x, int y) {
-					return true;
+					return false;
 				}
 			};
 			event.register(new ResourceLocation("craft_no_taizai:cave_training"), customEffect);
@@ -48,11 +47,8 @@ public class CaveTrainingDimension {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		if (event.getFrom() == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:cave_training"))) {
-			CaveTrainingPlayerLeavesDimensionProcedure.execute(entity);
-		}
 		if (event.getTo() == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:cave_training"))) {
-			CaveTrainingPlayerEntersDimensionProcedure.execute(world, y, entity);
+			CaveTrainingPlayerEntersDimensionProcedure.execute(world, entity);
 		}
 	}
 }

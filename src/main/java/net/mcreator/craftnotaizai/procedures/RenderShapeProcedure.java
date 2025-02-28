@@ -208,8 +208,8 @@ public class RenderShapeProcedure {
 		double j = 0;
 		double k = 0;
 		double l = 0;
-		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).MagicDetection == true) {
-			if (target(3)) {
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).MagicDetection) {
+			if (target(1)) {
 				if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR, false)) {
 					for (int index0 = 0; index0 < 90; index0++) {
 						for (int index1 = 0; index1 < 45; index1++) {
@@ -231,7 +231,7 @@ public class RenderShapeProcedure {
 					i = 0;
 					end();
 				}
-				if (target(3)) {
+				if (target(1)) {
 					RenderSystem.disableDepthTest();
 					if (world instanceof ClientLevel) {
 						for (Entity entityiterator : ((ClientLevel) world).entitiesForRendering()) {
@@ -267,7 +267,7 @@ public class RenderShapeProcedure {
 				}
 				release();
 			}
-			if (target(3)) {
+			if (target(1)) {
 				if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR, false)) {
 					for (int index2 = 0; index2 < 90; index2++) {
 						for (int index3 = 0; index3 < 45; index3++) {
@@ -289,7 +289,7 @@ public class RenderShapeProcedure {
 					i = 0;
 					end();
 				}
-				if (target(3)) {
+				if (target(1)) {
 					RenderSystem.disableDepthTest();
 					if (world instanceof ClientLevel) {
 						for (Entity entityiterator : ((ClientLevel) world).entitiesForRendering()) {

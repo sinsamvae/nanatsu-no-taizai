@@ -234,6 +234,6 @@ public class IstarRenderSkyBoxProcedure {
 				release();
 			}
 		}
-		return true;
+		return false;
 	}
 }

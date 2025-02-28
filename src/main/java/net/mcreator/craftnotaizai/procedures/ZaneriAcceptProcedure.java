@@ -22,7 +22,7 @@ public class ZaneriAcceptProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).tower_of_trails_cooldown == 0) {
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).istar_cooldown == 0) {
 			if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
 				ResourceKey<Level> destinationType = ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:tower_of_trails"));
 				if (_player.level().dimension() == destinationType)
@@ -37,35 +37,12 @@ public class ZaneriAcceptProcedure {
 					_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 				}
 			}
-			{
-				double _setval = entity.getX();
-				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.trainingX = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				double _setval = entity.getY();
-				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.trainingY = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				double _setval = entity.getZ();
-				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.trainingZ = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
 		} else {
 			if (entity instanceof Player _player)
 				_player.closeContainer();
 			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(
-						Component.literal(("Remaining time before you can re enter "
-								+ new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).tower_of_trails_cooldown) + "!")),
-						false);
+				_player.displayClientMessage(Component.literal(("Remaining time before you can re-enter "
+						+ new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).istar_cooldown) + "!")), false);
 		}
 	}
 }

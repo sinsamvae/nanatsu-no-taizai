@@ -83,10 +83,7 @@
     "treeFruits": {
       "value": ""
     },
-    "defaultFeatures": [
-      "Dripstone",
-      "AmethystGeodes"
-    ],
+    "defaultFeatures": [],
     "spawnStronghold": false,
     "spawnMineshaft": false,
     "spawnMineshaftMesa": false,

@@ -1,17 +1,15 @@
 package net.mcreator.craftnotaizai.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 
-import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
-
 public class PollenGardenUpdateTickProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		CraftNoTaizaiMod.queueServerWork(150, () -> {
+		entity.getPersistentData().putDouble("Despawn", (entity.getPersistentData().getDouble("Despawn") + 1));
+		if (entity.getPersistentData().getDouble("Despawn") >= 150) {
 			if (!entity.level().isClientSide())
 				entity.discard();
-		});
+		}
 	}
 }

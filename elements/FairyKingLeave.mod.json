@@ -47,9 +47,9 @@
         "value": "CUSTOM:SdsBlocks"
       }
     ],
-    "destroyTool": "Not specified",
+    "destroyTool": "hoe",
     "customDrop": {
-      "value": ""
+      "value": "Blocks.AIR"
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
@@ -84,7 +84,7 @@
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "PLANT"
+      "value": "CHERRY_LEAVES"
     },
     "breakSound": {
       "value": ""
@@ -102,8 +102,8 @@
       "value": ""
     },
     "luminance": 0,
-    "unbreakable": true,
-    "vanillaToolTier": "STONE",
+    "unbreakable": false,
+    "vanillaToolTier": "NONE",
     "isBonemealable": false,
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
@@ -122,6 +122,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onDestroyedByPlayer": {
+      "name": "FairyKingLeaveBlockDestroyedByPlayer"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

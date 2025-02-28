@@ -154,13 +154,13 @@
       4,
       2
     ],
-    "spawnThisMob": false,
+    "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
     "spawningCondition": {
       "name": "SpawnCondtion"
     },
     "spawningProbability": 15,
-    "mobSpawningType": "waterAmbient",
+    "mobSpawningType": "waterCreature",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 2,
     "restrictionBiomes": [

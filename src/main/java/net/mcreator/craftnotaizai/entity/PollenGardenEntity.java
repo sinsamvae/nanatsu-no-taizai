@@ -94,13 +94,13 @@ public class PollenGardenEntity extends Monster {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		PollenGardenUpdateTickProcedure.execute(this.level(), this);
+		PollenGardenUpdateTickProcedure.execute(this);
 	}
 
 	@Override
 	public void playerTouch(Player sourceentity) {
 		super.playerTouch(sourceentity);
-		PollenGardenEntityCollidesInTheBlockProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
+		PollenGardenEntityCollidesInTheBlockProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override

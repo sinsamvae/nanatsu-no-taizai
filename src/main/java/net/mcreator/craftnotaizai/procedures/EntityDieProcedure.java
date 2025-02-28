@@ -16,6 +16,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModMobEffects;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModItems;
 import net.mcreator.craftnotaizai.entity.TyrantDragonEntity;
+import net.mcreator.craftnotaizai.entity.TyrantDragonCaveEntity;
 import net.mcreator.craftnotaizai.entity.TrollEntity;
 import net.mcreator.craftnotaizai.entity.MutilatorRabbitsEntity;
 import net.mcreator.craftnotaizai.entity.HawksEntity;
@@ -132,8 +133,8 @@ public class EntityDieProcedure {
 				}
 			}
 		}
-		if (entity instanceof TyrantDragonEntity) {
-			if (entity.isOnFire() || entity instanceof LivingEntity _livEnt32 && _livEnt32.hasEffect(CraftNoTaizaiModMobEffects.PURGATORY_FLAME.get())) {
+		if (entity instanceof TyrantDragonEntity || entity instanceof TyrantDragonCaveEntity) {
+			if (entity.isOnFire() || entity instanceof LivingEntity _livEnt33 && _livEnt33.hasEffect(CraftNoTaizaiModMobEffects.PURGATORY_FLAME.get())) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(CraftNoTaizaiModItems.TYRANT_DRAGON_COOKED_MEAT.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -148,7 +149,7 @@ public class EntityDieProcedure {
 			}
 		}
 		if (entity instanceof DuskBison1Entity) {
-			if (entity.isOnFire() || entity instanceof LivingEntity _livEnt37 && _livEnt37.hasEffect(CraftNoTaizaiModMobEffects.PURGATORY_FLAME.get())) {
+			if (entity.isOnFire() || entity instanceof LivingEntity _livEnt38 && _livEnt38.hasEffect(CraftNoTaizaiModMobEffects.PURGATORY_FLAME.get())) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(CraftNoTaizaiModItems.COOKED_DUSK_MEAT.get()));
 					entityToSpawn.setPickUpDelay(10);

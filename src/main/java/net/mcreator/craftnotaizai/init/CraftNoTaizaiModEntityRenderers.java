@@ -16,6 +16,7 @@ import net.mcreator.craftnotaizai.client.renderer.ZeldrisStoryRenderer;
 import net.mcreator.craftnotaizai.client.renderer.ZaneriRenderer;
 import net.mcreator.craftnotaizai.client.renderer.WickedBiteRenderer;
 import net.mcreator.craftnotaizai.client.renderer.WeinheidtAnimatedRenderer;
+import net.mcreator.craftnotaizai.client.renderer.WailioRenderer;
 import net.mcreator.craftnotaizai.client.renderer.VivianAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.VineRenderer;
 import net.mcreator.craftnotaizai.client.renderer.TyrantDragonRenderer;
@@ -70,6 +71,7 @@ import net.mcreator.craftnotaizai.client.renderer.KulumilRenderer;
 import net.mcreator.craftnotaizai.client.renderer.KingStory1Renderer;
 import net.mcreator.craftnotaizai.client.renderer.KingBossAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.KamichigiriProjectileRenderer;
+import net.mcreator.craftnotaizai.client.renderer.KaleidoscopeEntityRenderer;
 import net.mcreator.craftnotaizai.client.renderer.JumanjuEntityRenderer;
 import net.mcreator.craftnotaizai.client.renderer.JillianAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.JigumoRenderer;
@@ -164,6 +166,7 @@ import net.mcreator.craftnotaizai.client.renderer.DemonHendricksonAnimatedRender
 import net.mcreator.craftnotaizai.client.renderer.DeldryRenderer;
 import net.mcreator.craftnotaizai.client.renderer.DeireriStoryRenderer;
 import net.mcreator.craftnotaizai.client.renderer.DeireriStory2Renderer;
+import net.mcreator.craftnotaizai.client.renderer.DeathpierceRenderer;
 import net.mcreator.craftnotaizai.client.renderer.DeathThornRenderer;
 import net.mcreator.craftnotaizai.client.renderer.DeadHelbramanimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.DeadEndRenderer;
@@ -179,6 +182,7 @@ import net.mcreator.craftnotaizai.client.renderer.ClayDragonRenderer;
 import net.mcreator.craftnotaizai.client.renderer.ChickenRenderer;
 import net.mcreator.craftnotaizai.client.renderer.ChastiefolTrueSpirtSpearRenderer;
 import net.mcreator.craftnotaizai.client.renderer.ChainExplosionV2Renderer;
+import net.mcreator.craftnotaizai.client.renderer.CathRenderer;
 import net.mcreator.craftnotaizai.client.renderer.CainBarzadAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.BusterIceRenderer;
 import net.mcreator.craftnotaizai.client.renderer.BulletSquallRenderer;
@@ -415,5 +419,9 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.FRAUDRIN_STORY.get(), FraudrinStoryRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.ZHIVAGO.get(), ZhivagoRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.DELDRY.get(), DeldryRenderer::new);
+		event.registerEntityRenderer(CraftNoTaizaiModEntities.WAILIO.get(), WailioRenderer::new);
+		event.registerEntityRenderer(CraftNoTaizaiModEntities.CATH.get(), CathRenderer::new);
+		event.registerEntityRenderer(CraftNoTaizaiModEntities.KALEIDOSCOPE_ENTITY.get(), KaleidoscopeEntityRenderer::new);
+		event.registerEntityRenderer(CraftNoTaizaiModEntities.DEATHPIERCE.get(), DeathpierceRenderer::new);
 	}
 }

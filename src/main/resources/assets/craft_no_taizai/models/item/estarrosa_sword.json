@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/estarrossa_sword",
+  "textures": {
+    "0": "craft_no_taizai:block/estarrossa_sword",
+    "particle": "craft_no_taizai:item/estarrossa_sword"
+  }
+}

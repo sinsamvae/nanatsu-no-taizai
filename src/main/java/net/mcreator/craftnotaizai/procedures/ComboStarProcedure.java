@@ -1,10 +1,5 @@
 package net.mcreator.craftnotaizai.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
-
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
@@ -15,26 +10,11 @@ import net.minecraft.world.damagesource.DamageSource;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 
-import javax.annotation.Nullable;
-
-@Mod.EventBusSubscriber
 public class ComboStarProcedure {
-	@SubscribeEvent
-	public static void onEntityAttacked(LivingAttackEvent event) {
-		if (event != null && event.getEntity() != null) {
-			execute(event, event.getSource(), event.getEntity(), event.getSource().getEntity());
-		}
-	}
-
 	public static void execute(DamageSource damagesource, Entity entity, Entity sourceentity) {
-		execute(null, damagesource, entity, sourceentity);
-	}
-
-	private static void execute(@Nullable Event event, DamageSource damagesource, Entity entity, Entity sourceentity) {
 		if (damagesource == null || entity == null || sourceentity == null)
 			return;
-		if (sourceentity instanceof Player && (sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).combostar == true
-				&& damagesource.is(DamageTypes.PLAYER_ATTACK)) {
+		if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).combostar && damagesource.is(DamageTypes.PLAYER_ATTACK)) {
 			{
 				double _setval = (sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).combostarcounter + 10;
 				sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -61,7 +41,7 @@ public class ComboStarProcedure {
 						(int) (Math.ceil(0.45 * (sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).combostarcounter) + 1),
 						(int) (Math.ceil(0.45 * (sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).hit) + 1), false, false));
 		}
-		if (entity instanceof Player && (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).combostar == true
+		if (entity instanceof Player && (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).combostar
 				&& !(damagesource.is(DamageTypes.FALL) || damagesource.is(DamageTypes.ON_FIRE) || damagesource.is(DamageTypes.DROWN))) {
 			{
 				double _setval = 0;

@@ -9,6 +9,9 @@ public class IstarPlayerEntersDimensionProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
+		double yTP = 0;
+		double xTP = 0;
+		double zTP = 0;
 		IstarSetUpProcedure.execute(world, entity);
 		if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Story).equals("Story37")) {
 			{

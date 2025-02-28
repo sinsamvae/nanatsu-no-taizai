@@ -408,12 +408,24 @@ public class CaveOfTrainingTimeLeftRenderProcedure {
 				LevelAccessor world = entity.level();
 				ResourceKey<Level> dimension = entity.level().dimension();
 				if ((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:cave_training"))) {
-					renderTexts(("Time Left: " + new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).training_kick)),
+					renderTexts(
+							("Waves: " + new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).waveNumber) + "/"
+									+ new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).MaxWave)),
 							210, 18, 0, 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255, 4);
+					if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).wave_timer > 0) {
+						renderTexts(("Next Wave:" + new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).wave_timer)),
+								380, 18, 0, 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255, 4);
+					}
 				}
 				if ((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:tower_of_trails"))) {
-					renderTexts(("Time Left: " + new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).training_kick)),
+					renderTexts(
+							("Waves: " + new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).waveNumber) + "/"
+									+ new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).MaxWave)),
 							210, 18, 0, 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255, 4);
+					if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).wave_timer > 0) {
+						renderTexts(("Next Wave: " + new java.text.DecimalFormat("##.##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).wave_timer)),
+								380, 18, 0, 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255, 4);
+					}
 				}
 			}
 			release();

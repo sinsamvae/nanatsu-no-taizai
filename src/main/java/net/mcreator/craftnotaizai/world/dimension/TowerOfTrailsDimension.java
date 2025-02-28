@@ -16,7 +16,6 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.client.renderer.DimensionSpecialEffects;
 
-import net.mcreator.craftnotaizai.procedures.TowerOfTrailsPlayerLeavesDimensionProcedure;
 import net.mcreator.craftnotaizai.procedures.TowerOfTrailsPlayerEntersDimensionProcedure;
 
 @Mod.EventBusSubscriber
@@ -48,11 +47,8 @@ public class TowerOfTrailsDimension {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		if (event.getFrom() == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:tower_of_trails"))) {
-			TowerOfTrailsPlayerLeavesDimensionProcedure.execute(entity);
-		}
 		if (event.getTo() == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("craft_no_taizai:tower_of_trails"))) {
-			TowerOfTrailsPlayerEntersDimensionProcedure.execute(world, y, entity);
+			TowerOfTrailsPlayerEntersDimensionProcedure.execute(world, entity);
 		}
 	}
 }

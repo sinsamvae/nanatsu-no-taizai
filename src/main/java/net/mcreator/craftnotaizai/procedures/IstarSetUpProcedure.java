@@ -1,14 +1,18 @@
 package net.mcreator.craftnotaizai.procedures;
 
+import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
+import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
+import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.data.worldgen.features.FeatureUtils;
-import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
+import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
 public class IstarSetUpProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
@@ -24,21 +28,38 @@ public class IstarSetUpProcedure {
 		entity.getPersistentData().putDouble("TPX", xTP);
 		entity.getPersistentData().putDouble("TPY", yTP);
 		entity.getPersistentData().putDouble("TPZ", zTP);
-		{
-			Entity _ent = entity;
-			_ent.teleportTo((entity.getPersistentData().getDouble("TPX")), (entity.getPersistentData().getDouble("TPY")), (entity.getPersistentData().getDouble("TPZ")));
-			if (_ent instanceof ServerPlayer _serverPlayer)
-				_serverPlayer.connection.teleport((entity.getPersistentData().getDouble("TPX")), (entity.getPersistentData().getDouble("TPY")), (entity.getPersistentData().getDouble("TPZ")), _ent.getYRot(), _ent.getXRot());
-		}
-		if (!(world instanceof ServerLevel _level7 && _level7.registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE).getHolderOrThrow(FeatureUtils.createKey("craft_no_taizai:istar_structure")).value().place(_level7,
-				_level7.getChunkSource().getGenerator(), _level7.getRandom(), BlockPos.containing(xTP - 103, yTP - 23, zTP - 175)))) {
-			if (!CraftNoTaizaiModVariables.MapVariables.get(world).Istar) {
-				if (world instanceof ServerLevel _level)
-					_level.registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE).getHolderOrThrow(FeatureUtils.createKey("craft_no_taizai:istar_structure")).value().place(_level, _level.getChunkSource().getGenerator(), _level.getRandom(),
-							BlockPos.containing(xTP - 103, yTP - 23, zTP - 175));
-				CraftNoTaizaiModVariables.MapVariables.get(world).Istar = true;
-				CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
+		CraftNoTaizaiMod.queueServerWork(15, () -> {
+			{
+				Entity _ent = entity;
+				_ent.teleportTo(197, 104, 254);
+				if (_ent instanceof ServerPlayer _serverPlayer)
+					_serverPlayer.connection.teleport(197, 104, 254, _ent.getYRot(), _ent.getXRot());
 			}
+		});
+		if (!CraftNoTaizaiModVariables.MapVariables.get(world).Istar) {
+			if (world instanceof ServerLevel _serverworld) {
+				StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craft_no_taizai", "istar_base"));
+				if (template != null) {
+					template.placeInWorld(_serverworld, BlockPos.containing(xTP, yTP, zTP), BlockPos.containing(xTP, yTP, zTP), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false),
+							_serverworld.random, 3);
+				}
+			}
+			if (world instanceof ServerLevel _serverworld) {
+				StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craft_no_taizai", "istar_2"));
+				if (template != null) {
+					template.placeInWorld(_serverworld, BlockPos.containing(xTP, yTP, zTP - 50), BlockPos.containing(xTP, yTP, zTP - 50), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false),
+							_serverworld.random, 3);
+				}
+			}
+			if (world instanceof ServerLevel _serverworld) {
+				StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craft_no_taizai", "istar_3"));
+				if (template != null) {
+					template.placeInWorld(_serverworld, BlockPos.containing(xTP, yTP, zTP - 105), BlockPos.containing(xTP, yTP, zTP - 105), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false),
+							_serverworld.random, 3);
+				}
+			}
+			CraftNoTaizaiModVariables.MapVariables.get(world).Istar = true;
+			CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 		}
 	}
 }

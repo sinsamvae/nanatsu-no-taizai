@@ -224,7 +224,7 @@ public class RenderSphereProcedure {
 						i = 0;
 						end();
 					}
-					if (target(1)) {
+					if (target(2)) {
 						renderShape(shape(), x, y, z, 0, 0, 0, 5, 5, 5, 255 << 24 | 255 << 16 | 255 << 8 | 255);
 						release();
 					}

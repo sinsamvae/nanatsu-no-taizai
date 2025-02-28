@@ -243,13 +243,10 @@ public class CraftNoTaizaiModVariables {
 			clone.istarX = original.istarX;
 			clone.istarY = original.istarY;
 			clone.istarZ = original.istarZ;
-			clone.cave_of_training_timer = original.cave_of_training_timer;
 			clone.training_kick = original.training_kick;
-			clone.cave_of_training_cd = original.cave_of_training_cd;
 			clone.cave_of_training = original.cave_of_training;
 			clone.training_id = original.training_id;
 			clone.tower_of_trails = original.tower_of_trails;
-			clone.tower_of_trails_cooldown = original.tower_of_trails_cooldown;
 			clone.istar_kills = original.istar_kills;
 			clone.HighSpeedRegeneration = original.HighSpeedRegeneration;
 			clone.agility_percentage_lower = original.agility_percentage_lower;
@@ -279,9 +276,6 @@ public class CraftNoTaizaiModVariables {
 			clone.purgatory_fire_overlay = original.purgatory_fire_overlay;
 			clone.cost_amount = original.cost_amount;
 			clone.the_ruler = original.the_ruler;
-			clone.trainingX = original.trainingX;
-			clone.trainingY = original.trainingY;
-			clone.trainingZ = original.trainingZ;
 			clone.demon_hearts = original.demon_hearts;
 			clone.defeat_bluedemon = original.defeat_bluedemon;
 			clone.demon = original.demon;
@@ -296,6 +290,17 @@ public class CraftNoTaizaiModVariables {
 			clone.kill_demons = original.kill_demons;
 			clone.logic_cords = original.logic_cords;
 			clone.string_cords = original.string_cords;
+			clone.Demon = original.Demon;
+			clone.Human = original.Human;
+			clone.Fairy = original.Fairy;
+			clone.Gaint = original.Gaint;
+			clone.waveNumber = original.waveNumber;
+			clone.remainingEnemies = original.remainingEnemies;
+			clone.MaxWave = original.MaxWave;
+			clone.wave_timer = original.wave_timer;
+			clone.spawn_cath = original.spawn_cath;
+			clone.istar_cooldown = original.istar_cooldown;
+			clone.Melody = original.Melody;
 			if (!event.isWasDeath()) {
 				clone.jumbvar = original.jumbvar;
 				clone.hijack = original.hijack;
@@ -735,13 +740,10 @@ public class CraftNoTaizaiModVariables {
 		public double istarX = 0;
 		public double istarY = 0;
 		public double istarZ = 0;
-		public double cave_of_training_timer = 0;
 		public double training_kick = 0;
-		public double cave_of_training_cd = 0;
 		public boolean cave_of_training = false;
 		public double training_id = 0;
 		public boolean tower_of_trails = false;
-		public double tower_of_trails_cooldown = 0;
 		public double istar_kills = 0;
 		public boolean hijack = false;
 		public boolean HighSpeedRegeneration = false;
@@ -772,9 +774,6 @@ public class CraftNoTaizaiModVariables {
 		public boolean purgatory_fire_overlay = false;
 		public double cost_amount = 0;
 		public boolean the_ruler = false;
-		public double trainingX = 0;
-		public double trainingY = 0;
-		public double trainingZ = 0;
 		public double demon_hearts = 0;
 		public double defeat_bluedemon = 0;
 		public boolean demon = false;
@@ -789,6 +788,17 @@ public class CraftNoTaizaiModVariables {
 		public double kill_demons = 0;
 		public boolean logic_cords = false;
 		public String string_cords = "";
+		public boolean Demon = false;
+		public boolean Human = false;
+		public boolean Fairy = false;
+		public boolean Gaint = false;
+		public double waveNumber = 0;
+		public double remainingEnemies = 0;
+		public double MaxWave = 0;
+		public double wave_timer = 0;
+		public boolean spawn_cath = false;
+		public double istar_cooldown = 0;
+		public double Melody = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -955,13 +965,10 @@ public class CraftNoTaizaiModVariables {
 			nbt.putDouble("istarX", istarX);
 			nbt.putDouble("istarY", istarY);
 			nbt.putDouble("istarZ", istarZ);
-			nbt.putDouble("cave_of_training_timer", cave_of_training_timer);
 			nbt.putDouble("training_kick", training_kick);
-			nbt.putDouble("cave_of_training_cd", cave_of_training_cd);
 			nbt.putBoolean("cave_of_training", cave_of_training);
 			nbt.putDouble("training_id", training_id);
 			nbt.putBoolean("tower_of_trails", tower_of_trails);
-			nbt.putDouble("tower_of_trails_cooldown", tower_of_trails_cooldown);
 			nbt.putDouble("istar_kills", istar_kills);
 			nbt.putBoolean("hijack", hijack);
 			nbt.putBoolean("HighSpeedRegeneration", HighSpeedRegeneration);
@@ -992,9 +999,6 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("purgatory_fire_overlay", purgatory_fire_overlay);
 			nbt.putDouble("cost_amount", cost_amount);
 			nbt.putBoolean("the_ruler", the_ruler);
-			nbt.putDouble("trainingX", trainingX);
-			nbt.putDouble("trainingY", trainingY);
-			nbt.putDouble("trainingZ", trainingZ);
 			nbt.putDouble("demon_hearts", demon_hearts);
 			nbt.putDouble("defeat_bluedemon", defeat_bluedemon);
 			nbt.putBoolean("demon", demon);
@@ -1009,6 +1013,17 @@ public class CraftNoTaizaiModVariables {
 			nbt.putDouble("kill_demons", kill_demons);
 			nbt.putBoolean("logic_cords", logic_cords);
 			nbt.putString("string_cords", string_cords);
+			nbt.putBoolean("Demon", Demon);
+			nbt.putBoolean("Human", Human);
+			nbt.putBoolean("Fairy", Fairy);
+			nbt.putBoolean("Gaint", Gaint);
+			nbt.putDouble("waveNumber", waveNumber);
+			nbt.putDouble("remainingEnemies", remainingEnemies);
+			nbt.putDouble("MaxWave", MaxWave);
+			nbt.putDouble("wave_timer", wave_timer);
+			nbt.putBoolean("spawn_cath", spawn_cath);
+			nbt.putDouble("istar_cooldown", istar_cooldown);
+			nbt.putDouble("Melody", Melody);
 			return nbt;
 		}
 
@@ -1178,13 +1193,10 @@ public class CraftNoTaizaiModVariables {
 			istarX = nbt.getDouble("istarX");
 			istarY = nbt.getDouble("istarY");
 			istarZ = nbt.getDouble("istarZ");
-			cave_of_training_timer = nbt.getDouble("cave_of_training_timer");
 			training_kick = nbt.getDouble("training_kick");
-			cave_of_training_cd = nbt.getDouble("cave_of_training_cd");
 			cave_of_training = nbt.getBoolean("cave_of_training");
 			training_id = nbt.getDouble("training_id");
 			tower_of_trails = nbt.getBoolean("tower_of_trails");
-			tower_of_trails_cooldown = nbt.getDouble("tower_of_trails_cooldown");
 			istar_kills = nbt.getDouble("istar_kills");
 			hijack = nbt.getBoolean("hijack");
 			HighSpeedRegeneration = nbt.getBoolean("HighSpeedRegeneration");
@@ -1215,9 +1227,6 @@ public class CraftNoTaizaiModVariables {
 			purgatory_fire_overlay = nbt.getBoolean("purgatory_fire_overlay");
 			cost_amount = nbt.getDouble("cost_amount");
 			the_ruler = nbt.getBoolean("the_ruler");
-			trainingX = nbt.getDouble("trainingX");
-			trainingY = nbt.getDouble("trainingY");
-			trainingZ = nbt.getDouble("trainingZ");
 			demon_hearts = nbt.getDouble("demon_hearts");
 			defeat_bluedemon = nbt.getDouble("defeat_bluedemon");
 			demon = nbt.getBoolean("demon");
@@ -1232,6 +1241,17 @@ public class CraftNoTaizaiModVariables {
 			kill_demons = nbt.getDouble("kill_demons");
 			logic_cords = nbt.getBoolean("logic_cords");
 			string_cords = nbt.getString("string_cords");
+			Demon = nbt.getBoolean("Demon");
+			Human = nbt.getBoolean("Human");
+			Fairy = nbt.getBoolean("Fairy");
+			Gaint = nbt.getBoolean("Gaint");
+			waveNumber = nbt.getDouble("waveNumber");
+			remainingEnemies = nbt.getDouble("remainingEnemies");
+			MaxWave = nbt.getDouble("MaxWave");
+			wave_timer = nbt.getDouble("wave_timer");
+			spawn_cath = nbt.getBoolean("spawn_cath");
+			istar_cooldown = nbt.getDouble("istar_cooldown");
+			Melody = nbt.getDouble("Melody");
 		}
 	}
 
@@ -1423,13 +1443,10 @@ public class CraftNoTaizaiModVariables {
 					variables.istarX = message.data.istarX;
 					variables.istarY = message.data.istarY;
 					variables.istarZ = message.data.istarZ;
-					variables.cave_of_training_timer = message.data.cave_of_training_timer;
 					variables.training_kick = message.data.training_kick;
-					variables.cave_of_training_cd = message.data.cave_of_training_cd;
 					variables.cave_of_training = message.data.cave_of_training;
 					variables.training_id = message.data.training_id;
 					variables.tower_of_trails = message.data.tower_of_trails;
-					variables.tower_of_trails_cooldown = message.data.tower_of_trails_cooldown;
 					variables.istar_kills = message.data.istar_kills;
 					variables.hijack = message.data.hijack;
 					variables.HighSpeedRegeneration = message.data.HighSpeedRegeneration;
@@ -1460,9 +1477,6 @@ public class CraftNoTaizaiModVariables {
 					variables.purgatory_fire_overlay = message.data.purgatory_fire_overlay;
 					variables.cost_amount = message.data.cost_amount;
 					variables.the_ruler = message.data.the_ruler;
-					variables.trainingX = message.data.trainingX;
-					variables.trainingY = message.data.trainingY;
-					variables.trainingZ = message.data.trainingZ;
 					variables.demon_hearts = message.data.demon_hearts;
 					variables.defeat_bluedemon = message.data.defeat_bluedemon;
 					variables.demon = message.data.demon;
@@ -1477,6 +1491,17 @@ public class CraftNoTaizaiModVariables {
 					variables.kill_demons = message.data.kill_demons;
 					variables.logic_cords = message.data.logic_cords;
 					variables.string_cords = message.data.string_cords;
+					variables.Demon = message.data.Demon;
+					variables.Human = message.data.Human;
+					variables.Fairy = message.data.Fairy;
+					variables.Gaint = message.data.Gaint;
+					variables.waveNumber = message.data.waveNumber;
+					variables.remainingEnemies = message.data.remainingEnemies;
+					variables.MaxWave = message.data.MaxWave;
+					variables.wave_timer = message.data.wave_timer;
+					variables.spawn_cath = message.data.spawn_cath;
+					variables.istar_cooldown = message.data.istar_cooldown;
+					variables.Melody = message.data.Melody;
 				}
 			});
 			context.setPacketHandled(true);

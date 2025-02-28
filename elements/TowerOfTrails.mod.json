@@ -24,9 +24,6 @@
     "onPlayerEntersDimension": {
       "name": "TowerOfTrailsPlayerEntersDimension"
     },
-    "onPlayerLeavesDimension": {
-      "name": "TowerOfTrailsPlayerLeavesDimension"
-    },
     "portalFrame": {
       "value": ""
     },

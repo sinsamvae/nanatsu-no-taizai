@@ -23,6 +23,7 @@ import net.mcreator.craftnotaizai.entity.WindShotProjectileEntity;
 import net.mcreator.craftnotaizai.entity.WickedBiteEntity;
 import net.mcreator.craftnotaizai.entity.WhirlShockProjectileEntity;
 import net.mcreator.craftnotaizai.entity.WeinheidtAnimatedEntity;
+import net.mcreator.craftnotaizai.entity.WailioEntity;
 import net.mcreator.craftnotaizai.entity.VivianAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.VineEntity;
 import net.mcreator.craftnotaizai.entity.TyrantDragonEntity;
@@ -85,6 +86,7 @@ import net.mcreator.craftnotaizai.entity.KingStory1Entity;
 import net.mcreator.craftnotaizai.entity.KingBossAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.KillSwitchProjectileEntity;
 import net.mcreator.craftnotaizai.entity.KamichigiriProjectileEntity;
+import net.mcreator.craftnotaizai.entity.KaleidoscopeEntityEntity;
 import net.mcreator.craftnotaizai.entity.JumanjuEntityEntity;
 import net.mcreator.craftnotaizai.entity.JillianAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.JigumoEntity;
@@ -183,6 +185,7 @@ import net.mcreator.craftnotaizai.entity.DemonHendricksonAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.DeldryEntity;
 import net.mcreator.craftnotaizai.entity.DeireriStoryEntity;
 import net.mcreator.craftnotaizai.entity.DeireriStory2Entity;
+import net.mcreator.craftnotaizai.entity.DeathpierceEntity;
 import net.mcreator.craftnotaizai.entity.DeathThornEntity;
 import net.mcreator.craftnotaizai.entity.DeadHelbramanimatedEntity;
 import net.mcreator.craftnotaizai.entity.DeadEndEntity;
@@ -198,6 +201,7 @@ import net.mcreator.craftnotaizai.entity.ClayDragonEntity;
 import net.mcreator.craftnotaizai.entity.ChickenEntity;
 import net.mcreator.craftnotaizai.entity.ChastiefolTrueSpirtSpearEntity;
 import net.mcreator.craftnotaizai.entity.ChainExplosionV2Entity;
+import net.mcreator.craftnotaizai.entity.CathEntity;
 import net.mcreator.craftnotaizai.entity.CannonEntity;
 import net.mcreator.craftnotaizai.entity.CainBarzadAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.BusterIceEntity;
@@ -244,7 +248,7 @@ public class CraftNoTaizaiModEntities {
 
 					.sized(2.5f, 4.5f));
 	public static final RegistryObject<EntityType<GeckolibKrakenEntity>> GECKOLIB_KRAKEN = register("geckolib_kraken",
-			EntityType.Builder.<GeckolibKrakenEntity>of(GeckolibKrakenEntity::new, MobCategory.WATER_AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GeckolibKrakenEntity::new)
+			EntityType.Builder.<GeckolibKrakenEntity>of(GeckolibKrakenEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GeckolibKrakenEntity::new)
 
 					.sized(2f, 7f));
 	public static final RegistryObject<EntityType<RedDemonGeckolibEntity>> RED_DEMON_GECKOLIB = register("red_demon_geckolib",
@@ -909,6 +913,22 @@ public class CraftNoTaizaiModEntities {
 			EntityType.Builder.<DeldryEntity>of(DeldryEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DeldryEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<WailioEntity>> WAILIO = register("wailio",
+			EntityType.Builder.<WailioEntity>of(WailioEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WailioEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<CathEntity>> CATH = register("cath",
+			EntityType.Builder.<CathEntity>of(CathEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CathEntity::new)
+
+					.sized(0.6f, 0.7f));
+	public static final RegistryObject<EntityType<KaleidoscopeEntityEntity>> KALEIDOSCOPE_ENTITY = register("kaleidoscope_entity",
+			EntityType.Builder.<KaleidoscopeEntityEntity>of(KaleidoscopeEntityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(KaleidoscopeEntityEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<DeathpierceEntity>> DEATHPIERCE = register("deathpierce",
+			EntityType.Builder.<DeathpierceEntity>of(DeathpierceEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DeathpierceEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -1070,6 +1090,10 @@ public class CraftNoTaizaiModEntities {
 			FraudrinStoryEntity.init();
 			ZhivagoEntity.init();
 			DeldryEntity.init();
+			WailioEntity.init();
+			CathEntity.init();
+			KaleidoscopeEntityEntity.init();
+			DeathpierceEntity.init();
 		});
 	}
 
@@ -1228,5 +1252,9 @@ public class CraftNoTaizaiModEntities {
 		event.put(FRAUDRIN_STORY.get(), FraudrinStoryEntity.createAttributes().build());
 		event.put(ZHIVAGO.get(), ZhivagoEntity.createAttributes().build());
 		event.put(DELDRY.get(), DeldryEntity.createAttributes().build());
+		event.put(WAILIO.get(), WailioEntity.createAttributes().build());
+		event.put(CATH.get(), CathEntity.createAttributes().build());
+		event.put(KALEIDOSCOPE_ENTITY.get(), KaleidoscopeEntityEntity.createAttributes().build());
+		event.put(DEATHPIERCE.get(), DeathpierceEntity.createAttributes().build());
 	}
 }

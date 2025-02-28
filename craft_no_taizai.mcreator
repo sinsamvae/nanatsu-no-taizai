@@ -2804,6 +2804,10 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -2837,10 +2841,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -3790,6 +3790,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -4102,45 +4106,6 @@
         ]
       },
       "path": "~/Magic Abilities/sevendeadlysinsmagic/Invasion/Nightmare Teller"
-    },
-    {
-      "name": "BreakerOff",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "breaker_off",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/BreakerOffProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Magic Abilities/sevendeadlysinsmagic/Invasion/Breaker Off"
     },
     {
       "name": "KillSwitchWhileProjectileFlyingTick",
@@ -4770,6 +4735,7 @@
         "files": [
           "src/main/java/net/mcreator/craftnotaizai/client/renderer/GeckolibKrakenRenderer.java",
           "src/main/java/net/mcreator/craftnotaizai/entity/model/GeckolibKrakenModel.java",
+          "src/main/resources/data/craft_no_taizai/forge/biome_modifier/geckolib_kraken_biome_modifier.json",
           "src/main/resources/assets/craft_no_taizai/models/item/geckolib_kraken_spawn_egg.json",
           "src/main/java/net/mcreator/craftnotaizai/entity/GeckolibKrakenEntity.java"
         ]
@@ -9722,25 +9688,6 @@
       "path": "~/Block/sleepingforestblocks"
     },
     {
-      "name": "Spawn",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spawn",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/SpawnProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/dimensions/CapitalOfTheDead"
-    },
-    {
       "name": "LuigiOnEntityTickUpdate",
       "type": "procedure",
       "compiles": true,
@@ -11005,25 +10952,6 @@
       "path": "~/Magic Abilities/HumanMagic/Gravity Manipulation"
     },
     {
-      "name": "GravityManiplationReachZero",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gravity_maniplation_reach_zero",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/GravityManiplationReachZeroProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Magic Abilities/HumanMagic/Gravity Manipulation/Gravity Ten"
-    },
-    {
       "name": "ChangeMagicGravity",
       "type": "procedure",
       "compiles": true,
@@ -11074,25 +11002,6 @@
           {
             "name": "world",
             "type": "world"
-          }
-        ]
-      },
-      "path": "~/Magic Abilities/HumanMagic/Gravity Manipulation/Hyper Gravity"
-    },
-    {
-      "name": "HyperGravityReachZero",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "hyper_gravity_reach_zero",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/HyperGravityReachZeroProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -13169,7 +13078,7 @@
           "src/main/resources/assets/craft_no_taizai/blockstates/fairy_king_leave.json"
         ]
       },
-      "path": "~/Block/fairytree"
+      "path": "~/Block/fairytree/FairyKingLeaves"
     },
     {
       "name": "FairyKingForest",
@@ -16107,41 +16016,6 @@
       "path": "~/var"
     },
     {
-      "name": "PhysicalFullCounter",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "physical_full_counter",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/PhysicalFullCounterProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "damagesource",
-            "type": "damagesource"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "amount",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Magic Abilities/ten commandments/Full Counter/Full Counter"
-    },
-    {
       "name": "ChangeMagicFullConter",
       "type": "procedure",
       "compiles": true,
@@ -16384,25 +16258,6 @@
         ]
       },
       "path": "~/Commands/magic/Set_Magic_Demon"
-    },
-    {
-      "name": "CriticalOverRender",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "critical_over_render",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/CriticalOverRenderProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Magic Abilities/ten commandments/Critical Over/CriticalOver"
     },
     {
       "name": "SetSlotButton",
@@ -17283,8 +17138,8 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "itemstack",
+            "type": "itemstack"
           },
           {
             "name": "x",
@@ -17450,8 +17305,8 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "itemstack",
+            "type": "itemstack"
           },
           {
             "name": "x",
@@ -17926,8 +17781,8 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "itemstack",
+            "type": "itemstack"
           },
           {
             "name": "x",
@@ -18654,41 +18509,6 @@
       "path": "~/Recipe"
     },
     {
-      "name": "FullCounter",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "full_counter",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/FullCounterProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "damagesource",
-            "type": "damagesource"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "amount",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Magic Abilities/sevendeadlysinsmagic/Full_Counter/FullCounter"
-    },
-    {
       "name": "OpenSideQuestGui",
       "type": "procedure",
       "compiles": true,
@@ -18967,19 +18787,6 @@
         ]
       },
       "path": "~/Recipe/FairyTreeRecipe"
-    },
-    {
-      "name": "FairyKingLeavesLoot",
-      "type": "loottable",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fairy_king_leaves_loot",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craft_no_taizai/loot_tables/blocks/fairykingleaves.json"
-        ]
-      },
-      "path": "~/Block/fairytree"
     },
     {
       "name": "FairyTreeFence",
@@ -25139,18 +24946,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -25172,18 +24967,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -27172,25 +26955,6 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftnotaizai/procedures/GodKeyBindProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Magic Abilities/God"
-    },
-    {
-      "name": "GodMana",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "god_mana",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/GodManaProcedure.java"
         ],
         "dependencies": [
           {
@@ -29215,7 +28979,7 @@
           "src/main/java/net/mcreator/craftnotaizai/world/dimension/CaveTrainingDimension.java"
         ]
       },
-      "path": "~/dimensions/Istar/CaveTraining/CaveDimension"
+      "path": "~/dimensions/Istar/CaveTraining"
     },
     {
       "name": "CaveTrainingBiome",
@@ -29246,16 +29010,12 @@
             "type": "entity"
           },
           {
-            "name": "y",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
         ]
       },
-      "path": "~/dimensions/Istar/CaveTraining/CaveDimension"
+      "path": "~/dimensions/Istar/CaveTraining"
     },
     {
       "name": "CaveOfTrainingSetUp",
@@ -29278,7 +29038,7 @@
           }
         ]
       },
-      "path": "~/dimensions/Istar/CaveTraining/CaveDimension"
+      "path": "~/dimensions/Istar/CaveTraining"
     },
     {
       "name": "JennaGui",
@@ -29348,41 +29108,6 @@
         ]
       },
       "path": "~/entities/Istar/Jenna"
-    },
-    {
-      "name": "CaveTrainingSpawnMob",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cave_training_spawn_mob",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/CaveTrainingSpawnMobProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/dimensions/Istar/CaveTraining"
     },
     {
       "name": "ReturnCubps1",
@@ -29584,25 +29309,6 @@
       "path": "~/Gui/MagicMenu/Page"
     },
     {
-      "name": "CaveTrainingPlayerLeavesDimension",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cave_training_player_leaves_dimension",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/CaveTrainingPlayerLeavesDimensionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/dimensions/Istar/CaveTraining/CaveDimension"
-    },
-    {
       "name": "MossDragon",
       "type": "animatedentity",
       "compiles": true,
@@ -29634,25 +29340,6 @@
         ]
       },
       "path": "~/entities/Hard/very_hard/TyrantDragon"
-    },
-    {
-      "name": "CaveOfTrainingCoolDown",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cave_of_training_cool_down",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/CaveOfTrainingCoolDownProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/dimensions/Istar/CaveTraining"
     },
     {
       "name": "RestartTimer",
@@ -29735,33 +29422,6 @@
         "dependencies": []
       },
       "path": "~/overlay"
-    },
-    {
-      "name": "CaveofTrainingSpawn",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "caveof_training_spawn",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/CaveofTrainingSpawnProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/dimensions/Istar"
     },
     {
       "name": "DestroyFourElementsProjectileHitsLivingEntity",
@@ -30078,10 +29738,6 @@
             "type": "entity"
           },
           {
-            "name": "y",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -30107,63 +29763,6 @@
         ]
       },
       "path": "~/entities/Istar/Zaneri"
-    },
-    {
-      "name": "TowerOfTrailsPlayerLeavesDimension",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "tower_of_trails_player_leaves_dimension",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/TowerOfTrailsPlayerLeavesDimensionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/dimensions/Istar/TowerOfTrails"
-    },
-    {
-      "name": "CaveAndTowerKick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cave_and_tower_kick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/CaveAndTowerKickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/dimensions/Istar"
-    },
-    {
-      "name": "ResetTowerCooldown",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "reset_tower_cooldown",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/ResetTowerCooldownProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
-        ]
-      },
-      "path": "~/Commands/training"
     },
     {
       "name": "TheoGui",
@@ -36050,20 +35649,6 @@
       "path": "~/Recipe/Armor/EscanorArmorTavern"
     },
     {
-      "name": "IstarStructure",
-      "type": "feature",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "istar_structure",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craft_no_taizai/worldgen/configured_feature/istar_structure.json"
-        ],
-        "has_nbt_structure": true
-      },
-      "path": "~/dimensions/Istar/IstarSetUp"
-    },
-    {
       "name": "PurgatoryFeature",
       "type": "feature",
       "compiles": true,
@@ -38677,7 +38262,7 @@
           "src/main/resources/assets/craft_no_taizai/models/item/deldry_spawn_egg.json"
         ]
       },
-      "path": "~/entities/Normal/very_hard/Deldry"
+      "path": "~/entities/Normal/hard/Deldry"
     },
     {
       "name": "LoveDriveEffect",
@@ -38725,7 +38310,7 @@
           }
         ]
       },
-      "path": "~/entities/Normal/very_hard/Deldry"
+      "path": "~/entities/Normal/hard/Deldry"
     },
     {
       "name": "PhysicalHuntSkill",
@@ -39298,6 +38883,492 @@
         ]
       },
       "path": "~/var"
+    },
+    {
+      "name": "EscanorArmor2",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "escanor_armor_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_no_taizai/models/item/escanor_armor_2_chestplate.json",
+          "src/main/java/net/mcreator/craftnotaizai/item/EscanorArmor2Item.java",
+          "src/main/resources/assets/craft_no_taizai/models/item/escanor_armor_2_leggings.json"
+        ]
+      },
+      "path": "~/armor"
+    },
+    {
+      "name": "SetRaceLogic",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_race_logic",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/SetRaceLogicProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/races"
+    },
+    {
+      "name": "SetSubRace",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_sub_race",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/SetSubRaceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/races"
+    },
+    {
+      "name": "Wailio",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wailio",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/entity/WailioEntity.java",
+          "src/main/java/net/mcreator/craftnotaizai/client/renderer/WailioRenderer.java",
+          "src/main/java/net/mcreator/craftnotaizai/entity/model/WailioModel.java",
+          "src/main/resources/data/craft_no_taizai/forge/biome_modifier/wailio_biome_modifier.json",
+          "src/main/resources/assets/craft_no_taizai/models/item/wailio_spawn_egg.json"
+        ]
+      },
+      "path": "~/entities/Normal/normal/Wailio"
+    },
+    {
+      "name": "IstarTrainingUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "istar_training_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/IstarTrainingUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/dimensions/Istar"
+    },
+    {
+      "name": "IstarStartWave",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "istar_start_wave",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/IstarStartWaveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/dimensions/Istar"
+    },
+    {
+      "name": "IstarEntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "istar_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/IstarEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/dimensions/Istar"
+    },
+    {
+      "name": "IstarCoolDown",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "istar_cool_down",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/IstarCoolDownProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/dimensions/Istar"
+    },
+    {
+      "name": "Cath",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cath",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/entity/model/CathModel.java",
+          "src/main/java/net/mcreator/craftnotaizai/entity/CathEntity.java",
+          "src/main/java/net/mcreator/craftnotaizai/client/renderer/CathRenderer.java",
+          "src/main/resources/assets/craft_no_taizai/models/item/cath_spawn_egg.json"
+        ]
+      },
+      "path": "~/entities/Hard/very_hard/Cath"
+    },
+    {
+      "name": "CathRightClickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cath_right_clicked_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/CathRightClickedOnEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/entities/Hard/very_hard/Cath"
+    },
+    {
+      "name": "CathOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cath_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/CathOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/entities/Hard/very_hard/Cath"
+    },
+    {
+      "name": "EscanorGolenArmorChestPlate",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "escanor_golen_armor_chest_plate",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_no_taizai/recipes/escanor_golen_armor_chest_plate.json"
+        ]
+      },
+      "path": "~/Recipe/Armor/Season1/Seven Deadly Sins Armor/Escanor"
+    },
+    {
+      "name": "EscanorGolenArmorLegginsRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "escanor_golen_armor_leggins_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_no_taizai/recipes/escanor_golen_armor_leggins_recipe.json"
+        ]
+      },
+      "path": "~/Recipe/Armor/Season1/Seven Deadly Sins Armor/Escanor"
+    },
+    {
+      "name": "KaleidoscopeEntity",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kaleidoscope_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/client/renderer/KaleidoscopeEntityRenderer.java",
+          "src/main/java/net/mcreator/craftnotaizai/entity/KaleidoscopeEntityEntity.java",
+          "src/main/resources/assets/craft_no_taizai/models/item/kaleidoscope_entity_spawn_egg.json"
+        ]
+      },
+      "path": "~/Magic Abilities/sevendeadlysinsmagic/Invasion/Kaleidoscope"
+    },
+    {
+      "name": "KaleidoscopeRender",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kaleidoscope_render",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/KaleidoscopeRenderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic Abilities/sevendeadlysinsmagic/Invasion/Kaleidoscope"
+    },
+    {
+      "name": "KaleidoscopeSkill",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kaleidoscope_skill",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/KaleidoscopeSkillProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Magic Abilities/sevendeadlysinsmagic/Invasion/Kaleidoscope"
+    },
+    {
+      "name": "WaterEntitySpawns",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_entity_spawns",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/WaterEntitySpawnsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/dimensions"
+    },
+    {
+      "name": "EstarrosaSword",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "estarrosa_sword",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craft_no_taizai/models/item/estarrosa_sword.json",
+          "src/main/java/net/mcreator/craftnotaizai/item/EstarrosaSwordItem.java"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "TrueSpirtSpearAura",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "true_spirt_spear_aura",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/TrueSpirtSpearAuraProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/races/fairyclan/TrueSpiritSpear"
+    },
+    {
+      "name": "Deathpierce",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deathpierce",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/entity/DeathpierceEntity.java",
+          "src/main/java/net/mcreator/craftnotaizai/client/renderer/DeathpierceRenderer.java",
+          "src/main/java/net/mcreator/craftnotaizai/entity/model/DeathpierceModel.java",
+          "src/main/resources/assets/craft_no_taizai/models/item/deathpierce_spawn_egg.json",
+          "src/main/resources/data/craft_no_taizai/forge/biome_modifier/deathpierce_biome_modifier.json"
+        ]
+      },
+      "path": "~/entities/Hard/weak/Death Pierce"
+    },
+    {
+      "name": "DeathpierceOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deathpierce_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/DeathpierceOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/entities/Hard/weak/Death Pierce"
+    },
+    {
+      "name": "FairyKingLeaveBlockDestroyedByPlayer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_king_leave_block_destroyed_by_player",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/FairyKingLeaveBlockDestroyedByPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Block/fairytree/FairyKingLeaves"
+    },
+    {
+      "name": "FairyKingLeaveLootTabel",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fairy_king_leave_loot_tabel",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craft_no_taizai/loot_tables/blocks/fairykingleave.json"
+        ]
+      },
+      "path": "~/Block/fairytree/FairyKingLeaves"
     }
   ],
   "variable_elements": [
@@ -40424,19 +40495,7 @@
       "value": "false"
     },
     {
-      "name": "cave_of_training_timer",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
       "name": "training_kick",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "cave_of_training_cd",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
@@ -40458,12 +40517,6 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
-    },
-    {
-      "name": "tower_of_trails_cooldown",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
     },
     {
       "name": "istar_kills",
@@ -40682,24 +40735,6 @@
       "value": "false"
     },
     {
-      "name": "trainingX",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "trainingY",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "trainingZ",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
       "name": "demon_hearts",
       "type": "number",
       "scope": "player_persistent",
@@ -40782,6 +40817,72 @@
       "type": "string",
       "scope": "player_persistent",
       "value": ""
+    },
+    {
+      "name": "Demon",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "Human",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "Fairy",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "Gaint",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "waveNumber",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "remainingEnemies",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "MaxWave",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "wave_timer",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "spawn_cath",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "istar_cooldown",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Melody",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -41064,9 +41165,6 @@
     "BLOCKS:minecraft:replaceable": [
       "~CUSTOM:GlowBlock"
     ],
-    "BLOCKS:minecraft:mineable/hoe": [
-      "~CUSTOM:FairyKingLeaves"
-    ],
     "DAMAGE_TYPES:mod:magic_dmg": [
       "CUSTOM:ManaDmg",
       "CUSTOM:EarthMagic",
@@ -41075,6 +41173,10 @@
       "CUSTOM:LightningMagic",
       "CUSTOM:WaterMagic",
       "CUSTOM:WindMagic"
+    ],
+    "BLOCKS:minecraft:mineable/hoe": [
+      "~CUSTOM:FairyKingLeave",
+      "~CUSTOM:FairyKingLeaves"
     ],
     "ENTITIES:minecraft:demon": [
       "CUSTOM:RedDemonGeckolib",
@@ -41141,7 +41243,8 @@
       "CUSTOM:GigaFall",
       "CUSTOM:GigaPick",
       "CUSTOM:OminousNebulaEnitiy",
-      "CUSTOM:CocoonOfDarkness"
+      "CUSTOM:CocoonOfDarkness",
+      "CUSTOM:SunFlowerTrueSpirtSpear"
     ],
     "ENTITIES:mod:giant": [
       "CUSTOM:DumblebbasAnimated",
@@ -41181,7 +41284,8 @@
       "CUSTOM:EarthCrawler",
       "CUSTOM:ClayDragon",
       "CUSTOM:Troll",
-      "CUSTOM:TyrantDragon"
+      "CUSTOM:TyrantDragon",
+      "CUSTOM:Deathpierce"
     ],
     "ENTITIES:mod:tamed_skills": [
       "CUSTOM:PhysicalClone",
@@ -41203,6 +41307,7 @@
       "~CUSTOM:FairyTreeStaires"
     ],
     "ITEMS:minecraft:swords": [
+      "~CUSTOM:EstarrosaSword",
       "~CUSTOM:ZeldrisSword",
       "~CUSTOM:Basquias",
       "~CUSTOM:DoubleSidedSpear",
@@ -41404,7 +41509,11 @@
       "CUSTOM:GloxiniaStory2",
       "CUSTOM:ZeldrisStory",
       "CUSTOM:EstarossaStory",
-      "CUSTOM:EstarrossaStory"
+      "CUSTOM:EstarrossaStory",
+      "CUSTOM:Zhivago",
+      "CUSTOM:Deldry",
+      "CUSTOM:Wailio",
+      "CUSTOM:Deathpierce"
     ],
     "ITEMS:mod:uncommon_clover_trades": [
       "CUSTOM:ChickenMatangoMushRoom",
@@ -41859,6 +41968,7 @@
       "item.craft_no_taizai.soldier_armor_helmet": "Soldier Helmet",
       "entity.craft_no_taizai.monspeit_story_2": "Monspeit",
       "item.craft_no_taizai.merlin_armor_chest_plate_chestplate": "Merlin Chestplate",
+      "item.craft_no_taizai.estarrosa_sword": "Estarrosa_Sword",
       "biome.craft_no_taizai.istar_biome": "Istar Biome",
       "gui.craft_no_taizai.giant_clan.label_40_spirit": "- Spirit: 45 to 60",
       "item.craft_no_taizai.earth_golem_spawn_egg": "Earth Golem Spawn Egg",
@@ -41906,6 +42016,7 @@
       "advancements.defeat_merlin.descr": "Defeat The Sin Of Gluttony",
       "entity.craft_no_taizai.dreyfus_animated": "Dreyfus",
       "gui.craft_no_taizai.story_board.label_ep_16_deathtrap_maze": "EP 16: Death-Trap Maze",
+      "item.craft_no_taizai.escanor_armor_2_chestplate": "Escanor Armor ChestPlate",
       "gui.craft_no_taizai.story_board.label_ep_6_part_2": "EP 6 Part 2:The Poem Of Beginning",
       "block.craft_no_taizai.fairy_king_leaves": "Fairy King Leave",
       "entity.craft_no_taizai.jillian_animated": "Jillian",
@@ -41954,6 +42065,7 @@
       "gui.craft_no_taizai.story_board.label_obtain_coffin_of_eternal_darknes": "Obtain Coffin Of Eternal Darkness",
       "item.craft_no_taizai.soldier_armor_leggings": "Soldier Leggings",
       "item.craft_no_taizai.hugo_animated_spawn_egg": "Hugo Spawn Egg",
+      "entity.craft_no_taizai.deathpierce": "Deathpierce",
       "gui.craft_no_taizai.horn_of_cernunos_gui.label_seven_deadly_sins_dragon_sin_me": "Seven Deadly Sins Dragon Sin, Meliodas",
       "item.craft_no_taizai.red_knight_armor_chestplate": "RedKnight Chestplate",
       "gui.craft_no_taizai.jenna_gui.label_do_you_accept": "Do you Accept",
@@ -42050,6 +42162,7 @@
       "entity.craft_no_taizai.galand_over": "Galand",
       "item.craft_no_taizai.drole_story_2_spawn_egg": "Drole Spawn Egg",
       "item.craft_no_taizai.hendrickson_animated_spawn_egg": "Hendrickson Spawn Egg",
+      "item.craft_no_taizai.wailio_spawn_egg": "Wailio Spawn Egg",
       "entity.craft_no_taizai.gray_road_story_2": "Gray Road",
       "item.craft_no_taizai.moon_rose_spawn_egg": "Moon Rose Spawn Egg",
       "gui.craft_no_taizai.story_board.label_melioddas_must_now_face_the_rema": "Melioddas must now face the remaining Ten Commandments ",
@@ -42064,6 +42177,7 @@
       "entity.craft_no_taizai.gustaf_animated": "Gustaf Animated",
       "item_group.craft_no_taizai.armor": "Craft No Taizai Armor",
       "block.craft_no_taizai.purgatory_block": "Purgatory",
+      "entity.craft_no_taizai.cath": "Cath",
       "entity.craft_no_taizai.black_out": "Black Out",
       "entity.craft_no_taizai.fraudrin_story": "Fraudrin Story",
       "block.craft_no_taizai.areafence": "Areafence",
@@ -42081,6 +42195,7 @@
       "gui.craft_no_taizai.human_clan.button_empty": "\u003e",
       "item.craft_no_taizai.blue_demon_spawn_egg": "Blue Demon Spawn Egg",
       "subtitles.red_demon_idle": "",
+      "item.craft_no_taizai.deathpierce_spawn_egg": "Deathpierce Spawn Egg",
       "gui.craft_no_taizai.story_board.label_the_land_as_the_seven_deadly_sin": "The land as the Seven Deadly Sins",
       "gui.craft_no_taizai.story_board.label_to_destory_those_in_their_path1": "to destory those in their path",
       "gui.craft_no_taizai.story_board.label_defeat_corrupted_jericho": "Defeat Corrupted Jericho",
@@ -42249,6 +42364,7 @@
       "gui.craft_no_taizai.story_board.label_roun_1": "First round challanger taizoo appears",
       "item.craft_no_taizai.cider_mug": "Cider ale",
       "entity.craft_no_taizai.diane_animated": "Diane",
+      "entity.craft_no_taizai.kaleidoscope_entity": "Kaleidoscope",
       "entity.craft_no_taizai.drole": "Drole",
       "gui.craft_no_taizai.guild_accept_gui.label_accept": "ACCEPT",
       "gui.craft_no_taizai.story_board.label_capital_of_the_dead": "Capital of the Dead",
@@ -42390,6 +42506,7 @@
       "gui.craft_no_taizai.story_board.label_defeat_15_giants": "Defeat 15 Giants Located Desert Biome",
       "subtitles.cure_angle_walk": "",
       "entity.craft_no_taizai.servant": "Servant",
+      "item.craft_no_taizai.escanor_armor_2_leggings": "Escanor Armor 2 Leggings",
       "item.craft_no_taizai.andre_demon_form_spawn_egg": "Andre Demon Form Spawn Egg",
       "item.craft_no_taizai.dogedo_spawn_egg": "Dogedo Spawn Egg",
       "gui.craft_no_taizai.story_board.label_against_formidable_magical_power": "against formidable magical powers.",
@@ -42408,7 +42525,7 @@
       "gui.craft_no_taizai.demon_stat.label_strength": "Strength",
       "item.craft_no_taizai.andre_armor_chestplate": "Andre Chestplate",
       "item.craft_no_taizai.gloxinia_story_2_spawn_egg": "Gloxinia Spawn Egg",
-      "gui.craft_no_taizai.story_board.label_holy_knights_they_were_known_t": "Holy Knights",
+      "gui.craft_no_taizai.story_board.label_holy_knights_they_were_known_t": "Holy Knights They were known throughout",
       "entity.craft_no_taizai.matrona": "Matrona",
       "advancements.sapphire.title": "Sapphire",
       "entity.craft_no_taizai.goddess_bless_entity": "Goddess Bless Entity",
@@ -42525,6 +42642,7 @@
       "item.craft_no_taizai.cooked_dusk_meat": "Dusk Meat",
       "entity.craft_no_taizai.gloxina_boss": "Gloxina",
       "item.craft_no_taizai.acid_twower_mob_spawn_egg": "Acid Twower Mob Spawn Egg",
+      "entity.craft_no_taizai.wailio": "Wailio",
       "gui.craft_no_taizai.story_board.label_ep_11_father_son": "EP 11: Father \u0026 Son",
       "gui.craft_no_taizai.story_board.label_when_it_seems_the_seven_deadly_s": "When it seems the Seven Deadly Sins",
       "gui.craft_no_taizai.magic_menu.tooltip_goddess": "Goddess",
@@ -42555,6 +42673,7 @@
       "item.craft_no_taizai.gowther_outfit_chestplate": "Gowther Shirt",
       "item.craft_no_taizai.saw_sword": "Saw Sword",
       "gui.craft_no_taizai.side_quest_gui.label_claim": "CLAIM",
+      "gui.craft_no_taizai.story_board.label_proc_plains_cords_var": "",
       "item.craft_no_taizai.knightarmor_leggings": "Knightarmor Leggings",
       "item.craft_no_taizai.uncooked_dusk": "Raw Dusk Meat",
       "gui.craft_no_taizai.story_board.label_evvent_that_occurred_between_him": "event that occurred between him and Helbram. What",
@@ -42607,6 +42726,7 @@
       "item.craft_no_taizai.giga_pick_spawn_egg": "Giga Pick Spawn Egg",
       "gui.craft_no_taizai.story_board.label_ten_commandments_return_to_the_p": "Ten Commandments return to the physical realm. King",
       "gui.craft_no_taizai.story_board.label_go_to_the_plains_biome": "Go To the Plains Biome",
+      "item.craft_no_taizai.cath_spawn_egg": "Cath Spawn Egg",
       "item_group.craft_no_taizai.weapons": "Craft No Taizai Weapons",
       "item.craft_no_taizai.dreyfus_armor_chestplate": "Dreyfus Chestplate",
       "gui.craft_no_taizai.story_board.label_defeat_10_commandments": "Defeat 10 Commandments",
@@ -42804,6 +42924,7 @@
       "item.craft_no_taizai.liz_sneath_sword": "Liz Sneath Sword",
       "item.craft_no_taizai.soldier_armor_chestplate": "Soldier Chestplate",
       "advancements.capitalofthedeadadvancement.title": "Capital Of The Dead",
+      "item.craft_no_taizai.kaleidoscope_entity_spawn_egg": "Kaleidoscope Spawn Egg",
       "gui.craft_no_taizai.story_board.label_gathered_for_the_great_fight_fes": "gathered for the Great Fight Festival.",
       "entity.craft_no_taizai.friesia_animated": "Friesia",
       "item.craft_no_taizai.coffin_of_eternal_darkness": "Coffin Of Eternal Darkness",
@@ -43529,6 +43650,10 @@
                   {
                     "name": "Marmas",
                     "children": []
+                  },
+                  {
+                    "name": "Wailio",
+                    "children": []
                   }
                 ]
               },
@@ -43550,6 +43675,10 @@
                   {
                     "name": "Jillian",
                     "children": []
+                  },
+                  {
+                    "name": "Deldry",
+                    "children": []
                   }
                 ]
               },
@@ -43558,10 +43687,6 @@
                 "children": [
                   {
                     "name": "Simon",
-                    "children": []
-                  },
-                  {
-                    "name": "Deldry",
                     "children": []
                   }
                 ]
@@ -43603,7 +43728,12 @@
               },
               {
                 "name": "weak",
-                "children": []
+                "children": [
+                  {
+                    "name": "Death Pierce",
+                    "children": []
+                  }
+                ]
               },
               {
                 "name": "normal",
@@ -43618,6 +43748,10 @@
                 "children": [
                   {
                     "name": "TyrantDragon",
+                    "children": []
+                  },
+                  {
+                    "name": "Cath",
                     "children": []
                   }
                 ]
@@ -43791,6 +43925,10 @@
               },
               {
                 "name": "FairyTreeWood",
+                "children": []
+              },
+              {
+                "name": "FairyKingLeaves",
                 "children": []
               }
             ]
@@ -43972,12 +44110,7 @@
             "children": [
               {
                 "name": "CaveTraining",
-                "children": [
-                  {
-                    "name": "CaveDimension",
-                    "children": []
-                  }
-                ]
+                "children": []
               },
               {
                 "name": "IstarSetUp",
@@ -45125,10 +45258,6 @@
                     "children": []
                   },
                   {
-                    "name": "Breaker Off",
-                    "children": []
-                  },
-                  {
                     "name": "Kill Switch",
                     "children": []
                   },
@@ -45144,6 +45273,10 @@
                         "children": []
                       }
                     ]
+                  },
+                  {
+                    "name": "Kaleidoscope",
+                    "children": []
                   }
                 ]
               },
@@ -45175,10 +45308,6 @@
               {
                 "name": "Full_Counter",
                 "children": [
-                  {
-                    "name": "FullCounter",
-                    "children": []
-                  },
                   {
                     "name": "RevengeCounter",
                     "children": []
@@ -45257,10 +45386,6 @@
                   },
                   {
                     "name": "Purgatory Venom",
-                    "children": []
-                  },
-                  {
-                    "name": "Absolute Cancel ",
                     "children": []
                   }
                 ]
@@ -45612,10 +45737,6 @@
                 "name": "Full Counter",
                 "children": [
                   {
-                    "name": "Full Counter",
-                    "children": []
-                  },
-                  {
                     "name": "Quitet Down",
                     "children": []
                   },
@@ -45634,10 +45755,6 @@
                   },
                   {
                     "name": "Critical Strike",
-                    "children": []
-                  },
-                  {
-                    "name": "CriticalOver",
                     "children": []
                   }
                 ]

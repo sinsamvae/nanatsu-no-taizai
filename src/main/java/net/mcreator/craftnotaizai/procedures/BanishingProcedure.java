@@ -34,7 +34,7 @@ public class BanishingProcedure {
 			}
 		}
 		entity.getPersistentData().putDouble("distance", 0);
-		for (int index0 = 0; index0 < 90; index0++) {
+		for (int index0 = 0; index0 < 80; index0++) {
 			wait = wait + 0.4;
 			CraftNoTaizaiMod.queueServerWork((int) wait, () -> {
 				if (entity.getPersistentData().getDouble("distance") > 1) {
@@ -44,7 +44,7 @@ public class BanishingProcedure {
 				entity.getPersistentData().putDouble("distance", (entity.getPersistentData().getDouble("distance") + 0.03));
 				entity.getPersistentData().putDouble("rep", (Math.PI * (entity.getYRot() / 180) * (-1) - Math.PI / 3.5));
 				entity.getPersistentData().putDouble("range", 1);
-				for (int index1 = 0; index1 < 100; index1++) {
+				for (int index1 = 0; index1 < 80; index1++) {
 					entity.getPersistentData().putDouble("range", (entity.getPersistentData().getDouble("range") + 0.2));
 					entity.getPersistentData().putDouble("rep", (entity.getPersistentData().getDouble("rep") + ((0.6 * Math.PI) / 100) * (entity.getPersistentData().getBoolean("dir_slash") ? -1 : 1)));
 					if (world instanceof ServerLevel _level)

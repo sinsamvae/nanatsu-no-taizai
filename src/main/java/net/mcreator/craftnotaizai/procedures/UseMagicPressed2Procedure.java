@@ -9,7 +9,7 @@ public class UseMagicPressed2Procedure {
 			return;
 		ElizabethArkProcedure.execute(world, entity);
 		WallKeyBindOnKeyPressedProcedure.execute(entity);
-		PurgeBindOnKeyPressedProcedure.execute(entity);
+		PurgeBindOnKeyPressedProcedure.execute(world, entity);
 		BreakBindOnKeyPressedProcedure.execute(world, x, y, z, entity);
 		HellBlazeFullCounterOnKeyPressedProcedure.execute(entity);
 		HunterWispbindOnKeyPressedProcedure.execute(entity);

@@ -8,6 +8,7 @@ import net.mcreator.craftnotaizai.entity.ZhivagoEntity;
 import net.mcreator.craftnotaizai.entity.ZeldrisStoryEntity;
 import net.mcreator.craftnotaizai.entity.WickedBiteEntity;
 import net.mcreator.craftnotaizai.entity.WeinheidtAnimatedEntity;
+import net.mcreator.craftnotaizai.entity.WailioEntity;
 import net.mcreator.craftnotaizai.entity.VivianAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.VineEntity;
 import net.mcreator.craftnotaizai.entity.TyrantDragonEntity;
@@ -117,6 +118,7 @@ import net.mcreator.craftnotaizai.entity.DemonHendricksonAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.DeldryEntity;
 import net.mcreator.craftnotaizai.entity.DeireriStoryEntity;
 import net.mcreator.craftnotaizai.entity.DeireriStory2Entity;
+import net.mcreator.craftnotaizai.entity.DeathpierceEntity;
 import net.mcreator.craftnotaizai.entity.DeathThornEntity;
 import net.mcreator.craftnotaizai.entity.DeadHelbramanimatedEntity;
 import net.mcreator.craftnotaizai.entity.DalefinalEntity;
@@ -125,6 +127,7 @@ import net.mcreator.craftnotaizai.entity.DaleArmoredEntity;
 import net.mcreator.craftnotaizai.entity.CocoonOfDarknessEntity;
 import net.mcreator.craftnotaizai.entity.ClayDragonEntity;
 import net.mcreator.craftnotaizai.entity.ChickenEntity;
+import net.mcreator.craftnotaizai.entity.CathEntity;
 import net.mcreator.craftnotaizai.entity.CainBarzadAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.BlueDemonEntity;
 import net.mcreator.craftnotaizai.entity.BlackOutEntity;
@@ -1084,6 +1087,27 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof DeldryEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof WailioEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof CathEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof DeathpierceEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

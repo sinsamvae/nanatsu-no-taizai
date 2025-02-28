@@ -23,7 +23,7 @@ public class ResetCaveCooldownProcedure {
 					}
 				}
 			}.getEntity()).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.cave_of_training_cd = _setval;
+				capability.istar_cooldown = _setval;
 				capability.syncPlayerVariables((new Object() {
 					public Entity getEntity() {
 						try {
