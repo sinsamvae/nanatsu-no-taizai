@@ -19,5 +19,6 @@ public class UseMagicPressed4Procedure {
 		ArkKeyBindProcedure.execute(world, entity);
 		DroleDanceKeyBindProcedure.execute(world, entity);
 		TheRulerKeybindProcedure.execute(entity);
+		LaiKeybindProcedure.execute(world, x, y, z, entity);
 	}
 }

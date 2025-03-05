@@ -34,12 +34,9 @@
     "glowCondition": {
       "fixedValue": false
     },
-    "guiBoundTo": "<NONE>",
+    "guiBoundTo": "MonsterBlockGui",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onRightClickedInAir": {
-      "name": "MonsterBlockRightclicked"
-    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

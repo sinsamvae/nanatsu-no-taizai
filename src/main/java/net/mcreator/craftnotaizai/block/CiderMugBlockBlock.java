@@ -22,7 +22,7 @@ import net.mcreator.craftnotaizai.procedures.CiderMugBlockOnBlockRightClickedPro
 
 public class CiderMugBlockBlock extends Block {
 	public CiderMugBlockBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.WOOD).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.WOOD).strength(0.8f, 6f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 	}
 
 	@Override

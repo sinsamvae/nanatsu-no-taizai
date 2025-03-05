@@ -27,7 +27,7 @@ public class MinimumTabletsItem extends Item {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		MinimumTabletsPlayerFinishesUsingItemProcedure.execute(entity, itemstack);
+		MinimumTabletsPlayerFinishesUsingItemProcedure.execute(entity);
 		return retval;
 	}
 }

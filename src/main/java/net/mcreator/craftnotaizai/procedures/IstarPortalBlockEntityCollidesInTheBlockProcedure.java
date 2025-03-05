@@ -22,7 +22,7 @@ public class IstarPortalBlockEntityCollidesInTheBlockProcedure {
 			return;
 		if ((entity.level().dimension()) == Level.OVERWORLD) {
 			{
-				double _setval = entity.getX() - 5;
+				double _setval = entity.getX();
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.istarX = _setval;
 					capability.syncPlayerVariables(entity);
@@ -36,7 +36,7 @@ public class IstarPortalBlockEntityCollidesInTheBlockProcedure {
 				});
 			}
 			{
-				double _setval = entity.getZ();
+				double _setval = entity.getZ() - 5;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.istarZ = _setval;
 					capability.syncPlayerVariables(entity);
@@ -70,6 +70,16 @@ public class IstarPortalBlockEntityCollidesInTheBlockProcedure {
 						_player.connection.send(new ClientboundUpdateMobEffectPacket(_player.getId(), _effectinstance));
 					_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 				}
+			}
+			{
+				Entity _ent = entity;
+				_ent.teleportTo(((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).istarX),
+						((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).istarY),
+						((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).istarZ));
+				if (_ent instanceof ServerPlayer _serverPlayer)
+					_serverPlayer.connection.teleport(((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).istarX),
+							((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).istarY),
+							((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).istarZ), _ent.getYRot(), _ent.getXRot());
 			}
 		}
 	}

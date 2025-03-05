@@ -72,7 +72,7 @@ public class HellblazeOmegaProjectileEntity extends AbstractArrow implements Ite
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		HellblazeOmegaProjectileHitsLivingEntityProcedure.execute(entityHitResult.getEntity());
+		HellblazeOmegaProjectileHitsLivingEntityProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), entityHitResult.getEntity());
 	}
 
 	@Override

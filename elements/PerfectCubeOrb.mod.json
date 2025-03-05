@@ -9,11 +9,7 @@
     "states": [],
     "name": "Perfect Cube Orb (Working On)",
     "rarity": "COMMON",
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:IncantationOrb"
-      }
-    ],
+    "creativeTabs": [],
     "stackSize": 3,
     "enchantability": 0,
     "useDuration": 1,
@@ -37,9 +33,6 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onRightClickedInAir": {
-      "name": "PerfectCubeOrbRightclicked"
-    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

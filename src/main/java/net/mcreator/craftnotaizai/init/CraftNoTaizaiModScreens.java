@@ -27,6 +27,7 @@ import net.mcreator.craftnotaizai.client.gui.JennaGuiScreen;
 import net.mcreator.craftnotaizai.client.gui.HumanClanUiScreen;
 import net.mcreator.craftnotaizai.client.gui.GuildGuiScreen;
 import net.mcreator.craftnotaizai.client.gui.GuildAcceptGuiScreen;
+import net.mcreator.craftnotaizai.client.gui.GoddessClanScreen;
 import net.mcreator.craftnotaizai.client.gui.GiantClanScreen;
 import net.mcreator.craftnotaizai.client.gui.FairyClanUiScreen;
 import net.mcreator.craftnotaizai.client.gui.DubsTradeScreen;
@@ -67,6 +68,7 @@ public class CraftNoTaizaiModScreens {
 			MenuScreens.register(CraftNoTaizaiModMenus.GUILD_GUI.get(), GuildGuiScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.POSSESSION.get(), PossessionScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.DUBS_TRADE.get(), DubsTradeScreen::new);
+			MenuScreens.register(CraftNoTaizaiModMenus.GODDESS_CLAN.get(), GoddessClanScreen::new);
 		});
 	}
 }

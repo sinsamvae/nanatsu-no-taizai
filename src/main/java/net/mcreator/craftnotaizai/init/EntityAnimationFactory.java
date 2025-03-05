@@ -6,6 +6,7 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 
 import net.mcreator.craftnotaizai.entity.ZhivagoEntity;
 import net.mcreator.craftnotaizai.entity.ZeldrisStoryEntity;
+import net.mcreator.craftnotaizai.entity.ZeldrisBossEntity;
 import net.mcreator.craftnotaizai.entity.WickedBiteEntity;
 import net.mcreator.craftnotaizai.entity.WeinheidtAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.WailioEntity;
@@ -43,8 +44,11 @@ import net.mcreator.craftnotaizai.entity.MossDragonEntity;
 import net.mcreator.craftnotaizai.entity.MoonRoseEntity;
 import net.mcreator.craftnotaizai.entity.MonspeitStoryEntity;
 import net.mcreator.craftnotaizai.entity.MonspeitStory2Entity;
+import net.mcreator.craftnotaizai.entity.MonspeetBossEntity;
 import net.mcreator.craftnotaizai.entity.MerlinBossAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.MeliodasBossAnimatedEntity;
+import net.mcreator.craftnotaizai.entity.MelasculaStoryEntity;
+import net.mcreator.craftnotaizai.entity.MelasculaBossEntity;
 import net.mcreator.craftnotaizai.entity.MatronaEntity;
 import net.mcreator.craftnotaizai.entity.MarmasEntity;
 import net.mcreator.craftnotaizai.entity.KulumilEntity;
@@ -72,6 +76,7 @@ import net.mcreator.craftnotaizai.entity.GriamoreAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.GreenKnightAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.GrayRoadStoryEntity;
 import net.mcreator.craftnotaizai.entity.GrayRoadStory2Entity;
+import net.mcreator.craftnotaizai.entity.GrayRoadBossEntity;
 import net.mcreator.craftnotaizai.entity.GrayDemonHendricksonAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.GrayDemonEntityEntity;
 import net.mcreator.craftnotaizai.entity.GrayDemonEntity;
@@ -93,12 +98,16 @@ import net.mcreator.craftnotaizai.entity.GerheadeEntity;
 import net.mcreator.craftnotaizai.entity.GeckolibKrakenEntity;
 import net.mcreator.craftnotaizai.entity.GalandStory2Entity;
 import net.mcreator.craftnotaizai.entity.GalandOverEntity;
+import net.mcreator.craftnotaizai.entity.GalandOverBossEntity;
 import net.mcreator.craftnotaizai.entity.GalandEntity;
+import net.mcreator.craftnotaizai.entity.GalandBossEntity;
 import net.mcreator.craftnotaizai.entity.FriesiaAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.FraudrinStoryEntity;
+import net.mcreator.craftnotaizai.entity.FraudrinBossEntity;
 import net.mcreator.craftnotaizai.entity.FairyHelbremAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.EstarrossaStoryEntity;
 import net.mcreator.craftnotaizai.entity.EstarossaStoryEntity;
+import net.mcreator.craftnotaizai.entity.EstarossaBossEntity;
 import net.mcreator.craftnotaizai.entity.EscanorBossEntity;
 import net.mcreator.craftnotaizai.entity.ElaineStoryEntity;
 import net.mcreator.craftnotaizai.entity.EarthGolemEntity;
@@ -107,12 +116,14 @@ import net.mcreator.craftnotaizai.entity.DuskBison1Entity;
 import net.mcreator.craftnotaizai.entity.DumblebbasAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.DroleStory2Entity;
 import net.mcreator.craftnotaizai.entity.DroleEntity;
+import net.mcreator.craftnotaizai.entity.DroleBossEntity;
 import net.mcreator.craftnotaizai.entity.DreyfusDemonEntity;
 import net.mcreator.craftnotaizai.entity.DreyfusAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.DogedoEntity;
 import net.mcreator.craftnotaizai.entity.DianeBossAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.DianeAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.DiamondTowerEntity;
+import net.mcreator.craftnotaizai.entity.DerieriBossEntity;
 import net.mcreator.craftnotaizai.entity.DemonMarkMeliodasEntity;
 import net.mcreator.craftnotaizai.entity.DemonHendricksonAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.DeldryEntity;
@@ -134,6 +145,7 @@ import net.mcreator.craftnotaizai.entity.BlackOutEntity;
 import net.mcreator.craftnotaizai.entity.BlackHoundEntity;
 import net.mcreator.craftnotaizai.entity.BasquiasGuardianEntity;
 import net.mcreator.craftnotaizai.entity.BanBossAnimatedEntity;
+import net.mcreator.craftnotaizai.entity.ArdenEntity;
 import net.mcreator.craftnotaizai.entity.AngleCureEntity;
 import net.mcreator.craftnotaizai.entity.AndreDemonFormEntity;
 import net.mcreator.craftnotaizai.entity.AndreAnimatedEntity;
@@ -1108,6 +1120,90 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof DeathpierceEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof ArdenEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof DroleBossEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof DerieriBossEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof EstarossaBossEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof FraudrinBossEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof GalandBossEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof GalandOverBossEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof GrayRoadBossEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof MelasculaBossEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof MelasculaStoryEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof MonspeetBossEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof ZeldrisBossEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

@@ -197,7 +197,7 @@ public class HellGateRedDemonsEntity extends TamableAnimal implements GeoEntity 
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		HellGateRedDemonsOnEntityTickUpdateProcedure.execute(this.level(), this);
+		HellGateRedDemonsOnEntityTickUpdateProcedure.execute(this);
 		this.refreshDimensions();
 	}
 

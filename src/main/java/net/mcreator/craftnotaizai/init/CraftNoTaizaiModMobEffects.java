@@ -11,6 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.effect.MobEffect;
 
 import net.mcreator.craftnotaizai.potion.VenomToxicyPotionMobEffect;
+import net.mcreator.craftnotaizai.potion.VeinPotionEffectMobEffect;
 import net.mcreator.craftnotaizai.potion.StaffOfImrisonmentEffectMobEffect;
 import net.mcreator.craftnotaizai.potion.SelflessnessEffectMobEffect;
 import net.mcreator.craftnotaizai.potion.PurgatoryFlameMobEffect;
@@ -20,6 +21,7 @@ import net.mcreator.craftnotaizai.potion.OverPowerEffectMobEffect;
 import net.mcreator.craftnotaizai.potion.NightmaretellerMobEffect;
 import net.mcreator.craftnotaizai.potion.NecrosisMobEffect;
 import net.mcreator.craftnotaizai.potion.MinimumTabletsEffectMobEffect;
+import net.mcreator.craftnotaizai.potion.MelodyMobEffect;
 import net.mcreator.craftnotaizai.potion.ManaRegenEffetMobEffect;
 import net.mcreator.craftnotaizai.potion.LoveDriveEffectMobEffect;
 import net.mcreator.craftnotaizai.potion.KingTrumpetMobEffect;
@@ -54,4 +56,6 @@ public class CraftNoTaizaiModMobEffects {
 	public static final RegistryObject<MobEffect> SELFLESSNESS_EFFECT = REGISTRY.register("selflessness_effect", () -> new SelflessnessEffectMobEffect());
 	public static final RegistryObject<MobEffect> STAFF_OF_IMRISONMENT_EFFECT = REGISTRY.register("staff_of_imrisonment_effect", () -> new StaffOfImrisonmentEffectMobEffect());
 	public static final RegistryObject<MobEffect> LOVE_DRIVE_EFFECT = REGISTRY.register("love_drive_effect", () -> new LoveDriveEffectMobEffect());
+	public static final RegistryObject<MobEffect> VEIN_POTION_EFFECT = REGISTRY.register("vein_potion_effect", () -> new VeinPotionEffectMobEffect());
+	public static final RegistryObject<MobEffect> MELODY = REGISTRY.register("melody", () -> new MelodyMobEffect());
 }

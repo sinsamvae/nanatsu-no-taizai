@@ -25,7 +25,7 @@ public class HyperRecoveryItem extends Item {
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
 		entity.startUsingItem(hand);
-		HyperRecoveryRightclicked2Procedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
+		HyperRecoveryRightclicked2Procedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), ar.getObject());
 		return ar;
 	}
 }

@@ -55,7 +55,7 @@
     "canRedstoneConnect": false,
     "lightOpacity": 15,
     "material": {
-      "value": "AIR"
+      "value": "STRUCTURE_VOID"
     },
     "tickRate": 0,
     "tickRandomly": false,

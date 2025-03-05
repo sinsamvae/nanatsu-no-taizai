@@ -158,7 +158,7 @@ public class GalandOnEntityTickUpdateProcedure {
 					});
 				}
 			}
-			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 100, 250)));
+			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 100, 300)));
 		}
 	}
 }

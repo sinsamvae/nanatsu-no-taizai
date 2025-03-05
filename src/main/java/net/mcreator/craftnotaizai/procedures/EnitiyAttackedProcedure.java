@@ -197,25 +197,25 @@ public class EnitiyAttackedProcedure {
 									_player.displayClientMessage(Component.literal((new java.text.DecimalFormat("DMG: ##").format(damage))), true);
 							}
 						} else if (world.dayTime() % 24000 >= 23460 && world.dayTime() % 24000 <= 23992) {
-							damage = Math.ceil(damage * 2.5);
+							damage = Math.ceil(damage * 1.3);
 							if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).damage_indicator == true) {
 								if (sourceentity instanceof Player _player && !_player.level().isClientSide())
 									_player.displayClientMessage(Component.literal((new java.text.DecimalFormat("DMG: ##").format(damage))), true);
 							}
 						} else if (world.dayTime() % 24000 >= 23992 && world.dayTime() % 24000 <= 0) {
-							damage = Math.ceil(damage * 5);
+							damage = Math.ceil(damage * 1.5);
 							if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).damage_indicator == true) {
 								if (sourceentity instanceof Player _player && !_player.level().isClientSide())
 									_player.displayClientMessage(Component.literal((new java.text.DecimalFormat("DMG: ##").format(damage))), true);
 							}
 						} else if (world.dayTime() % 24000 >= 0 && world.dayTime() % 24000 <= 1000) {
-							damage = Math.ceil(damage * 6.75);
+							damage = Math.ceil(damage * 1.8);
 							if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).damage_indicator == true) {
 								if (sourceentity instanceof Player _player && !_player.level().isClientSide())
 									_player.displayClientMessage(Component.literal((new java.text.DecimalFormat("DMG: ##").format(damage))), true);
 							}
 						} else if (world.dayTime() % 24000 >= 1000 && world.dayTime() % 24000 <= 6000) {
-							damage = Math.ceil(damage * 7.5);
+							damage = Math.ceil(damage * 2);
 							if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).damage_indicator == true) {
 								if (sourceentity instanceof Player _player && !_player.level().isClientSide())
 									_player.displayClientMessage(Component.literal((new java.text.DecimalFormat("DMG: ##").format(damage))), true);
@@ -227,31 +227,31 @@ public class EnitiyAttackedProcedure {
 									_player.displayClientMessage(Component.literal((new java.text.DecimalFormat("DMG: ##").format(damage))), true);
 							}
 						} else if (world.dayTime() % 24000 >= 9000 && world.dayTime() % 24000 <= 12542) {
-							damage = Math.ceil(damage * 1);
+							damage = Math.ceil(damage * 1.3);
 							if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).damage_indicator == true) {
 								if (sourceentity instanceof Player _player && !_player.level().isClientSide())
 									_player.displayClientMessage(Component.literal((new java.text.DecimalFormat("DMG: ##").format(damage))), true);
 							}
 						} else if (world.dayTime() % 24000 >= 12542 && world.dayTime() % 24000 <= 12786) {
-							damage = Math.ceil(damage / 5);
+							damage = Math.ceil(damage / 1.5);
 							if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).damage_indicator == true) {
 								if (sourceentity instanceof Player _player && !_player.level().isClientSide())
 									_player.displayClientMessage(Component.literal((new java.text.DecimalFormat("DMG: ##").format(damage))), true);
 							}
 						} else if (world.dayTime() % 24000 >= 12786 && world.dayTime() % 24000 <= 13000) {
-							damage = Math.ceil(damage / 6.75);
+							damage = Math.ceil(damage / 1.8);
 							if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).damage_indicator == true) {
 								if (sourceentity instanceof Player _player && !_player.level().isClientSide())
 									_player.displayClientMessage(Component.literal((new java.text.DecimalFormat("DMG: ##").format(damage))), true);
 							}
 						} else if (world.dayTime() % 24000 >= 13000 && world.dayTime() % 24000 <= 13670) {
-							damage = Math.ceil(damage / 7.5);
+							damage = Math.ceil(damage / 2);
 							if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).damage_indicator == true) {
 								if (sourceentity instanceof Player _player && !_player.level().isClientSide())
 									_player.displayClientMessage(Component.literal((new java.text.DecimalFormat("DMG: ##").format(damage))), true);
 							}
 						} else if (world.dayTime() % 24000 >= 18000 && world.dayTime() % 24000 <= 22300) {
-							damage = Math.ceil(damage / 20);
+							damage = Math.ceil(damage / 10);
 							if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).damage_indicator == true) {
 								if (sourceentity instanceof Player _player && !_player.level().isClientSide())
 									_player.displayClientMessage(Component.literal((new java.text.DecimalFormat("DMG: ##").format(damage))), true);

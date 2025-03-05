@@ -18,6 +18,7 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.craftnotaizai.entity.ZhivagoEntity;
 import net.mcreator.craftnotaizai.entity.ZeldrisStoryEntity;
+import net.mcreator.craftnotaizai.entity.ZeldrisBossEntity;
 import net.mcreator.craftnotaizai.entity.ZaneriEntity;
 import net.mcreator.craftnotaizai.entity.WindShotProjectileEntity;
 import net.mcreator.craftnotaizai.entity.WickedBiteEntity;
@@ -72,8 +73,11 @@ import net.mcreator.craftnotaizai.entity.MossDragonEntity;
 import net.mcreator.craftnotaizai.entity.MoonRoseEntity;
 import net.mcreator.craftnotaizai.entity.MonspeitStoryEntity;
 import net.mcreator.craftnotaizai.entity.MonspeitStory2Entity;
+import net.mcreator.craftnotaizai.entity.MonspeetBossEntity;
 import net.mcreator.craftnotaizai.entity.MerlinBossAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.MeliodasBossAnimatedEntity;
+import net.mcreator.craftnotaizai.entity.MelasculaStoryEntity;
+import net.mcreator.craftnotaizai.entity.MelasculaBossEntity;
 import net.mcreator.craftnotaizai.entity.MatronaEntity;
 import net.mcreator.craftnotaizai.entity.MarmasEntity;
 import net.mcreator.craftnotaizai.entity.MantaEntity;
@@ -111,6 +115,7 @@ import net.mcreator.craftnotaizai.entity.HellFireBirdEntity;
 import net.mcreator.craftnotaizai.entity.HellBlazeProjectileEntity;
 import net.mcreator.craftnotaizai.entity.HelbremAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.HelbramSwordEntity;
+import net.mcreator.craftnotaizai.entity.HeartlessWaterfallEntity;
 import net.mcreator.craftnotaizai.entity.HawksEntity;
 import net.mcreator.craftnotaizai.entity.GustafAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.GuilaDemonanimatedEntity;
@@ -121,6 +126,7 @@ import net.mcreator.craftnotaizai.entity.GriamoreAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.GreenKnightAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.GrayRoadStoryEntity;
 import net.mcreator.craftnotaizai.entity.GrayRoadStory2Entity;
+import net.mcreator.craftnotaizai.entity.GrayRoadBossEntity;
 import net.mcreator.craftnotaizai.entity.GrayDemonHendricksonAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.GrayDemonEntityEntity;
 import net.mcreator.craftnotaizai.entity.GrayDemonEntity;
@@ -142,11 +148,14 @@ import net.mcreator.craftnotaizai.entity.GerheadeEntity;
 import net.mcreator.craftnotaizai.entity.GeckolibKrakenEntity;
 import net.mcreator.craftnotaizai.entity.GalandStory2Entity;
 import net.mcreator.craftnotaizai.entity.GalandOverEntity;
+import net.mcreator.craftnotaizai.entity.GalandOverBossEntity;
 import net.mcreator.craftnotaizai.entity.GalandEntity;
+import net.mcreator.craftnotaizai.entity.GalandBossEntity;
 import net.mcreator.craftnotaizai.entity.FurkuuSutonEntity;
 import net.mcreator.craftnotaizai.entity.FrozenBreathEntity;
 import net.mcreator.craftnotaizai.entity.FriesiaAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.FraudrinStoryEntity;
+import net.mcreator.craftnotaizai.entity.FraudrinBossEntity;
 import net.mcreator.craftnotaizai.entity.FossProjectileEntity;
 import net.mcreator.craftnotaizai.entity.FiveLostProjectileEntity;
 import net.mcreator.craftnotaizai.entity.FinalProminenceEntity;
@@ -157,6 +166,7 @@ import net.mcreator.craftnotaizai.entity.ExterminateRayProjectileEntity;
 import net.mcreator.craftnotaizai.entity.EvilhoundProjectileEntity;
 import net.mcreator.craftnotaizai.entity.EstarrossaStoryEntity;
 import net.mcreator.craftnotaizai.entity.EstarossaStoryEntity;
+import net.mcreator.craftnotaizai.entity.EstarossaBossEntity;
 import net.mcreator.craftnotaizai.entity.EscanorBossEntity;
 import net.mcreator.craftnotaizai.entity.EnergyArrowEntity;
 import net.mcreator.craftnotaizai.entity.EmbraceoftheThunderGodProjectileEntity;
@@ -169,6 +179,7 @@ import net.mcreator.craftnotaizai.entity.DumblebbasAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.DubsEntity;
 import net.mcreator.craftnotaizai.entity.DroleStory2Entity;
 import net.mcreator.craftnotaizai.entity.DroleEntity;
+import net.mcreator.craftnotaizai.entity.DroleBossEntity;
 import net.mcreator.craftnotaizai.entity.DriftBombProjectileEntity;
 import net.mcreator.craftnotaizai.entity.DreyfusDemonEntity;
 import net.mcreator.craftnotaizai.entity.DreyfusAnimatedEntity;
@@ -179,6 +190,7 @@ import net.mcreator.craftnotaizai.entity.DianeAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.DiamondTowerEntity;
 import net.mcreator.craftnotaizai.entity.DestroyFourElementsEntity;
 import net.mcreator.craftnotaizai.entity.DespairVenomEntity;
+import net.mcreator.craftnotaizai.entity.DerieriBossEntity;
 import net.mcreator.craftnotaizai.entity.DemonMarkMeliodasEntity;
 import net.mcreator.craftnotaizai.entity.DemonKingEntity;
 import net.mcreator.craftnotaizai.entity.DemonHendricksonAnimatedEntity;
@@ -219,6 +231,7 @@ import net.mcreator.craftnotaizai.entity.BasquiasGuardianEntity;
 import net.mcreator.craftnotaizai.entity.BanBossAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.AuraBurstEntity;
 import net.mcreator.craftnotaizai.entity.AshDragonEntity;
+import net.mcreator.craftnotaizai.entity.ArdenEntity;
 import net.mcreator.craftnotaizai.entity.AngleCureEntity;
 import net.mcreator.craftnotaizai.entity.AndreDemonFormEntity;
 import net.mcreator.craftnotaizai.entity.AndreAnimatedEntity;
@@ -929,6 +942,56 @@ public class CraftNoTaizaiModEntities {
 			EntityType.Builder.<DeathpierceEntity>of(DeathpierceEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DeathpierceEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ArdenEntity>> ARDEN = register("arden",
+			EntityType.Builder.<ArdenEntity>of(ArdenEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ArdenEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<DroleBossEntity>> DROLE_BOSS = register("drole_boss",
+			EntityType.Builder.<DroleBossEntity>of(DroleBossEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DroleBossEntity::new)
+
+					.sized(1.3f, 5.5f));
+	public static final RegistryObject<EntityType<DerieriBossEntity>> DERIERI_BOSS = register("derieri_boss",
+			EntityType.Builder.<DerieriBossEntity>of(DerieriBossEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DerieriBossEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<EstarossaBossEntity>> ESTAROSSA_BOSS = register("estarossa_boss",
+			EntityType.Builder.<EstarossaBossEntity>of(EstarossaBossEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EstarossaBossEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<FraudrinBossEntity>> FRAUDRIN_BOSS = register("fraudrin_boss",
+			EntityType.Builder.<FraudrinBossEntity>of(FraudrinBossEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FraudrinBossEntity::new)
+
+					.sized(0.6f, 3.6f));
+	public static final RegistryObject<EntityType<GalandBossEntity>> GALAND_BOSS = register("galand_boss",
+			EntityType.Builder.<GalandBossEntity>of(GalandBossEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GalandBossEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<GalandOverBossEntity>> GALAND_OVER_BOSS = register("galand_over_boss",
+			EntityType.Builder.<GalandOverBossEntity>of(GalandOverBossEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GalandOverBossEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<GrayRoadBossEntity>> GRAY_ROAD_BOSS = register("gray_road_boss",
+			EntityType.Builder.<GrayRoadBossEntity>of(GrayRoadBossEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GrayRoadBossEntity::new)
+
+					.sized(0.6f, 2.2f));
+	public static final RegistryObject<EntityType<MelasculaBossEntity>> MELASCULA_BOSS = register("melascula_boss",
+			EntityType.Builder.<MelasculaBossEntity>of(MelasculaBossEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MelasculaBossEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MelasculaStoryEntity>> MELASCULA_STORY = register("melascula_story",
+			EntityType.Builder.<MelasculaStoryEntity>of(MelasculaStoryEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(MelasculaStoryEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MonspeetBossEntity>> MONSPEET_BOSS = register("monspeet_boss",
+			EntityType.Builder.<MonspeetBossEntity>of(MonspeetBossEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(MonspeetBossEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ZeldrisBossEntity>> ZELDRIS_BOSS = register("zeldris_boss",
+			EntityType.Builder.<ZeldrisBossEntity>of(ZeldrisBossEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ZeldrisBossEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<HeartlessWaterfallEntity>> HEARTLESS_WATERFALL = register("heartless_waterfall", EntityType.Builder.<HeartlessWaterfallEntity>of(HeartlessWaterfallEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(HeartlessWaterfallEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -1094,6 +1157,18 @@ public class CraftNoTaizaiModEntities {
 			CathEntity.init();
 			KaleidoscopeEntityEntity.init();
 			DeathpierceEntity.init();
+			ArdenEntity.init();
+			DroleBossEntity.init();
+			DerieriBossEntity.init();
+			EstarossaBossEntity.init();
+			FraudrinBossEntity.init();
+			GalandBossEntity.init();
+			GalandOverBossEntity.init();
+			GrayRoadBossEntity.init();
+			MelasculaBossEntity.init();
+			MelasculaStoryEntity.init();
+			MonspeetBossEntity.init();
+			ZeldrisBossEntity.init();
 		});
 	}
 
@@ -1256,5 +1331,17 @@ public class CraftNoTaizaiModEntities {
 		event.put(CATH.get(), CathEntity.createAttributes().build());
 		event.put(KALEIDOSCOPE_ENTITY.get(), KaleidoscopeEntityEntity.createAttributes().build());
 		event.put(DEATHPIERCE.get(), DeathpierceEntity.createAttributes().build());
+		event.put(ARDEN.get(), ArdenEntity.createAttributes().build());
+		event.put(DROLE_BOSS.get(), DroleBossEntity.createAttributes().build());
+		event.put(DERIERI_BOSS.get(), DerieriBossEntity.createAttributes().build());
+		event.put(ESTAROSSA_BOSS.get(), EstarossaBossEntity.createAttributes().build());
+		event.put(FRAUDRIN_BOSS.get(), FraudrinBossEntity.createAttributes().build());
+		event.put(GALAND_BOSS.get(), GalandBossEntity.createAttributes().build());
+		event.put(GALAND_OVER_BOSS.get(), GalandOverBossEntity.createAttributes().build());
+		event.put(GRAY_ROAD_BOSS.get(), GrayRoadBossEntity.createAttributes().build());
+		event.put(MELASCULA_BOSS.get(), MelasculaBossEntity.createAttributes().build());
+		event.put(MELASCULA_STORY.get(), MelasculaStoryEntity.createAttributes().build());
+		event.put(MONSPEET_BOSS.get(), MonspeetBossEntity.createAttributes().build());
+		event.put(ZELDRIS_BOSS.get(), ZeldrisBossEntity.createAttributes().build());
 	}
 }

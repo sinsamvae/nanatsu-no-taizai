@@ -44,7 +44,7 @@ public class GroundKeyBindProcedure {
 								capability.syncPlayerVariables(entity);
 							});
 						}
-						GigaCrushSkillProcedure.execute(world, y, entity);
+						GigaCrushSkillProcedure.execute(world, entity);
 						((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag().putDouble(
 								("cooldown" + new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Move + 1)), 95);
 					} else {
@@ -64,7 +64,7 @@ public class GroundKeyBindProcedure {
 								capability.syncPlayerVariables(entity);
 							});
 						}
-						GigaFallSkillProcedure.execute(world, y, entity);
+						GigaFallSkillProcedure.execute(world, entity);
 						((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag().putDouble(
 								("cooldown" + new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Move + 1)), 150);
 					} else {

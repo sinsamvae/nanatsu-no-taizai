@@ -1,0 +1,25 @@
+{
+  "_fv": 69,
+  "_type": "achievement",
+  "definition": {
+    "achievementName": "Defeat Estarossa",
+    "achievementDescription": "Defeat Commandment Of Love",
+    "achievementIcon": {
+      "value": "CUSTOM:LoveIcon"
+    },
+    "background": "Default",
+    "disableDisplay": false,
+    "showPopup": true,
+    "announceToChat": true,
+    "hideIfNotCompleted": false,
+    "rewardLoot": [],
+    "rewardRecipes": [],
+    "rewardFunction": "No function",
+    "rewardXP": 10,
+    "achievementType": "challenge",
+    "parent": {
+      "value": "CUSTOM:DefeatDerieri"
+    },
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"advancement_trigger\" deletable=\"false\" x=\"182\" y=\"140\"><next><block type=\"custom_trigger\"></block></next></block></xml>"
+  }
+}

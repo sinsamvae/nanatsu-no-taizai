@@ -49,7 +49,7 @@
     ],
     "destroyTool": "pickaxe",
     "customDrop": {
-      "value": "CUSTOM:HolyTreeShard"
+      "value": "CUSTOM:HolyTreeOre"
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,

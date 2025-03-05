@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "craft_no_taizai:pacifism_icon"
+    },
+    "title": {
+      "translate": "advancements.defeat_gray_road.title"
+    },
+    "description": {
+      "translate": "advancements.defeat_gray_road.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat_gray_road_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 6
+  },
+  "parent": "craft_no_taizai:defeat_galand"
+}

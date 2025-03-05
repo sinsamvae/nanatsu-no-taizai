@@ -69,6 +69,9 @@
     "craft_no_taizai:zhivago",
     "craft_no_taizai:deldry",
     "craft_no_taizai:wailio",
-    "craft_no_taizai:deathpierce"
+    "craft_no_taizai:deathpierce",
+    "craft_no_taizai:arden",
+    "#craft_no_taizai:bosses",
+    "craft_no_taizai:galand_over_boss"
   ]
 }

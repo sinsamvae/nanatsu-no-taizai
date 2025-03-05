@@ -180,7 +180,7 @@ public class ServantEntity extends TamableAnimal implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		ServantOnEntityTickUpdateProcedure.execute(this);
+		ServantOnEntityTickUpdateProcedure.execute(this.level(), this.getY(), this);
 		this.refreshDimensions();
 	}
 

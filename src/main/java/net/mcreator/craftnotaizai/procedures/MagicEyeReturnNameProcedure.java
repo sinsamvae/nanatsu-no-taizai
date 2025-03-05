@@ -5,9 +5,10 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+
+import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 
 import java.util.List;
 import java.util.Comparator;
@@ -36,9 +37,10 @@ public class MagicEyeReturnNameProcedure {
 				}
 			}
 			if (target && entity_target instanceof Player) {
-				return "\u00A7eDisplayName: " + entity_target.getDisplayName().getString();
-			} else if (target && entity_target instanceof PathfinderMob) {
-				return "\u00A7eDisplayName: " + entity_target.getDisplayName().getString();
+				return "\u00A7eDisplayName: " + (entity_target.getDisplayName().getString() + " lv:"
+						+ new java.text.DecimalFormat("##").format((entity_target.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).level));
+			} else if (target && entity_target instanceof LivingEntity) {
+				return "\u00A7eDisplayName: " + (entity_target.getDisplayName().getString() + " lv:" + new java.text.DecimalFormat("##").format(entity_target.getPersistentData().getDouble("level")));
 			}
 			range = range + 1;
 		}

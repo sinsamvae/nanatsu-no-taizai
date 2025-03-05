@@ -17,6 +17,9 @@
     "customModelTexture": "super_slash.png",
     "modelWidth": 0.5,
     "modelHeight": 0.5,
+    "onHitsBlock": {
+      "name": "CrazyProminenceProjectileHitsBlock"
+    },
     "onHitsEntity": {
       "name": "CruelSunProjectileHitsLivingEntity"
     },

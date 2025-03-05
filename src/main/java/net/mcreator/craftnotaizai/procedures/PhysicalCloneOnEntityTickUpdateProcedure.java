@@ -1,7 +1,6 @@
 package net.mcreator.craftnotaizai.procedures;
 
 import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
@@ -13,7 +12,7 @@ import net.minecraft.commands.arguments.EntityAnchorArgument;
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 
 public class PhysicalCloneOnEntityTickUpdateProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
 		double yaw = 0;
@@ -40,6 +39,8 @@ public class PhysicalCloneOnEntityTickUpdateProcedure {
 				entity.getPersistentData().putDouble("ManaDmg",
 						(((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack
 								/ 2));
+				entity.getPersistentData().putDouble("level",
+						(((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).level / 2));
 			}
 			if (((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).LostVayne == 2) {
 				entity.getPersistentData().putDouble("CloneHealth", Math.ceil(
@@ -56,6 +57,8 @@ public class PhysicalCloneOnEntityTickUpdateProcedure {
 				entity.getPersistentData().putDouble("ManaDmg",
 						(((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack
 								/ 4));
+				entity.getPersistentData().putDouble("level",
+						(((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).level / 4));
 			}
 			if (((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).LostVayne == 3) {
 				entity.getPersistentData().putDouble("CloneHealth", Math.ceil(
@@ -72,6 +75,8 @@ public class PhysicalCloneOnEntityTickUpdateProcedure {
 				entity.getPersistentData().putDouble("ManaDmg",
 						(((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack
 								/ 6));
+				entity.getPersistentData().putDouble("level",
+						(((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).level / 6));
 			}
 			if (((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).LostVayne == 4) {
 				entity.getPersistentData().putDouble("CloneHealth", Math.ceil(
@@ -88,6 +93,8 @@ public class PhysicalCloneOnEntityTickUpdateProcedure {
 				entity.getPersistentData().putDouble("ManaDmg",
 						(((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack
 								/ 8));
+				entity.getPersistentData().putDouble("level",
+						(((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).level / 8));
 			}
 			if (((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).LostVayne == 5) {
 				entity.getPersistentData().putDouble("CloneHealth", Math.ceil(
@@ -104,6 +111,8 @@ public class PhysicalCloneOnEntityTickUpdateProcedure {
 				entity.getPersistentData().putDouble("ManaDmg",
 						(((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack
 								/ 10));
+				entity.getPersistentData().putDouble("level",
+						(((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).level / 10));
 			}
 			if (((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).LostVayne == 6) {
 				entity.getPersistentData().putDouble("CloneHealth", Math.ceil(
@@ -120,6 +129,8 @@ public class PhysicalCloneOnEntityTickUpdateProcedure {
 				entity.getPersistentData().putDouble("ManaDmg",
 						(((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack
 								/ 12));
+				entity.getPersistentData().putDouble("level",
+						(((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).level / 12));
 			}
 			if (entity.getPersistentData().getDouble("skill_cooldown") > 0) {
 				entity.getPersistentData().putDouble("skill_cooldown", Math.round(entity.getPersistentData().getDouble("skill_cooldown") - 1));
@@ -131,12 +142,9 @@ public class PhysicalCloneOnEntityTickUpdateProcedure {
 				entity.lookAt(EntityAnchorArgument.Anchor.EYES, new Vec3(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX()), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY()),
 						((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ())));
 				if (distance <= 6) {
-					CloneSkill1Procedure.execute(world, x, y, z, entity);
-					CloneSkill2Procedure.execute(world, x, y, z, entity);
-					CloneSkill3Procedure.execute(world, x, y, z, entity);
-					CloneSkill4Procedure.execute(world, y, entity);
+					CloneSkill1Procedure.execute(entity);
 				}
-				entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 145, 250)));
+				entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 145, 300)));
 			}
 			if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 				if ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) == ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null)) {

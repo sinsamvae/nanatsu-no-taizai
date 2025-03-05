@@ -166,7 +166,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "vanillaToolTier": "STONE",
+    "vanillaToolTier": "NONE",
     "isBonemealable": false,
     "hasInventory": true,
     "guiBoundTo": "<NONE>",

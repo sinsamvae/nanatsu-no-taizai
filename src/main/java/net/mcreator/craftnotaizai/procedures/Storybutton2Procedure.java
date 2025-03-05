@@ -315,6 +315,13 @@ public class Storybutton2Procedure {
 					entityToSpawn.setDeltaMovement(0, 0, 0);
 				}
 			}
+			if (world instanceof ServerLevel _level) {
+				Entity entityToSpawn = CraftNoTaizaiModEntities.MELASCULA_STORY.get().spawn(_level,
+						BlockPos.containing(entity.getLookAngle().x + entity.getX(), entity.getLookAngle().y + entity.getY() + entity.getBbHeight(), entity.getLookAngle().z + entity.getZ()), MobSpawnType.MOB_SUMMONED);
+				if (entityToSpawn != null) {
+					entityToSpawn.setDeltaMovement(0, 0, 0);
+				}
+			}
 			if (entity instanceof Player _player)
 				_player.closeContainer();
 		}

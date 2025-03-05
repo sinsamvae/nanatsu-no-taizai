@@ -15,7 +15,7 @@ import net.mcreator.craftnotaizai.procedures.FairyKingLeaveBlockDestroyedByPlaye
 
 public class FairyKingLeaveBlock extends Block {
 	public FairyKingLeaveBlock() {
-		super(BlockBehaviour.Properties.of().ignitedByLava().sound(SoundType.CHERRY_LEAVES).strength(1f, 10f));
+		super(BlockBehaviour.Properties.of().ignitedByLava().sound(SoundType.CHERRY_LEAVES).strength(0.45f, 1.5f));
 	}
 
 	@Override

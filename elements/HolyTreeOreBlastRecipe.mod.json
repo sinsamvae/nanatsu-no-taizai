@@ -1,0 +1,22 @@
+{
+  "_fv": 69,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Blasting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 2.3000000000000003,
+    "cookingTime": 145,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "blastingInputStack": {
+      "value": "CUSTOM:HolyTreeOre"
+    },
+    "blastingReturnStack": {
+      "value": "CUSTOM:HolyTreeShard"
+    },
+    "name": "holy_tree_ore_blast_recipe",
+    "namespace": "mod"
+  }
+}

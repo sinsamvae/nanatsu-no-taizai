@@ -28,6 +28,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.commands.arguments.EntityAnchorArgument;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
+
 import java.util.List;
 import java.util.Comparator;
 
@@ -37,6 +39,17 @@ public class CathOnEntityTickUpdateProcedure {
 			return;
 		double distance = 0;
 		double ran = 0;
+		{
+			final Vec3 _center = new Vec3(x, y, z);
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(35 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+			for (Entity entityiterator : _entfound) {
+				if (((entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Chaos") && entityiterator instanceof Player
+						&& !(entity instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false)) {
+					if (entity instanceof TamableAnimal _toTame && entityiterator instanceof Player _owner)
+						_toTame.tame(_owner);
+				}
+			}
+		}
 		if (entity.getPersistentData().getDouble("skill_cooldown") > 0) {
 			entity.getPersistentData().putDouble("skill_cooldown", Math.round(entity.getPersistentData().getDouble("skill_cooldown") - 1));
 		}

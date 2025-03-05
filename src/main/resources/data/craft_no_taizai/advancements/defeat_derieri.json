@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "craft_no_taizai:purity_icon"
+    },
+    "title": {
+      "translate": "advancements.defeat_derieri.title"
+    },
+    "description": {
+      "translate": "advancements.defeat_derieri.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat_derieri_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "craft_no_taizai:defeat_drole"
+}

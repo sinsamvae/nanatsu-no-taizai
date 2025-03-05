@@ -102,9 +102,6 @@
     "raidCelebrationSound": {
       "value": ""
     },
-    "onRightClickedOn": {
-      "name": "CathRightClickedOnEntity"
-    },
     "onMobTickUpdate": {
       "name": "CathOnEntityTickUpdate"
     },

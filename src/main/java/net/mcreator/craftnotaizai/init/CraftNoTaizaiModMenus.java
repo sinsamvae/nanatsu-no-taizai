@@ -27,6 +27,7 @@ import net.mcreator.craftnotaizai.world.inventory.JennaGuiMenu;
 import net.mcreator.craftnotaizai.world.inventory.HumanClanUiMenu;
 import net.mcreator.craftnotaizai.world.inventory.GuildGuiMenu;
 import net.mcreator.craftnotaizai.world.inventory.GuildAcceptGuiMenu;
+import net.mcreator.craftnotaizai.world.inventory.GoddessClanMenu;
 import net.mcreator.craftnotaizai.world.inventory.GiantClanMenu;
 import net.mcreator.craftnotaizai.world.inventory.FairyClanUiMenu;
 import net.mcreator.craftnotaizai.world.inventory.DubsTradeMenu;
@@ -65,4 +66,5 @@ public class CraftNoTaizaiModMenus {
 	public static final RegistryObject<MenuType<GuildGuiMenu>> GUILD_GUI = REGISTRY.register("guild_gui", () -> IForgeMenuType.create(GuildGuiMenu::new));
 	public static final RegistryObject<MenuType<PossessionMenu>> POSSESSION = REGISTRY.register("possession", () -> IForgeMenuType.create(PossessionMenu::new));
 	public static final RegistryObject<MenuType<DubsTradeMenu>> DUBS_TRADE = REGISTRY.register("dubs_trade", () -> IForgeMenuType.create(DubsTradeMenu::new));
+	public static final RegistryObject<MenuType<GoddessClanMenu>> GODDESS_CLAN = REGISTRY.register("goddess_clan", () -> IForgeMenuType.create(GoddessClanMenu::new));
 }

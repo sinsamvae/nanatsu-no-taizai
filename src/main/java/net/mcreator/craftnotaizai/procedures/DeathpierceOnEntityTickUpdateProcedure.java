@@ -5,12 +5,14 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.commands.arguments.EntityAnchorArgument;
 
-import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
+import net.mcreator.craftnotaizai.init.CraftNoTaizaiModMobEffects;
 
 import java.util.List;
 import java.util.Comparator;
@@ -34,14 +36,9 @@ public class DeathpierceOnEntityTickUpdateProcedure {
 					final Vec3 _center = new Vec3((entity.getX() + entity.getLookAngle().x), (entity.getY() + entity.getLookAngle().y), (entity.getZ() + entity.getLookAngle().z));
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
-						if (entityiterator instanceof Player && (entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Melody == 0) {
-							{
-								double _setval = 200;
-								entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.Melody = _setval;
-									capability.syncPlayerVariables(entityiterator);
-								});
-							}
+						if (entityiterator instanceof Player && !(entityiterator instanceof LivingEntity _livEnt27 && _livEnt27.hasEffect(CraftNoTaizaiModMobEffects.MELODY.get()))) {
+							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+								_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.MELODY.get(), 200, 1, false, false));
 						}
 					}
 				}

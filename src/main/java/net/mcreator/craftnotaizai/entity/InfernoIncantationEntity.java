@@ -70,7 +70,7 @@ public class InfernoIncantationEntity extends AbstractArrow implements ItemSuppl
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		CruelSunProjectileHitsLivingEntityProcedure.execute(entityHitResult.getEntity());
+		CruelSunProjectileHitsLivingEntityProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), entityHitResult.getEntity());
 	}
 
 	@Override

@@ -72,7 +72,7 @@ public class HellBlazeProjectileEntity extends AbstractArrow implements ItemSupp
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		HellBlazeProjectileHitsLivingEntityProcedure.execute(entityHitResult.getEntity());
+		HellBlazeProjectileHitsLivingEntityProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), entityHitResult.getEntity());
 	}
 
 	@Override

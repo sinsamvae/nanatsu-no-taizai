@@ -24,7 +24,6 @@ public class CraftNoTaizaiModTabs {
 	public static final RegistryObject<CreativeModeTab> INCANTATION_ORB = REGISTRY.register("incantation_orb",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.craft_no_taizai.incantation_orb")).icon(() -> new ItemStack(CraftNoTaizaiModItems.PERFECT_CUBE_ORB.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(CraftNoTaizaiModItems.HYPER_RECOVERY.get());
-				tabData.accept(CraftNoTaizaiModItems.PERFECT_CUBE_ORB.get());
 				tabData.accept(CraftNoTaizaiModItems.EMPTYORB.get());
 				tabData.accept(CraftNoTaizaiModItems.LUME_ORB.get());
 				tabData.accept(CraftNoTaizaiModItems.TELEPORTATION_ORB.get());
@@ -163,6 +162,15 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.ELAINE_ARMOR_LEGGINGS.get());
 				tabData.accept(CraftNoTaizaiModItems.ESCANOR_ARMOR_2_CHESTPLATE.get());
 				tabData.accept(CraftNoTaizaiModItems.ESCANOR_ARMOR_2_LEGGINGS.get());
+				tabData.accept(CraftNoTaizaiModItems.ESTAROSSAARMOR_CHESTPLATE.get());
+				tabData.accept(CraftNoTaizaiModItems.ESTAROSSAARMOR_LEGGINGS.get());
+				tabData.accept(CraftNoTaizaiModItems.MONSSPEET_ARMOR_CHESTPLATE.get());
+				tabData.accept(CraftNoTaizaiModItems.MONSSPEET_ARMOR_LEGGINGS.get());
+				tabData.accept(CraftNoTaizaiModItems.ZELDRIS_ARMOR_HELMET.get());
+				tabData.accept(CraftNoTaizaiModItems.ZELDRIS_ARMOR_CHESTPLATE.get());
+				tabData.accept(CraftNoTaizaiModItems.ZELDRIS_ARMOR_LEGGINGS.get());
+				tabData.accept(CraftNoTaizaiModItems.MELASCULA_ARMOR_CHESTPLATE.get());
+				tabData.accept(CraftNoTaizaiModItems.MELASCULA_ARMOR_LEGGINGS.get());
 			})
 
 					.build());
@@ -275,7 +283,6 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModBlocks.FAIRY_TREES_LOG.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.FAIRY_KING_LOG.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.FAIRY_KING_LEAVE.get().asItem());
-				tabData.accept(CraftNoTaizaiModBlocks.FAIRY_KING_LEAVES.get().asItem());
 				tabData.accept(CraftNoTaizaiModItems.EMPTY_MUG.get());
 				tabData.accept(CraftNoTaizaiModBlocks.GODDASS_ORE.get().asItem());
 				tabData.accept(CraftNoTaizaiModBlocks.FAIRY_TREE_WOOD.get().asItem());
@@ -390,6 +397,15 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.DUBS_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.BLUE_DEMON_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.JIGUMO_SPAWN_EGG.get());
+				tabData.accept(CraftNoTaizaiModItems.DROLE_BOSS_SPAWN_EGG.get());
+				tabData.accept(CraftNoTaizaiModItems.DERIERI_BOSS_SPAWN_EGG.get());
+				tabData.accept(CraftNoTaizaiModItems.ESTAROSSA_BOSS_SPAWN_EGG.get());
+				tabData.accept(CraftNoTaizaiModItems.FRAUDRIN_BOSS_SPAWN_EGG.get());
+				tabData.accept(CraftNoTaizaiModItems.GALAND_BOSS_SPAWN_EGG.get());
+				tabData.accept(CraftNoTaizaiModItems.GRAY_ROAD_BOSS_SPAWN_EGG.get());
+				tabData.accept(CraftNoTaizaiModItems.MELASCULA_BOSS_SPAWN_EGG.get());
+				tabData.accept(CraftNoTaizaiModItems.MONSPEET_BOSS_SPAWN_EGG.get());
+				tabData.accept(CraftNoTaizaiModItems.ZELDRIS_BOSS_SPAWN_EGG.get());
 			})
 
 					.build());

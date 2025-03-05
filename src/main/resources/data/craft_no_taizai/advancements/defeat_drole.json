@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "craft_no_taizai:patience_icon"
+    },
+    "title": {
+      "translate": "advancements.defeat_drole.title"
+    },
+    "description": {
+      "translate": "advancements.defeat_drole.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat_drole_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "craft_no_taizai:defeat_gloxina"
+}

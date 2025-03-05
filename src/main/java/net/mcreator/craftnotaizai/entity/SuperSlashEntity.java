@@ -8,6 +8,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
@@ -23,6 +24,7 @@ import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.craftnotaizai.procedures.CruelSunWhileProjectileFlyingTickProcedure;
 import net.mcreator.craftnotaizai.procedures.CruelSunProjectileHitsLivingEntityProcedure;
+import net.mcreator.craftnotaizai.procedures.CrazyProminenceProjectileHitsBlockProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
@@ -70,7 +72,13 @@ public class SuperSlashEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		CruelSunProjectileHitsLivingEntityProcedure.execute(entityHitResult.getEntity());
+		CruelSunProjectileHitsLivingEntityProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), entityHitResult.getEntity());
+	}
+
+	@Override
+	public void onHitBlock(BlockHitResult blockHitResult) {
+		super.onHitBlock(blockHitResult);
+		CrazyProminenceProjectileHitsBlockProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
 	}
 
 	@Override

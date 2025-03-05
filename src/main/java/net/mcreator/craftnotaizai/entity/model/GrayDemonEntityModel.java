@@ -9,12 +9,12 @@ import net.mcreator.craftnotaizai.entity.GrayDemonEntityEntity;
 public class GrayDemonEntityModel extends GeoModel<GrayDemonEntityEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(GrayDemonEntityEntity entity) {
-		return new ResourceLocation("craft_no_taizai", "animations/gay_demon.animation.json");
+		return new ResourceLocation("craft_no_taizai", "animations/gay_demon_rm.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(GrayDemonEntityEntity entity) {
-		return new ResourceLocation("craft_no_taizai", "geo/gay_demon.geo.json");
+		return new ResourceLocation("craft_no_taizai", "geo/gay_demon_rm.geo.json");
 	}
 
 	@Override

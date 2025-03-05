@@ -37,7 +37,6 @@ import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionResult;
@@ -52,7 +51,6 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
-import net.mcreator.craftnotaizai.procedures.CathRightClickedOnEntityProcedure;
 import net.mcreator.craftnotaizai.procedures.CathOnEntityTickUpdateProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
@@ -191,13 +189,6 @@ public class CathEntity extends TamableAnimal implements GeoEntity {
 					this.setPersistenceRequired();
 			}
 		}
-		double x = this.getX();
-		double y = this.getY();
-		double z = this.getZ();
-		Entity entity = this;
-		Level world = this.level();
-
-		CathRightClickedOnEntityProcedure.execute(entity, sourceentity);
 		return retval;
 	}
 

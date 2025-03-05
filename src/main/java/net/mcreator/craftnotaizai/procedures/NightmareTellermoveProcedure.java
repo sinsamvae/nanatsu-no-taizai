@@ -10,6 +10,7 @@ import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
@@ -59,7 +60,13 @@ public class NightmareTellermoveProcedure {
 							}
 						}.checkGamemode(entityiterator))) {
 					if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.NIGHTMARETELLER.get(), (int) damage, 0, false, false));
+						_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.NIGHTMARETELLER.get(), (int) Math.max(damage, 6000), 0, false, false));
+					if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+						_entity.addEffect(new MobEffectInstance(MobEffects.DARKNESS, (int) Math.max(damage, 6000), 0, false, false));
+					if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+						_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, (int) Math.max(damage, 6000), 0, false, false));
+					if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+						_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, (int) Math.max(damage, 6000), 0, false, false));
 				}
 			}
 		}

@@ -85,6 +85,7 @@ public class BeforehitProcedure {
 		dmg = dmg * (200 / (200 + ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Spirit
 				+ (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).physical_hunt_spirt)
 				* (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).spirit_boost));
+		dmg = dmg * (10 / (10 + entity.getPersistentData().getDouble("level") * 14));
 		dmg = dmg * (25 / (25 + armor));
 		if (entity instanceof Player) {
 			current_health = (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) / 20;
@@ -158,11 +159,11 @@ public class BeforehitProcedure {
 			}
 			if (((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.ALDAN.get()
 					|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.ALDAN.get())
-					&& !(entity instanceof Player _plrCldCheck20 && _plrCldCheck20.getCooldowns().isOnCooldown(CraftNoTaizaiModItems.ALDAN.get())) && Math.floor(current_health) <= 0) {
+					&& !(entity instanceof Player _plrCldCheck21 && _plrCldCheck21.getCooldowns().isOnCooldown(CraftNoTaizaiModItems.ALDAN.get())) && Math.floor(current_health) <= 0) {
 				current_health = 20;
 			}
 			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).immortality
-					&& !(entity instanceof LivingEntity _livEnt21 && _livEnt21.hasEffect(CraftNoTaizaiModMobEffects.PURGATORY_FLAME.get())) && Math.floor(current_health) <= 0) {
+					&& !(entity instanceof LivingEntity _livEnt22 && _livEnt22.hasEffect(CraftNoTaizaiModMobEffects.PURGATORY_FLAME.get())) && Math.floor(current_health) <= 0) {
 				current_health = 1;
 			}
 			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).revengecounter) {
@@ -177,10 +178,10 @@ public class BeforehitProcedure {
 			if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.PEACE_AMULET_CHESTPLATE.get()) {
 				dmg = dmg * 0.9;
 			}
-			if (entity instanceof LivingEntity _livEnt24 && _livEnt24.hasEffect(CraftNoTaizaiModMobEffects.KING_TRUMPET.get())) {
+			if (entity instanceof LivingEntity _livEnt25 && _livEnt25.hasEffect(CraftNoTaizaiModMobEffects.KING_TRUMPET.get())) {
 				dmg = dmg * 1.1;
 			}
-			if (entity instanceof LivingEntity _livEnt25 && _livEnt25.hasEffect(CraftNoTaizaiModMobEffects.NIGHTMARETELLER.get())) {
+			if (entity instanceof LivingEntity _livEnt26 && _livEnt26.hasEffect(CraftNoTaizaiModMobEffects.NIGHTMARETELLER.get())) {
 				dmg = dmg * 1.3;
 			}
 			{

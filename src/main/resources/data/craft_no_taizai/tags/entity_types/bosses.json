@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "craft_no_taizai:ban_boss_animated",
+    "craft_no_taizai:diane_boss_animated",
+    "craft_no_taizai:gowther_boss_animated",
+    "craft_no_taizai:king_boss_animated",
+    "craft_no_taizai:merlin_boss_animated",
+    "craft_no_taizai:meliodas_boss_animated",
+    "craft_no_taizai:escanor_boss",
+    "craft_no_taizai:gloxina_boss",
+    "craft_no_taizai:drole_boss",
+    "craft_no_taizai:derieri_boss",
+    "craft_no_taizai:estarossa_boss",
+    "craft_no_taizai:fraudrin_boss",
+    "craft_no_taizai:galand_boss",
+    "craft_no_taizai:galand_over_boss",
+    "craft_no_taizai:melascula_boss",
+    "craft_no_taizai:monspeet_boss",
+    "craft_no_taizai:zeldris_boss"
+  ]
+}

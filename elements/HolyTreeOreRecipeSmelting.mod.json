@@ -1,0 +1,22 @@
+{
+  "_fv": 69,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "BLOCKS",
+    "xpReward": 1.5,
+    "cookingTime": 220,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "CUSTOM:HolyTreeOre"
+    },
+    "smeltingReturnStack": {
+      "value": "CUSTOM:HolyTreeShard"
+    },
+    "name": "holy_tree_ore_recipe_smelting",
+    "namespace": "mod"
+  }
+}

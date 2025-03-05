@@ -8,12 +8,12 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ItemSupplier;
 import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.util.RandomSource;
@@ -70,15 +70,15 @@ public class KamichigiriProjectileEntity extends AbstractArrow implements ItemSu
 	}
 
 	@Override
-	public void playerTouch(Player entity) {
-		super.playerTouch(entity);
-		HellBlazeProjectileHitsBlockProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
+	public void onHitEntity(EntityHitResult entityHitResult) {
+		super.onHitEntity(entityHitResult);
+		HellBlazeProjectileHitsLivingEntityProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), entityHitResult.getEntity());
 	}
 
 	@Override
-	public void onHitEntity(EntityHitResult entityHitResult) {
-		super.onHitEntity(entityHitResult);
-		HellBlazeProjectileHitsLivingEntityProcedure.execute(entityHitResult.getEntity());
+	public void onHitBlock(BlockHitResult blockHitResult) {
+		super.onHitBlock(blockHitResult);
+		HellBlazeProjectileHitsBlockProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
 	}
 
 	@Override

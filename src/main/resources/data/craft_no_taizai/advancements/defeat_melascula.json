@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "craft_no_taizai:faith_icon"
+    },
+    "title": {
+      "translate": "advancements.defeat_melascula.title"
+    },
+    "description": {
+      "translate": "advancements.defeat_melascula.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat_melascula_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 6
+  },
+  "parent": "craft_no_taizai:defeat_gray_road"
+}

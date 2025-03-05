@@ -50,10 +50,6 @@ public class MonsterBlockGuiScreen extends AbstractContainerScreen<MonsterBlockG
 		RenderSystem.disableBlend();
 	}
 
-	public static HashMap<String, String> getTextboxValues() {
-		return textstate;
-	}
-
 	@Override
 	public boolean keyPressed(int key, int b, int c) {
 		if (key == 256) {

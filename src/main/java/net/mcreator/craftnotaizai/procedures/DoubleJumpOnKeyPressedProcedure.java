@@ -13,7 +13,7 @@ public class DoubleJumpOnKeyPressedProcedure {
 			return;
 		double jump = 0;
 		jump = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Agility / 100;
-		if (!world.getBlockState(BlockPos.containing(x, y - 0.5, z)).canOcclude() && !(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).jumbvar) {
+		if (!(world.getBlockState(BlockPos.containing(x, y - 0.5, z)).canOcclude() && (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).jumbvar)) {
 			entity.setDeltaMovement(new Vec3((entity.getDeltaMovement().x()), (entity.getDeltaMovement().y() + Math.min(jump, 0.95)), (entity.getDeltaMovement().z())));
 			{
 				boolean _setval = true;

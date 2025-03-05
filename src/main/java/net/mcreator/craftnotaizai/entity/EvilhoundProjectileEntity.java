@@ -72,7 +72,7 @@ public class EvilhoundProjectileEntity extends AbstractArrow implements ItemSupp
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		EvilhoundProjectileHitsLivingEntityProcedure.execute(entityHitResult.getEntity());
+		EvilhoundProjectileHitsLivingEntityProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), entityHitResult.getEntity());
 	}
 
 	@Override

@@ -141,7 +141,7 @@ public class PhysicalCloneEntity extends TamableAnimal {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		PhysicalCloneOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
+		PhysicalCloneOnEntityTickUpdateProcedure.execute(this);
 	}
 
 	@Override

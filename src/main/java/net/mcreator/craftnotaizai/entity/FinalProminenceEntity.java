@@ -23,7 +23,7 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.craftnotaizai.procedures.FinalProminenceWhileProjectileFlyingTickProcedure;
-import net.mcreator.craftnotaizai.procedures.CrazyProminenceProjectileHitsPlayerProcedure;
+import net.mcreator.craftnotaizai.procedures.CruelSunProjectileHitsLivingEntityProcedure;
 import net.mcreator.craftnotaizai.procedures.CrazyProminenceProjectileHitsBlockProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
@@ -72,7 +72,7 @@ public class FinalProminenceEntity extends AbstractArrow implements ItemSupplier
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		CrazyProminenceProjectileHitsPlayerProcedure.execute(entityHitResult.getEntity());
+		CruelSunProjectileHitsLivingEntityProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), entityHitResult.getEntity());
 	}
 
 	@Override

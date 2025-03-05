@@ -7,6 +7,7 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
@@ -22,6 +23,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
+import net.mcreator.craftnotaizai.procedures.CruelSunProjectileHitsLivingEntityProcedure;
 import net.mcreator.craftnotaizai.procedures.CrazyProminenceWhileProjectileFlyingTickProcedure;
 import net.mcreator.craftnotaizai.procedures.CrazyProminenceProjectileHitsPlayerProcedure;
 import net.mcreator.craftnotaizai.procedures.CrazyProminenceProjectileHitsBlockProcedure;
@@ -73,6 +75,12 @@ public class CrazyProminenceEntity extends AbstractArrow implements ItemSupplier
 	public void playerTouch(Player entity) {
 		super.playerTouch(entity);
 		CrazyProminenceProjectileHitsPlayerProcedure.execute(entity);
+	}
+
+	@Override
+	public void onHitEntity(EntityHitResult entityHitResult) {
+		super.onHitEntity(entityHitResult);
+		CruelSunProjectileHitsLivingEntityProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), entityHitResult.getEntity());
 	}
 
 	@Override

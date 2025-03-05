@@ -7,6 +7,7 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
@@ -46,9 +47,23 @@ public class PlayerFirstJoinsProcedure {
 		double RandomRace = 0;
 		if (!(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).PlayerFirstJoins) {
 			{
-				ItemStack _setval = new ItemStack(CraftNoTaizaiModItems.DRAGON_HANDLE.get());
+				ItemStack _setval = new ItemStack(Items.DIAMOND_SWORD);
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.guild_stack = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				ItemStack _setval = new ItemStack(CraftNoTaizaiModItems.DRAGON_HANDLE.get());
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.AbilitySelect = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				ItemStack _setval = new ItemStack(Items.WOODEN_SWORD);
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.learn_skill = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
@@ -191,20 +206,6 @@ public class PlayerFirstJoinsProcedure {
 					boolean _setval = true;
 					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.damage_indicator = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					ItemStack _setval = new ItemStack(CraftNoTaizaiModItems.DRAGON_HANDLE.get());
-					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.AbilitySelect = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					ItemStack _setval = new ItemStack(CraftNoTaizaiModItems.DRAGON_HANDLE.get());
-					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.learn_skill = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}

@@ -17,7 +17,7 @@
     "customModelTexture": "kamichigiri.png",
     "modelWidth": 0.5,
     "modelHeight": 0.5,
-    "onHitsPlayer": {
+    "onHitsBlock": {
       "name": "HellBlazeProjectileHitsBlock"
     },
     "onHitsEntity": {

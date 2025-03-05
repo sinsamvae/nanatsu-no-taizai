@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "craft_no_taizai:block/fairyleaves",
-    "particle": "craft_no_taizai:block/fairyleaves"
-  }
-}

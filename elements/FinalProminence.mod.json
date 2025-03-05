@@ -21,7 +21,7 @@
       "name": "CrazyProminenceProjectileHitsBlock"
     },
     "onHitsEntity": {
-      "name": "CrazyProminenceProjectileHitsPlayer"
+      "name": "CruelSunProjectileHitsLivingEntity"
     },
     "onFlyingTick": {
       "name": "FinalProminenceWhileProjectileFlyingTick"

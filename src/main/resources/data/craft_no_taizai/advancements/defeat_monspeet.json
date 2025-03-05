@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "craft_no_taizai:reticence_icon"
+    },
+    "title": {
+      "translate": "advancements.defeat_monspeet.title"
+    },
+    "description": {
+      "translate": "advancements.defeat_monspeet.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "defeat_monspeet_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 6
+  },
+  "parent": "craft_no_taizai:defeat_melascula"
+}

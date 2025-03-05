@@ -41,7 +41,6 @@ import net.mcreator.craftnotaizai.block.FairyTreeSlabBlock;
 import net.mcreator.craftnotaizai.block.FairyTreeSaplingsBlock;
 import net.mcreator.craftnotaizai.block.FairyTreeFenceBlock;
 import net.mcreator.craftnotaizai.block.FairyKingLogBlock;
-import net.mcreator.craftnotaizai.block.FairyKingLeavesBlock;
 import net.mcreator.craftnotaizai.block.FairyKingLeaveBlock;
 import net.mcreator.craftnotaizai.block.EmptyMugBlockBlock;
 import net.mcreator.craftnotaizai.block.CiderMugBlockBlock;
@@ -88,7 +87,6 @@ public class CraftNoTaizaiModBlocks {
 	public static final RegistryObject<Block> LAST_STAGE_AGAVE = REGISTRY.register("last_stage_agave", () -> new LastStageAgaveBlock());
 	public static final RegistryObject<Block> GLOW_MUG_BLOCK = REGISTRY.register("glow_mug_block", () -> new GlowMugBlockBlock());
 	public static final RegistryObject<Block> BEER_MUG_BLOCK = REGISTRY.register("beer_mug_block", () -> new BeerMugBlockBlock());
-	public static final RegistryObject<Block> FAIRY_KING_LEAVES = REGISTRY.register("fairy_king_leaves", () -> new FairyKingLeavesBlock());
 	public static final RegistryObject<Block> GODDASS_ORE = REGISTRY.register("goddass_ore", () -> new GoddassOreBlock());
 	public static final RegistryObject<Block> FAIRY_TREE_SAPLINGS = REGISTRY.register("fairy_tree_saplings", () -> new FairyTreeSaplingsBlock());
 	public static final RegistryObject<Block> FAIRY_TREE_WOOD = REGISTRY.register("fairy_tree_wood", () -> new FairyTreeWoodBlock());
