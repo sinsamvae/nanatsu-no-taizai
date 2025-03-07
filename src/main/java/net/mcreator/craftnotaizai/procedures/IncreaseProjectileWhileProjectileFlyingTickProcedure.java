@@ -12,8 +12,8 @@ import java.util.List;
 import java.util.Comparator;
 
 public class IncreaseProjectileWhileProjectileFlyingTickProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity immediatesourceentity) {
-		if (entity == null || immediatesourceentity == null)
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity immediatesourceentity) {
+		if (immediatesourceentity == null)
 			return;
 		double sevy = 0;
 		double a = 0;
@@ -32,7 +32,7 @@ public class IncreaseProjectileWhileProjectileFlyingTickProcedure {
 		double delta = 0;
 		double delay = 0;
 		immediatesourceentity.setNoGravity(true);
-		ProjectileFullCounterProcedure.execute(world, x, y, z, entity, immediatesourceentity);
+		ProjectileFullCounterProcedure.execute(world, x, y, z, immediatesourceentity);
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles(ParticleTypes.END_ROD, x, y, z, 1, 0.2, 0.2, 0.2, 0);
 		immediatesourceentity.getPersistentData().putDouble("Flying", (immediatesourceentity.getPersistentData().getDouble("Flying") + 1));

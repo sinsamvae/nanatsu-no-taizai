@@ -65,7 +65,7 @@ public class ExterminateRayProjectileEntity extends AbstractArrow implements Ite
 	@Override
 	public void tick() {
 		super.tick();
-		ExterminateRayWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
+		ExterminateRayWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		if (this.inGround)
 			this.discard();
 	}

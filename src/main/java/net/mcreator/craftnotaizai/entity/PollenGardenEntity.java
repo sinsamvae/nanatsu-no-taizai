@@ -94,7 +94,7 @@ public class PollenGardenEntity extends Monster {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		PollenGardenUpdateTickProcedure.execute(this);
+		PollenGardenUpdateTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override

@@ -27,7 +27,7 @@ public class UseMagicOnKeyPressedProcedure {
 				HumandemonmarkProcedure.execute(entity);
 				ChastiefolButtonPressProcedure.execute(world, x, y, z, entity);
 				UseMagicPressed4Procedure.execute(world, x, y, z, entity);
-				BulletSquallKeyBindProcedure.execute(world, x, y, z, entity);
+				BulletSquallKeyBindProcedure.execute(world, x, z, entity);
 			});
 		} else {
 			ThunderboltbindOnKeyPressedProcedure.execute(world, x, y, z, entity);
@@ -44,7 +44,7 @@ public class UseMagicOnKeyPressedProcedure {
 			HumandemonmarkProcedure.execute(entity);
 			ChastiefolButtonPressProcedure.execute(world, x, y, z, entity);
 			UseMagicPressed4Procedure.execute(world, x, y, z, entity);
-			BulletSquallKeyBindProcedure.execute(world, x, y, z, entity);
+			BulletSquallKeyBindProcedure.execute(world, x, z, entity);
 		}
 	}
 }

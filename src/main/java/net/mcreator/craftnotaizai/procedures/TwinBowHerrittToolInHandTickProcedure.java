@@ -9,7 +9,7 @@ public class TwinBowHerrittToolInHandTickProcedure {
 		if (entity == null)
 			return;
 		if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Invasion")) {
-			if (entity.getPersistentData().getBoolean("twinbow") == false) {
+			if (!entity.getPersistentData().getBoolean("twinbow")) {
 				{
 					double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).range + 5;
 					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -19,7 +19,7 @@ public class TwinBowHerrittToolInHandTickProcedure {
 				}
 				entity.getPersistentData().putBoolean("twinbow", true);
 			}
-			if (entity.getPersistentData().getBoolean("twinbow") == true) {
+			if (entity.getPersistentData().getBoolean("twinbow")) {
 				{
 					double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).range - 5;
 					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

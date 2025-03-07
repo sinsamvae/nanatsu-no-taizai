@@ -15,8 +15,8 @@ import java.util.List;
 import java.util.Comparator;
 
 public class IncreaseTrueSpiritSpearProjectileWhileProjectileFlyingTickProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity immediatesourceentity) {
-		if (entity == null || immediatesourceentity == null)
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity immediatesourceentity) {
+		if (immediatesourceentity == null)
 			return;
 		double sevy = 0;
 		double a = 0;
@@ -34,7 +34,7 @@ public class IncreaseTrueSpiritSpearProjectileWhileProjectileFlyingTickProcedure
 		double sev2 = 0;
 		double delta = 0;
 		immediatesourceentity.setNoGravity(true);
-		ProjectileFullCounterProcedure.execute(world, x, y, z, entity, immediatesourceentity);
+		ProjectileFullCounterProcedure.execute(world, x, y, z, immediatesourceentity);
 		immediatesourceentity.getPersistentData().putDouble("Flying", (immediatesourceentity.getPersistentData().getDouble("Flying") + 1));
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.HUNTER_WISPPARTICLE.get()), x, y, z, 1, 0.1, 0.1, 0.1, 0);

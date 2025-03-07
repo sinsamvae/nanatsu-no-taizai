@@ -65,7 +65,7 @@ public class JethammerProjectileEntity extends AbstractArrow implements ItemSupp
 	@Override
 	public void tick() {
 		super.tick();
-		JethammerWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
+		JethammerWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		if (this.inGround)
 			this.discard();
 	}

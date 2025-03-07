@@ -55,5 +55,26 @@ public class MagicAbilitySlot6Procedure {
 				}
 			}
 		}
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).learn_demon_skills == true) {
+			if (!(DisplayDemonSkill6Procedure.execute(entity)).equals("LOCKED")) {
+				can_set = true;
+				for (int index2 = 0; index2 < 8; index2++) {
+					if ((((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag().getString(("skill" + check)))
+							.equals(DisplayDemonSkill6Procedure.execute(entity))) {
+						can_set = false;
+					}
+					check = check + 1;
+				}
+				if (can_set) {
+					((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag()
+							.putString(("skill" + (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Move), DisplayDemonSkill6Procedure.execute(entity));
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(Component.literal(DisplayDemonSkill6Procedure.execute(entity)), false);
+				} else {
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(Component.literal("You already have this skill"), false);
+				}
+			}
+		}
 	}
 }

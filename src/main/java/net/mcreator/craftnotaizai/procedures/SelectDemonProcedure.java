@@ -20,7 +20,6 @@ public class SelectDemonProcedure {
 		}
 		SetDemonClanAttribuesProcedure.execute(entity);
 		SetDemonMagicProcedure.execute(world, entity);
-		SetDemonManaProcedure.execute(entity);
 		if (entity instanceof Player _player)
 			_player.closeContainer();
 	}

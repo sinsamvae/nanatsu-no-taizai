@@ -84,7 +84,7 @@ public class BrilliantDetonationProjectileEntity extends AbstractArrow implement
 	@Override
 	public void tick() {
 		super.tick();
-		DriftBombWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
+		DriftBombWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		if (this.inGround)
 			this.discard();
 	}

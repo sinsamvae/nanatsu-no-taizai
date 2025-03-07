@@ -73,7 +73,7 @@ public class KillSwitchProjectileEntity extends AbstractArrow implements ItemSup
 	@Override
 	public void tick() {
 		super.tick();
-		KillSwitchWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
+		KillSwitchWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		if (this.inGround)
 			this.discard();
 	}

@@ -84,7 +84,7 @@ public class FinalProminenceEntity extends AbstractArrow implements ItemSupplier
 	@Override
 	public void tick() {
 		super.tick();
-		FinalProminenceWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
+		FinalProminenceWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		if (this.inGround)
 			this.discard();
 	}

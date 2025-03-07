@@ -83,7 +83,7 @@
           "name": "label_proc_display_magic",
           "text": {
             "fixedValue": "",
-            "name": "DisplayMagic"
+            "name": "MagicVar"
           },
           "color": {
             "value": -1,
@@ -969,6 +969,25 @@
         }
       },
       {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_demon_skill_6",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayDemonSkill6"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "LearnDemonSkillsDisplay"
+          },
+          "x": 134,
+          "y": 145
+        }
+      },
+      {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_berserk_mode",
@@ -1144,6 +1163,25 @@
           },
           "x": 134,
           "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_possession_skill_3",
+          "text": {
+            "fixedValue": "",
+            "name": "PossessionSkill3"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "PossessionSwitch"
+          },
+          "x": 134,
+          "y": 103
         }
       }
     ],

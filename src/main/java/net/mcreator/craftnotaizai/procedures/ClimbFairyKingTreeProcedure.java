@@ -7,7 +7,6 @@ import net.minecraftforge.event.TickEvent;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.BlockPos;
 
@@ -31,10 +30,7 @@ public class ClimbFairyKingTreeProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double y, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getXRot() <= 25 && (world.getBlockState(
-				BlockPos.containing(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX(), y,
-						entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ())))
-				.getBlock() == CraftNoTaizaiModBlocks.FAIRY_KING_LOG.get()) {
+		if (entity.getXRot() <= 25 && (world.getBlockState(BlockPos.containing(entity.getX() + entity.getLookAngle().x, y, entity.getZ() + entity.getLookAngle().z))).getBlock() == CraftNoTaizaiModBlocks.FAIRY_KING_LOG.get()) {
 			entity.setDeltaMovement(new Vec3(0, 0.15, 0));
 		}
 	}

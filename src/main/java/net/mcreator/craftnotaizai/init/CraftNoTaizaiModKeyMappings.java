@@ -24,7 +24,6 @@ import net.mcreator.craftnotaizai.network.MantaraySMoveMessage;
 import net.mcreator.craftnotaizai.network.MantarayMoveMessage;
 import net.mcreator.craftnotaizai.network.ManaChargeBindMessage;
 import net.mcreator.craftnotaizai.network.LockOnMessage;
-import net.mcreator.craftnotaizai.network.LevitationMessage;
 import net.mcreator.craftnotaizai.network.DoubleJumpMessage;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
@@ -70,19 +69,6 @@ public class CraftNoTaizaiModKeyMappings {
 				int dt = (int) (System.currentTimeMillis() - MANA_CHARGE_BIND_LASTPRESS);
 				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new ManaChargeBindMessage(1, dt));
 				ManaChargeBindMessage.pressAction(Minecraft.getInstance().player, 1, dt);
-			}
-			isDownOld = isDown;
-		}
-	};
-	public static final KeyMapping LEVITATION = new KeyMapping("key.craft_no_taizai.levitation", GLFW.GLFW_KEY_F, "key.categories.misc") {
-		private boolean isDownOld = false;
-
-		@Override
-		public void setDown(boolean isDown) {
-			super.setDown(isDown);
-			if (isDownOld != isDown && isDown) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new LevitationMessage(0, 0));
-				LevitationMessage.pressAction(Minecraft.getInstance().player, 0, 0);
 			}
 			isDownOld = isDown;
 		}
@@ -209,7 +195,6 @@ public class CraftNoTaizaiModKeyMappings {
 		event.register(OPEN_STATS);
 		event.register(DOUBLE_JUMP);
 		event.register(MANA_CHARGE_BIND);
-		event.register(LEVITATION);
 		event.register(W_PRESS_F_LY);
 		event.register(LOCK_ON);
 		event.register(SWAP_MOVE);
@@ -227,7 +212,6 @@ public class CraftNoTaizaiModKeyMappings {
 				OPEN_STATS.consumeClick();
 				DOUBLE_JUMP.consumeClick();
 				MANA_CHARGE_BIND.consumeClick();
-				LEVITATION.consumeClick();
 				W_PRESS_F_LY.consumeClick();
 				LOCK_ON.consumeClick();
 				SWAP_MOVE.consumeClick();

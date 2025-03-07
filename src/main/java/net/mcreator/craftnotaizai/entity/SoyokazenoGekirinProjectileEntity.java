@@ -76,7 +76,7 @@ public class SoyokazenoGekirinProjectileEntity extends AbstractArrow implements 
 	@Override
 	public void tick() {
 		super.tick();
-		SoyokazenoGekirinWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
+		SoyokazenoGekirinWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		if (this.inGround)
 			this.discard();
 	}

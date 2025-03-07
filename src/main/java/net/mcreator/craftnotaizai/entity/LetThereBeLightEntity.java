@@ -68,7 +68,7 @@ public class LetThereBeLightEntity extends AbstractArrow implements ItemSupplier
 	@Override
 	public void tick() {
 		super.tick();
-		LetThereBeLightWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
+		LetThereBeLightWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		if (this.inGround)
 			this.discard();
 	}

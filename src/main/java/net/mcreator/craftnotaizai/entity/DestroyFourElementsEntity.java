@@ -76,7 +76,7 @@ public class DestroyFourElementsEntity extends AbstractArrow implements ItemSupp
 	@Override
 	public void tick() {
 		super.tick();
-		HellblazeOmegaWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
+		HellblazeOmegaWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		if (this.inGround)
 			this.discard();
 	}

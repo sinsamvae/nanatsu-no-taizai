@@ -69,7 +69,7 @@ public class EmbraceoftheThunderGodWhileProjectileFlyingTickProcedure {
 							(immediatesourceentity.getPersistentData().getDouble("sx") + Math.sin(immediatesourceentity.getPersistentData().getDouble("h")) * (entity.getDirection()).getStepZ()),
 							(immediatesourceentity.getPersistentData().getDouble("sy") + Math.cos(immediatesourceentity.getPersistentData().getDouble("h"))),
 							(immediatesourceentity.getPersistentData().getDouble("sz") + Math.sin(immediatesourceentity.getPersistentData().getDouble("h")) * (entity.getDirection()).getStepX()), 4, 0.1, 0.1, 0.1, 0);
-				ProjectileFullCounterProcedure.execute(world, x, y, z, entity, immediatesourceentity);
+				ProjectileFullCounterProcedure.execute(world, x, y, z, immediatesourceentity);
 			});
 		}
 		immediatesourceentity.getPersistentData().putDouble("Flying", (immediatesourceentity.getPersistentData().getDouble("Flying") + 1));

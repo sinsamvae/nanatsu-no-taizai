@@ -76,7 +76,7 @@ public class ManpuunoGekirinProjectileEntity extends AbstractArrow implements It
 	@Override
 	public void tick() {
 		super.tick();
-		ManpuunoGekirinWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
+		ManpuunoGekirinWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		if (this.inGround)
 			this.discard();
 	}

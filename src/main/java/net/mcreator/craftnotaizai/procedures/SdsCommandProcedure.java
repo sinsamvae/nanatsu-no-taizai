@@ -72,5 +72,11 @@ public class SdsCommandProcedure {
 		CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 		CraftNoTaizaiModVariables.MapVariables.get(world).StaffOfImprisonment = BoolArgumentType.getBool(arguments, "name");
 		CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
+		CraftNoTaizaiModVariables.MapVariables.get(world).infinity = BoolArgumentType.getBool(arguments, "name");
+		CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
+		CraftNoTaizaiModVariables.MapVariables.get(world).sntach = BoolArgumentType.getBool(arguments, "name");
+		CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
+		CraftNoTaizaiModVariables.MapVariables.get(world).Invasion = BoolArgumentType.getBool(arguments, "name");
+		CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 	}
 }

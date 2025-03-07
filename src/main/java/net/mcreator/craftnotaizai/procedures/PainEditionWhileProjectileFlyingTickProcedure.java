@@ -60,7 +60,7 @@ public class PainEditionWhileProjectileFlyingTickProcedure {
 				_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.PINK.get()), (x + radius * vX), (y + radius * vY), (z + radius * vZ), 1, 0, 0, 0, 0);
 		}
 		immediatesourceentity.setNoGravity(true);
-		ProjectileFullCounterProcedure.execute(world, x, y, z, entity, immediatesourceentity);
+		ProjectileFullCounterProcedure.execute(world, x, y, z, immediatesourceentity);
 		immediatesourceentity.getPersistentData().putDouble("Flying", (immediatesourceentity.getPersistentData().getDouble("Flying") + 1));
 		if (immediatesourceentity.getPersistentData().getDouble("Flying") >= 200) {
 			if (!immediatesourceentity.level().isClientSide())

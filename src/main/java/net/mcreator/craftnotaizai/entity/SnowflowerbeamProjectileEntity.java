@@ -65,7 +65,7 @@ public class SnowflowerbeamProjectileEntity extends AbstractArrow implements Ite
 	@Override
 	public void tick() {
 		super.tick();
-		SnowflowerbeamWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
+		SnowflowerbeamWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		if (this.inGround)
 			this.discard();
 	}

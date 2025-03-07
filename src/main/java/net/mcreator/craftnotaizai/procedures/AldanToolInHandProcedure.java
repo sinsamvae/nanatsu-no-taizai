@@ -9,7 +9,7 @@ public class AldanToolInHandProcedure {
 		if (entity == null)
 			return;
 		boolean manaboost = false;
-		if (entity.getPersistentData().getBoolean("aldan") == false) {
+		if (!entity.getPersistentData().getBoolean("aldan")) {
 			{
 				double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack_boost * 1.5;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -26,16 +26,16 @@ public class AldanToolInHandProcedure {
 			}
 			entity.getPersistentData().putBoolean("aldan", true);
 		}
-		if (entity.getPersistentData().getBoolean("aldan") == true) {
+		if (entity.getPersistentData().getBoolean("aldan")) {
 			{
-				double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack_boost / 1.5;
+				double _setval = 1;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.ManaAttack_boost = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
 			{
-				double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).maxmana_boost / 1.5;
+				double _setval = 1;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.maxmana_boost = _setval;
 					capability.syncPlayerVariables(entity);

@@ -164,7 +164,7 @@ public class BulletSquallEntity extends TamableAnimal {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		BulletSquallOnEntityTickUpdateProcedure.execute(this);
+		BulletSquallOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override

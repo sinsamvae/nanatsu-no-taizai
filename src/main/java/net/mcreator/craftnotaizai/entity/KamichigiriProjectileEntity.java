@@ -84,7 +84,7 @@ public class KamichigiriProjectileEntity extends AbstractArrow implements ItemSu
 	@Override
 	public void tick() {
 		super.tick();
-		HellBlazeProjectileWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
+		HellBlazeProjectileWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		if (this.inGround)
 			this.discard();
 	}

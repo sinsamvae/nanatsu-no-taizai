@@ -25,7 +25,9 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "shift right click to fly"
+      ]
     },
     "glowCondition": {
       "fixedValue": false

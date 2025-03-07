@@ -8,8 +8,8 @@ import net.minecraft.core.particles.SimpleParticleType;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModParticleTypes;
 
 public class EvilhoundWhileProjectileFlyingTickProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity immediatesourceentity) {
-		if (entity == null || immediatesourceentity == null)
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity immediatesourceentity) {
+		if (immediatesourceentity == null)
 			return;
 		double delay = 0;
 		double rep = 0;
@@ -30,7 +30,7 @@ public class EvilhoundWhileProjectileFlyingTickProcedure {
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.FLAME_PURPLE.get()), x, y, z, 5, 0.3, 0.3, 0.3, 0.1);
 		immediatesourceentity.setNoGravity(true);
-		ProjectileFullCounterProcedure.execute(world, x, y, z, entity, immediatesourceentity);
+		ProjectileFullCounterProcedure.execute(world, x, y, z, immediatesourceentity);
 		immediatesourceentity.getPersistentData().putDouble("Flying", (immediatesourceentity.getPersistentData().getDouble("Flying") + 1));
 		if (immediatesourceentity.getPersistentData().getDouble("Flying") >= 200) {
 			if (!immediatesourceentity.level().isClientSide())

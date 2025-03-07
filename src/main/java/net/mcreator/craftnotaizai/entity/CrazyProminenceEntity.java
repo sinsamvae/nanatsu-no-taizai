@@ -92,7 +92,7 @@ public class CrazyProminenceEntity extends AbstractArrow implements ItemSupplier
 	@Override
 	public void tick() {
 		super.tick();
-		CrazyProminenceWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
+		CrazyProminenceWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		if (this.inGround)
 			this.discard();
 	}

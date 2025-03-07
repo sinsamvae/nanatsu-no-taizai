@@ -10,6 +10,7 @@ import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.craftnotaizai.client.particle.WhiteParticle;
+import net.mcreator.craftnotaizai.client.particle.WaterFallParticle;
 import net.mcreator.craftnotaizai.client.particle.VenomToxicyParticle;
 import net.mcreator.craftnotaizai.client.particle.SmokeParticle;
 import net.mcreator.craftnotaizai.client.particle.Smoke2Particle;
@@ -38,6 +39,7 @@ import net.mcreator.craftnotaizai.client.particle.GoddessParticleParticle;
 import net.mcreator.craftnotaizai.client.particle.FreezeCoffinParticle;
 import net.mcreator.craftnotaizai.client.particle.FlamePurpleParticle;
 import net.mcreator.craftnotaizai.client.particle.FeatherParticle;
+import net.mcreator.craftnotaizai.client.particle.ElectricParticlesParticle;
 import net.mcreator.craftnotaizai.client.particle.DarkSnowParticle;
 import net.mcreator.craftnotaizai.client.particle.DarkSnow2Particle;
 import net.mcreator.craftnotaizai.client.particle.ChastifolRedParticlesParticle;
@@ -94,5 +96,7 @@ public class CraftNoTaizaiModParticles {
 		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.BREAKER_OFF_PARTICLE.get(), BreakerOffParticleParticle::provider);
 		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.OMINOUS_NEBULA_PARTICLE.get(), OminousNebulaParticleParticle::provider);
 		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.PURGATORY_FIRE_PARTICLES.get(), PurgatoryFireParticlesParticle::provider);
+		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.WATER_FALL.get(), WaterFallParticle::provider);
+		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.ELECTRIC_PARTICLES.get(), ElectricParticlesParticle::provider);
 	}
 }

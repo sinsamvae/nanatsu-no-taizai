@@ -65,7 +65,7 @@ public class IncreaseTrueSpiritSpearProjectileEntity extends AbstractArrow imple
 	@Override
 	public void tick() {
 		super.tick();
-		IncreaseTrueSpiritSpearProjectileWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
+		IncreaseTrueSpiritSpearProjectileWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		if (this.inGround)
 			this.discard();
 	}

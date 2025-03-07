@@ -11,8 +11,8 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
 public class RockRushWhileProjectileFlyingTickProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity immediatesourceentity) {
-		if (entity == null || immediatesourceentity == null)
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity immediatesourceentity) {
+		if (immediatesourceentity == null)
 			return;
 		double delay = 0;
 		double sevy = 0;
@@ -30,7 +30,7 @@ public class RockRushWhileProjectileFlyingTickProcedure {
 		double cubesize = 0;
 		double sev2 = 0;
 		immediatesourceentity.setNoGravity(true);
-		ProjectileFullCounterProcedure.execute(world, x, y, z, entity, immediatesourceentity);
+		ProjectileFullCounterProcedure.execute(world, x, y, z, immediatesourceentity);
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					"particle dust 0.74 0.47 0 1 ~ ~1 ~ 0 0 0 0 1");

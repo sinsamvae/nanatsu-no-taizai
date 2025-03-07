@@ -10,8 +10,8 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.craftnotaizai.world.inventory.DisasterMenuMenu;
+import net.mcreator.craftnotaizai.procedures.MagicVarProcedure;
 import net.mcreator.craftnotaizai.procedures.DisplaySlotProcedure;
-import net.mcreator.craftnotaizai.procedures.DisplayMagicProcedure;
 import net.mcreator.craftnotaizai.procedures.DisasterSkillDisplay8Procedure;
 import net.mcreator.craftnotaizai.procedures.DisasterSkillDisplay7Procedure;
 import net.mcreator.craftnotaizai.procedures.DisasterSkillDisplay6Procedure;
@@ -95,7 +95,7 @@ public class DisasterMenuScreen extends AbstractContainerScreen<DisasterMenuMenu
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font,
 
-				DisplayMagicProcedure.execute(entity), -98, -82, -1, false);
+				MagicVarProcedure.execute(entity), -98, -82, -1, false);
 		guiGraphics.drawString(this.font,
 
 				DisplaySlotProcedure.execute(entity), 24, 64, -1, false);

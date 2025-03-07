@@ -17,7 +17,6 @@ import net.mcreator.craftnotaizai.client.gui.TheoGuiScreen;
 import net.mcreator.craftnotaizai.client.gui.TheoCaveScreen;
 import net.mcreator.craftnotaizai.client.gui.TeleportationGuiScreen;
 import net.mcreator.craftnotaizai.client.gui.StoryBoardScreen;
-import net.mcreator.craftnotaizai.client.gui.SideQuestGuiScreen;
 import net.mcreator.craftnotaizai.client.gui.SettingsUIScreen;
 import net.mcreator.craftnotaizai.client.gui.PossessionScreen;
 import net.mcreator.craftnotaizai.client.gui.MonsterBlockGuiScreen;
@@ -49,7 +48,6 @@ public class CraftNoTaizaiModScreens {
 			MenuScreens.register(CraftNoTaizaiModMenus.MAGIC_MENU.get(), MagicMenuScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.TELEPORTATION_GUI.get(), TeleportationGuiScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.KEG_GUI.get(), KegGuiScreen::new);
-			MenuScreens.register(CraftNoTaizaiModMenus.SIDE_QUEST_GUI.get(), SideQuestGuiScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.CLONES_GUI.get(), ClonesGuiScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.MONSTER_BLOCK_GUI.get(), MonsterBlockGuiScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.DEMON_KING_GUI.get(), DemonKingGuiScreen::new);

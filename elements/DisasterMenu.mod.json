@@ -25,7 +25,7 @@
           "name": "label_proc_display_magic",
           "text": {
             "fixedValue": "",
-            "name": "DisplayMagic"
+            "name": "MagicVar"
           },
           "color": {
             "value": -1,

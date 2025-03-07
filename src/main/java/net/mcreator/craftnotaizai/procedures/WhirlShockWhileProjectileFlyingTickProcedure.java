@@ -57,7 +57,7 @@ public class WhirlShockWhileProjectileFlyingTickProcedure {
 					_level.sendParticles(ParticleTypes.POOF, (entity.getPersistentData().getDouble("sx") + Math.sin(entity.getPersistentData().getDouble("h")) * (entity.getDirection()).getStepZ()),
 							(entity.getPersistentData().getDouble("sy") + Math.cos(entity.getPersistentData().getDouble("h"))),
 							(entity.getPersistentData().getDouble("sz") + Math.sin(entity.getPersistentData().getDouble("h")) * (entity.getDirection()).getStepX()), 4, 0.1, 0.1, 0.1, 0);
-				ProjectileFullCounterProcedure.execute(world, x, y, z, entity, immediatesourceentity);
+				ProjectileFullCounterProcedure.execute(world, x, y, z, immediatesourceentity);
 			});
 		}
 		immediatesourceentity.getPersistentData().putDouble("Flying", (immediatesourceentity.getPersistentData().getDouble("Flying") + 1));

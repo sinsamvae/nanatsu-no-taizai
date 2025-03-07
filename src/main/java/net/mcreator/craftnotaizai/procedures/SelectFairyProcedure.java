@@ -19,7 +19,6 @@ public class SelectFairyProcedure {
 		}
 		SetFairyClanAttributesProcedure.execute(entity);
 		SetFairyMagicProcedure.execute(world, entity);
-		SetFairyManaProcedure.execute(entity);
 		if (entity instanceof Player _player)
 			_player.closeContainer();
 	}

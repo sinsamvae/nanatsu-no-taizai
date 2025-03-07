@@ -9,8 +9,8 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModParticleTypes;
 
 public class FakeBallWhileProjectileFlyingTickProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity immediatesourceentity) {
-		if (entity == null || immediatesourceentity == null)
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity immediatesourceentity) {
+		if (immediatesourceentity == null)
 			return;
 		double delay = 0;
 		double sevy = 0;
@@ -28,7 +28,7 @@ public class FakeBallWhileProjectileFlyingTickProcedure {
 		double cubesize = 0;
 		double sev2 = 0;
 		immediatesourceentity.setNoGravity(true);
-		ProjectileFullCounterProcedure.execute(world, x, y, z, entity, immediatesourceentity);
+		ProjectileFullCounterProcedure.execute(world, x, y, z, immediatesourceentity);
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles(ParticleTypes.FLAME, x, y, z, 5, 0.02, 0.02, 0.02, 0);
 		if (world instanceof ServerLevel _level)

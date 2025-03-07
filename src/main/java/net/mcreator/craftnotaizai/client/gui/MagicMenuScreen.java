@@ -15,7 +15,9 @@ import net.mcreator.craftnotaizai.procedures.ReturnPossessionProcedure;
 import net.mcreator.craftnotaizai.procedures.ReturnPageProcedure;
 import net.mcreator.craftnotaizai.procedures.PossessionSwitchProcedure;
 import net.mcreator.craftnotaizai.procedures.PossessionSkillProcedure;
+import net.mcreator.craftnotaizai.procedures.PossessionSkill3Procedure;
 import net.mcreator.craftnotaizai.procedures.PossessionSkill2Procedure;
+import net.mcreator.craftnotaizai.procedures.MagicVarProcedure;
 import net.mcreator.craftnotaizai.procedures.MagicScrollSkill4Procedure;
 import net.mcreator.craftnotaizai.procedures.MagicScrollSkill3Procedure;
 import net.mcreator.craftnotaizai.procedures.MagicScrollSkill2Procedure;
@@ -30,7 +32,7 @@ import net.mcreator.craftnotaizai.procedures.DisplaySlotProcedure;
 import net.mcreator.craftnotaizai.procedures.DisplaySlot3Procedure;
 import net.mcreator.craftnotaizai.procedures.DisplaySlot2Procedure;
 import net.mcreator.craftnotaizai.procedures.DisplaySlot1Procedure;
-import net.mcreator.craftnotaizai.procedures.DisplayMagicProcedure;
+import net.mcreator.craftnotaizai.procedures.DisplayDemonSkill6Procedure;
 import net.mcreator.craftnotaizai.procedures.DisplayDemonSkill4Procedure;
 import net.mcreator.craftnotaizai.procedures.DisplayDemonSkill3Procedure;
 import net.mcreator.craftnotaizai.procedures.DisplayDemonSkill2Procedure;
@@ -154,7 +156,7 @@ public class MagicMenuScreen extends AbstractContainerScreen<MagicMenuMenu> {
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font,
 
-				DisplayMagicProcedure.execute(entity), -87, -56, -1, false);
+				MagicVarProcedure.execute(entity), -87, -56, -1, false);
 		guiGraphics.drawString(this.font,
 
 				DisplaySlotProcedure.execute(entity), 38, 61, -1, false);
@@ -201,11 +203,11 @@ public class MagicMenuScreen extends AbstractContainerScreen<MagicMenuMenu> {
 		if (DisplaySlot2Procedure.execute(entity))
 			guiGraphics.drawString(this.font,
 
-					DisplayAbility11Procedure.execute(), -80, -17, -1, false);
+					DisplayAbility11Procedure.execute(entity), -80, -17, -1, false);
 		if (DisplaySlot2Procedure.execute(entity))
 			guiGraphics.drawString(this.font,
 
-					Display12Procedure.execute(), -80, -3, -1, false);
+					Display12Procedure.execute(entity), -80, -3, -1, false);
 		if (DisplaySlot2Procedure.execute(entity))
 			guiGraphics.drawString(this.font,
 
@@ -306,6 +308,10 @@ public class MagicMenuScreen extends AbstractContainerScreen<MagicMenuMenu> {
 			guiGraphics.drawString(this.font,
 
 					DisplayDemonSKill5Procedure.execute(entity), -80, 11, -1, false);
+		if (LearnDemonSkillsDisplayProcedure.execute(entity))
+			guiGraphics.drawString(this.font,
+
+					DisplayDemonSkill6Procedure.execute(entity), -80, 25, -1, false);
 		if (LearnDemonKingDisplayProcedure.execute(entity))
 			guiGraphics.drawString(this.font,
 
@@ -322,6 +328,10 @@ public class MagicMenuScreen extends AbstractContainerScreen<MagicMenuMenu> {
 			guiGraphics.drawString(this.font,
 
 					PossessionSkill2Procedure.execute(entity), -80, -31, -1, false);
+		if (PossessionSwitchProcedure.execute(entity))
+			guiGraphics.drawString(this.font,
+
+					PossessionSkill3Procedure.execute(entity), -80, -17, -1, false);
 	}
 
 	@Override

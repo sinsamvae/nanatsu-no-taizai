@@ -76,7 +76,7 @@ public class BreakthroughProjectileEntity extends AbstractArrow implements ItemS
 	@Override
 	public void tick() {
 		super.tick();
-		BreakthroughWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
+		BreakthroughWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		if (this.inGround)
 			this.discard();
 	}

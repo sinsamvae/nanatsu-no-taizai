@@ -18,7 +18,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class FraudrinStoryRenderer extends GeoEntityRenderer<FraudrinStoryEntity> {
 	public FraudrinStoryRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new FraudrinStoryModel());
-		this.shadowRadius = 0.5f;
+		this.shadowRadius = 0.8f;
 	}
 
 	@Override

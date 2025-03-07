@@ -102,7 +102,6 @@ public class CraftNoTaizaiModVariables {
 			clone.PurgatoryFire = original.PurgatoryFire;
 			clone.heavy_metal = original.heavy_metal;
 			clone.lightningarmor = original.lightningarmor;
-			clone.heavy_armor = original.heavy_armor;
 			clone.Transparency_Use = original.Transparency_Use;
 			clone.magic = original.magic;
 			clone.revengecounter = original.revengecounter;
@@ -205,7 +204,6 @@ public class CraftNoTaizaiModVariables {
 			clone.JubakuEnsaY = original.JubakuEnsaY;
 			clone.JubakuEnsaZ = original.JubakuEnsaZ;
 			clone.JubakuEnsaTick = original.JubakuEnsaTick;
-			clone.JubakuEnsa = original.JubakuEnsa;
 			clone.God = original.God;
 			clone.elizbethArk = original.elizbethArk;
 			clone.commandment = original.commandment;
@@ -220,8 +218,6 @@ public class CraftNoTaizaiModVariables {
 			clone.defeatRedDemon = original.defeatRedDemon;
 			clone.DefeatGrayDemon = original.DefeatGrayDemon;
 			clone.giantskills = original.giantskills;
-			clone.sidequest = original.sidequest;
-			clone.questamount = original.questamount;
 			clone.istarX = original.istarX;
 			clone.istarY = original.istarY;
 			clone.istarZ = original.istarZ;
@@ -242,8 +238,6 @@ public class CraftNoTaizaiModVariables {
 			clone.possession = original.possession;
 			clone.MagicalCounter = original.MagicalCounter;
 			clone.power_percentage = original.power_percentage;
-			clone.PerpetualReincarnation = original.PerpetualReincarnation;
-			clone.EternalLife = original.EternalLife;
 			clone.Possession_Switch = original.Possession_Switch;
 			clone.Awaken = original.Awaken;
 			clone.drole_dance = original.drole_dance;
@@ -283,9 +277,10 @@ public class CraftNoTaizaiModVariables {
 			clone.spawn_cath = original.spawn_cath;
 			clone.istar_cooldown = original.istar_cooldown;
 			clone.Melody = original.Melody;
+			clone.liquefying = original.liquefying;
 			if (!event.isWasDeath()) {
 				clone.jumbvar = original.jumbvar;
-				clone.hijack = original.hijack;
+				clone.drunk_level = original.drunk_level;
 			}
 			if (!event.getEntity().level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
@@ -384,11 +379,12 @@ public class CraftNoTaizaiModVariables {
 		public boolean Istar = false;
 		public boolean Basquias = false;
 		public boolean fairy_kings = false;
-		public boolean Reincarnation = false;
-		public boolean eternallife = false;
 		public boolean ReaperScythe = false;
 		public boolean FlyingSaucer = false;
 		public boolean StaffOfImprisonment = false;
+		public boolean infinity = false;
+		public boolean sntach = false;
+		public boolean Invasion = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -429,11 +425,12 @@ public class CraftNoTaizaiModVariables {
 			Istar = nbt.getBoolean("Istar");
 			Basquias = nbt.getBoolean("Basquias");
 			fairy_kings = nbt.getBoolean("fairy_kings");
-			Reincarnation = nbt.getBoolean("Reincarnation");
-			eternallife = nbt.getBoolean("eternallife");
 			ReaperScythe = nbt.getBoolean("ReaperScythe");
 			FlyingSaucer = nbt.getBoolean("FlyingSaucer");
 			StaffOfImprisonment = nbt.getBoolean("StaffOfImprisonment");
+			infinity = nbt.getBoolean("infinity");
+			sntach = nbt.getBoolean("sntach");
+			Invasion = nbt.getBoolean("Invasion");
 		}
 
 		@Override
@@ -467,11 +464,12 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("Istar", Istar);
 			nbt.putBoolean("Basquias", Basquias);
 			nbt.putBoolean("fairy_kings", fairy_kings);
-			nbt.putBoolean("Reincarnation", Reincarnation);
-			nbt.putBoolean("eternallife", eternallife);
 			nbt.putBoolean("ReaperScythe", ReaperScythe);
 			nbt.putBoolean("FlyingSaucer", FlyingSaucer);
 			nbt.putBoolean("StaffOfImprisonment", StaffOfImprisonment);
+			nbt.putBoolean("infinity", infinity);
+			nbt.putBoolean("sntach", sntach);
+			nbt.putBoolean("Invasion", Invasion);
 			return nbt;
 		}
 
@@ -580,7 +578,6 @@ public class CraftNoTaizaiModVariables {
 		public boolean PurgatoryFire = false;
 		public boolean heavy_metal = false;
 		public boolean lightningarmor = false;
-		public double heavy_armor = 0;
 		public boolean Transparency_Use = false;
 		public String magic = "\"\"";
 		public boolean revengecounter = false;
@@ -684,7 +681,6 @@ public class CraftNoTaizaiModVariables {
 		public double JubakuEnsaY = 0;
 		public double JubakuEnsaZ = 0;
 		public double JubakuEnsaTick = 0;
-		public boolean JubakuEnsa = false;
 		public boolean God = false;
 		public boolean elizbethArk = false;
 		public String commandment = "";
@@ -699,8 +695,6 @@ public class CraftNoTaizaiModVariables {
 		public double defeatRedDemon = 0;
 		public double DefeatGrayDemon = 0;
 		public double giantskills = 0;
-		public ItemStack sidequest = ItemStack.EMPTY;
-		public double questamount = 0;
 		public double istarX = 0;
 		public double istarY = 0;
 		public double istarZ = 0;
@@ -709,7 +703,6 @@ public class CraftNoTaizaiModVariables {
 		public double training_id = 0;
 		public boolean tower_of_trails = false;
 		public double istar_kills = 0;
-		public boolean hijack = false;
 		public boolean HighSpeedRegeneration = false;
 		public double agility_percentage_lower = 0;
 		public double repose_timer = 0;
@@ -722,8 +715,6 @@ public class CraftNoTaizaiModVariables {
 		public boolean possession = false;
 		public boolean MagicalCounter = false;
 		public double power_percentage = 0.0;
-		public boolean PerpetualReincarnation = false;
-		public boolean EternalLife = false;
 		public boolean Possession_Switch = false;
 		public boolean Awaken = false;
 		public boolean drole_dance = false;
@@ -763,6 +754,8 @@ public class CraftNoTaizaiModVariables {
 		public boolean spawn_cath = false;
 		public double istar_cooldown = 0;
 		public double Melody = 0;
+		public boolean liquefying = false;
+		public double drunk_level = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -787,7 +780,6 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("PurgatoryFire", PurgatoryFire);
 			nbt.putBoolean("heavy_metal", heavy_metal);
 			nbt.putBoolean("lightningarmor", lightningarmor);
-			nbt.putDouble("heavy_armor", heavy_armor);
 			nbt.putBoolean("Transparency_Use", Transparency_Use);
 			nbt.putString("magic", magic);
 			nbt.putBoolean("revengecounter", revengecounter);
@@ -891,7 +883,6 @@ public class CraftNoTaizaiModVariables {
 			nbt.putDouble("JubakuEnsaY", JubakuEnsaY);
 			nbt.putDouble("JubakuEnsaZ", JubakuEnsaZ);
 			nbt.putDouble("JubakuEnsaTick", JubakuEnsaTick);
-			nbt.putBoolean("JubakuEnsa", JubakuEnsa);
 			nbt.putBoolean("God", God);
 			nbt.putBoolean("elizbethArk", elizbethArk);
 			nbt.putString("commandment", commandment);
@@ -906,8 +897,6 @@ public class CraftNoTaizaiModVariables {
 			nbt.putDouble("defeatRedDemon", defeatRedDemon);
 			nbt.putDouble("DefeatGrayDemon", DefeatGrayDemon);
 			nbt.putDouble("giantskills", giantskills);
-			nbt.put("sidequest", sidequest.save(new CompoundTag()));
-			nbt.putDouble("questamount", questamount);
 			nbt.putDouble("istarX", istarX);
 			nbt.putDouble("istarY", istarY);
 			nbt.putDouble("istarZ", istarZ);
@@ -916,7 +905,6 @@ public class CraftNoTaizaiModVariables {
 			nbt.putDouble("training_id", training_id);
 			nbt.putBoolean("tower_of_trails", tower_of_trails);
 			nbt.putDouble("istar_kills", istar_kills);
-			nbt.putBoolean("hijack", hijack);
 			nbt.putBoolean("HighSpeedRegeneration", HighSpeedRegeneration);
 			nbt.putDouble("agility_percentage_lower", agility_percentage_lower);
 			nbt.putDouble("repose_timer", repose_timer);
@@ -929,8 +917,6 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("possession", possession);
 			nbt.putBoolean("MagicalCounter", MagicalCounter);
 			nbt.putDouble("power_percentage", power_percentage);
-			nbt.putBoolean("PerpetualReincarnation", PerpetualReincarnation);
-			nbt.putBoolean("EternalLife", EternalLife);
 			nbt.putBoolean("Possession_Switch", Possession_Switch);
 			nbt.putBoolean("Awaken", Awaken);
 			nbt.putBoolean("drole_dance", drole_dance);
@@ -970,6 +956,8 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("spawn_cath", spawn_cath);
 			nbt.putDouble("istar_cooldown", istar_cooldown);
 			nbt.putDouble("Melody", Melody);
+			nbt.putBoolean("liquefying", liquefying);
+			nbt.putDouble("drunk_level", drunk_level);
 			return nbt;
 		}
 
@@ -997,7 +985,6 @@ public class CraftNoTaizaiModVariables {
 			PurgatoryFire = nbt.getBoolean("PurgatoryFire");
 			heavy_metal = nbt.getBoolean("heavy_metal");
 			lightningarmor = nbt.getBoolean("lightningarmor");
-			heavy_armor = nbt.getDouble("heavy_armor");
 			Transparency_Use = nbt.getBoolean("Transparency_Use");
 			magic = nbt.getString("magic");
 			revengecounter = nbt.getBoolean("revengecounter");
@@ -1101,7 +1088,6 @@ public class CraftNoTaizaiModVariables {
 			JubakuEnsaY = nbt.getDouble("JubakuEnsaY");
 			JubakuEnsaZ = nbt.getDouble("JubakuEnsaZ");
 			JubakuEnsaTick = nbt.getDouble("JubakuEnsaTick");
-			JubakuEnsa = nbt.getBoolean("JubakuEnsa");
 			God = nbt.getBoolean("God");
 			elizbethArk = nbt.getBoolean("elizbethArk");
 			commandment = nbt.getString("commandment");
@@ -1116,8 +1102,6 @@ public class CraftNoTaizaiModVariables {
 			defeatRedDemon = nbt.getDouble("defeatRedDemon");
 			DefeatGrayDemon = nbt.getDouble("DefeatGrayDemon");
 			giantskills = nbt.getDouble("giantskills");
-			sidequest = ItemStack.of(nbt.getCompound("sidequest"));
-			questamount = nbt.getDouble("questamount");
 			istarX = nbt.getDouble("istarX");
 			istarY = nbt.getDouble("istarY");
 			istarZ = nbt.getDouble("istarZ");
@@ -1126,7 +1110,6 @@ public class CraftNoTaizaiModVariables {
 			training_id = nbt.getDouble("training_id");
 			tower_of_trails = nbt.getBoolean("tower_of_trails");
 			istar_kills = nbt.getDouble("istar_kills");
-			hijack = nbt.getBoolean("hijack");
 			HighSpeedRegeneration = nbt.getBoolean("HighSpeedRegeneration");
 			agility_percentage_lower = nbt.getDouble("agility_percentage_lower");
 			repose_timer = nbt.getDouble("repose_timer");
@@ -1139,8 +1122,6 @@ public class CraftNoTaizaiModVariables {
 			possession = nbt.getBoolean("possession");
 			MagicalCounter = nbt.getBoolean("MagicalCounter");
 			power_percentage = nbt.getDouble("power_percentage");
-			PerpetualReincarnation = nbt.getBoolean("PerpetualReincarnation");
-			EternalLife = nbt.getBoolean("EternalLife");
 			Possession_Switch = nbt.getBoolean("Possession_Switch");
 			Awaken = nbt.getBoolean("Awaken");
 			drole_dance = nbt.getBoolean("drole_dance");
@@ -1180,6 +1161,8 @@ public class CraftNoTaizaiModVariables {
 			spawn_cath = nbt.getBoolean("spawn_cath");
 			istar_cooldown = nbt.getDouble("istar_cooldown");
 			Melody = nbt.getDouble("Melody");
+			liquefying = nbt.getBoolean("liquefying");
+			drunk_level = nbt.getDouble("drunk_level");
 		}
 	}
 
@@ -1229,7 +1212,6 @@ public class CraftNoTaizaiModVariables {
 					variables.PurgatoryFire = message.data.PurgatoryFire;
 					variables.heavy_metal = message.data.heavy_metal;
 					variables.lightningarmor = message.data.lightningarmor;
-					variables.heavy_armor = message.data.heavy_armor;
 					variables.Transparency_Use = message.data.Transparency_Use;
 					variables.magic = message.data.magic;
 					variables.revengecounter = message.data.revengecounter;
@@ -1333,7 +1315,6 @@ public class CraftNoTaizaiModVariables {
 					variables.JubakuEnsaY = message.data.JubakuEnsaY;
 					variables.JubakuEnsaZ = message.data.JubakuEnsaZ;
 					variables.JubakuEnsaTick = message.data.JubakuEnsaTick;
-					variables.JubakuEnsa = message.data.JubakuEnsa;
 					variables.God = message.data.God;
 					variables.elizbethArk = message.data.elizbethArk;
 					variables.commandment = message.data.commandment;
@@ -1348,8 +1329,6 @@ public class CraftNoTaizaiModVariables {
 					variables.defeatRedDemon = message.data.defeatRedDemon;
 					variables.DefeatGrayDemon = message.data.DefeatGrayDemon;
 					variables.giantskills = message.data.giantskills;
-					variables.sidequest = message.data.sidequest;
-					variables.questamount = message.data.questamount;
 					variables.istarX = message.data.istarX;
 					variables.istarY = message.data.istarY;
 					variables.istarZ = message.data.istarZ;
@@ -1358,7 +1337,6 @@ public class CraftNoTaizaiModVariables {
 					variables.training_id = message.data.training_id;
 					variables.tower_of_trails = message.data.tower_of_trails;
 					variables.istar_kills = message.data.istar_kills;
-					variables.hijack = message.data.hijack;
 					variables.HighSpeedRegeneration = message.data.HighSpeedRegeneration;
 					variables.agility_percentage_lower = message.data.agility_percentage_lower;
 					variables.repose_timer = message.data.repose_timer;
@@ -1371,8 +1349,6 @@ public class CraftNoTaizaiModVariables {
 					variables.possession = message.data.possession;
 					variables.MagicalCounter = message.data.MagicalCounter;
 					variables.power_percentage = message.data.power_percentage;
-					variables.PerpetualReincarnation = message.data.PerpetualReincarnation;
-					variables.EternalLife = message.data.EternalLife;
 					variables.Possession_Switch = message.data.Possession_Switch;
 					variables.Awaken = message.data.Awaken;
 					variables.drole_dance = message.data.drole_dance;
@@ -1412,6 +1388,8 @@ public class CraftNoTaizaiModVariables {
 					variables.spawn_cath = message.data.spawn_cath;
 					variables.istar_cooldown = message.data.istar_cooldown;
 					variables.Melody = message.data.Melody;
+					variables.liquefying = message.data.liquefying;
+					variables.drunk_level = message.data.drunk_level;
 				}
 			});
 			context.setPacketHandled(true);

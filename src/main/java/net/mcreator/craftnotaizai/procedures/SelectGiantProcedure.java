@@ -21,7 +21,6 @@ public class SelectGiantProcedure {
 		}
 		SetgiantmagicProcedure.execute(entity);
 		SetGaintFairyAttributesProcedure.execute(entity);
-		SetGiantManaProcedure.execute(entity);
 		ScaleTypes.WIDTH.getScaleData(entity).setTargetScale((float) ScaleOperations.SET.applyAsDouble(ScaleTypes.WIDTH.getScaleData(entity).getTargetScale(), 2));
 		ScaleTypes.HEIGHT.getScaleData(entity).setTargetScale((float) ScaleOperations.SET.applyAsDouble(ScaleTypes.HEIGHT.getScaleData(entity).getTargetScale(), 2));
 		ScaleTypes.REACH.getScaleData(entity).setTargetScale((float) ScaleOperations.SET.applyAsDouble(ScaleTypes.REACH.getScaleData(entity).getTargetScale(), 2));

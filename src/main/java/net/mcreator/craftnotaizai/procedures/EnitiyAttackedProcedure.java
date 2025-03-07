@@ -150,6 +150,7 @@ public class EnitiyAttackedProcedure {
 				}
 				if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).combostar) {
 					damage = damage * (sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).combostarhit;
+					world.addParticle((SimpleParticleType) (CraftNoTaizaiModParticleTypes.PUNCH_EFFECT.get()), x, (y + entity.getEyeHeight()), z, 0, 1, 0);
 					if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).damage_indicator) {
 						if (sourceentity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal((new java.text.DecimalFormat("DMG: ##").format(damage))), true);
@@ -272,7 +273,7 @@ public class EnitiyAttackedProcedure {
 					if (world instanceof ServerLevel _level)
 						_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.BREAKER_OFF_PARTICLE.get()), x, (y + entity.getEyeHeight()), z, 5, 3, 3, 3, 0.1);
 				}
-				if (sourceentity instanceof LivingEntity _livEnt73 && _livEnt73.hasEffect(CraftNoTaizaiModMobEffects.NIGHTMARETELLER.get())) {
+				if (sourceentity instanceof LivingEntity _livEnt75 && _livEnt75.hasEffect(CraftNoTaizaiModMobEffects.NIGHTMARETELLER.get())) {
 					damage = damage * 0.7;
 					if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).damage_indicator) {
 						if (sourceentity instanceof Player _player && !_player.level().isClientSide())
@@ -452,13 +453,11 @@ public class EnitiyAttackedProcedure {
 			}
 		}
 		if (immediatesourceentity.getPersistentData().getBoolean("deflected")) {
-			if (event != null && event.isCancelable()) {
-				event.setCanceled(true);
-			} else if (event != null && event.hasResult()) {
-				event.setResult(Event.Result.DENY);
-			}
-			dmg = Math.ceil(amount * 2);
-			sourceentity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))), (float) dmg);
+			dmg = Math.ceil(amount * 1.5);
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal((new java.text.DecimalFormat("DMG: ##").format(dmg))), false);
+			entity.getPersistentData().putBoolean("hit", true);
+			entity.getPersistentData().putDouble("deal", dmg);
 		}
 		if (entity.getPersistentData().getBoolean("Full Counter") && (damagesource.is(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg"))) || damagesource.is(DamageTypes.ARROW))) {
 			if (event != null && event.isCancelable()) {

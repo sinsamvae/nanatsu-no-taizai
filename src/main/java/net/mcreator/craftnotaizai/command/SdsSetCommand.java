@@ -63,6 +63,7 @@ import net.mcreator.craftnotaizai.procedures.ChangeMagicTrickStarProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicTheRulerProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicOverPowerCommandProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicOminousNebulaProcedure;
+import net.mcreator.craftnotaizai.procedures.ChangeMagicOceanProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicLaiProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicHellGateProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicGroundProcedure;
@@ -117,7 +118,21 @@ public class SdsSetCommand {
 
 					ChangeRacecommandProcedure.execute(arguments);
 					return 0;
-				}))).then(Commands.literal("Magic").then(Commands.literal("Lai").executes(arguments -> {
+				}))).then(Commands.literal("Magic").then(Commands.literal("Ocean").executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					ChangeMagicOceanProcedure.execute(arguments);
+					return 0;
+				})).then(Commands.literal("Lai").executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();

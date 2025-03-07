@@ -19,7 +19,6 @@ public class SelectHumanProcedure {
 		}
 		SetHumanClanAttributesProcedure.execute(entity);
 		SetHumanMagicProcedure.execute(world, entity);
-		SetHumanManaProcedure.execute(entity);
 		if (entity instanceof Player _player)
 			_player.closeContainer();
 	}

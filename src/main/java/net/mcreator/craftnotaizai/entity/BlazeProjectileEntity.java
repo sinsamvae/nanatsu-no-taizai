@@ -22,9 +22,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
+import net.mcreator.craftnotaizai.procedures.CrazyProminenceProjectileHitsBlockProcedure;
 import net.mcreator.craftnotaizai.procedures.BlazeWhileProjectileFlyingTickProcedure;
 import net.mcreator.craftnotaizai.procedures.BlazeProjectileHitsLivingEntityProcedure;
-import net.mcreator.craftnotaizai.procedures.BlazeProjectileHitsBlockProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
@@ -78,13 +78,13 @@ public class BlazeProjectileEntity extends AbstractArrow implements ItemSupplier
 	@Override
 	public void onHitBlock(BlockHitResult blockHitResult) {
 		super.onHitBlock(blockHitResult);
-		BlazeProjectileHitsBlockProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
+		CrazyProminenceProjectileHitsBlockProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
 	}
 
 	@Override
 	public void tick() {
 		super.tick();
-		BlazeWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
+		BlazeWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		if (this.inGround)
 			this.discard();
 	}

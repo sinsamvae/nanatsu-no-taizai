@@ -17,7 +17,6 @@ import net.mcreator.craftnotaizai.world.inventory.TheoGuiMenu;
 import net.mcreator.craftnotaizai.world.inventory.TheoCaveMenu;
 import net.mcreator.craftnotaizai.world.inventory.TeleportationGuiMenu;
 import net.mcreator.craftnotaizai.world.inventory.StoryBoardMenu;
-import net.mcreator.craftnotaizai.world.inventory.SideQuestGuiMenu;
 import net.mcreator.craftnotaizai.world.inventory.SettingsUIMenu;
 import net.mcreator.craftnotaizai.world.inventory.PossessionMenu;
 import net.mcreator.craftnotaizai.world.inventory.MonsterBlockGuiMenu;
@@ -47,7 +46,6 @@ public class CraftNoTaizaiModMenus {
 	public static final RegistryObject<MenuType<MagicMenuMenu>> MAGIC_MENU = REGISTRY.register("magic_menu", () -> IForgeMenuType.create(MagicMenuMenu::new));
 	public static final RegistryObject<MenuType<TeleportationGuiMenu>> TELEPORTATION_GUI = REGISTRY.register("teleportation_gui", () -> IForgeMenuType.create(TeleportationGuiMenu::new));
 	public static final RegistryObject<MenuType<KegGuiMenu>> KEG_GUI = REGISTRY.register("keg_gui", () -> IForgeMenuType.create(KegGuiMenu::new));
-	public static final RegistryObject<MenuType<SideQuestGuiMenu>> SIDE_QUEST_GUI = REGISTRY.register("side_quest_gui", () -> IForgeMenuType.create(SideQuestGuiMenu::new));
 	public static final RegistryObject<MenuType<ClonesGuiMenu>> CLONES_GUI = REGISTRY.register("clones_gui", () -> IForgeMenuType.create(ClonesGuiMenu::new));
 	public static final RegistryObject<MenuType<MonsterBlockGuiMenu>> MONSTER_BLOCK_GUI = REGISTRY.register("monster_block_gui", () -> IForgeMenuType.create(MonsterBlockGuiMenu::new));
 	public static final RegistryObject<MenuType<DemonKingGuiMenu>> DEMON_KING_GUI = REGISTRY.register("demon_king_gui", () -> IForgeMenuType.create(DemonKingGuiMenu::new));

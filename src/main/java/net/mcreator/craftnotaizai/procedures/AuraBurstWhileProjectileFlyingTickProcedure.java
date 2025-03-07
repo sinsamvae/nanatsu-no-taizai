@@ -42,7 +42,7 @@ public class AuraBurstWhileProjectileFlyingTickProcedure {
 		double cubesize = 0;
 		double sev2 = 0;
 		immediatesourceentity.setNoGravity(true);
-		ProjectileFullCounterProcedure.execute(world, x, y, z, entity, immediatesourceentity);
+		ProjectileFullCounterProcedure.execute(world, x, y, z, immediatesourceentity);
 		radius = 3;
 		speed = 10;
 		particleNum = 30;

@@ -12,7 +12,7 @@ public class SetDemonMagicProcedure {
 		if (entity == null)
 			return;
 		double RandomMagic = 0;
-		RandomMagic = Mth.nextInt(RandomSource.create(), 1, 360);
+		RandomMagic = Mth.nextInt(RandomSource.create(), 1, 340);
 		if (RandomMagic <= 60) {
 			{
 				String _setval = "HellBlaze";
@@ -22,16 +22,94 @@ public class SetDemonMagicProcedure {
 				});
 			}
 		}
-		if (RandomMagic >= 60 && RandomMagic <= 90) {
-			{
-				String _setval = "Invasion";
-				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.magic = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+		if (RandomMagic >= 60 && RandomMagic <= 110) {
+			if (!CraftNoTaizaiModVariables.MapVariables.get(world).Invasion) {
+				{
+					String _setval = "Invasion";
+					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.magic = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				CraftNoTaizaiModVariables.MapVariables.get(world).Invasion = true;
+				CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
+			} else {
+				RandomMagic = Mth.nextInt(RandomSource.create(), 1, 210);
+				if (RandomMagic <= 60) {
+					{
+						String _setval = "HellBlaze";
+						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.magic = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				}
+				if (RandomMagic >= 60 && RandomMagic <= 90) {
+					{
+						String _setval = "Combo Star";
+						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.magic = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				}
+				if (RandomMagic >= 90 && RandomMagic <= 120) {
+					{
+						String _setval = "Critical Over";
+						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.magic = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				}
+				if (RandomMagic >= 120 && RandomMagic <= 150) {
+					{
+						String _setval = "Curse";
+						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.magic = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				}
+				if (RandomMagic >= 150 && RandomMagic <= 180) {
+					{
+						String _setval = "Full Size";
+						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.magic = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				}
+				if (RandomMagic >= 120 && RandomMagic <= 150) {
+					{
+						String _setval = "Hell Gate";
+						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.magic = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				}
+				if (RandomMagic >= 150 && RandomMagic <= 180) {
+					{
+						String _setval = "Ominous Nebula";
+						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.magic = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				}
+				if (RandomMagic >= 180 && RandomMagic <= 210) {
+					{
+						String _setval = "Trick Star";
+						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.magic = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				}
 			}
 		}
-		if (RandomMagic >= 90 && RandomMagic <= 120) {
+		if (RandomMagic >= 110 && RandomMagic <= 120) {
 			if (!CraftNoTaizaiModVariables.MapVariables.get(world).full_counter) {
 				{
 					String _setval = "Full Counter";
@@ -51,18 +129,9 @@ public class SetDemonMagicProcedure {
 				CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 			} else {
 				RandomMagic = Mth.nextInt(RandomSource.create(), 1, 210);
-				if (RandomMagic <= 30) {
+				if (RandomMagic <= 60) {
 					{
-						String _setval = "Combo Star";
-						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.magic = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-				}
-				if (RandomMagic >= 30 && RandomMagic <= 60) {
-					{
-						String _setval = "Critical Over";
+						String _setval = "HellBlaze";
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.magic = _setval;
 							capability.syncPlayerVariables(entity);
@@ -71,7 +140,7 @@ public class SetDemonMagicProcedure {
 				}
 				if (RandomMagic >= 60 && RandomMagic <= 90) {
 					{
-						String _setval = "Curse";
+						String _setval = "Combo Star";
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.magic = _setval;
 							capability.syncPlayerVariables(entity);
@@ -79,6 +148,24 @@ public class SetDemonMagicProcedure {
 					}
 				}
 				if (RandomMagic >= 90 && RandomMagic <= 120) {
+					{
+						String _setval = "Critical Over";
+						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.magic = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				}
+				if (RandomMagic >= 120 && RandomMagic <= 150) {
+					{
+						String _setval = "Curse";
+						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.magic = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				}
+				if (RandomMagic >= 150 && RandomMagic <= 180) {
 					{
 						String _setval = "Full Size";
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -125,7 +212,7 @@ public class SetDemonMagicProcedure {
 				});
 			}
 		}
-		if (RandomMagic >= 150 && RandomMagic <= 180) {
+		if (RandomMagic >= 150 && RandomMagic <= 160) {
 			if (!CraftNoTaizaiModVariables.MapVariables.get(world).fullcounter) {
 				{
 					String _setval = "Full Counter";
@@ -145,18 +232,9 @@ public class SetDemonMagicProcedure {
 				CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
 			} else {
 				RandomMagic = Mth.nextInt(RandomSource.create(), 1, 210);
-				if (RandomMagic <= 30) {
+				if (RandomMagic <= 60) {
 					{
-						String _setval = "Combo Star";
-						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.magic = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-				}
-				if (RandomMagic >= 30 && RandomMagic <= 60) {
-					{
-						String _setval = "Critical Over";
+						String _setval = "HellBlaze";
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.magic = _setval;
 							capability.syncPlayerVariables(entity);
@@ -165,7 +243,7 @@ public class SetDemonMagicProcedure {
 				}
 				if (RandomMagic >= 60 && RandomMagic <= 90) {
 					{
-						String _setval = "Curse";
+						String _setval = "Combo Star";
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.magic = _setval;
 							capability.syncPlayerVariables(entity);
@@ -173,6 +251,24 @@ public class SetDemonMagicProcedure {
 					}
 				}
 				if (RandomMagic >= 90 && RandomMagic <= 120) {
+					{
+						String _setval = "Critical Over";
+						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.magic = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				}
+				if (RandomMagic >= 120 && RandomMagic <= 150) {
+					{
+						String _setval = "Curse";
+						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.magic = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				}
+				if (RandomMagic >= 150 && RandomMagic <= 180) {
 					{
 						String _setval = "Full Size";
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -210,7 +306,7 @@ public class SetDemonMagicProcedure {
 				}
 			}
 		}
-		if (RandomMagic >= 180 && RandomMagic <= 210) {
+		if (RandomMagic >= 160 && RandomMagic <= 190) {
 			{
 				String _setval = "Critical Over";
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -219,7 +315,7 @@ public class SetDemonMagicProcedure {
 				});
 			}
 		}
-		if (RandomMagic >= 210 && RandomMagic <= 240) {
+		if (RandomMagic >= 190 && RandomMagic <= 220) {
 			{
 				String _setval = "Curse";
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -228,7 +324,7 @@ public class SetDemonMagicProcedure {
 				});
 			}
 		}
-		if (RandomMagic >= 240 && RandomMagic <= 270) {
+		if (RandomMagic >= 220 && RandomMagic <= 250) {
 			{
 				String _setval = "Full Size";
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -237,7 +333,7 @@ public class SetDemonMagicProcedure {
 				});
 			}
 		}
-		if (RandomMagic >= 270 && RandomMagic <= 300) {
+		if (RandomMagic >= 250 && RandomMagic <= 280) {
 			{
 				String _setval = "Hell Gate";
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -246,7 +342,7 @@ public class SetDemonMagicProcedure {
 				});
 			}
 		}
-		if (RandomMagic >= 300 && RandomMagic <= 330) {
+		if (RandomMagic >= 280 && RandomMagic <= 310) {
 			{
 				String _setval = "Ominous Nebula";
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -255,7 +351,7 @@ public class SetDemonMagicProcedure {
 				});
 			}
 		}
-		if (RandomMagic >= 330 && RandomMagic <= 360) {
+		if (RandomMagic >= 310 && RandomMagic <= 340) {
 			{
 				String _setval = "Trick Star";
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
