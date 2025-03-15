@@ -15,6 +15,7 @@ import net.minecraft.client.renderer.entity.player.PlayerRenderer;
 import net.minecraft.client.renderer.entity.LivingEntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
+import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.Minecraft;
 
@@ -23,6 +24,7 @@ import net.mcreator.craftnotaizai.init.CraftNoTaizaiModMobEffects;
 import net.mcreator.craftnotaizai.client.model.Modelthe_ultimate;
 import net.mcreator.craftnotaizai.client.model.Modelnormal_fairy_wings;
 import net.mcreator.craftnotaizai.client.model.Modelnew_helbram_wings;
+import net.mcreator.craftnotaizai.client.model.Modellight_chakram;
 import net.mcreator.craftnotaizai.client.model.Modelkingwings;
 import net.mcreator.craftnotaizai.client.model.Modelgoddess_wings;
 import net.mcreator.craftnotaizai.client.model.Modelgloxiana_wings;
@@ -191,13 +193,31 @@ public class PlayerRenderProcedure {
 				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 0);
 				}
+				int customLight = 0x000CD;
 				texture = "eliz";
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
+						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
+					}
+					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+							_evt.getMultiBufferSource(), LightTexture.FULL_BRIGHT);
+				}
 			}
 			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Awaken) {
 				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 0);
 				}
+				int customLight = 0x000CD;
 				texture = "eliz_aweken";
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
+						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
+					}
+					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+							_evt.getMultiBufferSource(), LightTexture.FULL_BRIGHT);
+				}
 			}
 			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Giant")
 					&& (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).humandemonmark) {
@@ -465,7 +485,7 @@ public class PlayerRenderProcedure {
 							_evt.getMultiBufferSource(), _evt.getPackedLight());
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt58 && _livEnt58.hasEffect(CraftNoTaizaiModMobEffects.FREEZE_COFFIN_POTION_EFFECT.get())) {
+			if (entity instanceof LivingEntity _livEnt60 && _livEnt60.hasEffect(CraftNoTaizaiModMobEffects.FREEZE_COFFIN_POTION_EFFECT.get())) {
 				texture = "freeze_coffin";
 				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 1);
@@ -572,7 +592,7 @@ public class PlayerRenderProcedure {
 							_evt.getMultiBufferSource(), _evt.getPackedLight());
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt84 && _livEnt84.hasEffect(CraftNoTaizaiModMobEffects.FOSSILIZATION_EFFECT.get())) {
+			if (entity instanceof LivingEntity _livEnt86 && _livEnt86.hasEffect(CraftNoTaizaiModMobEffects.FOSSILIZATION_EFFECT.get())) {
 				texture = "stone_ban";
 				if (_evt.getRenderer() instanceof LivingEntityRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					if (_evt instanceof RenderLivingEvent.Pre _pre) {
@@ -623,6 +643,46 @@ public class PlayerRenderProcedure {
 					poseStack.scale(0.9375F, 0.9375F, 0.9375F);
 					new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
 							_evt.getMultiBufferSource(), _evt.getPackedLight());
+					poseStack.popPose();
+				}
+			}
+			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).light_chakram) {
+				texture = "light-chakram-texture";
+				int customLight = 0x000CD;
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
+						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
+					}
+					Modellight_chakram newModel = new Modellight_chakram(context.bakeLayer(Modellight_chakram.LAYER_LOCATION));
+					newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
+					newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
+					newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
+					newModel.RightArm.copyFrom(_pr.getModel().rightArm);
+					newModel.Body.copyFrom(_pr.getModel().body);
+					newModel.Head.copyFrom(_pr.getModel().head);
+					poseStack.pushPose();
+					poseStack.scale(0.9375F, 0.9375F, 0.9375F);
+					new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+							_evt.getMultiBufferSource(), _evt.getPackedLight());
+					poseStack.popPose();
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
+						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
+					}
+					Modellight_chakram newModel = new Modellight_chakram(context.bakeLayer(Modellight_chakram.LAYER_LOCATION));
+					newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
+					newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
+					newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
+					newModel.RightArm.copyFrom(_pr.getModel().rightArm);
+					newModel.Body.copyFrom(_pr.getModel().body);
+					newModel.Head.copyFrom(_pr.getModel().head);
+					poseStack.pushPose();
+					poseStack.scale(0.9375F, 0.9375F, 0.9375F);
+					new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+							_evt.getMultiBufferSource(), LightTexture.FULL_BRIGHT);
 					poseStack.popPose();
 				}
 			}

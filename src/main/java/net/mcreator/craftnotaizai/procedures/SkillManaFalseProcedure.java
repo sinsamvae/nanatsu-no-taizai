@@ -405,5 +405,32 @@ public class SkillManaFalseProcedure {
 				});
 			}
 		}
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).liquefying) {
+			{
+				boolean _setval = false;
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.liquefying = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		}
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).flash_skill) {
+			{
+				boolean _setval = false;
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.flash_skill = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		}
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).wind_barrier) {
+			{
+				boolean _setval = false;
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.wind_barrier = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		}
 	}
 }

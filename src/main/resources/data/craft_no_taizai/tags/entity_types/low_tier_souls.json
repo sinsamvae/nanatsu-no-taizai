@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "villager",
+    "craft_no_taizai:royal_guard_animated",
+    "craft_no_taizai:royal_gurard_animated",
+    "pillager",
+    "vindicator",
+    "evoker",
+    "witch",
+    "craft_no_taizai:soldier_animated",
+    "craft_no_taizai:parada_animated"
+  ]
+}

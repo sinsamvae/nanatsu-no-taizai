@@ -9,19 +9,13 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.tags.TagKey;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModItems;
-import net.mcreator.craftnotaizai.entity.WeinheidtAnimatedEntity;
-import net.mcreator.craftnotaizai.entity.VivianAnimatedEntity;
-import net.mcreator.craftnotaizai.entity.SladerAnimatedEntity;
-import net.mcreator.craftnotaizai.entity.SimonAnimatedEntity;
-import net.mcreator.craftnotaizai.entity.RedKnightAnimatedEntity;
-import net.mcreator.craftnotaizai.entity.JillianAnimatedEntity;
-import net.mcreator.craftnotaizai.entity.HugoAnimatedEntity;
-import net.mcreator.craftnotaizai.entity.GustafAnimatedEntity;
-import net.mcreator.craftnotaizai.entity.GreenKnightAnimatedEntity;
 
 import javax.annotation.Nullable;
 
@@ -41,9 +35,8 @@ public class HighTierSoulDropProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if (((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Demon")) {
-			if (entity instanceof RedKnightAnimatedEntity || entity instanceof GreenKnightAnimatedEntity || entity instanceof WeinheidtAnimatedEntity || entity instanceof HugoAnimatedEntity || entity instanceof JillianAnimatedEntity
-					|| entity instanceof SimonAnimatedEntity || entity instanceof SladerAnimatedEntity || entity instanceof VivianAnimatedEntity || entity instanceof GustafAnimatedEntity) {
+		if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Demon) {
+			if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("craft_no_taizai:high_tier_souls")))) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(CraftNoTaizaiModItems.HIGH_TIER_SOULS.get()));
 					entityToSpawn.setPickUpDelay(1);

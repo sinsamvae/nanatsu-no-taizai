@@ -9,10 +9,13 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
+import net.minecraft.world.entity.ai.goal.TemptGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
@@ -77,9 +80,10 @@ public class MantaEntity extends PathfinderMob {
 				return new Vec3(dir_x, dir_y, dir_z);
 			}
 		});
-		this.goalSelector.addGoal(2, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(3, new FloatGoal(this));
-		this.goalSelector.addGoal(4, new LeapAtTargetGoal(this, (float) 0.5));
+		this.goalSelector.addGoal(2, new TemptGoal(this, 1, Ingredient.of(Items.BEEF), false));
+		this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(4, new FloatGoal(this));
+		this.goalSelector.addGoal(5, new LeapAtTargetGoal(this, (float) 0.5));
 	}
 
 	@Override

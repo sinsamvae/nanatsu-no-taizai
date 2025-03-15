@@ -44,7 +44,7 @@ public class InfinityBindOnKeyPressedProcedure {
 								capability.syncPlayerVariables(entity);
 							});
 						}
-						ExterminateRaySkillProcedure.execute(entity);
+						ExterminateRaySkillProcedure.execute(world, entity);
 						((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag().putDouble(
 								("cooldown" + new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Move + 1)), 55);
 					} else {

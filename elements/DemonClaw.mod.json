@@ -36,6 +36,9 @@
     "onRightClickedInAir": {
       "name": "DemonClawRightclicked"
     },
+    "onItemInInventoryTick": {
+      "name": "DemonClawItemInInventoryTick"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

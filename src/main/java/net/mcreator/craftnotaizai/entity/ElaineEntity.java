@@ -9,9 +9,9 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.EntityType;
@@ -28,7 +28,7 @@ import net.minecraft.network.protocol.Packet;
 import net.mcreator.craftnotaizai.procedures.ElaineRightClickedOnEntityProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
-public class ElaineEntity extends Monster {
+public class ElaineEntity extends PathfinderMob {
 	public ElaineEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(CraftNoTaizaiModEntities.ELAINE.get(), world);
 	}

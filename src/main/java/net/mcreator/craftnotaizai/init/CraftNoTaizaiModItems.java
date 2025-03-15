@@ -23,6 +23,7 @@ import net.minecraft.client.renderer.item.ItemProperties;
 
 import net.mcreator.craftnotaizai.item.ZeldrisSwordItem;
 import net.mcreator.craftnotaizai.item.ZeldrisArmorItem;
+import net.mcreator.craftnotaizai.item.ZaratrasShieldItem;
 import net.mcreator.craftnotaizai.item.WhipItem;
 import net.mcreator.craftnotaizai.item.WeinheidtArmorItem;
 import net.mcreator.craftnotaizai.item.VivianArmorItem;
@@ -676,6 +677,7 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> ZELDRIS_ARMOR_LEGGINGS = REGISTRY.register("zeldris_armor_leggings", () -> new ZeldrisArmorItem.Leggings());
 	public static final RegistryObject<Item> MELASCULA_ARMOR_CHESTPLATE = REGISTRY.register("melascula_armor_chestplate", () -> new MelasculaArmorItem.Chestplate());
 	public static final RegistryObject<Item> MELASCULA_ARMOR_LEGGINGS = REGISTRY.register("melascula_armor_leggings", () -> new MelasculaArmorItem.Leggings());
+	public static final RegistryObject<Item> ZARATRAS_SHIELD = REGISTRY.register("zaratras_shield", () -> new ZaratrasShieldItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
@@ -691,6 +693,7 @@ public class CraftNoTaizaiModItems {
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
 			ItemProperties.register(FLYING_SAUCER.get(), new ResourceLocation("blocking"), ItemProperties.getProperty(Items.SHIELD, new ResourceLocation("blocking")));
+			ItemProperties.register(ZARATRAS_SHIELD.get(), new ResourceLocation("blocking"), ItemProperties.getProperty(Items.SHIELD, new ResourceLocation("blocking")));
 		});
 	}
 }

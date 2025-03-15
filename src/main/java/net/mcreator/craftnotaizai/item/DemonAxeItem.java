@@ -11,10 +11,12 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 
 import net.mcreator.craftnotaizai.procedures.DemonAxeRightclickedProcedure;
+import net.mcreator.craftnotaizai.procedures.DemonAxeItemInInventoryTickProcedure;
 
 import com.google.common.collect.Multimap;
 import com.google.common.collect.ImmutableMultimap;
@@ -46,5 +48,11 @@ public class DemonAxeItem extends Item {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
 		DemonAxeRightclickedProcedure.execute(entity);
 		return ar;
+	}
+
+	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		DemonAxeItemInInventoryTickProcedure.execute(entity, itemstack);
 	}
 }

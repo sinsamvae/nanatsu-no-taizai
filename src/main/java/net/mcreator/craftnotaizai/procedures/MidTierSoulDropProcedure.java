@@ -9,15 +9,13 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.tags.TagKey;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModItems;
-import net.mcreator.craftnotaizai.entity.SoldierAnimatedEntity;
-import net.mcreator.craftnotaizai.entity.ParadaAnimatedEntity;
-import net.mcreator.craftnotaizai.entity.MuramoAnimatedEntity;
-import net.mcreator.craftnotaizai.entity.DumblebbasAnimatedEntity;
-import net.mcreator.craftnotaizai.entity.AndreAnimatedEntity;
 
 import javax.annotation.Nullable;
 
@@ -37,8 +35,8 @@ public class MidTierSoulDropProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if (((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Demon")) {
-			if (entity instanceof AndreAnimatedEntity || entity instanceof MuramoAnimatedEntity || entity instanceof ParadaAnimatedEntity || entity instanceof SoldierAnimatedEntity || entity instanceof DumblebbasAnimatedEntity) {
+		if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Demon) {
+			if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("craft_no_taizai:mid_tier_souls")))) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(CraftNoTaizaiModItems.MID_TIER_SOULS.get()));
 					entityToSpawn.setPickUpDelay(1);

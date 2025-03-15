@@ -1,0 +1,15 @@
+{
+  "_fv": 69,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "S",
+    "keyBindingName": "S Fly",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "SPressFlyOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "SPressFlyOnKeyReleased"
+    }
+  }
+}

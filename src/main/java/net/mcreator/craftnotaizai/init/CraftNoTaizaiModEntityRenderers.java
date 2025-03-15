@@ -24,6 +24,7 @@ import net.mcreator.craftnotaizai.client.renderer.TyrantDragonRenderer;
 import net.mcreator.craftnotaizai.client.renderer.TyrantDragonCaveRenderer;
 import net.mcreator.craftnotaizai.client.renderer.TwigoAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.TrollRenderer;
+import net.mcreator.craftnotaizai.client.renderer.TornadoDiskProJectileRenderer;
 import net.mcreator.craftnotaizai.client.renderer.TorahRenderer;
 import net.mcreator.craftnotaizai.client.renderer.TheoRenderer;
 import net.mcreator.craftnotaizai.client.renderer.TallAlbionRenderer;
@@ -108,6 +109,7 @@ import net.mcreator.craftnotaizai.client.renderer.GuardianTrueSpirtSpearRenderer
 import net.mcreator.craftnotaizai.client.renderer.Guardian1Renderer;
 import net.mcreator.craftnotaizai.client.renderer.GriamoreAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.GreenKnightAnimatedRenderer;
+import net.mcreator.craftnotaizai.client.renderer.GreatestSunProjectileRenderer;
 import net.mcreator.craftnotaizai.client.renderer.GrayRoadStoryRenderer;
 import net.mcreator.craftnotaizai.client.renderer.GrayRoadStory2Renderer;
 import net.mcreator.craftnotaizai.client.renderer.GrayRoadBossRenderer;
@@ -146,7 +148,6 @@ import net.mcreator.craftnotaizai.client.renderer.FinalProminenceRenderer;
 import net.mcreator.craftnotaizai.client.renderer.FightingAreaRenderer;
 import net.mcreator.craftnotaizai.client.renderer.FakeBallProjectileRenderer;
 import net.mcreator.craftnotaizai.client.renderer.FairyHelbremAnimatedRenderer;
-import net.mcreator.craftnotaizai.client.renderer.ExterminateRayProjectileRenderer;
 import net.mcreator.craftnotaizai.client.renderer.EvilhoundProjectileRenderer;
 import net.mcreator.craftnotaizai.client.renderer.EstarrossaStoryRenderer;
 import net.mcreator.craftnotaizai.client.renderer.EstarossaStoryRenderer;
@@ -260,7 +261,6 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.CONDENSE_POWER_PROJECTILE.get(), CondensePowerProjectileRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.FOSS_PROJECTILE.get(), FossProjectileRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.FAKE_BALL_PROJECTILE.get(), FakeBallProjectileRenderer::new);
-		event.registerEntityRenderer(CraftNoTaizaiModEntities.EXTERMINATE_RAY_PROJECTILE.get(), ExterminateRayProjectileRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.PURGATORY_VENOM_PROJECTILE.get(), PurgatoryVenomProjectileRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.KILL_SWITCH_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.CRUEL_SUN_PROJECTILE.get(), CruelSunProjectileRenderer::new);
@@ -449,5 +449,7 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.MONSPEET_BOSS.get(), MonspeetBossRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.ZELDRIS_BOSS.get(), ZeldrisBossRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.HEARTLESS_WATERFALL.get(), HeartlessWaterfallRenderer::new);
+		event.registerEntityRenderer(CraftNoTaizaiModEntities.GREATEST_SUN_PROJECTILE.get(), GreatestSunProjectileRenderer::new);
+		event.registerEntityRenderer(CraftNoTaizaiModEntities.TORNADO_DISK_PRO_JECTILE.get(), TornadoDiskProJectileRenderer::new);
 	}
 }

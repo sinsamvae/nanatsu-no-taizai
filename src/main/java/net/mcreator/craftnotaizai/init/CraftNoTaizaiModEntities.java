@@ -31,6 +31,7 @@ import net.mcreator.craftnotaizai.entity.TyrantDragonEntity;
 import net.mcreator.craftnotaizai.entity.TyrantDragonCaveEntity;
 import net.mcreator.craftnotaizai.entity.TwigoAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.TrollEntity;
+import net.mcreator.craftnotaizai.entity.TornadoDiskProJectileEntity;
 import net.mcreator.craftnotaizai.entity.TorahEntity;
 import net.mcreator.craftnotaizai.entity.TheoEntity;
 import net.mcreator.craftnotaizai.entity.TallAlbionEntity;
@@ -124,6 +125,7 @@ import net.mcreator.craftnotaizai.entity.GuardianTrueSpirtSpearEntity;
 import net.mcreator.craftnotaizai.entity.Guardian1Entity;
 import net.mcreator.craftnotaizai.entity.GriamoreAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.GreenKnightAnimatedEntity;
+import net.mcreator.craftnotaizai.entity.GreatestSunProjectileEntity;
 import net.mcreator.craftnotaizai.entity.GrayRoadStoryEntity;
 import net.mcreator.craftnotaizai.entity.GrayRoadStory2Entity;
 import net.mcreator.craftnotaizai.entity.GrayRoadBossEntity;
@@ -162,7 +164,6 @@ import net.mcreator.craftnotaizai.entity.FinalProminenceEntity;
 import net.mcreator.craftnotaizai.entity.FightingAreaEntity;
 import net.mcreator.craftnotaizai.entity.FakeBallProjectileEntity;
 import net.mcreator.craftnotaizai.entity.FairyHelbremAnimatedEntity;
-import net.mcreator.craftnotaizai.entity.ExterminateRayProjectileEntity;
 import net.mcreator.craftnotaizai.entity.EvilhoundProjectileEntity;
 import net.mcreator.craftnotaizai.entity.EstarrossaStoryEntity;
 import net.mcreator.craftnotaizai.entity.EstarossaStoryEntity;
@@ -348,9 +349,6 @@ public class CraftNoTaizaiModEntities {
 			EntityType.Builder.<FossProjectileEntity>of(FossProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(FossProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<FakeBallProjectileEntity>> FAKE_BALL_PROJECTILE = register("fake_ball_projectile", EntityType.Builder.<FakeBallProjectileEntity>of(FakeBallProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(FakeBallProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<ExterminateRayProjectileEntity>> EXTERMINATE_RAY_PROJECTILE = register("exterminate_ray_projectile",
-			EntityType.Builder.<ExterminateRayProjectileEntity>of(ExterminateRayProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(ExterminateRayProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
-					.setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<PurgatoryVenomProjectileEntity>> PURGATORY_VENOM_PROJECTILE = register("purgatory_venom_projectile",
 			EntityType.Builder.<PurgatoryVenomProjectileEntity>of(PurgatoryVenomProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(PurgatoryVenomProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
@@ -992,6 +990,10 @@ public class CraftNoTaizaiModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<HeartlessWaterfallEntity>> HEARTLESS_WATERFALL = register("heartless_waterfall", EntityType.Builder.<HeartlessWaterfallEntity>of(HeartlessWaterfallEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(HeartlessWaterfallEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<GreatestSunProjectileEntity>> GREATEST_SUN_PROJECTILE = register("greatest_sun_projectile", EntityType.Builder.<GreatestSunProjectileEntity>of(GreatestSunProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(GreatestSunProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<TornadoDiskProJectileEntity>> TORNADO_DISK_PRO_JECTILE = register("tornado_disk_pro_jectile", EntityType.Builder.<TornadoDiskProJectileEntity>of(TornadoDiskProJectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(TornadoDiskProJectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

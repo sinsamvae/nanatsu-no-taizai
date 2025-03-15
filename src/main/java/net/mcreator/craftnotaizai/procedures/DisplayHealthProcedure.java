@@ -216,7 +216,7 @@ public class DisplayHealthProcedure {
 							end();
 						}
 						if (target(2)) {
-							renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 2), (entityiterator.getZ()), entity.getViewYRot((float) partialTick), entity.getViewXRot((float) partialTick), 0, 1, 1,
+							renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 2), (entityiterator.getZ()), entityiterator.getViewYRot((float) partialTick), entityiterator.getViewXRot((float) partialTick), 0, 1, 1,
 									(float) ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) / (entityiterator instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)), 255 << 24 | 0 << 16 | 175 << 8 | 0);
 							release();
 						}

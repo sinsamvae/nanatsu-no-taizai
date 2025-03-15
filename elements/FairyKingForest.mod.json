@@ -110,25 +110,6 @@
     "spawnBastionRemnant": false,
     "spawnEndCity": false,
     "spawnRuinedPortal": "NONE",
-    "spawnEntries": [
-      {
-        "entity": {
-          "value": "CUSTOM:Chicken"
-        },
-        "minGroup": 2,
-        "maxGroup": 3,
-        "weight": 100,
-        "spawnType": "ambient"
-      },
-      {
-        "entity": {
-          "value": "CUSTOM:BlackHound"
-        },
-        "minGroup": 1,
-        "maxGroup": 2,
-        "weight": 100,
-        "spawnType": "ambient"
-      }
-    ]
+    "spawnEntries": []
   }
 }

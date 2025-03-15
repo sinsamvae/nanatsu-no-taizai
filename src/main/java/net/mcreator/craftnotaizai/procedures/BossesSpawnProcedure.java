@@ -35,7 +35,7 @@ public class BossesSpawnProcedure {
 		if (entity == null)
 			return;
 		if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("craft_no_taizai:bosses")))) {
-			entity.getPersistentData().putDouble("level", 100);
+			entity.getPersistentData().putDouble("level", 1000);
 			{
 				final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1500 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();

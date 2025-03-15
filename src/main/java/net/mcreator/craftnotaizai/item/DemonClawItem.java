@@ -10,10 +10,12 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 
 import net.mcreator.craftnotaizai.procedures.DemonClawRightclickedProcedure;
+import net.mcreator.craftnotaizai.procedures.DemonClawItemInInventoryTickProcedure;
 
 import com.google.common.collect.Multimap;
 import com.google.common.collect.ImmutableMultimap;
@@ -40,5 +42,11 @@ public class DemonClawItem extends Item {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
 		DemonClawRightclickedProcedure.execute(entity);
 		return ar;
+	}
+
+	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		DemonClawItemInInventoryTickProcedure.execute(entity, itemstack);
 	}
 }

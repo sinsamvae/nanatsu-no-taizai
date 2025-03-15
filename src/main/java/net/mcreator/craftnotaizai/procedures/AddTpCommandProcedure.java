@@ -11,9 +11,11 @@ import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.arguments.DoubleArgumentType;
 
 public class AddTpCommandProcedure {
-	public static void execute(CommandContext<CommandSourceStack> arguments) {
+	public static void execute(CommandContext<CommandSourceStack> arguments, Entity entity) {
+		if (entity == null)
+			return;
 		{
-			double _setval = DoubleArgumentType.getDouble(arguments, "number");
+			double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).TP + DoubleArgumentType.getDouble(arguments, "number");
 			(new Object() {
 				public Entity getEntity() {
 					try {

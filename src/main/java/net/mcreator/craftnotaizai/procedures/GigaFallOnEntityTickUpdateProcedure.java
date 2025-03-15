@@ -39,7 +39,6 @@ public class GigaFallOnEntityTickUpdateProcedure {
 			damage = damage
 					+ ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).power_percentage
 							/ 100;
-			entity.getPersistentData().putDouble("ChainExplosion", damage);
 		}
 		{
 			final Vec3 _center = new Vec3(x, y, z);

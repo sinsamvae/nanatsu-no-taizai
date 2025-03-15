@@ -36,6 +36,9 @@
     "onRightClickedInAir": {
       "name": "DemonAxeRightclicked"
     },
+    "onItemInInventoryTick": {
+      "name": "DemonAxeItemInInventoryTick"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

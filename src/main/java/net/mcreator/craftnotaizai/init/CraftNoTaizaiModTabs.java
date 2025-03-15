@@ -241,6 +241,7 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.DOUBLE_SIDED_SPEAR.get());
 				tabData.accept(CraftNoTaizaiModItems.ZELDRIS_SWORD.get());
 				tabData.accept(CraftNoTaizaiModItems.ESTARROSA_SWORD.get());
+				tabData.accept(CraftNoTaizaiModItems.ZARATRAS_SHIELD.get());
 			})
 
 					.build());

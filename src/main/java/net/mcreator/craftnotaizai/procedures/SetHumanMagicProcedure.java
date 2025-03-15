@@ -606,6 +606,13 @@ public class SetHumanMagicProcedure {
 				}
 				CraftNoTaizaiModVariables.MapVariables.get(world).sunshine = true;
 				CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
+				{
+					boolean _setval = false;
+					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.mael_sunshine = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			} else {
 				RandomMagic = Mth.nextInt(RandomSource.create(), 1, 1000);
 				if (RandomMagic <= 70) {

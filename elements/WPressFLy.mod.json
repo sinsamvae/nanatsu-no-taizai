@@ -3,7 +3,7 @@
   "_type": "keybind",
   "definition": {
     "triggerKey": "W",
-    "keyBindingName": "W Press Fly",
+    "keyBindingName": "W Fly",
     "keyBindingCategoryKey": "misc",
     "onKeyPressed": {
       "name": "WPressFLyOnKeyPressed"

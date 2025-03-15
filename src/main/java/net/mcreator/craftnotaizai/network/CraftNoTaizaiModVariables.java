@@ -117,7 +117,6 @@ public class CraftNoTaizaiModVariables {
 			clone.BP = original.BP;
 			clone.immortality = original.immortality;
 			clone.immortalityplayer = original.immortalityplayer;
-			clone.forwardfly = original.forwardfly;
 			clone.lokckedenity = original.lokckedenity;
 			clone.range = original.range;
 			clone.lock_on = original.lock_on;
@@ -278,6 +277,12 @@ public class CraftNoTaizaiModVariables {
 			clone.istar_cooldown = original.istar_cooldown;
 			clone.Melody = original.Melody;
 			clone.liquefying = original.liquefying;
+			clone.SPressed = original.SPressed;
+			clone.flash_skill = original.flash_skill;
+			clone.wind_barrier = original.wind_barrier;
+			clone.mael_sunshine = original.mael_sunshine;
+			clone.mael_ark = original.mael_ark;
+			clone.light_chakram = original.light_chakram;
 			if (!event.isWasDeath()) {
 				clone.jumbvar = original.jumbvar;
 				clone.drunk_level = original.drunk_level;
@@ -593,7 +598,6 @@ public class CraftNoTaizaiModVariables {
 		public double BP = 0;
 		public boolean immortality = false;
 		public boolean immortalityplayer = false;
-		public boolean forwardfly = false;
 		public String lokckedenity = "\"\"";
 		public double range = 0;
 		public boolean jumbvar = false;
@@ -756,6 +760,12 @@ public class CraftNoTaizaiModVariables {
 		public double Melody = 0;
 		public boolean liquefying = false;
 		public double drunk_level = 0;
+		public boolean SPressed = false;
+		public boolean flash_skill = false;
+		public boolean wind_barrier = false;
+		public boolean mael_sunshine = false;
+		public boolean mael_ark = false;
+		public boolean light_chakram = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -795,7 +805,6 @@ public class CraftNoTaizaiModVariables {
 			nbt.putDouble("BP", BP);
 			nbt.putBoolean("immortality", immortality);
 			nbt.putBoolean("immortalityplayer", immortalityplayer);
-			nbt.putBoolean("forwardfly", forwardfly);
 			nbt.putString("lokckedenity", lokckedenity);
 			nbt.putDouble("range", range);
 			nbt.putBoolean("jumbvar", jumbvar);
@@ -958,6 +967,12 @@ public class CraftNoTaizaiModVariables {
 			nbt.putDouble("Melody", Melody);
 			nbt.putBoolean("liquefying", liquefying);
 			nbt.putDouble("drunk_level", drunk_level);
+			nbt.putBoolean("SPressed", SPressed);
+			nbt.putBoolean("flash_skill", flash_skill);
+			nbt.putBoolean("wind_barrier", wind_barrier);
+			nbt.putBoolean("mael_sunshine", mael_sunshine);
+			nbt.putBoolean("mael_ark", mael_ark);
+			nbt.putBoolean("light_chakram", light_chakram);
 			return nbt;
 		}
 
@@ -1000,7 +1015,6 @@ public class CraftNoTaizaiModVariables {
 			BP = nbt.getDouble("BP");
 			immortality = nbt.getBoolean("immortality");
 			immortalityplayer = nbt.getBoolean("immortalityplayer");
-			forwardfly = nbt.getBoolean("forwardfly");
 			lokckedenity = nbt.getString("lokckedenity");
 			range = nbt.getDouble("range");
 			jumbvar = nbt.getBoolean("jumbvar");
@@ -1163,6 +1177,12 @@ public class CraftNoTaizaiModVariables {
 			Melody = nbt.getDouble("Melody");
 			liquefying = nbt.getBoolean("liquefying");
 			drunk_level = nbt.getDouble("drunk_level");
+			SPressed = nbt.getBoolean("SPressed");
+			flash_skill = nbt.getBoolean("flash_skill");
+			wind_barrier = nbt.getBoolean("wind_barrier");
+			mael_sunshine = nbt.getBoolean("mael_sunshine");
+			mael_ark = nbt.getBoolean("mael_ark");
+			light_chakram = nbt.getBoolean("light_chakram");
 		}
 	}
 
@@ -1227,7 +1247,6 @@ public class CraftNoTaizaiModVariables {
 					variables.BP = message.data.BP;
 					variables.immortality = message.data.immortality;
 					variables.immortalityplayer = message.data.immortalityplayer;
-					variables.forwardfly = message.data.forwardfly;
 					variables.lokckedenity = message.data.lokckedenity;
 					variables.range = message.data.range;
 					variables.jumbvar = message.data.jumbvar;
@@ -1390,6 +1409,12 @@ public class CraftNoTaizaiModVariables {
 					variables.Melody = message.data.Melody;
 					variables.liquefying = message.data.liquefying;
 					variables.drunk_level = message.data.drunk_level;
+					variables.SPressed = message.data.SPressed;
+					variables.flash_skill = message.data.flash_skill;
+					variables.wind_barrier = message.data.wind_barrier;
+					variables.mael_sunshine = message.data.mael_sunshine;
+					variables.mael_ark = message.data.mael_ark;
+					variables.light_chakram = message.data.light_chakram;
 				}
 			});
 			context.setPacketHandled(true);

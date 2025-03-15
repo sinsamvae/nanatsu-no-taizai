@@ -13,10 +13,13 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
+import net.mcreator.craftnotaizai.init.CraftNoTaizaiModParticleTypes;
 
 import java.util.List;
 import java.util.Comparator;
@@ -88,6 +91,9 @@ public class PurgeBindOnKeyPressedProcedure {
 											}.checkGamemode(entityiterator))) {
 										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 											_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 300, 5, false, false));
+										if (world instanceof ServerLevel _level)
+											_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.PARTICLE_ARK.get()), (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 5, 0.5,
+													(entityiterator.getBbHeight()), 0.5, 0.1);
 									}
 								}
 							}
@@ -110,6 +116,8 @@ public class PurgeBindOnKeyPressedProcedure {
 							}
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 300, 5, false, false));
+							if (world instanceof ServerLevel _level)
+								_level.sendParticles((SimpleParticleType) (CraftNoTaizaiModParticleTypes.PARTICLE_ARK.get()), (entity.getX()), (entity.getY()), (entity.getZ()), 5, 0.5, (entity.getBbHeight()), 0.5, 0.1);
 							((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag().putDouble(
 									("cooldown" + new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Move + 1)), 330);
 						} else {

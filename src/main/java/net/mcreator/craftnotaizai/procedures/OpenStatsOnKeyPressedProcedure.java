@@ -16,6 +16,7 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.craftnotaizai.world.inventory.DemonStatMenu;
 import net.mcreator.craftnotaizai.world.inventory.DemonClanMenu;
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
+import net.mcreator.craftnotaizai.init.CraftNoTaizaiModGameRules;
 
 import io.netty.buffer.Unpooled;
 
@@ -24,19 +25,23 @@ public class OpenStatsOnKeyPressedProcedure {
 		if (entity == null)
 			return;
 		if (!(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).PlayerFirstJoins) {
-			if (entity instanceof ServerPlayer _ent) {
-				BlockPos _bpos = BlockPos.containing(x, y, z);
-				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
-					@Override
-					public Component getDisplayName() {
-						return Component.literal("DemonClan");
-					}
+			if (!world.getLevelData().getGameRules().getBoolean(CraftNoTaizaiModGameRules.CRAFT_NO_TAIZAI_RANDOM_MAGIC)) {
+				if (entity instanceof ServerPlayer _ent) {
+					BlockPos _bpos = BlockPos.containing(x, y, z);
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+						@Override
+						public Component getDisplayName() {
+							return Component.literal("DemonClan");
+						}
 
-					@Override
-					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new DemonClanMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-					}
-				}, _bpos);
+						@Override
+						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+							return new DemonClanMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			} else {
+				RandomRaceProcedure.execute(world, entity);
 			}
 		} else {
 			if (entity instanceof ServerPlayer _ent) {

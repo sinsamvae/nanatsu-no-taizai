@@ -32,6 +32,7 @@ import net.mcreator.craftnotaizai.procedures.GivexpcommandProcedure;
 import net.mcreator.craftnotaizai.procedures.GiveRhittaStorePowerProcedureProcedure;
 import net.mcreator.craftnotaizai.procedures.GiveGodProcedureProcedure;
 import net.mcreator.craftnotaizai.procedures.CommandmentProcedureProcedure;
+import net.mcreator.craftnotaizai.procedures.ChnageMaigcFlashProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangemagicthunderboltProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangemagicsnatchProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangemagicicefangProcedure;
@@ -60,10 +61,12 @@ import net.mcreator.craftnotaizai.procedures.ChangeMaigcAcidProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicWindShooterProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicWallProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicTrickStarProcedure;
+import net.mcreator.craftnotaizai.procedures.ChangeMagicTornadoProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicTheRulerProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicOverPowerCommandProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicOminousNebulaProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicOceanProcedure;
+import net.mcreator.craftnotaizai.procedures.ChangeMagicMealSunshineProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicLaiProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicHellGateProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicGroundProcedure;
@@ -79,6 +82,7 @@ import net.mcreator.craftnotaizai.procedures.ChangeMagicComboStarProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicBulletSquallProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicBoostProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicBlizzardProcedure;
+import net.mcreator.craftnotaizai.procedures.ChanageMagicMaelArkProcedure;
 import net.mcreator.craftnotaizai.procedures.AddTpCommandProcedure;
 
 import com.mojang.brigadier.arguments.StringArgumentType;
@@ -118,7 +122,63 @@ public class SdsSetCommand {
 
 					ChangeRacecommandProcedure.execute(arguments);
 					return 0;
-				}))).then(Commands.literal("Magic").then(Commands.literal("Ocean").executes(arguments -> {
+				}))).then(Commands.literal("Magic").then(Commands.literal("Tornado").executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					ChangeMagicTornadoProcedure.execute(arguments);
+					return 0;
+				})).then(Commands.literal("Mael_Ark").executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					ChanageMagicMaelArkProcedure.execute(arguments);
+					return 0;
+				})).then(Commands.literal("Mael_Sunshine").executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					ChangeMagicMealSunshineProcedure.execute(arguments);
+					return 0;
+				})).then(Commands.literal("Flash").executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					ChnageMaigcFlashProcedure.execute(arguments);
+					return 0;
+				})).then(Commands.literal("Ocean").executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -816,7 +876,7 @@ public class SdsSetCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					AddTpCommandProcedure.execute(arguments);
+					AddTpCommandProcedure.execute(arguments, entity);
 					return 0;
 				})).then(Commands.literal("Max_Health").executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
@@ -998,7 +1058,7 @@ public class SdsSetCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					GiveRhittaStorePowerProcedureProcedure.execute(arguments);
+					GiveRhittaStorePowerProcedureProcedure.execute(arguments, entity);
 					return 0;
 				})))).then(Commands.literal("Story").then(Commands.argument("name", StringArgumentType.word()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();

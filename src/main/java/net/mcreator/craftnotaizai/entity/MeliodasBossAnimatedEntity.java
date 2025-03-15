@@ -166,7 +166,7 @@ public class MeliodasBossAnimatedEntity extends PathfinderMob implements GeoEnti
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 825);
-		builder = builder.add(Attributes.ARMOR, 15);
+		builder = builder.add(Attributes.ARMOR, 25);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 625);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		return builder;

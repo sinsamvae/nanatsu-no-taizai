@@ -7,19 +7,15 @@ import net.minecraftforge.event.entity.living.LivingDeathEvent;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.npc.Villager;
-import net.minecraft.world.entity.monster.Witch;
-import net.minecraft.world.entity.monster.Vindicator;
-import net.minecraft.world.entity.monster.Pillager;
-import net.minecraft.world.entity.monster.Evoker;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.tags.TagKey;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModItems;
-import net.mcreator.craftnotaizai.entity.RoyalGurardAnimatedEntity;
-import net.mcreator.craftnotaizai.entity.RoyalGuardAnimatedEntity;
 
 import javax.annotation.Nullable;
 
@@ -39,9 +35,8 @@ public class LowerTierSoulDropProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if (((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Demon")) {
-			if (entity instanceof Villager || entity instanceof RoyalGuardAnimatedEntity || entity instanceof RoyalGurardAnimatedEntity || entity instanceof Pillager || entity instanceof Vindicator || entity instanceof Evoker
-					|| entity instanceof Witch) {
+		if ((sourceentity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Demon) {
+			if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("craft_no_taizai:low_tier_souls")))) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(CraftNoTaizaiModItems.LOW_TIER_SOULS.get()));
 					entityToSpawn.setPickUpDelay(1);

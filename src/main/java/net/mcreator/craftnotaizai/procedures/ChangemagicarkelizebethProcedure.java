@@ -61,6 +61,31 @@ public class ChangemagicarkelizebethProcedure {
 				}.getEntity()));
 			});
 		}
+		{
+			boolean _setval = false;
+			(new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "Player");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.mael_ark = _setval;
+				capability.syncPlayerVariables((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "Player");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()));
+			});
+		}
 		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

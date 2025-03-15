@@ -26,7 +26,7 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "shift right click to fly"
+        "§cShiftRight To Fly"
       ]
     },
     "glowCondition": {
@@ -37,6 +37,9 @@
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
       "name": "DemonWingRightclicked"
+    },
+    "onItemInInventoryTick": {
+      "name": "DemonWingItemInInventoryTick"
     },
     "enableRanged": false,
     "shootConstantly": false,

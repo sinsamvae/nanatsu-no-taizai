@@ -13,7 +13,84 @@ import com.mojang.brigadier.arguments.DoubleArgumentType;
 public class SetallstatProcedure {
 	public static void execute(CommandContext<CommandSourceStack> arguments) {
 		{
-			double _setval = DoubleArgumentType.getDouble(arguments, "number");
+			double _setval = ((new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "Player");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).maxhealth + DoubleArgumentType.getDouble(arguments, "number");
+			(new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "Player");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.maxhealth = _setval;
+				capability.syncPlayerVariables((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "Player");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()));
+			});
+		}
+		{
+			double _setval = ((new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "Player");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).health + DoubleArgumentType.getDouble(arguments, "number");
+			(new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "Player");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.health = _setval;
+				capability.syncPlayerVariables((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "Player");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()));
+			});
+		}
+		{
+			double _setval = ((new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "Player");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).strength + DoubleArgumentType.getDouble(arguments, "number");
 			(new Object() {
 				public Entity getEntity() {
 					try {
@@ -38,7 +115,16 @@ public class SetallstatProcedure {
 			});
 		}
 		{
-			double _setval = DoubleArgumentType.getDouble(arguments, "number");
+			double _setval = ((new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "Player");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Spirit + DoubleArgumentType.getDouble(arguments, "number");
 			(new Object() {
 				public Entity getEntity() {
 					try {
@@ -63,7 +149,16 @@ public class SetallstatProcedure {
 			});
 		}
 		{
-			double _setval = DoubleArgumentType.getDouble(arguments, "number");
+			double _setval = ((new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "Player");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Agility + DoubleArgumentType.getDouble(arguments, "number");
 			(new Object() {
 				public Entity getEntity() {
 					try {
@@ -88,7 +183,16 @@ public class SetallstatProcedure {
 			});
 		}
 		{
-			double _setval = DoubleArgumentType.getDouble(arguments, "number");
+			double _setval = ((new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "Player");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).mana + DoubleArgumentType.getDouble(arguments, "number");
 			(new Object() {
 				public Entity getEntity() {
 					try {
@@ -113,7 +217,16 @@ public class SetallstatProcedure {
 			});
 		}
 		{
-			double _setval = DoubleArgumentType.getDouble(arguments, "number");
+			double _setval = ((new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "Player");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).maxmana + DoubleArgumentType.getDouble(arguments, "number");
 			(new Object() {
 				public Entity getEntity() {
 					try {
@@ -138,7 +251,16 @@ public class SetallstatProcedure {
 			});
 		}
 		{
-			double _setval = DoubleArgumentType.getDouble(arguments, "number");
+			double _setval = ((new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "Player");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack + DoubleArgumentType.getDouble(arguments, "number");
 			(new Object() {
 				public Entity getEntity() {
 					try {

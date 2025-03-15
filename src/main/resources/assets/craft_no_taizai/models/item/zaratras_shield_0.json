@@ -1,0 +1,7 @@
+{
+  "parent": "craft_no_taizai:custom/zaratras_shield_block",
+  "textures": {
+    "0": "craft_no_taizai:block/zaratras_shield_texture",
+    "particle": "craft_no_taizai:item/zaratras_shield_texture"
+  }
+}

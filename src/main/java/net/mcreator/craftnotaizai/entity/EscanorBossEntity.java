@@ -16,7 +16,6 @@ import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
@@ -26,6 +25,7 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
@@ -46,7 +46,7 @@ import net.mcreator.craftnotaizai.procedures.EscanorBossOnEntityTickUpdateProced
 import net.mcreator.craftnotaizai.procedures.EscanorBossEntityDiesProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
-public class EscanorBossEntity extends Monster implements GeoEntity {
+public class EscanorBossEntity extends PathfinderMob implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(EscanorBossEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(EscanorBossEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(EscanorBossEntity.class, EntityDataSerializers.STRING);
@@ -149,6 +149,12 @@ public class EscanorBossEntity extends Monster implements GeoEntity {
 		return super.getDimensions(p_33597_).scale((float) 1.3);
 	}
 
+	@Override
+	public void aiStep() {
+		super.aiStep();
+		this.updateSwingTime();
+	}
+
 	public static void init() {
 		SpawnPlacements.register(CraftNoTaizaiModEntities.ESCANOR_BOSS.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos, random) -> (world.getBlockState(pos.below()).is(BlockTags.ANIMALS_SPAWNABLE_ON) && world.getRawBrightness(pos, 0) > 8));
@@ -158,7 +164,7 @@ public class EscanorBossEntity extends Monster implements GeoEntity {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 850);
-		builder = builder.add(Attributes.ARMOR, 20);
+		builder = builder.add(Attributes.ARMOR, 25);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 650);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		return builder;

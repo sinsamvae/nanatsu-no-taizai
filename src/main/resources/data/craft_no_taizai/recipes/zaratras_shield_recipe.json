@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aaa",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "craft_no_taizai:carbon_steel"
+    }
+  },
+  "result": {
+    "item": "craft_no_taizai:zaratras_shield",
+    "count": 1
+  }
+}

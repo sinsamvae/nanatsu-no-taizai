@@ -29,8 +29,7 @@ public class DemonRemovePosionProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Demon") && entity instanceof LivingEntity _livEnt0
-				&& _livEnt0.hasEffect(MobEffects.POISON)) {
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Demon && entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(MobEffects.POISON)) {
 			if (entity instanceof LivingEntity _entity)
 				_entity.removeEffect(MobEffects.POISON);
 		}
