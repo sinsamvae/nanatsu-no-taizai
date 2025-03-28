@@ -26,6 +26,7 @@ import net.mcreator.craftnotaizai.client.model.Modelnormal_fairy_wings;
 import net.mcreator.craftnotaizai.client.model.Modelnew_helbram_wings;
 import net.mcreator.craftnotaizai.client.model.Modellight_chakram;
 import net.mcreator.craftnotaizai.client.model.Modelkingwings;
+import net.mcreator.craftnotaizai.client.model.Modelhigh_goddess_wings;
 import net.mcreator.craftnotaizai.client.model.Modelgoddess_wings;
 import net.mcreator.craftnotaizai.client.model.Modelgloxiana_wings;
 import net.mcreator.craftnotaizai.client.model.Modelelaine_wing3;
@@ -187,7 +188,7 @@ public class PlayerRenderProcedure {
 				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 1);
 				}
-				texture = "hendrickson_demon_mark";
+				texture = "blood_red";
 			}
 			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Half) {
 				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
@@ -278,6 +279,13 @@ public class PlayerRenderProcedure {
 							_evt.getMultiBufferSource(), _evt.getPackedLight());
 				}
 			}
+			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Transparency_Use) {
+				if (_evt.getRenderer() instanceof LivingEntityRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					if (_evt instanceof RenderLivingEvent.Pre _pre) {
+						_pre.setCanceled(true);
+					}
+				}
+			}
 			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).FullPowerDemonMark
 					&& (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Levitation) {
 				texture = "demon_wings";
@@ -300,11 +308,9 @@ public class PlayerRenderProcedure {
 					poseStack.popPose();
 				}
 			}
-			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Fairy")
-					&& (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Gloxinia == false
-					&& (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).level >= 35
-					&& ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Disaster")) {
-				texture = "kings_wing_texture2";
+			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Disaster")
+					&& !(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Gloxinia) {
+				texture = "kings_wing_texturte2";
 				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
 					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
@@ -324,8 +330,7 @@ public class PlayerRenderProcedure {
 					poseStack.popPose();
 				}
 			}
-			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Fairy")
-					&& ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Miracle Wind")) {
+			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Miracle Wind")) {
 				texture = "elaine_wings";
 				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
@@ -346,14 +351,13 @@ public class PlayerRenderProcedure {
 					poseStack.popPose();
 				}
 			}
-			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Fairy")
-					&& (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Blaze")
-							|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Boost")
-							|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("IceFang")
-							|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Wind Shooter")
-							|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Aura Burst")
-							|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Bullet Squall")
-							|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Goen no Jujin"))) {
+			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Blaze")
+					|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Boost")
+					|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("IceFang")
+					|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Wind Shooter")
+					|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Aura Burst")
+					|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Bullet Squall")
+					|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Goen no Jujin")) {
 				texture = "butterfly_wings";
 				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
@@ -374,8 +378,7 @@ public class PlayerRenderProcedure {
 					poseStack.popPose();
 				}
 			}
-			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Fairy")
-					&& ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Hunter Wisp")) {
+			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Hunter Wisp")) {
 				texture = "helbram-wing-texture";
 				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
@@ -396,9 +399,8 @@ public class PlayerRenderProcedure {
 					poseStack.popPose();
 				}
 			}
-			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Fairy")
-					&& (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Gloxinia == true
-					&& ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Disaster")) {
+			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Disaster")
+					&& (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Gloxinia) {
 				texture = "gloxiana-wing-texture";
 				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
@@ -485,7 +487,7 @@ public class PlayerRenderProcedure {
 							_evt.getMultiBufferSource(), _evt.getPackedLight());
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt60 && _livEnt60.hasEffect(CraftNoTaizaiModMobEffects.FREEZE_COFFIN_POTION_EFFECT.get())) {
+			if (entity instanceof LivingEntity _livEnt61 && _livEnt61.hasEffect(CraftNoTaizaiModMobEffects.FREEZE_COFFIN_POTION_EFFECT.get())) {
 				texture = "freeze_coffin";
 				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 1);
@@ -592,7 +594,7 @@ public class PlayerRenderProcedure {
 							_evt.getMultiBufferSource(), _evt.getPackedLight());
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt86 && _livEnt86.hasEffect(CraftNoTaizaiModMobEffects.FOSSILIZATION_EFFECT.get())) {
+			if (entity instanceof LivingEntity _livEnt87 && _livEnt87.hasEffect(CraftNoTaizaiModMobEffects.FOSSILIZATION_EFFECT.get())) {
 				texture = "stone_ban";
 				if (_evt.getRenderer() instanceof LivingEntityRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					if (_evt instanceof RenderLivingEvent.Pre _pre) {
@@ -683,6 +685,50 @@ public class PlayerRenderProcedure {
 					poseStack.scale(0.9375F, 0.9375F, 0.9375F);
 					new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
 							_evt.getMultiBufferSource(), LightTexture.FULL_BRIGHT);
+					poseStack.popPose();
+				}
+			}
+			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).goddess
+					&& (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).BP <= 12500) {
+				texture = "goddess_wings";
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
+						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
+					}
+					Modelgoddess_wings newModel = new Modelgoddess_wings(context.bakeLayer(Modelgoddess_wings.LAYER_LOCATION));
+					newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
+					newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
+					newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
+					newModel.RightArm.copyFrom(_pr.getModel().rightArm);
+					newModel.Body.copyFrom(_pr.getModel().body);
+					newModel.Head.copyFrom(_pr.getModel().head);
+					poseStack.pushPose();
+					poseStack.scale(0.9375F, 0.9375F, 0.9375F);
+					new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+							_evt.getMultiBufferSource(), _evt.getPackedLight());
+					poseStack.popPose();
+				}
+			}
+			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).goddess
+					&& (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).BP >= 12500) {
+				texture = "goddess_wings";
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
+						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
+					}
+					Modelhigh_goddess_wings newModel = new Modelhigh_goddess_wings(context.bakeLayer(Modelhigh_goddess_wings.LAYER_LOCATION));
+					newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
+					newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
+					newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
+					newModel.RightArm.copyFrom(_pr.getModel().rightArm);
+					newModel.Body.copyFrom(_pr.getModel().body);
+					newModel.Head.copyFrom(_pr.getModel().head);
+					poseStack.pushPose();
+					poseStack.scale(0.9375F, 0.9375F, 0.9375F);
+					new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+							_evt.getMultiBufferSource(), _evt.getPackedLight());
 					poseStack.popPose();
 				}
 			}

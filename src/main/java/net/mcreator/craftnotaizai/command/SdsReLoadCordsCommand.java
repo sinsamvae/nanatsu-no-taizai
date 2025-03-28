@@ -21,7 +21,7 @@ import com.mojang.brigadier.arguments.BoolArgumentType;
 public class SdsReLoadCordsCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("sds_reloadcords")
+		event.getDispatcher().register(Commands.literal("sds_reload_cords")
 
 				.then(Commands.argument("name", EntityArgument.player()).then(Commands.argument("name", BoolArgumentType.bool()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();

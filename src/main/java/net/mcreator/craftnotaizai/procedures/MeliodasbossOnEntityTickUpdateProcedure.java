@@ -27,7 +27,7 @@ public class MeliodasbossOnEntityTickUpdateProcedure {
 			return;
 		double distance = 0;
 		double ran = 0;
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) < ((entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) / 100) * 50) {
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) < ((entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) / 100) * 85) {
 			if (!entity.level().isClientSide())
 				entity.discard();
 			if (world instanceof ServerLevel _level) {

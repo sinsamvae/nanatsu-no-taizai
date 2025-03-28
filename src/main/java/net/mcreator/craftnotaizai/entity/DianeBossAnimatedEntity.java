@@ -41,9 +41,9 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
-import net.mcreator.craftnotaizai.procedures.SpawnCondtionProcedure;
 import net.mcreator.craftnotaizai.procedures.DianeBossOnEntityTickUpdateProcedure;
 import net.mcreator.craftnotaizai.procedures.DianeBossEntityDiesProcedure;
+import net.mcreator.craftnotaizai.procedures.BossSpawnProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
 public class DianeBossAnimatedEntity extends PathfinderMob implements GeoEntity {
@@ -165,7 +165,7 @@ public class DianeBossAnimatedEntity extends PathfinderMob implements GeoEntity 
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			return SpawnCondtionProcedure.execute(world);
+			return BossSpawnProcedure.execute(world);
 		});
 	}
 

@@ -10,9 +10,9 @@ import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.tags.TagKey;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
 
@@ -37,7 +37,7 @@ public class SpawnSmallHawksProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, DamageSource damagesource, Entity entity) {
 		if (damagesource == null || entity == null)
 			return;
-		if (entity instanceof HawksEntity && (damagesource.is(DamageTypes.ARROW) || damagesource.is(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg"))))) {
+		if (entity instanceof HawksEntity && (damagesource.is(DamageTypes.ARROW) || damagesource.is(TagKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:magic_dmg"))))) {
 			if (world instanceof ServerLevel _level) {
 				Entity entityToSpawn = CraftNoTaizaiModEntities.SMALL_HAWKS.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 				if (entityToSpawn != null) {

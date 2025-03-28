@@ -50,7 +50,6 @@ public class SunShineSizeProcedure {
 			return;
 		double damage = 0;
 		if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("SunShine")
-				&& !(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).mael_sunshine
 				&& !((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.ESCANOR_TAVERN_HELMET.get()
 						|| entity instanceof LivingEntity _livEnt2 && _livEnt2.hasEffect(CraftNoTaizaiModMobEffects.KING_TRUMPET.get()))) {
 			if (world.dayTime() % 24000 >= 23460 && world.dayTime() % 24000 <= 23992) {
@@ -84,7 +83,7 @@ public class SunShineSizeProcedure {
 										return false;
 									}
 								}.checkGamemode(entityiterator))) {
-							entityiterator.setSecondsOnFire(5);
+							entityiterator.setSecondsOnFire(3);
 						}
 					}
 				}
@@ -119,7 +118,7 @@ public class SunShineSizeProcedure {
 										return false;
 									}
 								}.checkGamemode(entityiterator))) {
-							entityiterator.setSecondsOnFire(5);
+							entityiterator.setSecondsOnFire(3);
 						}
 					}
 				}
@@ -154,7 +153,7 @@ public class SunShineSizeProcedure {
 										return false;
 									}
 								}.checkGamemode(entityiterator))) {
-							entityiterator.setSecondsOnFire(5);
+							entityiterator.setSecondsOnFire(3);
 						}
 					}
 				}
@@ -189,7 +188,7 @@ public class SunShineSizeProcedure {
 										return false;
 									}
 								}.checkGamemode(entityiterator))) {
-							entityiterator.setSecondsOnFire(5);
+							entityiterator.setSecondsOnFire(3);
 						}
 					}
 				}

@@ -14,6 +14,8 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftnotaizai.world.inventory.GoddessClanMenu;
 import net.mcreator.craftnotaizai.procedures.SelectGoddessProcedure;
+import net.mcreator.craftnotaizai.procedures.OpenGiantUiProcedure;
+import net.mcreator.craftnotaizai.procedures.OpenDemonUiProcedure;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
 import java.util.function.Supplier;
@@ -75,9 +77,17 @@ public class GoddessClanButtonMessage {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
+		if (buttonID == 0) {
+
+			OpenGiantUiProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 1) {
+
+			OpenDemonUiProcedure.execute(world, x, y, z, entity);
+		}
 		if (buttonID == 2) {
 
-			SelectGoddessProcedure.execute(entity);
+			SelectGoddessProcedure.execute(world, entity);
 		}
 	}
 

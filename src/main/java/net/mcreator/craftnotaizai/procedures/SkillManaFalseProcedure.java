@@ -432,5 +432,14 @@ public class SkillManaFalseProcedure {
 				});
 			}
 		}
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).light_chakram) {
+			{
+				boolean _setval = false;
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.light_chakram = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		}
 	}
 }

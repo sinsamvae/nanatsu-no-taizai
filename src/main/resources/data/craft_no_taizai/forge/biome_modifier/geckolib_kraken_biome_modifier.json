@@ -7,7 +7,7 @@
   ],
   "spawners": {
     "type": "craft_no_taizai:geckolib_kraken",
-    "weight": 15,
+    "weight": 25,
     "minCount": 1,
     "maxCount": 2
   }

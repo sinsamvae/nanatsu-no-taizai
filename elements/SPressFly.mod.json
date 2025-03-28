@@ -3,8 +3,8 @@
   "_type": "keybind",
   "definition": {
     "triggerKey": "S",
-    "keyBindingName": "S Fly",
-    "keyBindingCategoryKey": "misc",
+    "keyBindingName": "Flying Backwards",
+    "keyBindingCategoryKey": "gameplay",
     "onKeyPressed": {
       "name": "SPressFlyOnKeyPressed"
     },

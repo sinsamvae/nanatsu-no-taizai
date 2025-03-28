@@ -69,19 +69,15 @@ import net.mcreator.craftnotaizai.procedures.Story12Procedure;
 import net.mcreator.craftnotaizai.procedures.Story11Procedure;
 import net.mcreator.craftnotaizai.procedures.Story10Procedure;
 import net.mcreator.craftnotaizai.procedures.Start2Procedure;
-import net.mcreator.craftnotaizai.procedures.SleepingBiomeCordsVarProcedure;
 import net.mcreator.craftnotaizai.procedures.RoylekillcountProcedure;
 import net.mcreator.craftnotaizai.procedures.RedDemonKillProcedure;
-import net.mcreator.craftnotaizai.procedures.PlainsCordsVarProcedure;
 import net.mcreator.craftnotaizai.procedures.KillGiantVarProcedure;
 import net.mcreator.craftnotaizai.procedures.GrayDemonKillProcedure;
-import net.mcreator.craftnotaizai.procedures.FairyKingForestCordsVarProcedure;
-import net.mcreator.craftnotaizai.procedures.EntraceIstarVarProcedure;
-import net.mcreator.craftnotaizai.procedures.EntraceCapitalOfDeadVarProcedure;
 import net.mcreator.craftnotaizai.procedures.EarthCrawlerKillsProcedure;
 import net.mcreator.craftnotaizai.procedures.DefeatGloxiniaVarProcedure;
 import net.mcreator.craftnotaizai.procedures.DefeatDroleVarProcedure;
 import net.mcreator.craftnotaizai.procedures.Defeat3DemonsProcedure;
+import net.mcreator.craftnotaizai.procedures.CordsVarProcedure;
 import net.mcreator.craftnotaizai.procedures.CaveOfTrainingVarProcedure;
 import net.mcreator.craftnotaizai.procedures.BlueDemonKillsProcedure;
 import net.mcreator.craftnotaizai.network.StoryBoardButtonMessage;
@@ -177,10 +173,6 @@ public class StoryBoardScreen extends AbstractContainerScreen<StoryBoardMenu> {
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_the_other_memebers_of_the_seven"), -144, -43, -16777216, false);
 		if (Start2Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_go_to_the_sleeping_forest_biome"), -145, -23, -13369345, false);
-		if (Start2Procedure.execute(entity))
-			guiGraphics.drawString(this.font,
-
-					SleepingBiomeCordsVarProcedure.execute(entity), -145, -2, -13369345, false);
 		if (Story3Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_dinae_joins_the_mission_to_free"), -141, -57, -16777216, false);
 		if (Story3Procedure.execute(entity))
@@ -227,10 +219,6 @@ public class StoryBoardScreen extends AbstractContainerScreen<StoryBoardMenu> {
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_grizzlys_sins_of_sloth"), -144, -43, -16777216, false);
 		if (Story8Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_locate_capital_of_the_dead"), -143, -28, -13369345, false);
-		if (Story8Procedure.execute(entity))
-			guiGraphics.drawString(this.font,
-
-					EntraceCapitalOfDeadVarProcedure.execute(entity), -145, -6, -13369345, false);
 		if (Story9Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_ep_8the_fearsome_pursuer"), -143, -71, -16711681, false);
 		if (Story9Procedure.execute(entity))
@@ -457,10 +445,6 @@ public class StoryBoardScreen extends AbstractContainerScreen<StoryBoardMenu> {
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_go_to_the_fairy_king_forest_biom"), -145, -20, -16777216, false);
 		if (Story33Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_defeat_tall_albion"), -145, -5, -13369345, false);
-		if (Story33Procedure.execute(entity))
-			guiGraphics.drawString(this.font,
-
-					FairyKingForestCordsVarProcedure.execute(entity), -145, 25, -13369345, false);
 		if (Story34Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_ep_5_overwhelming_violence"), -145, -71, -16711681, false);
 		if (Story34Procedure.execute(entity))
@@ -513,10 +497,6 @@ public class StoryBoardScreen extends AbstractContainerScreen<StoryBoardMenu> {
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_of_the_ten_commandments_once_aga"), -149, -32, -16777216, false);
 		if (Story37Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_find_entrance_of_istar"), -149, -18, -13369345, false);
-		if (Story37Procedure.execute(entity))
-			guiGraphics.drawString(this.font,
-
-					EntraceIstarVarProcedure.execute(entity), -149, -6, -13369345, false);
 		if (Story38Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_ep_9_a_promise_to_a_loved_one"), -145, -72, -16711681, false);
 		if (Story38Procedure.execute(entity))
@@ -559,10 +539,6 @@ public class StoryBoardScreen extends AbstractContainerScreen<StoryBoardMenu> {
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_as_melascula_and_galand_of_the_t"), -145, -42, -16777216, false);
 		if (Story41Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_to_destory_those_in_their_path"), -145, -26, -16777216, false);
-		if (Story41Procedure.execute(entity))
-			guiGraphics.drawString(this.font,
-
-					PlainsCordsVarProcedure.execute(entity), -146, 9, -13369345, false);
 		if (Story42Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_ep_13_farewell_beloved_thief"), -145, -72, -16711681, false);
 		if (Story42Procedure.execute(entity))
@@ -749,6 +725,9 @@ public class StoryBoardScreen extends AbstractContainerScreen<StoryBoardMenu> {
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_cted_darker_more_powerful_melio"), -145, -22, -16777216, false);
 		if (Story58Procedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.craft_no_taizai.story_board.label_defeat_fraudrin"), -145, -1, -13369345, false);
+		guiGraphics.drawString(this.font,
+
+				CordsVarProcedure.execute(entity), -146, 23, -12829636, false);
 	}
 
 	@Override

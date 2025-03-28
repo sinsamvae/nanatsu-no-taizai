@@ -207,7 +207,7 @@ public class MagicMenuScreen extends AbstractContainerScreen<MagicMenuMenu> {
 		if (DisplaySlot2Procedure.execute(entity))
 			guiGraphics.drawString(this.font,
 
-					Display12Procedure.execute(entity), -80, -3, -1, false);
+					Display12Procedure.execute(), -80, -3, -1, false);
 		if (DisplaySlot2Procedure.execute(entity))
 			guiGraphics.drawString(this.font,
 
@@ -311,7 +311,7 @@ public class MagicMenuScreen extends AbstractContainerScreen<MagicMenuMenu> {
 		if (LearnDemonSkillsDisplayProcedure.execute(entity))
 			guiGraphics.drawString(this.font,
 
-					DisplayDemonSkill6Procedure.execute(entity), -80, 25, -1, false);
+					DisplayDemonSkill6Procedure.execute(), -80, 25, -1, false);
 		if (LearnDemonKingDisplayProcedure.execute(entity))
 			guiGraphics.drawString(this.font,
 

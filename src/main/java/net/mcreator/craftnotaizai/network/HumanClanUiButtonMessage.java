@@ -14,8 +14,8 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftnotaizai.world.inventory.HumanClanUiMenu;
 import net.mcreator.craftnotaizai.procedures.SelectHumanProcedure;
-import net.mcreator.craftnotaizai.procedures.NextButton2Procedure;
-import net.mcreator.craftnotaizai.procedures.BackButtonProcedure;
+import net.mcreator.craftnotaizai.procedures.OpenFairyUiProcedure;
+import net.mcreator.craftnotaizai.procedures.OpenDemonUiProcedure;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
 import java.util.function.Supplier;
@@ -79,11 +79,11 @@ public class HumanClanUiButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			BackButtonProcedure.execute(world, x, y, z, entity);
+			OpenDemonUiProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 1) {
 
-			NextButton2Procedure.execute(world, x, y, z, entity);
+			OpenFairyUiProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 

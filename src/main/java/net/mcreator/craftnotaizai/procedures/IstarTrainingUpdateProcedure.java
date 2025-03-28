@@ -84,7 +84,7 @@ public class IstarTrainingUpdateProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				IstarStartWaveProcedure.execute(world, x, y, z, entity);
+				IstarStartWaveProcedure.execute(world, entity);
 				if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Chaos")
 						&& !(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).spawn_cath) {
 					if (world instanceof ServerLevel _level) {

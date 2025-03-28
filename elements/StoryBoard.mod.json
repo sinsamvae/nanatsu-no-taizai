@@ -382,25 +382,6 @@
       {
         "type": "label",
         "data": {
-          "name": "label_proc_sleeping_biome_cords_var",
-          "text": {
-            "fixedValue": "",
-            "name": "SleepingBiomeCordsVar"
-          },
-          "color": {
-            "value": -13369345,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "Start2"
-          },
-          "x": 69,
-          "y": 118
-        }
-      },
-      {
-        "type": "label",
-        "data": {
           "name": "label_dinae_joins_the_mission_to_free",
           "text": {
             "fixedValue": "Dinae joins the mission to free Ban From the "
@@ -810,25 +791,6 @@
           },
           "x": 71,
           "y": 92
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_entrace_capital_of_dead_var",
-          "text": {
-            "fixedValue": "",
-            "name": "EntraceCapitalOfDeadVar"
-          },
-          "color": {
-            "value": -13369345,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "Story8"
-          },
-          "x": 69,
-          "y": 114
         }
       },
       {
@@ -2851,25 +2813,6 @@
       {
         "type": "label",
         "data": {
-          "name": "label_proc_fairy_king_forest_cords_var",
-          "text": {
-            "fixedValue": "",
-            "name": "FairyKingForestCordsVar"
-          },
-          "color": {
-            "value": -13369345,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "Story33"
-          },
-          "x": 69,
-          "y": 145
-        }
-      },
-      {
-        "type": "label",
-        "data": {
           "name": "label_ep_5_overwhelming_violence",
           "text": {
             "fixedValue": "EP 5: Overwhelming Violence"
@@ -3287,25 +3230,6 @@
       {
         "type": "label",
         "data": {
-          "name": "label_proc_entrace_istar_var",
-          "text": {
-            "fixedValue": "",
-            "name": "EntraceIstarVar"
-          },
-          "color": {
-            "value": -13369345,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "Story37"
-          },
-          "x": 65,
-          "y": 114
-        }
-      },
-      {
-        "type": "label",
-        "data": {
           "name": "label_ep_9_a_promise_to_a_loved_one",
           "text": {
             "fixedValue": "EP 9: A Promise To A Loved One"
@@ -3662,25 +3586,6 @@
           },
           "x": 69,
           "y": 94
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_plains_cords_var",
-          "text": {
-            "fixedValue": "",
-            "name": "PlainsCordsVar"
-          },
-          "color": {
-            "value": -13369345,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "Story41"
-          },
-          "x": 68,
-          "y": 129
         }
       },
       {
@@ -5270,6 +5175,22 @@
           },
           "x": 69,
           "y": 119
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_cords_var",
+          "text": {
+            "fixedValue": "",
+            "name": "CordsVar"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 68,
+          "y": 143
         }
       }
     ],

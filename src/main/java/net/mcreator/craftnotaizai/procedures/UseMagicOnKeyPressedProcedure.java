@@ -17,7 +17,7 @@ public class UseMagicOnKeyPressedProcedure {
 				TransparencyBindOnKeyPressedProcedure.execute(entity);
 				GoenNoJujinKeybindProcedure.execute(world, x, y, z, entity);
 				WindShooterKeybindProcedure.execute(world, x, y, z, entity);
-				FlickStoneKeybindProcedure.execute(entity);
+				FlickStoneKeybindProcedure.execute(world, entity);
 				GravityManipulationKeybindProcedure.execute(entity);
 				GodSpeedProcedure.execute(world, x, y, z, entity);
 				AuraBurstKeybindProcedure.execute(world, entity);
@@ -34,7 +34,7 @@ public class UseMagicOnKeyPressedProcedure {
 			TransparencyBindOnKeyPressedProcedure.execute(entity);
 			GoenNoJujinKeybindProcedure.execute(world, x, y, z, entity);
 			WindShooterKeybindProcedure.execute(world, x, y, z, entity);
-			FlickStoneKeybindProcedure.execute(entity);
+			FlickStoneKeybindProcedure.execute(world, entity);
 			GravityManipulationKeybindProcedure.execute(entity);
 			GodSpeedProcedure.execute(world, x, y, z, entity);
 			AuraBurstKeybindProcedure.execute(world, entity);

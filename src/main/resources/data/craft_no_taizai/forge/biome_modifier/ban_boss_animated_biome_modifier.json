@@ -5,7 +5,7 @@
   },
   "spawners": {
     "type": "craft_no_taizai:ban_boss_animated",
-    "weight": 2,
+    "weight": 1,
     "minCount": 1,
     "maxCount": 1
   }

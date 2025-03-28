@@ -41,10 +41,8 @@ public class SunFlowerSpirtSpearOnEntityTickUpdateProcedure {
 							* ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 									.orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack_boost)
 					+ 3;
-			damage = damage
-					+ ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).power_percentage
-							/ 100;
-			entity.getPersistentData().putDouble("sunflowerspear", damage);
+			damage = damage * (((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new CraftNoTaizaiModVariables.PlayerVariables())).power_percentage / 100);
 		}
 		{
 			final Vec3 _center = new Vec3(x, y, z);
@@ -72,8 +70,7 @@ public class SunFlowerSpirtSpearOnEntityTickUpdateProcedure {
 					}
 				}.checkGamemode(entityiterator) || (entity instanceof TamableAnimal _tamIsTamedBy && entityiterator instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false)
 						|| (entityiterator instanceof TamableAnimal _tamIsTamedBy && entity instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false) || entityiterator instanceof SunFlowerTrueSpirtSpearEntity)) {
-					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
-							(float) entity.getPersistentData().getDouble("sunflowerspear"));
+					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))), (float) damage);
 					{
 						Entity _ent = entityiterator;
 						_ent.setYRot((float) (entityiterator.getYRot() + Mth.nextInt(RandomSource.create(), -3, 3)));

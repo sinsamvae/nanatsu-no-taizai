@@ -13,6 +13,8 @@ import net.mcreator.craftnotaizai.procedures.ReturnCups4Procedure;
 import net.mcreator.craftnotaizai.procedures.ReturnCups3Procedure;
 import net.mcreator.craftnotaizai.procedures.ReturnCubps2Procedure;
 import net.mcreator.craftnotaizai.procedures.ReturnCubps1Procedure;
+import net.mcreator.craftnotaizai.procedures.KegHoneyToolTipProcedure;
+import net.mcreator.craftnotaizai.procedures.KegAgaveToolTipProcedure;
 import net.mcreator.craftnotaizai.procedures.DisplayKegTickProcedure;
 
 import java.util.HashMap;
@@ -44,6 +46,12 @@ public class KegGuiScreen extends AbstractContainerScreen<KegGuiMenu> {
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (KegHoneyToolTipProcedure.execute(world, x, y, z))
+			if (mouseX > leftPos + 40 && mouseX < leftPos + 64 && mouseY > topPos + -50 && mouseY < topPos + -26)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.keg_gui.tooltip_honey"), mouseX, mouseY);
+		if (KegAgaveToolTipProcedure.execute(world, x, y, z))
+			if (mouseX > leftPos + -57 && mouseX < leftPos + -33 && mouseY > topPos + -50 && mouseY < topPos + -26)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.craft_no_taizai.keg_gui.tooltip_agave"), mouseX, mouseY);
 	}
 
 	@Override

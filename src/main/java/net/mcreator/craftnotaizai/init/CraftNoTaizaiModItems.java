@@ -148,6 +148,7 @@ import net.mcreator.craftnotaizai.item.EmptyorbItem;
 import net.mcreator.craftnotaizai.item.EmptyNeedleItem;
 import net.mcreator.craftnotaizai.item.EmptyMugItem;
 import net.mcreator.craftnotaizai.item.ElaineArmorItem;
+import net.mcreator.craftnotaizai.item.ElaineArmorBlackItem;
 import net.mcreator.craftnotaizai.item.EarthCrawlerTailItem;
 import net.mcreator.craftnotaizai.item.EarthCrawlerTailCookedItem;
 import net.mcreator.craftnotaizai.item.DreyfusSwordItem;
@@ -678,6 +679,11 @@ public class CraftNoTaizaiModItems {
 	public static final RegistryObject<Item> MELASCULA_ARMOR_CHESTPLATE = REGISTRY.register("melascula_armor_chestplate", () -> new MelasculaArmorItem.Chestplate());
 	public static final RegistryObject<Item> MELASCULA_ARMOR_LEGGINGS = REGISTRY.register("melascula_armor_leggings", () -> new MelasculaArmorItem.Leggings());
 	public static final RegistryObject<Item> ZARATRAS_SHIELD = REGISTRY.register("zaratras_shield", () -> new ZaratrasShieldItem());
+	public static final RegistryObject<Item> LIGHTNING_SPREE_ENTITY_SPAWN_EGG = REGISTRY.register("lightning_spree_entity_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.LIGHTNING_SPREE_ENTITY, -1, -1, new Item.Properties()));
+	public static final RegistryObject<Item> MELIODAS_BOSS_BESRERK_SPAWN_EGG = REGISTRY.register("meliodas_boss_besrerk_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.MELIODAS_BOSS_BESRERK, -1, -256, new Item.Properties()));
+	public static final RegistryObject<Item> ZARATRAS_SPAWN_EGG = REGISTRY.register("zaratras_spawn_egg", () -> new ForgeSpawnEggItem(CraftNoTaizaiModEntities.ZARATRAS, -1, -1, new Item.Properties()));
+	public static final RegistryObject<Item> ELAINE_ARMOR_BLACK_CHESTPLATE = REGISTRY.register("elaine_armor_black_chestplate", () -> new ElaineArmorBlackItem.Chestplate());
+	public static final RegistryObject<Item> ELAINE_ARMOR_BLACK_LEGGINGS = REGISTRY.register("elaine_armor_black_leggings", () -> new ElaineArmorBlackItem.Leggings());
 
 	// Start of user code block custom items
 	// End of user code block custom items

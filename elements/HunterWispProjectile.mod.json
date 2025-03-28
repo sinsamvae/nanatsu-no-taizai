@@ -17,6 +17,12 @@
     "customModelTexture": "hunterwisp.png",
     "modelWidth": 0.5,
     "modelHeight": 0.5,
+    "onHitsBlock": {
+      "name": "HunterWispProjectileProjectileHitsLivingEntity"
+    },
+    "onHitsEntity": {
+      "name": "HunterWispProjectileProjectileHitsLivingEntity"
+    },
     "onFlyingTick": {
       "name": "HunterWispWhileProjectileFlyingTick"
     }

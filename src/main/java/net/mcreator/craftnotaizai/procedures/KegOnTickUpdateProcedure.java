@@ -531,7 +531,7 @@ public class KegOnTickUpdateProcedure {
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
 				if (world instanceof ServerLevel _level)
-					_level.sendParticles(ParticleTypes.SCRAPE, x, y, z, 1, 0.5, 0.5, 0.5, 0.1);
+					_level.sendParticles(ParticleTypes.SCRAPE, x, y, z, 1, 0.3, 0.3, 0.3, 0.1);
 				if (new Object() {
 					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 						BlockEntity blockEntity = world.getBlockEntity(pos);

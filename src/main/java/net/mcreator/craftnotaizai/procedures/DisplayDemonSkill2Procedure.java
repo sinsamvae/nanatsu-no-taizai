@@ -10,7 +10,7 @@ public class DisplayDemonSkill2Procedure {
 			return "";
 		String skill = "";
 		skill = "LOCKED";
-		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).reddemonboost == true) {
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).reddemonboost) {
 			skill = "Demon Mark";
 		}
 		return skill;

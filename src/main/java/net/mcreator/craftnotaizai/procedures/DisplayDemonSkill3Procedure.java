@@ -10,8 +10,8 @@ public class DisplayDemonSkill3Procedure {
 			return "";
 		String skill = "";
 		skill = "LOCKED";
-		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).reddemonboost == true) {
-			skill = "Regeneration";
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).graydemonblood) {
+			skill = "Gray Demon";
 		}
 		return skill;
 	}

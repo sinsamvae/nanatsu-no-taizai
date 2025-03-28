@@ -61,6 +61,8 @@ public class GoddessClanScreen extends AbstractContainerScreen<GoddessClanMenu> 
 
 		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/gui.png"), this.leftPos + -108, this.topPos + -104, 0, 0, 196, 186, 196, 186);
 
+		guiGraphics.blit(new ResourceLocation("craft_no_taizai:textures/screens/goddess_symbol.png"), this.leftPos + -88, this.topPos + -67, 0, 0, 42, 42, 42, 42);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -92,10 +94,18 @@ public class GoddessClanScreen extends AbstractContainerScreen<GoddessClanMenu> 
 	public void init() {
 		super.init();
 		imagebutton_overarrow = new ImageButton(this.leftPos + -140, this.topPos + -14, 16, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_overarrow.png"), 16, 32, e -> {
+			if (true) {
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new GoddessClanButtonMessage(0, x, y, z, textstate));
+				GoddessClanButtonMessage.handleButtonAction(entity, 0, x, y, z, textstate);
+			}
 		});
 		guistate.put("button:imagebutton_overarrow", imagebutton_overarrow);
 		this.addRenderableWidget(imagebutton_overarrow);
 		imagebutton_overarrow2 = new ImageButton(this.leftPos + 102, this.topPos + -14, 16, 16, 0, 0, 16, new ResourceLocation("craft_no_taizai:textures/screens/atlas/imagebutton_overarrow2.png"), 16, 32, e -> {
+			if (true) {
+				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new GoddessClanButtonMessage(1, x, y, z, textstate));
+				GoddessClanButtonMessage.handleButtonAction(entity, 1, x, y, z, textstate);
+			}
 		});
 		guistate.put("button:imagebutton_overarrow2", imagebutton_overarrow2);
 		this.addRenderableWidget(imagebutton_overarrow2);

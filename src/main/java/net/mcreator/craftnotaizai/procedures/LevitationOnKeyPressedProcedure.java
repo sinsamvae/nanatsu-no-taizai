@@ -1,22 +1,14 @@
 package net.mcreator.craftnotaizai.procedures;
 
-import net.minecraftforge.network.NetworkDirection;
-
-import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.Connection;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
-import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
-
-import java.util.List;
-import java.util.Iterator;
 
 public class LevitationOnKeyPressedProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
 		if ((((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag()
@@ -25,22 +17,7 @@ public class LevitationOnKeyPressedProcedure {
 					&& (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).reddemonboost) {
 				if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).graydemonform) {
 					if (!(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Levitation) {
-						if (world.isClientSide()) {
-							SetUpAnimationsProcedure.setAnimationClientside((Player) entity, "flight", false);
-						}
-						if (!world.isClientSide()) {
-							if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-								List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-								synchronized (connections) {
-									Iterator<Connection> iterator = connections.iterator();
-									while (iterator.hasNext()) {
-										Connection connection = iterator.next();
-										if (!connection.isConnecting() && connection.isConnected())
-											CraftNoTaizaiMod.PACKET_HANDLER.sendTo(new SetUpAnimationsProcedure.CraftNoTaizaiModAnimationMessage(Component.literal("flight"), entity.getId(), false), connection, NetworkDirection.PLAY_TO_CLIENT);
-									}
-								}
-							}
-						}
+						entity.setDeltaMovement(new Vec3(0, 0.8, 0));
 						{
 							boolean _setval = true;
 							entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -49,22 +26,6 @@ public class LevitationOnKeyPressedProcedure {
 							});
 						}
 					} else if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Levitation) {
-						if (world.isClientSide()) {
-							SetUpAnimationsProcedure.setAnimationClientside((Player) entity, "flightstop", true);
-						}
-						if (!world.isClientSide()) {
-							if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-								List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-								synchronized (connections) {
-									Iterator<Connection> iterator = connections.iterator();
-									while (iterator.hasNext()) {
-										Connection connection = iterator.next();
-										if (!connection.isConnecting() && connection.isConnected())
-											CraftNoTaizaiMod.PACKET_HANDLER.sendTo(new SetUpAnimationsProcedure.CraftNoTaizaiModAnimationMessage(Component.literal("flightstop"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
-									}
-								}
-							}
-						}
 						{
 							boolean _setval = false;
 							entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -85,22 +46,7 @@ public class LevitationOnKeyPressedProcedure {
 					&& (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).possession) {
 				if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Awaken) {
 					if (!(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Levitation) {
-						if (world.isClientSide()) {
-							SetUpAnimationsProcedure.setAnimationClientside((Player) entity, "flight", false);
-						}
-						if (!world.isClientSide()) {
-							if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-								List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-								synchronized (connections) {
-									Iterator<Connection> iterator = connections.iterator();
-									while (iterator.hasNext()) {
-										Connection connection = iterator.next();
-										if (!connection.isConnecting() && connection.isConnected())
-											CraftNoTaizaiMod.PACKET_HANDLER.sendTo(new SetUpAnimationsProcedure.CraftNoTaizaiModAnimationMessage(Component.literal("flight"), entity.getId(), false), connection, NetworkDirection.PLAY_TO_CLIENT);
-									}
-								}
-							}
-						}
+						entity.setDeltaMovement(new Vec3(0, 0.8, 0));
 						{
 							boolean _setval = true;
 							entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -109,22 +55,6 @@ public class LevitationOnKeyPressedProcedure {
 							});
 						}
 					} else if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Levitation) {
-						if (world.isClientSide()) {
-							SetUpAnimationsProcedure.setAnimationClientside((Player) entity, "flightstop", true);
-						}
-						if (!world.isClientSide()) {
-							if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-								List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-								synchronized (connections) {
-									Iterator<Connection> iterator = connections.iterator();
-									while (iterator.hasNext()) {
-										Connection connection = iterator.next();
-										if (!connection.isConnecting() && connection.isConnected())
-											CraftNoTaizaiMod.PACKET_HANDLER.sendTo(new SetUpAnimationsProcedure.CraftNoTaizaiModAnimationMessage(Component.literal("flightstop"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
-									}
-								}
-							}
-						}
 						{
 							boolean _setval = false;
 							entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -143,22 +73,7 @@ public class LevitationOnKeyPressedProcedure {
 				.getString(("skill" + (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Move))).equals("Levitation")) {
 			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Fairy) {
 				if (!(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Levitation) {
-					if (world.isClientSide()) {
-						SetUpAnimationsProcedure.setAnimationClientside((Player) entity, "flight", false);
-					}
-					if (!world.isClientSide()) {
-						if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-							List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-							synchronized (connections) {
-								Iterator<Connection> iterator = connections.iterator();
-								while (iterator.hasNext()) {
-									Connection connection = iterator.next();
-									if (!connection.isConnecting() && connection.isConnected())
-										CraftNoTaizaiMod.PACKET_HANDLER.sendTo(new SetUpAnimationsProcedure.CraftNoTaizaiModAnimationMessage(Component.literal("flight"), entity.getId(), false), connection, NetworkDirection.PLAY_TO_CLIENT);
-								}
-							}
-						}
-					}
+					entity.setDeltaMovement(new Vec3(0, 0.8, 0));
 					{
 						boolean _setval = true;
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -167,22 +82,6 @@ public class LevitationOnKeyPressedProcedure {
 						});
 					}
 				} else if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Levitation) {
-					if (world.isClientSide()) {
-						SetUpAnimationsProcedure.setAnimationClientside((Player) entity, "flightstop", true);
-					}
-					if (!world.isClientSide()) {
-						if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-							List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-							synchronized (connections) {
-								Iterator<Connection> iterator = connections.iterator();
-								while (iterator.hasNext()) {
-									Connection connection = iterator.next();
-									if (!connection.isConnecting() && connection.isConnected())
-										CraftNoTaizaiMod.PACKET_HANDLER.sendTo(new SetUpAnimationsProcedure.CraftNoTaizaiModAnimationMessage(Component.literal("flightstop"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
-								}
-							}
-						}
-					}
 					{
 						boolean _setval = false;
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -199,22 +98,7 @@ public class LevitationOnKeyPressedProcedure {
 				if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).DemonMark
 						|| (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).FullPowerDemonMark) {
 					if (!(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Levitation) {
-						if (world.isClientSide()) {
-							SetUpAnimationsProcedure.setAnimationClientside((Player) entity, "flight", false);
-						}
-						if (!world.isClientSide()) {
-							if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-								List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-								synchronized (connections) {
-									Iterator<Connection> iterator = connections.iterator();
-									while (iterator.hasNext()) {
-										Connection connection = iterator.next();
-										if (!connection.isConnecting() && connection.isConnected())
-											CraftNoTaizaiMod.PACKET_HANDLER.sendTo(new SetUpAnimationsProcedure.CraftNoTaizaiModAnimationMessage(Component.literal("flight"), entity.getId(), false), connection, NetworkDirection.PLAY_TO_CLIENT);
-									}
-								}
-							}
-						}
+						entity.setDeltaMovement(new Vec3(0, 0.8, 0));
 						{
 							boolean _setval = true;
 							entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -223,22 +107,6 @@ public class LevitationOnKeyPressedProcedure {
 							});
 						}
 					} else if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Levitation) {
-						if (world.isClientSide()) {
-							SetUpAnimationsProcedure.setAnimationClientside((Player) entity, "flightstop", true);
-						}
-						if (!world.isClientSide()) {
-							if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-								List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-								synchronized (connections) {
-									Iterator<Connection> iterator = connections.iterator();
-									while (iterator.hasNext()) {
-										Connection connection = iterator.next();
-										if (!connection.isConnecting() && connection.isConnected())
-											CraftNoTaizaiMod.PACKET_HANDLER.sendTo(new SetUpAnimationsProcedure.CraftNoTaizaiModAnimationMessage(Component.literal("flightstop"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
-									}
-								}
-							}
-						}
 						{
 							boolean _setval = false;
 							entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -250,6 +118,29 @@ public class LevitationOnKeyPressedProcedure {
 				} else {
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal("Demon Form Needed To Use This Skill!"), true);
+				}
+			}
+		}
+		if ((((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag()
+				.getString(("skill" + (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Move))).equals("Levitation")) {
+			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).goddess) {
+				if (!(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Levitation) {
+					entity.setDeltaMovement(new Vec3(0, 0.8, 0));
+					{
+						boolean _setval = true;
+						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.Levitation = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				} else if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Levitation) {
+					{
+						boolean _setval = false;
+						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.Levitation = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 				}
 			}
 		}

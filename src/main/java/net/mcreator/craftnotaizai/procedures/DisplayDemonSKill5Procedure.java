@@ -10,8 +10,8 @@ public class DisplayDemonSKill5Procedure {
 			return "";
 		String skill = "";
 		skill = "LOCKED";
-		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).graydemonblood == true) {
-			skill = "Dead End";
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).graydemonblood) {
+			skill = "Levitation";
 		}
 		return skill;
 	}

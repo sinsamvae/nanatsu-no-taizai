@@ -40,10 +40,8 @@ public class ChainExplosionV2OnEntityTickUpdateProcedure {
 							* ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 									.orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack_boost)
 					+ 4;
-			damage = damage
-					+ ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).power_percentage
-							/ 100;
-			entity.getPersistentData().putDouble("ChainExplosion", damage);
+			damage = damage * (((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new CraftNoTaizaiModVariables.PlayerVariables())).power_percentage / 100);
 		}
 		{
 			final Vec3 _center = new Vec3(x, y, z);
@@ -73,7 +71,7 @@ public class ChainExplosionV2OnEntityTickUpdateProcedure {
 							}
 						}.checkGamemode(entityiterator) || entityiterator instanceof ChainExplosionV2Entity)) {
 					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:fire_magic")))),
-							(float) entity.getPersistentData().getDouble("ChainExplosion"));
+							(float) damage);
 					if (world instanceof ServerLevel _level)
 						_level.sendParticles(ParticleTypes.EXPLOSION, (entity.getX()), (entity.getY()), (entity.getZ()), 3, 0.1, 0.1, 0.1, 0);
 					if (!entity.level().isClientSide())
@@ -114,7 +112,7 @@ public class ChainExplosionV2OnEntityTickUpdateProcedure {
 								}
 							}.checkGamemode(entityiterator) || entityiterator instanceof ChainExplosionV2Entity)) {
 						entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:fire_magic")))),
-								(float) entity.getPersistentData().getDouble("ChainExplosion"));
+								(float) damage);
 						if (world instanceof ServerLevel _level)
 							_level.sendParticles(ParticleTypes.EXPLOSION, (entity.getX()), (entity.getY()), (entity.getZ()), 3, 0.1, 0.1, 0.1, 0);
 						if (!entity.level().isClientSide())

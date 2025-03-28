@@ -31,7 +31,7 @@ public class MagicAbilitySlot4Procedure {
 					_player.displayClientMessage(Component.literal("You already have this skill"), false);
 			}
 		}
-		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).learn_skills == true) {
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).learn_skills) {
 			if (!(MagicScrollSkill4Procedure.execute(entity)).equals("LOCKED")) {
 				can_set = true;
 				for (int index1 = 0; index1 < 8; index1++) {
@@ -52,7 +52,7 @@ public class MagicAbilitySlot4Procedure {
 				}
 			}
 		}
-		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).learn_demon_skills == true) {
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).learn_demon_skills) {
 			if (!(DisplayDemonSkill4Procedure.execute(entity)).equals("LOCKED")) {
 				can_set = true;
 				for (int index2 = 0; index2 < 8; index2++) {
@@ -72,9 +72,6 @@ public class MagicAbilitySlot4Procedure {
 						_player.displayClientMessage(Component.literal("You already have this skill"), false);
 				}
 			}
-		}
-		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).SlotSwitch == 2) {
-			MagicAbilitySlot12Procedure.execute(entity);
 		}
 	}
 }

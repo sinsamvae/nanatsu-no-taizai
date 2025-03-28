@@ -3,7 +3,7 @@
   "biomes": "craft_no_taizai:fairy_king_forest",
   "spawners": {
     "type": "craft_no_taizai:albion_tall",
-    "weight": 8,
+    "weight": 18,
     "minCount": 1,
     "maxCount": 1
   }

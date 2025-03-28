@@ -10,9 +10,11 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.EntityType;
@@ -30,7 +32,7 @@ import net.minecraft.network.protocol.Packet;
 import net.mcreator.craftnotaizai.procedures.LuigiRightClickedOnEntityProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
-public class LuigiEntity extends Monster {
+public class LuigiEntity extends PathfinderMob {
 	public LuigiEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(CraftNoTaizaiModEntities.LUIGI.get(), world);
 	}
@@ -51,7 +53,8 @@ public class LuigiEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-
+		this.goalSelector.addGoal(1, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(2, new LookAtPlayerGoal(this, Player.class, (float) 6));
 	}
 
 	@Override
@@ -126,7 +129,7 @@ public class LuigiEntity extends Monster {
 		Entity entity = this;
 		Level world = this.level();
 
-		LuigiRightClickedOnEntityProcedure.execute(world, sourceentity);
+		LuigiRightClickedOnEntityProcedure.execute(sourceentity);
 		return retval;
 	}
 

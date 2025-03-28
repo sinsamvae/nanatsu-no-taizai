@@ -19,6 +19,7 @@ import net.minecraft.world.entity.Entity;
 import net.mcreator.craftnotaizai.entity.ZhivagoEntity;
 import net.mcreator.craftnotaizai.entity.ZeldrisStoryEntity;
 import net.mcreator.craftnotaizai.entity.ZeldrisBossEntity;
+import net.mcreator.craftnotaizai.entity.ZaratrasEntity;
 import net.mcreator.craftnotaizai.entity.ZaneriEntity;
 import net.mcreator.craftnotaizai.entity.WindShotProjectileEntity;
 import net.mcreator.craftnotaizai.entity.WickedBiteEntity;
@@ -76,6 +77,7 @@ import net.mcreator.craftnotaizai.entity.MonspeitStoryEntity;
 import net.mcreator.craftnotaizai.entity.MonspeitStory2Entity;
 import net.mcreator.craftnotaizai.entity.MonspeetBossEntity;
 import net.mcreator.craftnotaizai.entity.MerlinBossAnimatedEntity;
+import net.mcreator.craftnotaizai.entity.MeliodasBossBesrerkEntity;
 import net.mcreator.craftnotaizai.entity.MeliodasBossAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.MelasculaStoryEntity;
 import net.mcreator.craftnotaizai.entity.MelasculaBossEntity;
@@ -85,6 +87,7 @@ import net.mcreator.craftnotaizai.entity.MantaEntity;
 import net.mcreator.craftnotaizai.entity.ManpuunoGekirinProjectileEntity;
 import net.mcreator.craftnotaizai.entity.LuigiEntity;
 import net.mcreator.craftnotaizai.entity.LightningbeastProjectileEntity;
+import net.mcreator.craftnotaizai.entity.LightningSpreeEntityEntity;
 import net.mcreator.craftnotaizai.entity.LetThereBeLightEntity;
 import net.mcreator.craftnotaizai.entity.KulumilEntity;
 import net.mcreator.craftnotaizai.entity.KingStory1Entity;
@@ -296,7 +299,7 @@ public class CraftNoTaizaiModEntities {
 
 					.sized(1.2f, 5.5f));
 	public static final RegistryObject<EntityType<ElaineEntity>> ELAINE = register("elaine",
-			EntityType.Builder.<ElaineEntity>of(ElaineEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ElaineEntity::new).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<ElaineEntity>of(ElaineEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ElaineEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<InsectEntity>> INSECT = register("insect",
 			EntityType.Builder.<InsectEntity>of(InsectEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InsectEntity::new)
 
@@ -376,12 +379,12 @@ public class CraftNoTaizaiModEntities {
 			EntityType.Builder.<DespairVenomEntity>of(DespairVenomEntity::new, MobCategory.MISC).setCustomClientFactory(DespairVenomEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<CrazyProminenceEntity>> CRAZY_PROMINENCE = register("crazy_prominence", EntityType.Builder.<CrazyProminenceEntity>of(CrazyProminenceEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(CrazyProminenceEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<FightingAreaEntity>> FIGHTING_AREA = register("fighting_area", EntityType.Builder.<FightingAreaEntity>of(FightingAreaEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true)
+	public static final RegistryObject<EntityType<FightingAreaEntity>> FIGHTING_AREA = register("fighting_area", EntityType.Builder.<FightingAreaEntity>of(FightingAreaEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FightingAreaEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<FinalProminenceEntity>> FINAL_PROMINENCE = register("final_prominence", EntityType.Builder.<FinalProminenceEntity>of(FinalProminenceEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(FinalProminenceEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<LuigiEntity>> LUIGI = register("luigi",
-			EntityType.Builder.<LuigiEntity>of(LuigiEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LuigiEntity::new).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<LuigiEntity>of(LuigiEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LuigiEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<TyrantDragonEntity>> TYRANT_DRAGON = register("tyrant_dragon",
 			EntityType.Builder.<TyrantDragonEntity>of(TyrantDragonEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TyrantDragonEntity::new)
 
@@ -994,6 +997,16 @@ public class CraftNoTaizaiModEntities {
 			.setCustomClientFactory(GreatestSunProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<TornadoDiskProJectileEntity>> TORNADO_DISK_PRO_JECTILE = register("tornado_disk_pro_jectile", EntityType.Builder.<TornadoDiskProJectileEntity>of(TornadoDiskProJectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(TornadoDiskProJectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<LightningSpreeEntityEntity>> LIGHTNING_SPREE_ENTITY = register("lightning_spree_entity", EntityType.Builder.<LightningSpreeEntityEntity>of(LightningSpreeEntityEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LightningSpreeEntityEntity::new).fireImmune().sized(0.6f, 0.9f));
+	public static final RegistryObject<EntityType<MeliodasBossBesrerkEntity>> MELIODAS_BOSS_BESRERK = register("meliodas_boss_besrerk",
+			EntityType.Builder.<MeliodasBossBesrerkEntity>of(MeliodasBossBesrerkEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MeliodasBossBesrerkEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ZaratrasEntity>> ZARATRAS = register("zaratras",
+			EntityType.Builder.<ZaratrasEntity>of(ZaratrasEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ZaratrasEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -1171,6 +1184,9 @@ public class CraftNoTaizaiModEntities {
 			MelasculaStoryEntity.init();
 			MonspeetBossEntity.init();
 			ZeldrisBossEntity.init();
+			LightningSpreeEntityEntity.init();
+			MeliodasBossBesrerkEntity.init();
+			ZaratrasEntity.init();
 		});
 	}
 
@@ -1345,5 +1361,8 @@ public class CraftNoTaizaiModEntities {
 		event.put(MELASCULA_STORY.get(), MelasculaStoryEntity.createAttributes().build());
 		event.put(MONSPEET_BOSS.get(), MonspeetBossEntity.createAttributes().build());
 		event.put(ZELDRIS_BOSS.get(), ZeldrisBossEntity.createAttributes().build());
+		event.put(LIGHTNING_SPREE_ENTITY.get(), LightningSpreeEntityEntity.createAttributes().build());
+		event.put(MELIODAS_BOSS_BESRERK.get(), MeliodasBossBesrerkEntity.createAttributes().build());
+		event.put(ZARATRAS.get(), ZaratrasEntity.createAttributes().build());
 	}
 }

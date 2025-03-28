@@ -53,7 +53,7 @@ public class AlbionTallOnEntityTickUpdateProcedure {
 					}
 				});
 			}
-			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 45, 125)));
+			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 100, 300)));
 		}
 	}
 }

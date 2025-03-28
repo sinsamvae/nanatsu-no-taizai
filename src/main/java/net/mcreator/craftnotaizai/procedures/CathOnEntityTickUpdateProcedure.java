@@ -90,12 +90,14 @@ public class CathOnEntityTickUpdateProcedure {
 								_level.sendParticles(ParticleTypes.EXPLOSION, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 8, 3, 3, 3, 0.1);
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, (float) 0.05, 1);
+									_level.playSound(null, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")),
+											SoundSource.NEUTRAL, (float) 0.05, 1);
 								} else {
-									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, (float) 0.05, 1, false);
+									_level.playLocalSound((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL,
+											(float) 0.05, 1, false);
 								}
 							}
-							entityiterator.setDeltaMovement(new Vec3(((x + entityiterator.getX()) * 0.1), ((y + entityiterator.getY()) * 0.1), ((z + entityiterator.getZ()) * 0.1)));
+							entityiterator.setDeltaMovement(new Vec3(((x + entityiterator.getX()) * 0.3), ((y + entityiterator.getY()) * 0.3), ((z + entityiterator.getZ()) * 0.3)));
 							entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
 									entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1);
 						}
@@ -103,6 +105,50 @@ public class CathOnEntityTickUpdateProcedure {
 				}
 			}
 			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 100, 300)));
+		}
+		if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
+			if (((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Levitation) {
+				if (entity instanceof Mob _entity)
+					_entity.getNavigation().moveTo(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX()), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY()),
+							((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ()), 1);
+				if (entity.getZ() <= (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ()) {
+					{
+						Entity _ent = entity;
+						_ent.setYRot((float) (Math.toDegrees(
+								Math.atan(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX() - entity.getX()) / ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ() - entity.getZ()))) * (-1)));
+						_ent.setXRot((float) (Math.toDegrees(Math.atan((((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY() - entity.getY()) - 1) / Math.sqrt(
+								Math.pow((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX() - entity.getX(), 2) + Math.pow((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ() - entity.getZ(), 2))))
+								* (-1)));
+						_ent.setYBodyRot(_ent.getYRot());
+						_ent.setYHeadRot(_ent.getYRot());
+						_ent.yRotO = _ent.getYRot();
+						_ent.xRotO = _ent.getXRot();
+						if (_ent instanceof LivingEntity _entity) {
+							_entity.yBodyRotO = _entity.getYRot();
+							_entity.yHeadRotO = _entity.getYRot();
+						}
+					}
+				} else {
+					{
+						Entity _ent = entity;
+						_ent.setYRot((float) ((Math.toDegrees(
+								Math.atan(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX() - entity.getX()) / ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ() - entity.getZ()))) + 180)
+								* (-1)));
+						_ent.setXRot((float) (Math.toDegrees(Math.atan((((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY() - entity.getY()) - 1) / Math.sqrt(
+								Math.pow((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX() - entity.getX(), 2) + Math.pow((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ() - entity.getZ(), 2))))
+								* (-1)));
+						_ent.setYBodyRot(_ent.getYRot());
+						_ent.setYHeadRot(_ent.getYRot());
+						_ent.yRotO = _ent.getYRot();
+						_ent.xRotO = _ent.getXRot();
+						if (_ent instanceof LivingEntity _entity) {
+							_entity.yBodyRotO = _entity.getYRot();
+							_entity.yHeadRotO = _entity.getYRot();
+						}
+					}
+				}
+				entity.setDeltaMovement(new Vec3((Math.sin(Math.toRadians(entity.getYRot() + 180)) * 1 * 0.6), ((Math.sin(Math.toRadians(0 - entity.getXRot())) + 0) * 0.6), (Math.cos(Math.toRadians(entity.getYRot())) * 1 * 0.6)));
+			}
 		}
 	}
 }

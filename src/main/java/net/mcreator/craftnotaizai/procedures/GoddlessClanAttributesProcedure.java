@@ -18,13 +18,6 @@ public class GoddlessClanAttributesProcedure {
 			});
 		}
 		{
-			double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).maxmana;
-			entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.mana = _setval;
-				capability.syncPlayerVariables(entity);
-			});
-		}
-		{
 			double _setval = Mth.nextInt(RandomSource.create(), 8, 10) * 5;
 			entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.maxhealth = _setval;
@@ -56,6 +49,13 @@ public class GoddlessClanAttributesProcedure {
 			double _setval = Mth.nextInt(RandomSource.create(), 4, 10) * 50;
 			entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.maxmana = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
+			double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).maxmana;
+			entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.mana = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}

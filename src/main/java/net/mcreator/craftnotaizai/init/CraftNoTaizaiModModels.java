@@ -52,6 +52,7 @@ import net.mcreator.craftnotaizai.client.model.Modelinsect;
 import net.mcreator.craftnotaizai.client.model.Modelincrease_true_spirt_spear;
 import net.mcreator.craftnotaizai.client.model.Modelhowzer_armor;
 import net.mcreator.craftnotaizai.client.model.Modelhorn;
+import net.mcreator.craftnotaizai.client.model.Modelhigh_goddess_wings;
 import net.mcreator.craftnotaizai.client.model.Modelhelbrum_armor;
 import net.mcreator.craftnotaizai.client.model.Modelhelbramwings;
 import net.mcreator.craftnotaizai.client.model.Modelhelbram_wings3;
@@ -172,6 +173,7 @@ public class CraftNoTaizaiModModels {
 		event.registerLayerDefinition(Modelyggdra_armor.LAYER_LOCATION, Modelyggdra_armor::createBodyLayer);
 		event.registerLayerDefinition(Modelminecraftmob.LAYER_LOCATION, Modelminecraftmob::createBodyLayer);
 		event.registerLayerDefinition(Modelmantaray.LAYER_LOCATION, Modelmantaray::createBodyLayer);
+		event.registerLayerDefinition(Modelhigh_goddess_wings.LAYER_LOCATION, Modelhigh_goddess_wings::createBodyLayer);
 		event.registerLayerDefinition(Modelking_boss.LAYER_LOCATION, Modelking_boss::createBodyLayer);
 		event.registerLayerDefinition(ModelBLANK_GIANT.LAYER_LOCATION, ModelBLANK_GIANT::createBodyLayer);
 		event.registerLayerDefinition(Modelgear_spirit_spear.LAYER_LOCATION, Modelgear_spirit_spear::createBodyLayer);

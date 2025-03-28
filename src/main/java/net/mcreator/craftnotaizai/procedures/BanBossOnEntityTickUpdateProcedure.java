@@ -79,7 +79,7 @@ public class BanBossOnEntityTickUpdateProcedure {
 						_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 120, 5, false, false));
 				}
 			}
-			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 45, 125)));
+			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 100, 300)));
 		}
 	}
 }

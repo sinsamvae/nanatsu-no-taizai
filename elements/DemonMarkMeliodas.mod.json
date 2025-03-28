@@ -2,7 +2,7 @@
   "_fv": 69,
   "_type": "animatedentity",
   "definition": {
-    "mobName": "Meliodas Boss Animated",
+    "mobName": "Meliodas",
     "mobLabel": "",
     "mobModelTexture": "meliodasdemon_mark.png",
     "mobModelGlowTexture": "",
@@ -55,7 +55,7 @@
     "equipmentBoots": {
       "value": ""
     },
-    "mobBehaviourType": "Creature",
+    "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
     "attackStrength": 675,
     "attackKnockback": 0.0,
@@ -113,9 +113,6 @@
     },
     "onMobTickUpdate": {
       "name": "DemonMarkMeliodasOnEntityTickUpdate"
-    },
-    "onInitialSpawn": {
-      "name": "DemonMarkMeliodasOnInitialEntitySpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",

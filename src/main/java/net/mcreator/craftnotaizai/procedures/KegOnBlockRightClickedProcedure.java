@@ -1,6 +1,7 @@
 package net.mcreator.craftnotaizai.procedures;
 
 import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -123,13 +124,12 @@ public class KegOnBlockRightClickedProcedure {
 				}
 			}.getValue(world, BlockPos.containing(x, y, z), "recipe") == 1) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.EMPTY_MUG.get()) {
-					if (entity instanceof LivingEntity _entity) {
+					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(CraftNoTaizaiModItems.MUG_ALE.get()).copy();
 						_setstack.setCount(1);
-						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
-						if (_entity instanceof Player _player)
-							_player.getInventory().setChanged();
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
+					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).shrink(1);
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(x, y, z);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -164,13 +164,12 @@ public class KegOnBlockRightClickedProcedure {
 				}
 			}.getValue(world, BlockPos.containing(x, y, z), "recipe") == 2) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.EMPTY_MUG.get()) {
-					if (entity instanceof LivingEntity _entity) {
+					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(CraftNoTaizaiModItems.GLOW_MUG.get()).copy();
 						_setstack.setCount(1);
-						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
-						if (_entity instanceof Player _player)
-							_player.getInventory().setChanged();
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
+					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).shrink(1);
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(x, y, z);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -205,13 +204,12 @@ public class KegOnBlockRightClickedProcedure {
 				}
 			}.getValue(world, BlockPos.containing(x, y, z), "recipe") == 3) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.EMPTY_MUG.get()) {
-					if (entity instanceof LivingEntity _entity) {
+					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(CraftNoTaizaiModItems.BEER_MUG.get()).copy();
 						_setstack.setCount(1);
-						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
-						if (_entity instanceof Player _player)
-							_player.getInventory().setChanged();
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
+					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).shrink(1);
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(x, y, z);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -246,13 +244,12 @@ public class KegOnBlockRightClickedProcedure {
 				}
 			}.getValue(world, BlockPos.containing(x, y, z), "recipe") == 4) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.EMPTY_MUG.get()) {
-					if (entity instanceof LivingEntity _entity) {
+					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(CraftNoTaizaiModItems.CIDER_MUG.get()).copy();
 						_setstack.setCount(1);
-						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
-						if (_entity instanceof Player _player)
-							_player.getInventory().setChanged();
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
+					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).shrink(1);
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(x, y, z);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);

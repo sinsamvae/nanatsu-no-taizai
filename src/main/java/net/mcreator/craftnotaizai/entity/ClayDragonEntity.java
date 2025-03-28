@@ -141,7 +141,7 @@ public class ClayDragonEntity extends PathfinderMob implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		ClayDragonOnEntityTickUpdateProcedure.execute(this);
+		ClayDragonOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 

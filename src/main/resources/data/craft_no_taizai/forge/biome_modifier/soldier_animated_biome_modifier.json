@@ -5,7 +5,7 @@
   },
   "spawners": {
     "type": "craft_no_taizai:soldier_animated",
-    "weight": 15,
+    "weight": 25,
     "minCount": 2,
     "maxCount": 3
   }

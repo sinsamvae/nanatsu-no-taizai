@@ -178,6 +178,38 @@
           "x": 159,
           "y": 75
         }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_honey",
+          "text": {
+            "fixedValue": "Honey"
+          },
+          "displayCondition": {
+            "name": "KegHoneyToolTip"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 254,
+          "y": 70
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_agave",
+          "text": {
+            "fixedValue": "Agave"
+          },
+          "displayCondition": {
+            "name": "KegAgaveToolTip"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 157,
+          "y": 70
+        }
       }
     ],
     "gridSettings": {

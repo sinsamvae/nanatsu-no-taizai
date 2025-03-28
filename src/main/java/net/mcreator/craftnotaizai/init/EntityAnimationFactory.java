@@ -7,6 +7,7 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 import net.mcreator.craftnotaizai.entity.ZhivagoEntity;
 import net.mcreator.craftnotaizai.entity.ZeldrisStoryEntity;
 import net.mcreator.craftnotaizai.entity.ZeldrisBossEntity;
+import net.mcreator.craftnotaizai.entity.ZaratrasEntity;
 import net.mcreator.craftnotaizai.entity.WickedBiteEntity;
 import net.mcreator.craftnotaizai.entity.WeinheidtAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.WailioEntity;
@@ -46,6 +47,7 @@ import net.mcreator.craftnotaizai.entity.MonspeitStoryEntity;
 import net.mcreator.craftnotaizai.entity.MonspeitStory2Entity;
 import net.mcreator.craftnotaizai.entity.MonspeetBossEntity;
 import net.mcreator.craftnotaizai.entity.MerlinBossAnimatedEntity;
+import net.mcreator.craftnotaizai.entity.MeliodasBossBesrerkEntity;
 import net.mcreator.craftnotaizai.entity.MeliodasBossAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.MelasculaStoryEntity;
 import net.mcreator.craftnotaizai.entity.MelasculaBossEntity;
@@ -1204,6 +1206,20 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof ZeldrisBossEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof MeliodasBossBesrerkEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof ZaratrasEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

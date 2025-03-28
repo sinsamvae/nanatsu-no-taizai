@@ -7,7 +7,7 @@
   ],
   "spawners": {
     "type": "craft_no_taizai:earth_crawler",
-    "weight": 10,
+    "weight": 20,
     "minCount": 1,
     "maxCount": 3
   }

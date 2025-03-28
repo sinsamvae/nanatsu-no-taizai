@@ -14,8 +14,8 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftnotaizai.world.inventory.FairyClanUiMenu;
 import net.mcreator.craftnotaizai.procedures.SelectFairyProcedure;
-import net.mcreator.craftnotaizai.procedures.NextButton3Procedure;
-import net.mcreator.craftnotaizai.procedures.BackButton2Procedure;
+import net.mcreator.craftnotaizai.procedures.OpenHumanUIProcedure;
+import net.mcreator.craftnotaizai.procedures.OpenGiantUiProcedure;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
 import java.util.function.Supplier;
@@ -79,11 +79,11 @@ public class FairyClanUiButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			BackButton2Procedure.execute(world, x, y, z, entity);
+			OpenHumanUIProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 1) {
 
-			NextButton3Procedure.execute(world, x, y, z, entity);
+			OpenGiantUiProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 

@@ -1,14 +1,18 @@
 package net.mcreator.craftnotaizai.procedures;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.BlockPos;
 import net.minecraft.commands.arguments.EntityAnchorArgument;
 
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
@@ -16,11 +20,20 @@ import net.mcreator.craftnotaizai.entity.HellblazeOmegaProjectileEntity;
 import net.mcreator.craftnotaizai.entity.HellBlazeProjectileEntity;
 
 public class DemonMarkMeliodasOnEntityTickUpdateProcedure {
-	public static void execute(Entity entity) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		double distance = 0;
 		double ran = 0;
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) < ((entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) / 100) * 65) {
+			if (!entity.level().isClientSide())
+				entity.discard();
+			if (world instanceof ServerLevel _level) {
+				Entity entityToSpawn = CraftNoTaizaiModEntities.DEMON_MARK_MELIODAS.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+				if (entityToSpawn != null) {
+				}
+			}
+		}
 		if (entity.getPersistentData().getDouble("skill_cooldown") > 0) {
 			entity.getPersistentData().putDouble("skill_cooldown", Math.round(entity.getPersistentData().getDouble("skill_cooldown") - 1));
 		}

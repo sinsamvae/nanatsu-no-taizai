@@ -5,7 +5,7 @@
   },
   "spawners": {
     "type": "craft_no_taizai:royal_guard_animated",
-    "weight": 25,
+    "weight": 35,
     "minCount": 2,
     "maxCount": 3
   }

@@ -11,20 +11,21 @@ public class UseMagicPressed3Procedure {
 		TempestBindOnKeyPressedProcedure.execute(world, x, y, z, entity);
 		IceFangBindOnKeyPressedProcedure.execute(world, x, y, z, entity);
 		AcidkeyPressProcedure.execute(world, x, y, z, entity);
-		MiracleWindKeyPressProcedure.execute(world, x, y, z, entity);
+		MiracleWindKeypressedProcedure.execute(world, x, y, z, entity);
 		BlazeBindOnKeyPressedProcedure.execute(world, x, y, z, entity);
 		InfinityBindOnKeyPressedProcedure.execute(world, entity);
 		CreationbindOnKeyPressedProcedure.execute(world, x, y, z, entity);
 		SnatchBindOnKeyPressedProcedure.execute(world, entity);
 		InvasionBindOnKeyPressedProcedure.execute(world, x, y, z, entity);
-		SunshinekeypressProcedure.execute(world, entity);
+		SunShineKeyPressedProcedure.execute(world, entity);
 		DisasterBindOnKeyPressedProcedure.execute(world, x, y, z, entity);
 		GrayDemonMoveProcedure.execute(world, x, y, z, entity);
 		DemonRegenMoveProcedure.execute(entity);
-		ComboStarKeybindProcedure.execute(world, x, y, z, entity);
+		ComboStarKeybindProcedure.execute(entity);
 		TrickStarKeyBindProcedure.execute(world, x, y, z, entity);
 		FullSizeSkillProcedure.execute(entity);
 		CriticalOverKeybindProcedure.execute(world, x, y, z, entity);
 		TrueSpirtSpearKeybindProcedure.execute(entity);
+		MaelArkProcedure.execute(world, entity);
 	}
 }

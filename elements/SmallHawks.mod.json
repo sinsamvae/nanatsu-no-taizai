@@ -49,7 +49,7 @@
     "equipmentBoots": {
       "value": ""
     },
-    "mobBehaviourType": "Creature",
+    "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
     "attackStrength": 6,
     "attackKnockback": 0.0,

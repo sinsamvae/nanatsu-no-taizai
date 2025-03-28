@@ -109,7 +109,7 @@ public class EntityCombatSystemProcedure {
 														SoundSource.NEUTRAL, 1, 1, false);
 											}
 										}
-										entityiterator.setDeltaMovement(new Vec3(((entityiterator.getDeltaMovement().x() + entityiterator.getLookAngle().x) * 0), ((entityiterator.getDeltaMovement().y() + entityiterator.getLookAngle().y) * (-3)),
+										entityiterator.setDeltaMovement(new Vec3(((entityiterator.getDeltaMovement().x() + entityiterator.getLookAngle().x) * 0), ((entityiterator.getDeltaMovement().y() + entityiterator.getLookAngle().y) * 0.5),
 												((entityiterator.getDeltaMovement().z() + entityiterator.getLookAngle().z) * 0)));
 										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MOB_ATTACK)),
 												(float) (entity instanceof LivingEntity _attributeContext ? _attributeContext.getAttributeValue(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE) : 0.0D));

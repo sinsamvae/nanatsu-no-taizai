@@ -38,6 +38,15 @@ public class AlbionEntityDiesProcedure {
 								capability.syncPlayerVariables(entityiterator);
 							});
 						}
+						if ((entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).logic_cords) {
+							{
+								boolean _setval = false;
+								entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.logic_cords = _setval;
+									capability.syncPlayerVariables(entityiterator);
+								});
+							}
+						}
 					}
 				}
 			}

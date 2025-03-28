@@ -14,26 +14,24 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
-import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.Pose;
-import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -48,7 +46,7 @@ import net.mcreator.craftnotaizai.procedures.GalandBossOnEntityTickUpdateProcedu
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModItems;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
-public class GalandOverBossEntity extends PathfinderMob implements GeoEntity {
+public class GalandOverBossEntity extends Monster implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(GalandOverBossEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(GalandOverBossEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(GalandOverBossEntity.class, EntityDataSerializers.STRING);
@@ -99,10 +97,10 @@ public class GalandOverBossEntity extends PathfinderMob implements GeoEntity {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
 		});
-		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
+		this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.8));
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(5, new FloatGoal(this));
+		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, true));
 	}
 
 	@Override
@@ -156,15 +154,7 @@ public class GalandOverBossEntity extends PathfinderMob implements GeoEntity {
 		return super.getDimensions(p_33597_).scale((float) 1.5);
 	}
 
-	@Override
-	public void aiStep() {
-		super.aiStep();
-		this.updateSwingTime();
-	}
-
 	public static void init() {
-		SpawnPlacements.register(CraftNoTaizaiModEntities.GALAND_OVER_BOSS.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getBlockState(pos.below()).is(BlockTags.ANIMALS_SPAWNABLE_ON) && world.getRawBrightness(pos, 0) > 8));
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

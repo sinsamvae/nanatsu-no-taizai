@@ -14,6 +14,7 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.mcreator.craftnotaizai.client.renderer.ZhivagoRenderer;
 import net.mcreator.craftnotaizai.client.renderer.ZeldrisStoryRenderer;
 import net.mcreator.craftnotaizai.client.renderer.ZeldrisBossRenderer;
+import net.mcreator.craftnotaizai.client.renderer.ZaratrasRenderer;
 import net.mcreator.craftnotaizai.client.renderer.ZaneriRenderer;
 import net.mcreator.craftnotaizai.client.renderer.WickedBiteRenderer;
 import net.mcreator.craftnotaizai.client.renderer.WeinheidtAnimatedRenderer;
@@ -64,6 +65,7 @@ import net.mcreator.craftnotaizai.client.renderer.MonspeitStoryRenderer;
 import net.mcreator.craftnotaizai.client.renderer.MonspeitStory2Renderer;
 import net.mcreator.craftnotaizai.client.renderer.MonspeetBossRenderer;
 import net.mcreator.craftnotaizai.client.renderer.MerlinBossAnimatedRenderer;
+import net.mcreator.craftnotaizai.client.renderer.MeliodasBossBesrerkRenderer;
 import net.mcreator.craftnotaizai.client.renderer.MeliodasBossAnimatedRenderer;
 import net.mcreator.craftnotaizai.client.renderer.MelasculaStoryRenderer;
 import net.mcreator.craftnotaizai.client.renderer.MelasculaBossRenderer;
@@ -72,6 +74,7 @@ import net.mcreator.craftnotaizai.client.renderer.MarmasRenderer;
 import net.mcreator.craftnotaizai.client.renderer.MantaRenderer;
 import net.mcreator.craftnotaizai.client.renderer.LuigiRenderer;
 import net.mcreator.craftnotaizai.client.renderer.LightningbeastProjectileRenderer;
+import net.mcreator.craftnotaizai.client.renderer.LightningSpreeEntityRenderer;
 import net.mcreator.craftnotaizai.client.renderer.KulumilRenderer;
 import net.mcreator.craftnotaizai.client.renderer.KingStory1Renderer;
 import net.mcreator.craftnotaizai.client.renderer.KingBossAnimatedRenderer;
@@ -451,5 +454,8 @@ public class CraftNoTaizaiModEntityRenderers {
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.HEARTLESS_WATERFALL.get(), HeartlessWaterfallRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.GREATEST_SUN_PROJECTILE.get(), GreatestSunProjectileRenderer::new);
 		event.registerEntityRenderer(CraftNoTaizaiModEntities.TORNADO_DISK_PRO_JECTILE.get(), TornadoDiskProJectileRenderer::new);
+		event.registerEntityRenderer(CraftNoTaizaiModEntities.LIGHTNING_SPREE_ENTITY.get(), LightningSpreeEntityRenderer::new);
+		event.registerEntityRenderer(CraftNoTaizaiModEntities.MELIODAS_BOSS_BESRERK.get(), MeliodasBossBesrerkRenderer::new);
+		event.registerEntityRenderer(CraftNoTaizaiModEntities.ZARATRAS.get(), ZaratrasRenderer::new);
 	}
 }

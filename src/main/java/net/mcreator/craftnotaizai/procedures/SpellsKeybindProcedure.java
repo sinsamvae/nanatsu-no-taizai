@@ -20,6 +20,6 @@ public class SpellsKeybindProcedure {
 		MagicDetectionKeyProcedure.execute(entity);
 		SpiralHailKeyBindProcedure.execute(world, entity);
 		TeleportationKeyBindProcedure.execute(world, x, y, z, entity);
-		LevitationOnKeyPressedProcedure.execute(world, entity);
+		LevitationOnKeyPressedProcedure.execute(entity);
 	}
 }

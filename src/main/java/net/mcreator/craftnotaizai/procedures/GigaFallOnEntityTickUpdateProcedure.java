@@ -36,9 +36,8 @@ public class GigaFallOnEntityTickUpdateProcedure {
 							* ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 									.orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack_boost)
 					+ 3;
-			damage = damage
-					+ ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).power_percentage
-							/ 100;
+			damage = damage * (((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new CraftNoTaizaiModVariables.PlayerVariables())).power_percentage / 100);
 		}
 		{
 			final Vec3 _center = new Vec3(x, y, z);

@@ -38,7 +38,7 @@ public class ArrowOfSalvationProcedure {
 		entity.getPersistentData().putDouble("velY", (entity.getLookAngle().y / 10));
 		entity.getPersistentData().putDouble("velZ", (entity.getLookAngle().z / 10));
 		damage = Math.ceil(0.1 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack
-				* (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack_boost) + 1;
+				* (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack_boost) + 2;
 		damage = damage * ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).power_percentage / 100);
 		for (int index0 = 0; index0 < (int) (25 * 10); index0++) {
 			entity.getPersistentData().putDouble("posX", (entity.getPersistentData().getDouble("posX") + entity.getPersistentData().getDouble("velX")));

@@ -14,8 +14,8 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftnotaizai.world.inventory.GiantClanMenu;
 import net.mcreator.craftnotaizai.procedures.SelectGiantProcedure;
-import net.mcreator.craftnotaizai.procedures.NextButton4Procedure;
-import net.mcreator.craftnotaizai.procedures.BackButton3Procedure;
+import net.mcreator.craftnotaizai.procedures.OpenGoddessUiProcedure;
+import net.mcreator.craftnotaizai.procedures.OpenFairyUiProcedure;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
 import java.util.function.Supplier;
@@ -79,11 +79,11 @@ public class GiantClanButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			BackButton3Procedure.execute(world, x, y, z, entity);
+			OpenFairyUiProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 1) {
 
-			NextButton4Procedure.execute(world, x, y, z, entity);
+			OpenGoddessUiProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 

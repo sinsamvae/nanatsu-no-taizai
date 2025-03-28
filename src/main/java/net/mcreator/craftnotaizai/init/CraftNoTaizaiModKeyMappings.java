@@ -21,8 +21,6 @@ import net.mcreator.craftnotaizai.network.SwapMoveMessage;
 import net.mcreator.craftnotaizai.network.SPressFlyMessage;
 import net.mcreator.craftnotaizai.network.OpenStatsMessage;
 import net.mcreator.craftnotaizai.network.MantaraySpaceMessage;
-import net.mcreator.craftnotaizai.network.MantaraySMoveMessage;
-import net.mcreator.craftnotaizai.network.MantarayMoveMessage;
 import net.mcreator.craftnotaizai.network.ManaChargeBindMessage;
 import net.mcreator.craftnotaizai.network.LockOnMessage;
 import net.mcreator.craftnotaizai.network.DoubleJumpMessage;
@@ -74,7 +72,7 @@ public class CraftNoTaizaiModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping W_PRESS_F_LY = new KeyMapping("key.craft_no_taizai.w_press_f_ly", GLFW.GLFW_KEY_W, "key.categories.misc") {
+	public static final KeyMapping W_PRESS_F_LY = new KeyMapping("key.craft_no_taizai.w_press_f_ly", GLFW.GLFW_KEY_W, "key.categories.gameplay") {
 		private boolean isDownOld = false;
 
 		@Override
@@ -131,42 +129,6 @@ public class CraftNoTaizaiModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping MANTARAY_MOVE = new KeyMapping("key.craft_no_taizai.mantaray_move", GLFW.GLFW_KEY_W, "key.categories.gameplay") {
-		private boolean isDownOld = false;
-
-		@Override
-		public void setDown(boolean isDown) {
-			super.setDown(isDown);
-			if (isDownOld != isDown && isDown) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new MantarayMoveMessage(0, 0));
-				MantarayMoveMessage.pressAction(Minecraft.getInstance().player, 0, 0);
-				MANTARAY_MOVE_LASTPRESS = System.currentTimeMillis();
-			} else if (isDownOld != isDown && !isDown) {
-				int dt = (int) (System.currentTimeMillis() - MANTARAY_MOVE_LASTPRESS);
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new MantarayMoveMessage(1, dt));
-				MantarayMoveMessage.pressAction(Minecraft.getInstance().player, 1, dt);
-			}
-			isDownOld = isDown;
-		}
-	};
-	public static final KeyMapping MANTARAY_S_MOVE = new KeyMapping("key.craft_no_taizai.mantaray_s_move", GLFW.GLFW_KEY_S, "key.categories.movement") {
-		private boolean isDownOld = false;
-
-		@Override
-		public void setDown(boolean isDown) {
-			super.setDown(isDown);
-			if (isDownOld != isDown && isDown) {
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new MantaraySMoveMessage(0, 0));
-				MantaraySMoveMessage.pressAction(Minecraft.getInstance().player, 0, 0);
-				MANTARAY_S_MOVE_LASTPRESS = System.currentTimeMillis();
-			} else if (isDownOld != isDown && !isDown) {
-				int dt = (int) (System.currentTimeMillis() - MANTARAY_S_MOVE_LASTPRESS);
-				CraftNoTaizaiMod.PACKET_HANDLER.sendToServer(new MantaraySMoveMessage(1, dt));
-				MantaraySMoveMessage.pressAction(Minecraft.getInstance().player, 1, dt);
-			}
-			isDownOld = isDown;
-		}
-	};
 	public static final KeyMapping MANTARAY_SPACE = new KeyMapping("key.craft_no_taizai.mantaray_space", GLFW.GLFW_KEY_SPACE, "key.categories.gameplay") {
 		private boolean isDownOld = false;
 
@@ -185,7 +147,7 @@ public class CraftNoTaizaiModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping S_PRESS_FLY = new KeyMapping("key.craft_no_taizai.s_press_fly", GLFW.GLFW_KEY_S, "key.categories.misc") {
+	public static final KeyMapping S_PRESS_FLY = new KeyMapping("key.craft_no_taizai.s_press_fly", GLFW.GLFW_KEY_S, "key.categories.gameplay") {
 		private boolean isDownOld = false;
 
 		@Override
@@ -205,8 +167,6 @@ public class CraftNoTaizaiModKeyMappings {
 	};
 	private static long MANA_CHARGE_BIND_LASTPRESS = 0;
 	private static long W_PRESS_F_LY_LASTPRESS = 0;
-	private static long MANTARAY_MOVE_LASTPRESS = 0;
-	private static long MANTARAY_S_MOVE_LASTPRESS = 0;
 	private static long MANTARAY_SPACE_LASTPRESS = 0;
 	private static long S_PRESS_FLY_LASTPRESS = 0;
 
@@ -219,8 +179,6 @@ public class CraftNoTaizaiModKeyMappings {
 		event.register(LOCK_ON);
 		event.register(SWAP_MOVE);
 		event.register(USE_MAGIC);
-		event.register(MANTARAY_MOVE);
-		event.register(MANTARAY_S_MOVE);
 		event.register(MANTARAY_SPACE);
 		event.register(S_PRESS_FLY);
 	}
@@ -237,8 +195,6 @@ public class CraftNoTaizaiModKeyMappings {
 				LOCK_ON.consumeClick();
 				SWAP_MOVE.consumeClick();
 				USE_MAGIC.consumeClick();
-				MANTARAY_MOVE.consumeClick();
-				MANTARAY_S_MOVE.consumeClick();
 				MANTARAY_SPACE.consumeClick();
 				S_PRESS_FLY.consumeClick();
 			}

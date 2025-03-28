@@ -12,7 +12,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.TamableAnimal;
@@ -54,7 +53,7 @@ public class SunflowerEntity extends TamableAnimal {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new RandomLookAroundGoal(this));
+
 	}
 
 	@Override
@@ -149,7 +148,7 @@ public class SunflowerEntity extends TamableAnimal {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		SunflowerOnEntityTickUpdateProcedure.execute(this);
+		SunflowerOnEntityTickUpdateProcedure.execute(this.level(), this);
 	}
 
 	@Override

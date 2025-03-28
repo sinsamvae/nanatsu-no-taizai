@@ -22,6 +22,9 @@ public class ReRollMagicRightclickedProcedure {
 		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Fairy) {
 			SetFairyMagicProcedure.execute(world, entity);
 		}
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).goddess) {
+			SetGoddessMagicProcedure.execute(world, entity);
+		}
 		itemstack.shrink(1);
 	}
 }

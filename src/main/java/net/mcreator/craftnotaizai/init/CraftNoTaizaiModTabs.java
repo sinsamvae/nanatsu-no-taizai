@@ -171,6 +171,8 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.ZELDRIS_ARMOR_LEGGINGS.get());
 				tabData.accept(CraftNoTaizaiModItems.MELASCULA_ARMOR_CHESTPLATE.get());
 				tabData.accept(CraftNoTaizaiModItems.MELASCULA_ARMOR_LEGGINGS.get());
+				tabData.accept(CraftNoTaizaiModItems.ELAINE_ARMOR_BLACK_CHESTPLATE.get());
+				tabData.accept(CraftNoTaizaiModItems.ELAINE_ARMOR_BLACK_LEGGINGS.get());
 			})
 
 					.build());
@@ -421,6 +423,7 @@ public class CraftNoTaizaiModTabs {
 
 			tabData.accept(CraftNoTaizaiModItems.CLOVER_SPAWN_EGG.get());
 			tabData.accept(CraftNoTaizaiModItems.KALEIDOSCOPE_ENTITY_SPAWN_EGG.get());
+			tabData.accept(CraftNoTaizaiModItems.LIGHTNING_SPREE_ENTITY_SPAWN_EGG.get());
 
 		} else if (tabData.getTabKey() == CreativeModeTabs.INGREDIENTS) {
 

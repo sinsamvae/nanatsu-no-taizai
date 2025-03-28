@@ -9,6 +9,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.PathfinderMob;
@@ -37,13 +39,20 @@ public class ElaineEntity extends PathfinderMob {
 		super(type, world);
 		setMaxUpStep(0.6f);
 		xpReward = 0;
-		setNoAi(true);
+		setNoAi(false);
 		setPersistenceRequired();
 	}
 
 	@Override
 	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
+	}
+
+	@Override
+	protected void registerGoals() {
+		super.registerGoals();
+		this.goalSelector.addGoal(1, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(2, new LookAtPlayerGoal(this, Player.class, (float) 6));
 	}
 
 	@Override

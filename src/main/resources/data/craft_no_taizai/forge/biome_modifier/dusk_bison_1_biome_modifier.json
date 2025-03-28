@@ -5,7 +5,7 @@
   },
   "spawners": {
     "type": "craft_no_taizai:dusk_bison_1",
-    "weight": 13,
+    "weight": 23,
     "minCount": 2,
     "maxCount": 3
   }

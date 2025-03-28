@@ -16,6 +16,7 @@ import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
@@ -26,7 +27,6 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.Pose;
-import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
@@ -46,7 +46,7 @@ import net.mcreator.craftnotaizai.procedures.SpawnCondtionProcedure;
 import net.mcreator.craftnotaizai.procedures.MarmasOnEntityTickUpdateProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
-public class MarmasEntity extends PathfinderMob implements GeoEntity {
+public class MarmasEntity extends Monster implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(MarmasEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(MarmasEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(MarmasEntity.class, EntityDataSerializers.STRING);
@@ -146,12 +146,6 @@ public class MarmasEntity extends PathfinderMob implements GeoEntity {
 	@Override
 	public EntityDimensions getDimensions(Pose p_33597_) {
 		return super.getDimensions(p_33597_).scale((float) 1);
-	}
-
-	@Override
-	public void aiStep() {
-		super.aiStep();
-		this.updateSwingTime();
 	}
 
 	public static void init() {

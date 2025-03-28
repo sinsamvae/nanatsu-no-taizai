@@ -16,6 +16,7 @@ import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
@@ -25,7 +26,6 @@ import net.minecraft.world.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.Pose;
-import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
@@ -43,7 +43,7 @@ import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
-public class SmallHawksEntity extends PathfinderMob implements GeoEntity {
+public class SmallHawksEntity extends Monster implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(SmallHawksEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(SmallHawksEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(SmallHawksEntity.class, EntityDataSerializers.STRING);
@@ -138,12 +138,6 @@ public class SmallHawksEntity extends PathfinderMob implements GeoEntity {
 	@Override
 	public EntityDimensions getDimensions(Pose p_33597_) {
 		return super.getDimensions(p_33597_).scale((float) 0.5);
-	}
-
-	@Override
-	public void aiStep() {
-		super.aiStep();
-		this.updateSwingTime();
 	}
 
 	public static void init() {

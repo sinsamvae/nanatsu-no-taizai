@@ -7,6 +7,7 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.GameRules;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -45,6 +46,9 @@ public class PlayerFirstJoinsProcedure {
 		if (entity == null)
 			return;
 		double RandomRace = 0;
+		if (world.getLevelData().getGameRules().getBoolean(GameRules.RULE_MOBGRIEFING)) {
+			world.getLevelData().getGameRules().getRule(GameRules.RULE_MOBGRIEFING).set(false, world.getServer());
+		}
 		if (!(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).PlayerFirstJoins) {
 			{
 				ItemStack _setval = new ItemStack(Items.DIAMOND_SWORD);
@@ -220,12 +224,19 @@ public class PlayerFirstJoinsProcedure {
 				RandomRaceProcedure.execute(world, entity);
 			}
 		}
-		if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("SunShine")
-				&& !(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).mael_sunshine) {
+		if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Ark")
+				&& (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).elizbethArk) {
 			{
 				boolean _setval = false;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.mael_sunshine = _setval;
+					capability.elizbethArk = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				String _setval = "elizabethArk";
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.Race = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}

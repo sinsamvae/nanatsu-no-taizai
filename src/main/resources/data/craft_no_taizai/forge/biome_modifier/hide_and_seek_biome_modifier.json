@@ -3,7 +3,7 @@
   "biomes": "craft_no_taizai:sleeping_forest",
   "spawners": {
     "type": "craft_no_taizai:hide_and_seek",
-    "weight": 25,
+    "weight": 35,
     "minCount": 2,
     "maxCount": 3
   }

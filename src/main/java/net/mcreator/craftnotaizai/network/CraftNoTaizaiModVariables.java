@@ -280,9 +280,12 @@ public class CraftNoTaizaiModVariables {
 			clone.SPressed = original.SPressed;
 			clone.flash_skill = original.flash_skill;
 			clone.wind_barrier = original.wind_barrier;
-			clone.mael_sunshine = original.mael_sunshine;
-			clone.mael_ark = original.mael_ark;
 			clone.light_chakram = original.light_chakram;
+			clone.space = original.space;
+			clone.goddess = original.goddess;
+			clone.HighSpeedRegenerationTimer = original.HighSpeedRegenerationTimer;
+			clone.passive_regen = original.passive_regen;
+			clone.assault_mode = original.assault_mode;
 			if (!event.isWasDeath()) {
 				clone.jumbvar = original.jumbvar;
 				clone.drunk_level = original.drunk_level;
@@ -390,6 +393,11 @@ public class CraftNoTaizaiModVariables {
 		public boolean infinity = false;
 		public boolean sntach = false;
 		public boolean Invasion = false;
+		public boolean flash = false;
+		public boolean ocean = false;
+		public boolean mael_sunshine = false;
+		public boolean tornado = false;
+		public boolean OminousNebula = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -436,6 +444,11 @@ public class CraftNoTaizaiModVariables {
 			infinity = nbt.getBoolean("infinity");
 			sntach = nbt.getBoolean("sntach");
 			Invasion = nbt.getBoolean("Invasion");
+			flash = nbt.getBoolean("flash");
+			ocean = nbt.getBoolean("ocean");
+			mael_sunshine = nbt.getBoolean("mael_sunshine");
+			tornado = nbt.getBoolean("tornado");
+			OminousNebula = nbt.getBoolean("OminousNebula");
 		}
 
 		@Override
@@ -475,6 +488,11 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("infinity", infinity);
 			nbt.putBoolean("sntach", sntach);
 			nbt.putBoolean("Invasion", Invasion);
+			nbt.putBoolean("flash", flash);
+			nbt.putBoolean("ocean", ocean);
+			nbt.putBoolean("mael_sunshine", mael_sunshine);
+			nbt.putBoolean("tornado", tornado);
+			nbt.putBoolean("OminousNebula", OminousNebula);
 			return nbt;
 		}
 
@@ -763,9 +781,12 @@ public class CraftNoTaizaiModVariables {
 		public boolean SPressed = false;
 		public boolean flash_skill = false;
 		public boolean wind_barrier = false;
-		public boolean mael_sunshine = false;
-		public boolean mael_ark = false;
 		public boolean light_chakram = false;
+		public boolean space = false;
+		public boolean goddess = false;
+		public double HighSpeedRegenerationTimer = 0;
+		public double passive_regen = 0;
+		public boolean assault_mode = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -970,9 +991,12 @@ public class CraftNoTaizaiModVariables {
 			nbt.putBoolean("SPressed", SPressed);
 			nbt.putBoolean("flash_skill", flash_skill);
 			nbt.putBoolean("wind_barrier", wind_barrier);
-			nbt.putBoolean("mael_sunshine", mael_sunshine);
-			nbt.putBoolean("mael_ark", mael_ark);
 			nbt.putBoolean("light_chakram", light_chakram);
+			nbt.putBoolean("space", space);
+			nbt.putBoolean("goddess", goddess);
+			nbt.putDouble("HighSpeedRegenerationTimer", HighSpeedRegenerationTimer);
+			nbt.putDouble("passive_regen", passive_regen);
+			nbt.putBoolean("assault_mode", assault_mode);
 			return nbt;
 		}
 
@@ -1180,9 +1204,12 @@ public class CraftNoTaizaiModVariables {
 			SPressed = nbt.getBoolean("SPressed");
 			flash_skill = nbt.getBoolean("flash_skill");
 			wind_barrier = nbt.getBoolean("wind_barrier");
-			mael_sunshine = nbt.getBoolean("mael_sunshine");
-			mael_ark = nbt.getBoolean("mael_ark");
 			light_chakram = nbt.getBoolean("light_chakram");
+			space = nbt.getBoolean("space");
+			goddess = nbt.getBoolean("goddess");
+			HighSpeedRegenerationTimer = nbt.getDouble("HighSpeedRegenerationTimer");
+			passive_regen = nbt.getDouble("passive_regen");
+			assault_mode = nbt.getBoolean("assault_mode");
 		}
 	}
 
@@ -1412,9 +1439,12 @@ public class CraftNoTaizaiModVariables {
 					variables.SPressed = message.data.SPressed;
 					variables.flash_skill = message.data.flash_skill;
 					variables.wind_barrier = message.data.wind_barrier;
-					variables.mael_sunshine = message.data.mael_sunshine;
-					variables.mael_ark = message.data.mael_ark;
 					variables.light_chakram = message.data.light_chakram;
+					variables.space = message.data.space;
+					variables.goddess = message.data.goddess;
+					variables.HighSpeedRegenerationTimer = message.data.HighSpeedRegenerationTimer;
+					variables.passive_regen = message.data.passive_regen;
+					variables.assault_mode = message.data.assault_mode;
 				}
 			});
 			context.setPacketHandled(true);

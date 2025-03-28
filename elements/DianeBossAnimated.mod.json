@@ -169,7 +169,7 @@
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
     "spawningCondition": {
-      "name": "SpawnCondtion"
+      "name": "BossSpawn"
     },
     "spawningProbability": 1,
     "mobSpawningType": "creature",

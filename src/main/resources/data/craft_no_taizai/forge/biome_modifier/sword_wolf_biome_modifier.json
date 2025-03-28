@@ -3,7 +3,7 @@
   "biomes": "forest",
   "spawners": {
     "type": "craft_no_taizai:sword_wolf",
-    "weight": 13,
+    "weight": 23,
     "minCount": 2,
     "maxCount": 3
   }

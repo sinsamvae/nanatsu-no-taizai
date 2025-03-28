@@ -14,13 +14,14 @@ import net.minecraft.network.protocol.game.ClientboundLevelEventPacket;
 import net.minecraft.network.protocol.game.ClientboundGameEventPacket;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
 public class CapitaloftheDeadPlayerEntersDimensionProcedure {
 	public static void execute(LevelAccessor world, double x, double z, Entity entity) {
 		if (entity == null)
 			return;
-		CraftNoTaizaiMod.queueServerWork(4000, () -> {
+		CraftNoTaizaiMod.queueServerWork(3600, () -> {
 			if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
 				ResourceKey<Level> destinationType = Level.OVERWORLD;
 				if (_player.level().dimension() == destinationType)
@@ -41,6 +42,15 @@ public class CapitaloftheDeadPlayerEntersDimensionProcedure {
 			_ent.teleportTo(x, (world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) x, (int) z)), z);
 			if (_ent instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.connection.teleport(x, (world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) x, (int) z)), z, _ent.getYRot(), _ent.getXRot());
+		}
+		if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Story).equals("Story8")) {
+			{
+				String _setval = "Story9";
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.Story = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
 	}
 }

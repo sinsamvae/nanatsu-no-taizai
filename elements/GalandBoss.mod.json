@@ -159,6 +159,9 @@
     ],
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
+    "spawningCondition": {
+      "name": "BossSpawn"
+    },
     "spawningProbability": 1,
     "mobSpawningType": "creature",
     "minNumberOfMobsPerGroup": 1,

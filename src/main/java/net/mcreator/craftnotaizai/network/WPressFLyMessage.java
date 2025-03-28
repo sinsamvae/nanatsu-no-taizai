@@ -53,11 +53,11 @@ public class WPressFLyMessage {
 			return;
 		if (type == 0) {
 
-			WPressFLyOnKeyPressedProcedure.execute(entity);
+			WPressFLyOnKeyPressedProcedure.execute(world, entity);
 		}
 		if (type == 1) {
 
-			WPressFLyOnKeyReleasedProcedure.execute(entity);
+			WPressFLyOnKeyReleasedProcedure.execute(world, entity);
 		}
 	}
 

@@ -131,9 +131,9 @@
     "canRedstoneConnect": false,
     "lightOpacity": 0,
     "material": {
-      "value": "GRASS"
+      "value": "NONE"
     },
-    "tickRate": 10,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -194,6 +194,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onTickUpdate": {
+      "name": "TalaVillageFlowerOnTickUpdate"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

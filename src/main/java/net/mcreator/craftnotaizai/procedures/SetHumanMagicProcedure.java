@@ -352,16 +352,9 @@ public class SetHumanMagicProcedure {
 				}
 				if (RandomMagic >= 940 && RandomMagic <= 970) {
 					{
-						String _setval = "Ark";
+						String _setval = "elizabethArk";
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.magic = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					{
-						boolean _setval = true;
-						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.elizbethArk = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
@@ -554,16 +547,9 @@ public class SetHumanMagicProcedure {
 				}
 				if (RandomMagic >= 940 && RandomMagic <= 970) {
 					{
-						String _setval = "Ark";
+						String _setval = "elizabethArk";
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.magic = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					{
-						boolean _setval = true;
-						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.elizbethArk = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
@@ -581,16 +567,9 @@ public class SetHumanMagicProcedure {
 		}
 		if (RandomMagic >= 980 && RandomMagic <= 1010) {
 			{
-				String _setval = "Ark";
+				String _setval = "elizabethArk";
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.magic = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				boolean _setval = true;
-				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.elizbethArk = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
@@ -606,13 +585,6 @@ public class SetHumanMagicProcedure {
 				}
 				CraftNoTaizaiModVariables.MapVariables.get(world).sunshine = true;
 				CraftNoTaizaiModVariables.MapVariables.get(world).syncData(world);
-				{
-					boolean _setval = false;
-					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.mael_sunshine = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
 			} else {
 				RandomMagic = Mth.nextInt(RandomSource.create(), 1, 1000);
 				if (RandomMagic <= 70) {
@@ -779,16 +751,9 @@ public class SetHumanMagicProcedure {
 				}
 				if (RandomMagic >= 940 && RandomMagic <= 970) {
 					{
-						String _setval = "Ark";
+						String _setval = "elizabethArk";
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.magic = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					{
-						boolean _setval = true;
-						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.elizbethArk = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
@@ -981,16 +946,9 @@ public class SetHumanMagicProcedure {
 				}
 				if (RandomMagic >= 940 && RandomMagic <= 970) {
 					{
-						String _setval = "Ark";
+						String _setval = "elizabethArk";
 						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.magic = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					{
-						boolean _setval = true;
-						entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.elizbethArk = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}

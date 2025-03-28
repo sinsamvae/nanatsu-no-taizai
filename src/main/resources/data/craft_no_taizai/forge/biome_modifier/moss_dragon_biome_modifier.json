@@ -3,7 +3,7 @@
   "biomes": "swamp",
   "spawners": {
     "type": "craft_no_taizai:moss_dragon",
-    "weight": 10,
+    "weight": 20,
     "minCount": 1,
     "maxCount": 3
   }

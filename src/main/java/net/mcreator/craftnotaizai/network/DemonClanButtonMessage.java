@@ -14,8 +14,8 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftnotaizai.world.inventory.DemonClanMenu;
 import net.mcreator.craftnotaizai.procedures.SelectDemonProcedure;
-import net.mcreator.craftnotaizai.procedures.NextButtonProcedure;
-import net.mcreator.craftnotaizai.procedures.BackButton4Procedure;
+import net.mcreator.craftnotaizai.procedures.OpenHumanUIProcedure;
+import net.mcreator.craftnotaizai.procedures.OpenGoddessUiProcedure;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
 
 import java.util.function.Supplier;
@@ -79,11 +79,11 @@ public class DemonClanButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			BackButton4Procedure.execute(world, x, y, z, entity);
+			OpenGoddessUiProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 1) {
 
-			NextButtonProcedure.execute(world, x, y, z, entity);
+			OpenHumanUIProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 

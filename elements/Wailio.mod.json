@@ -49,7 +49,7 @@
     "equipmentBoots": {
       "value": ""
     },
-    "mobBehaviourType": "Creature",
+    "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
     "attackStrength": 20,
     "attackKnockback": 0.0,
@@ -155,7 +155,7 @@
     "spawningCondition": {
       "name": "SpawnCondtion"
     },
-    "spawningProbability": 15,
+    "spawningProbability": 23,
     "mobSpawningType": "creature",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 1,

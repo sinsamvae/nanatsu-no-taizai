@@ -45,75 +45,72 @@ public class ServantOnEntityTickUpdateProcedure {
 							* ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 									.orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack_boost)
 					+ 2;
-			damage = damage
-					+ ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).power_percentage
-							/ 100;
-			entity.getPersistentData().putDouble("strength", damage);
-			if (entity.getPersistentData().getDouble("skill_cooldown") > 0) {
-				entity.getPersistentData().putDouble("skill_cooldown", Math.round(entity.getPersistentData().getDouble("skill_cooldown") - 1));
-			}
-			if (entity.getPersistentData().getDouble("skill_cooldown") == 0 && !((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
-				distance = Math
-						.sqrt(Math.pow(entity.getX() - (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX(), 2) + Math.pow(entity.getZ() - (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ(), 2));
-				ran = Mth.nextInt(RandomSource.create(), 1, 2);
-				entity.lookAt(EntityAnchorArgument.Anchor.EYES, new Vec3(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX()), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY()),
-						((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ())));
-				if (distance <= 6) {
-					if (entity.onGround()) {
-						x = entity.getX();
-						z = entity.getZ();
-						yaw = entity.getYRot() + 90;
-						{
-							Entity _ent = entity;
-							if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-								_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-										_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), ("summon craft_no_taizai:death_thorn " + x + " ~ " + z + " {Rotation:[" + yaw + "f,0f]}"));
-							}
+			damage = damage * (((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new CraftNoTaizaiModVariables.PlayerVariables())).power_percentage / 100);
+		}
+		if (entity.getPersistentData().getDouble("skill_cooldown") > 0) {
+			entity.getPersistentData().putDouble("skill_cooldown", Math.round(entity.getPersistentData().getDouble("skill_cooldown") - 1));
+		}
+		if (entity.getPersistentData().getDouble("skill_cooldown") == 0 && !((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
+			distance = Math.sqrt(Math.pow(entity.getX() - (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX(), 2) + Math.pow(entity.getZ() - (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ(), 2));
+			ran = Mth.nextInt(RandomSource.create(), 1, 2);
+			entity.lookAt(EntityAnchorArgument.Anchor.EYES, new Vec3(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX()), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY()),
+					((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ())));
+			if (distance <= 6) {
+				if (entity.onGround()) {
+					x = entity.getX();
+					z = entity.getZ();
+					yaw = entity.getYRot() + 90;
+					{
+						Entity _ent = entity;
+						if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+							_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+									_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), ("summon craft_no_taizai:death_thorn " + x + " ~ " + z + " {Rotation:[" + yaw + "f,0f]}"));
 						}
-						{
-							final Vec3 _center = new Vec3((entity.getX() + entity.getLookAngle().x), y, (entity.getZ() + entity.getLookAngle().z));
-							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(9 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-							for (Entity entityiterator : _entfound) {
-								if (!(entityiterator == entity || entityiterator instanceof ItemEntity || entityiterator instanceof ExperienceOrb
-										|| (entityiterator instanceof TamableAnimal _tamIsTamedBy && entity instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false)
-										|| (entity instanceof TamableAnimal _tamIsTamedBy && entityiterator instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false) || new Object() {
-											public boolean checkGamemode(Entity _ent) {
-												if (_ent instanceof ServerPlayer _serverPlayer) {
-													return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
-												} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-													return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-															&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.CREATIVE;
-												}
-												return false;
+					}
+					{
+						final Vec3 _center = new Vec3((entity.getX() + entity.getLookAngle().x), y, (entity.getZ() + entity.getLookAngle().z));
+						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(9 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+						for (Entity entityiterator : _entfound) {
+							if (!(entityiterator == entity || entityiterator instanceof ItemEntity || entityiterator instanceof ExperienceOrb
+									|| (entityiterator instanceof TamableAnimal _tamIsTamedBy && entity instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false)
+									|| (entity instanceof TamableAnimal _tamIsTamedBy && entityiterator instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false) || new Object() {
+										public boolean checkGamemode(Entity _ent) {
+											if (_ent instanceof ServerPlayer _serverPlayer) {
+												return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
+											} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
+												return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
+														&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.CREATIVE;
 											}
-										}.checkGamemode(entityiterator) || new Object() {
-											public boolean checkGamemode(Entity _ent) {
-												if (_ent instanceof ServerPlayer _serverPlayer) {
-													return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SPECTATOR;
-												} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-													return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-															&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SPECTATOR;
-												}
-												return false;
+											return false;
+										}
+									}.checkGamemode(entityiterator) || new Object() {
+										public boolean checkGamemode(Entity _ent) {
+											if (_ent instanceof ServerPlayer _serverPlayer) {
+												return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SPECTATOR;
+											} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
+												return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
+														&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SPECTATOR;
 											}
-										}.checkGamemode(entityiterator))) {
-									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
-											(float) damage);
-								}
+											return false;
+										}
+									}.checkGamemode(entityiterator))) {
+								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
+										(float) damage);
 							}
 						}
 					}
 				}
-				entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 100, 300)));
 			}
-			if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
-				if ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) == ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null)) {
-					if (entity instanceof Mob) {
-						try {
-							((Mob) entity).setTarget(null);
-						} catch (Exception e) {
-							e.printStackTrace();
-						}
+			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 100, 300)));
+		}
+		if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
+			if ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) == ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null)) {
+				if (entity instanceof Mob) {
+					try {
+						((Mob) entity).setTarget(null);
+					} catch (Exception e) {
+						e.printStackTrace();
 					}
 				}
 			}

@@ -39,6 +39,13 @@ public class SetRaceLogicProcedure {
 			{
 				boolean _setval = false;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.goddess = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				boolean _setval = false;
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.Human = _setval;
 					capability.syncPlayerVariables(entity);
 				});
@@ -64,6 +71,13 @@ public class SetRaceLogicProcedure {
 				boolean _setval = true;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.Human = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				boolean _setval = false;
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.goddess = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
@@ -101,6 +115,13 @@ public class SetRaceLogicProcedure {
 			{
 				boolean _setval = false;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.goddess = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				boolean _setval = false;
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.Demon = _setval;
 					capability.syncPlayerVariables(entity);
 				});
@@ -124,6 +145,51 @@ public class SetRaceLogicProcedure {
 				&& !(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Gaint) {
 			{
 				boolean _setval = true;
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.Gaint = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				boolean _setval = false;
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.goddess = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				boolean _setval = false;
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.Demon = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				boolean _setval = false;
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.Human = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				boolean _setval = false;
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.Fairy = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		}
+		if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Race).equals("Goddess")
+				&& !(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).goddess) {
+			{
+				boolean _setval = true;
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.goddess = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				boolean _setval = false;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.Gaint = _setval;
 					capability.syncPlayerVariables(entity);

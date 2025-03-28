@@ -2,7 +2,7 @@
   "_fv": 69,
   "_type": "command",
   "definition": {
-    "commandName": "sds_reloadcords",
+    "commandName": "sds_reload_cords",
     "type": "STANDARD",
     "permissionLevel": "No requirement",
     "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"entity\"><field name=\"name\">name</field><field name=\"type\">player</field><statement name=\"args\"><block type=\"logic\"><field name=\"name\">name</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">ReLoadCords</field></block></statement></block></statement></block></next></block></xml>"

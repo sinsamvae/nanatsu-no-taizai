@@ -9,9 +9,11 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.chat.Component;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
+import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 import net.mcreator.craftnotaizai.entity.BulletSquallEntity;
 
 import java.util.List;
@@ -28,6 +30,9 @@ public class BulletSqualProcedure {
 		double y2 = 0;
 		double x2 = 0;
 		double damage = 0;
+		damage = Math.ceil(0.1 * (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack
+				* (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).ManaAttack_boost) + 1;
+		damage = damage * ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).power_percentage / 100);
 		for (int index0 = 0; index0 < (int) (15 * 1); index0++) {
 			x2 = entity.getX() + Mth.nextDouble(RandomSource.create(), -5, 5);
 			y2 = entity.getY() + 10;
@@ -49,6 +54,10 @@ public class BulletSqualProcedure {
 					}
 				}
 			}
+		}
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).damage_indicator == true) {
+			if (entity instanceof Player _player && !_player.level().isClientSide())
+				_player.displayClientMessage(Component.literal((new java.text.DecimalFormat("DMG: ##").format(damage))), true);
 		}
 	}
 }

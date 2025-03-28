@@ -90,18 +90,47 @@ public class BeforehitProcedure {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal("Dodge Successful!"), true);
 			dmg = 0;
-			((LivingHurtEvent) event).setAmount(((float) 0));
 		}
 		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).liquefying
 				&& (damagesource.is(DamageTypes.MOB_ATTACK) || damagesource.is(DamageTypes.PLAYER_ATTACK))) {
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles(ParticleTypes.SPLASH, x, y, z, 5, 0.3, 1.1, 0.3, 0.1);
 			dmg = 0;
-			((LivingHurtEvent) event).setAmount(((float) 0));
 		}
 		if (damagesource.is(DamageTypes.MOB_ATTACK) && (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).the_ruler) {
 			dmg = 0;
 			current_health = current_health + (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).maxhealth * 0.05;
+		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.GIDEON.get()
+				&& (damagesource.is(TagKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:magic_dmg"))) || damagesource.is(DamageTypes.ARROW))) {
+			dmg = dmg * 0.4;
+		}
+		if (entity instanceof LivingEntity _livEnt15 && _livEnt15.hasEffect(CraftNoTaizaiModMobEffects.NIGHTMARETELLER.get())) {
+			dmg = dmg * 1.3;
+		}
+		if (entity instanceof LivingEntity _livEnt16 && _livEnt16.hasEffect(CraftNoTaizaiModMobEffects.KING_TRUMPET.get())) {
+			dmg = dmg * 1.1;
+		}
+		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.PEACE_AMULET_CHESTPLATE.get()) {
+			dmg = dmg * 0.2;
+		}
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).revengecounter) {
+			{
+				double _setval = amount + (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).storeddmg;
+				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.storeddmg = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		}
+		{
+			final Vec3 _center = new Vec3(x, y, z);
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+			for (Entity entityiterator : _entfound) {
+				if (((entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).commandment).equals("Patience")) {
+					dmg = dmg * 1.5;
+				}
+			}
 		}
 		if (entity instanceof Player) {
 			current_health = (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) / 20;
@@ -109,6 +138,13 @@ public class BeforehitProcedure {
 			current_health = current_health - dmg;
 			current_health = current_health / (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).maxhealth;
 			current_health = current_health * 20;
+			if (((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.ALDAN.get()
+					|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.ALDAN.get())
+					&& !(entity instanceof Player _plrCldCheck26 && _plrCldCheck26.getCooldowns().isOnCooldown(CraftNoTaizaiModItems.ALDAN.get())) && Math.floor(current_health) <= 0) {
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles(ParticleTypes.TOTEM_OF_UNDYING, x, y, z, 5, 0.3, 1.1, 0.3, 0.1);
+				current_health = 20;
+			}
 			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Human
 					&& !((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).reddemonboost
 							|| (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).graydemonblood
@@ -159,47 +195,9 @@ public class BeforehitProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.GIDEON.get()
-					&& (damagesource.is(TagKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:magic_dmg"))) || damagesource.is(DamageTypes.ARROW))) {
-				dmg = dmg * 0.4;
-			}
-			if (((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.ALDAN.get()
-					|| (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.ALDAN.get())
-					&& !(entity instanceof Player _plrCldCheck27 && _plrCldCheck27.getCooldowns().isOnCooldown(CraftNoTaizaiModItems.ALDAN.get())) && Math.floor(current_health) <= 0) {
-				if (world instanceof ServerLevel _level)
-					_level.sendParticles(ParticleTypes.TOTEM_OF_UNDYING, x, y, z, 5, 0.3, 1.1, 0.3, 0.1);
-				current_health = 20;
-			}
 			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).immortality
-					&& !(entity instanceof LivingEntity _livEnt29 && _livEnt29.hasEffect(CraftNoTaizaiModMobEffects.PURGATORY_FLAME.get())) && Math.floor(current_health) <= 0) {
+					&& !(entity instanceof LivingEntity _livEnt32 && _livEnt32.hasEffect(CraftNoTaizaiModMobEffects.PURGATORY_FLAME.get())) && Math.floor(current_health) <= 0) {
 				current_health = 1;
-			}
-			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).revengecounter) {
-				{
-					double _setval = amount + (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).storeddmg;
-					entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.storeddmg = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-			}
-			if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == CraftNoTaizaiModItems.PEACE_AMULET_CHESTPLATE.get()) {
-				dmg = dmg * 0.2;
-			}
-			if (entity instanceof LivingEntity _livEnt32 && _livEnt32.hasEffect(CraftNoTaizaiModMobEffects.KING_TRUMPET.get())) {
-				dmg = dmg * 1.1;
-			}
-			if (entity instanceof LivingEntity _livEnt33 && _livEnt33.hasEffect(CraftNoTaizaiModMobEffects.NIGHTMARETELLER.get())) {
-				dmg = dmg * 1.3;
-			}
-			{
-				final Vec3 _center = new Vec3(x, y, z);
-				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-				for (Entity entityiterator : _entfound) {
-					if (((entityiterator.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).commandment).equals("Patience")) {
-						dmg = dmg * 1.5;
-					}
-				}
 			}
 			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).infinity_use && Math.floor(current_health) <= 0) {
 				current_health = 0.1;

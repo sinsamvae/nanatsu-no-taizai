@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ab"
+  ],
+  "key": {
+    "a": {
+      "item": "craft_no_taizai:elaine_armor_leggings"
+    },
+    "b": {
+      "item": "minecraft:ink_sac"
+    }
+  },
+  "result": {
+    "item": "craft_no_taizai:elaine_armor_black_leggings",
+    "count": 1
+  }
+}

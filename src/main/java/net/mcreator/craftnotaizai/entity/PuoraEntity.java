@@ -14,19 +14,13 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
-import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.ai.navigation.PathNavigation;
-import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
-import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacements;
@@ -38,7 +32,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -47,9 +40,9 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftnotaizai.procedures.SpawnCondtionProcedure;
+import net.mcreator.craftnotaizai.procedures.PuoraOnEntityTickUpdateProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
 public class PuoraEntity extends PathfinderMob implements GeoEntity {
@@ -71,7 +64,6 @@ public class PuoraEntity extends PathfinderMob implements GeoEntity {
 		xpReward = 0;
 		setNoAi(false);
 		setMaxUpStep(0.6f);
-		this.moveControl = new FlyingMoveControl(this, 10, true);
 	}
 
 	@Override
@@ -96,34 +88,18 @@ public class PuoraEntity extends PathfinderMob implements GeoEntity {
 	}
 
 	@Override
-	protected PathNavigation createNavigation(Level world) {
-		return new FlyingPathNavigation(this, world);
-	}
-
-	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new RandomStrollGoal(this, 0.8, 20) {
-			@Override
-			protected Vec3 getPosition() {
-				RandomSource random = PuoraEntity.this.getRandom();
-				double dir_x = PuoraEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
-				double dir_y = PuoraEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
-				double dir_z = PuoraEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);
-				return new Vec3(dir_x, dir_y, dir_z);
-			}
-		});
-		this.goalSelector.addGoal(2, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(3, new FloatGoal(this));
-		this.goalSelector.addGoal(4, new LeapAtTargetGoal(this, (float) 0.5));
-		this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.2, false) {
+		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
 		});
-		this.goalSelector.addGoal(6, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(7, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
+		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(5, new FloatGoal(this));
 	}
 
 	@Override
@@ -142,11 +118,6 @@ public class PuoraEntity extends PathfinderMob implements GeoEntity {
 	}
 
 	@Override
-	public boolean causeFallDamage(float l, float d, DamageSource source) {
-		return false;
-	}
-
-	@Override
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putString("Texture", this.getTexture());
@@ -162,6 +133,7 @@ public class PuoraEntity extends PathfinderMob implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
+		PuoraOnEntityTickUpdateProcedure.execute(this);
 		this.refreshDimensions();
 	}
 
@@ -171,19 +143,9 @@ public class PuoraEntity extends PathfinderMob implements GeoEntity {
 	}
 
 	@Override
-	protected void checkFallDamage(double y, boolean onGroundIn, BlockState state, BlockPos pos) {
-	}
-
-	@Override
-	public void setNoGravity(boolean ignored) {
-		super.setNoGravity(true);
-	}
-
-	@Override
 	public void aiStep() {
 		super.aiStep();
 		this.updateSwingTime();
-		this.setNoGravity(true);
 	}
 
 	public static void init() {
@@ -202,7 +164,6 @@ public class PuoraEntity extends PathfinderMob implements GeoEntity {
 		builder = builder.add(Attributes.ARMOR, 1.4);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		builder = builder.add(Attributes.FLYING_SPEED, 0.3);
 		return builder;
 	}
 

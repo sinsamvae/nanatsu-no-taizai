@@ -9,20 +9,18 @@ import net.minecraftforge.client.event.RenderLevelStageEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.CameraType;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 
 import javax.annotation.Nullable;
-
-import java.util.List;
-import java.util.Comparator;
 
 import com.mojang.blaze3d.vertex.VertexFormat;
 import com.mojang.blaze3d.vertex.VertexBuffer;
@@ -187,7 +185,7 @@ public class DisplayHealthProcedure {
 			RenderSystem.enableBlend();
 			RenderSystem.defaultBlendFunc();
 			RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-			execute(event, level, pos.x(), pos.y(), pos.z(), entity, event.getPartialTick());
+			execute(event, level, entity);
 			RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 			RenderSystem.defaultBlendFunc();
 			RenderSystem.disableBlend();
@@ -195,31 +193,54 @@ public class DisplayHealthProcedure {
 		}
 	}
 
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, double partialTick) {
-		execute(null, world, x, y, z, entity, partialTick);
+	public static void execute(LevelAccessor world, Entity entity) {
+		execute(null, world, entity);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, double partialTick) {
+	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).health_display) {
-			{
-				final Vec3 _center = new Vec3(x, y, z);
-				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(50 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-				for (Entity entityiterator : _entfound) {
-					if (entityiterator instanceof LivingEntity && !(entityiterator == entity)) {
-						if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR, true)) {
-							add(0, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0, 0.25, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(1, 0.25, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(1, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+		double distance = 0;
+		double count = 0;
+		double i = 0;
+		double j = 0;
+		double k = 0;
+		double rep = 0;
+		double l = 0;
+		if (Minecraft.getInstance().options.getCameraType() == CameraType.FIRST_PERSON) {
+			if (world instanceof ClientLevel) {
+				for (Entity entityiterator : ((ClientLevel) world).entitiesForRendering()) {
+					if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).health_display && entityiterator.getPersistentData().getDouble("level") > 0) {
+						if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, false)) {
+							add(0.85, 0, 0.15, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							add(0.85, 0, (-0.15), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							add((-0.85), 0, (-0.15), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							add((-0.85), 0, 0.15, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
 							end();
 						}
 						if (target(2)) {
-							renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 2), (entityiterator.getZ()), entityiterator.getViewYRot((float) partialTick), entityiterator.getViewXRot((float) partialTick), 0, 1, 1,
-									(float) ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) / (entityiterator instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)), 255 << 24 | 0 << 16 | 175 << 8 | 0);
+							RenderSystem.setShaderTexture(0, new ResourceLocation(("craft_no_taizai" + ":textures/" + "gray" + ".png")));
+							renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + entityiterator.getBbHeight() + 0.7), (entityiterator.getZ()), (float) (entity.getYRot() + 180), (float) (entity.getXRot() * (-1) + 90), 0, 1, 1, 1,
+									200 << 24 | 255 << 16 | 255 << 8 | 255);
 							release();
 						}
+						clear();
+						if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, false)) {
+							add((-0.8 + 1.6 * ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) / (entityiterator instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1))), 0, 0.1, 0, 0,
+									255 << 24 | 255 << 16 | 255 << 8 | 255);
+							add((-0.8 + 1.6 * ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) / (entityiterator instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1))), 0, (-0.1), 0, 1,
+									255 << 24 | 255 << 16 | 255 << 8 | 255);
+							add((-0.8), 0, (-0.1), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							add((-0.8), 0, 0.1, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							end();
+						}
+						if (target(2)) {
+							RenderSystem.setShaderTexture(0, new ResourceLocation(("craft_no_taizai" + ":textures/" + "green" + ".png")));
+							renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + entityiterator.getBbHeight() + 0.7), (entityiterator.getZ()), (float) (entity.getYRot() + 180), (float) (entity.getXRot() * (-1) + 90), 0, 1, 1, 1,
+									255 << 24 | 255 << 16 | 0 << 8 | 150);
+							release();
+						}
+						clear();
 					}
 				}
 			}

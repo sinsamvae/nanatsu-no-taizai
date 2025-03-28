@@ -3,7 +3,7 @@
   "_type": "keybind",
   "definition": {
     "triggerKey": "SPACE",
-    "keyBindingName": "Move",
+    "keyBindingName": "Flying Ascend",
     "keyBindingCategoryKey": "gameplay",
     "onKeyPressed": {
       "name": "MantaraySpaceOnKeyPressed"

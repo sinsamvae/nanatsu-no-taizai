@@ -41,9 +41,9 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
-import net.mcreator.craftnotaizai.procedures.SpawnCondtionProcedure;
 import net.mcreator.craftnotaizai.procedures.GowtherBossOnEntityTickUpdateProcedure;
 import net.mcreator.craftnotaizai.procedures.GowtherBossEntityDiesProcedure;
+import net.mcreator.craftnotaizai.procedures.BossSpawnProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
 public class GowtherBossAnimatedEntity extends PathfinderMob implements GeoEntity {
@@ -160,7 +160,7 @@ public class GowtherBossAnimatedEntity extends PathfinderMob implements GeoEntit
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			return SpawnCondtionProcedure.execute(world);
+			return BossSpawnProcedure.execute(world);
 		});
 	}
 

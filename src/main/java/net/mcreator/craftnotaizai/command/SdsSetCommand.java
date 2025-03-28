@@ -67,6 +67,7 @@ import net.mcreator.craftnotaizai.procedures.ChangeMagicOverPowerCommandProcedur
 import net.mcreator.craftnotaizai.procedures.ChangeMagicOminousNebulaProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicOceanProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicMealSunshineProcedure;
+import net.mcreator.craftnotaizai.procedures.ChangeMagicLudocielArkProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicLaiProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicHellGateProcedure;
 import net.mcreator.craftnotaizai.procedures.ChangeMagicGroundProcedure;
@@ -122,7 +123,21 @@ public class SdsSetCommand {
 
 					ChangeRacecommandProcedure.execute(arguments);
 					return 0;
-				}))).then(Commands.literal("Magic").then(Commands.literal("Tornado").executes(arguments -> {
+				}))).then(Commands.literal("Magic").then(Commands.literal("ludociel_Ark").executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					ChangeMagicLudocielArkProcedure.execute(arguments);
+					return 0;
+				})).then(Commands.literal("Tornado").executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();

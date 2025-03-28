@@ -12,7 +12,7 @@ import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
 public class IstarStartWaveProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		double entities = 0;
@@ -27,23 +27,24 @@ public class IstarStartWaveProcedure {
 			entities = Mth.nextInt(RandomSource.create(), 1, 3);
 			if (entities == 1) {
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = CraftNoTaizaiModEntities.ANAON.get().spawn(_level, BlockPos.containing(x + Mth.nextDouble(RandomSource.create(), -5, 5), y, z + Mth.nextDouble(RandomSource.create(), -5, 5)), MobSpawnType.MOB_SUMMONED);
+					Entity entityToSpawn = CraftNoTaizaiModEntities.ANAON.get().spawn(_level, BlockPos.containing(entity.getPersistentData().getDouble("TPX") + Mth.nextDouble(RandomSource.create(), -5, 5), entity.getPersistentData().getDouble("TPY"),
+							entity.getPersistentData().getDouble("TPZ") + Mth.nextDouble(RandomSource.create(), -5, 5)), MobSpawnType.MOB_SUMMONED);
 					if (entityToSpawn != null) {
 					}
 				}
 			}
 			if (entities == 2) {
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = CraftNoTaizaiModEntities.TYRANT_DRAGON_CAVE.get().spawn(_level, BlockPos.containing(x + Mth.nextDouble(RandomSource.create(), -5, 5), y, z + Mth.nextDouble(RandomSource.create(), -5, 5)),
-							MobSpawnType.MOB_SUMMONED);
+					Entity entityToSpawn = CraftNoTaizaiModEntities.TYRANT_DRAGON_CAVE.get().spawn(_level, BlockPos.containing(entity.getPersistentData().getDouble("TPX") + Mth.nextDouble(RandomSource.create(), -5, 5),
+							entity.getPersistentData().getDouble("TPY"), entity.getPersistentData().getDouble("TPZ") + Mth.nextDouble(RandomSource.create(), -5, 5)), MobSpawnType.MOB_SUMMONED);
 					if (entityToSpawn != null) {
 					}
 				}
 			}
 			if (entities == 3) {
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = CraftNoTaizaiModEntities.CLAY_DRAGON.get().spawn(_level, BlockPos.containing(x + Mth.nextDouble(RandomSource.create(), -5, 5), y, z + Mth.nextDouble(RandomSource.create(), -5, 5)),
-							MobSpawnType.MOB_SUMMONED);
+					Entity entityToSpawn = CraftNoTaizaiModEntities.CLAY_DRAGON.get().spawn(_level, BlockPos.containing(entity.getPersistentData().getDouble("TPX") + Mth.nextDouble(RandomSource.create(), -5, 5),
+							entity.getPersistentData().getDouble("TPY"), entity.getPersistentData().getDouble("TPZ") + Mth.nextDouble(RandomSource.create(), -5, 5)), MobSpawnType.MOB_SUMMONED);
 					if (entityToSpawn != null) {
 					}
 				}

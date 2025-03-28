@@ -61,5 +61,6 @@ public class ChangeMagicDisasterGloxiniaProcedure {
 				}.getEntity()));
 			});
 		}
+		SetSkillSlotsNoneProcedure.execute(arguments);
 	}
 }

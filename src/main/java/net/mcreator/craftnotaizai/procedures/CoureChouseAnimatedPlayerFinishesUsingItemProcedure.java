@@ -8,21 +8,7 @@ public class CoureChouseAnimatedPlayerFinishesUsingItemProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getPersistentData().getBoolean("courechouse") == false) {
-			{
-				double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).strength_boost * 1.5;
-				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.strength_boost = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).agility_boost * 1.5;
-				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.agility_boost = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
+		if (!entity.getPersistentData().getBoolean("courechouse")) {
 			{
 				double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).fox_hunt + 2;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -32,21 +18,7 @@ public class CoureChouseAnimatedPlayerFinishesUsingItemProcedure {
 			}
 			entity.getPersistentData().putBoolean("courechouse", true);
 		}
-		if (entity.getPersistentData().getBoolean("courechouse") == true) {
-			{
-				double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).strength_boost / 1.5;
-				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.strength_boost = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).agility_boost / 1.5;
-				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.agility_boost = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
+		if (entity.getPersistentData().getBoolean("courechouse")) {
 			{
 				double _setval = (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).fox_hunt - 2;
 				entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

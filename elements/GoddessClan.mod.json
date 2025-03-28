@@ -54,7 +54,7 @@
         "data": {
           "name": "label_50_strength",
           "text": {
-            "fixedValue": "- Strength: 25 to 40"
+            "fixedValue": "- Strength: 10 to 30"
           },
           "color": {
             "value": -1,
@@ -130,6 +130,9 @@
           "name": "imagebutton_overarrow",
           "image": "overarrow.png",
           "hoveredImage": "overarrow2hover.png",
+          "onClick": {
+            "name": "OpenGiantUi"
+          },
           "x": 74,
           "y": 106
         }
@@ -140,6 +143,9 @@
           "name": "imagebutton_overarrow2",
           "image": "overarrow.png",
           "hoveredImage": "overarrow2hover.png",
+          "onClick": {
+            "name": "OpenDemonUi"
+          },
           "x": 316,
           "y": 106
         }
@@ -215,6 +221,15 @@
           },
           "x": 322,
           "y": 109
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "goddess_symbol.png",
+          "use1Xscale": true,
+          "x": 126,
+          "y": 53
         }
       }
     ],

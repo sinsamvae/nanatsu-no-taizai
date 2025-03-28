@@ -14,18 +14,14 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.ai.navigation.PathNavigation;
-import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.Pose;
@@ -43,7 +39,6 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftnotaizai.procedures.ElaineStoryOnEntityTickUpdateProcedure;
 import net.mcreator.craftnotaizai.procedures.ElaineStoryEntityDiesProcedure;
@@ -68,7 +63,6 @@ public class ElaineStoryEntity extends Monster implements GeoEntity {
 		xpReward = 0;
 		setNoAi(false);
 		setMaxUpStep(0.6f);
-		this.moveControl = new FlyingMoveControl(this, 10, true);
 	}
 
 	@Override
@@ -93,11 +87,6 @@ public class ElaineStoryEntity extends Monster implements GeoEntity {
 	}
 
 	@Override
-	protected PathNavigation createNavigation(Level world) {
-		return new FlyingPathNavigation(this, world);
-	}
-
-	@Override
 	protected void registerGoals() {
 		super.registerGoals();
 		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
@@ -109,7 +98,7 @@ public class ElaineStoryEntity extends Monster implements GeoEntity {
 		this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.8));
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, true));
+		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, false));
 	}
 
 	@Override
@@ -125,11 +114,6 @@ public class ElaineStoryEntity extends Monster implements GeoEntity {
 	@Override
 	public SoundEvent getDeathSound() {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
-	}
-
-	@Override
-	public boolean causeFallDamage(float l, float d, DamageSource source) {
-		return false;
 	}
 
 	@Override
@@ -163,20 +147,6 @@ public class ElaineStoryEntity extends Monster implements GeoEntity {
 		return super.getDimensions(p_33597_).scale((float) 1);
 	}
 
-	@Override
-	protected void checkFallDamage(double y, boolean onGroundIn, BlockState state, BlockPos pos) {
-	}
-
-	@Override
-	public void setNoGravity(boolean ignored) {
-		super.setNoGravity(true);
-	}
-
-	public void aiStep() {
-		super.aiStep();
-		this.setNoGravity(true);
-	}
-
 	public static void init() {
 	}
 
@@ -187,7 +157,6 @@ public class ElaineStoryEntity extends Monster implements GeoEntity {
 		builder = builder.add(Attributes.ARMOR, 8.5);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 395);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		builder = builder.add(Attributes.FLYING_SPEED, 0.3);
 		return builder;
 	}
 
