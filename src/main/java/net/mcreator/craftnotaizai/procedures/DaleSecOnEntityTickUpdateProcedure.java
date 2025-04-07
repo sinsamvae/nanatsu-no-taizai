@@ -59,7 +59,8 @@ public class DaleSecOnEntityTickUpdateProcedure {
 								entityToSpawn.setSilent(true);
 								return entityToSpawn;
 							}
-						}.getArrow(projectileLevel, entity, entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1, 1);
+						}.getArrow(projectileLevel, entity, Math.round(((entity instanceof LivingEntity _attributeContext ? _attributeContext.getAttributeValue(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE) : 0.0D)
+								+ (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) + (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) / 2), 1);
 						_entityToSpawn.setPos((entity.getX()), (entity.getY()), (entity.getZ()));
 						_entityToSpawn.shoot(0, 0, 0, 1, 0);
 						projectileLevel.addFreshEntity(_entityToSpawn);
@@ -76,7 +77,8 @@ public class DaleSecOnEntityTickUpdateProcedure {
 								entityToSpawn.setSilent(true);
 								return entityToSpawn;
 							}
-						}.getArrow(projectileLevel, entity, entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1, 1);
+						}.getArrow(projectileLevel, entity, Math.round(((entity instanceof LivingEntity _attributeContext ? _attributeContext.getAttributeValue(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE) : 0.0D)
+								+ (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) + (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) / 2), 1);
 						_entityToSpawn.setPos((entity.getX()), (entity.getY()), (entity.getZ()));
 						_entityToSpawn.shoot(0, 0, 0, 1, 0);
 						projectileLevel.addFreshEntity(_entityToSpawn);
@@ -93,14 +95,15 @@ public class DaleSecOnEntityTickUpdateProcedure {
 								entityToSpawn.setSilent(true);
 								return entityToSpawn;
 							}
-						}.getArrow(projectileLevel, entity, entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1, 1);
+						}.getArrow(projectileLevel, entity, Math.round(((entity instanceof LivingEntity _attributeContext ? _attributeContext.getAttributeValue(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE) : 0.0D)
+								+ (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) + (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) / 2), 1);
 						_entityToSpawn.setPos((entity.getX()), (entity.getY()), (entity.getZ()));
 						_entityToSpawn.shoot(0, 0, 0, 1, 0);
 						projectileLevel.addFreshEntity(_entityToSpawn);
 					}
 				}
 			}
-			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 100, 250)));
+			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 100, 300)));
 		}
 	}
 }

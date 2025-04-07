@@ -15,7 +15,6 @@ import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
@@ -43,7 +42,6 @@ import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.craftnotaizai.procedures.MeliodasbossEntityDiesProcedure;
 import net.mcreator.craftnotaizai.procedures.DemonMarkMeliodasOnEntityTickUpdateProcedure;
-import net.mcreator.craftnotaizai.init.CraftNoTaizaiModItems;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
 public class DemonMarkMeliodasEntity extends Monster implements GeoEntity {
@@ -108,11 +106,6 @@ public class DemonMarkMeliodasEntity extends Monster implements GeoEntity {
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
-	}
-
-	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
-		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(CraftNoTaizaiModItems.DRAGON_HANDLE.get()));
 	}
 
 	@Override

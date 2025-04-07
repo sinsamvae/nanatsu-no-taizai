@@ -32,7 +32,7 @@ public class GrayDemonBloodNeedleItem extends Item {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		GrayDemonBloodNeedleRightclickedProcedure.execute(world, entity, itemstack);
+		GrayDemonBloodNeedleRightclickedProcedure.execute(entity);
 		return retval;
 	}
 }

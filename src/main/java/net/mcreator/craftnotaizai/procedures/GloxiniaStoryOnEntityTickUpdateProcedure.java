@@ -79,7 +79,8 @@ public class GloxiniaStoryOnEntityTickUpdateProcedure {
 										entityToSpawn.setSilent(true);
 										return entityToSpawn;
 									}
-								}.getArrow(projectileLevel, entity, entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1, 1);
+								}.getArrow(projectileLevel, entity, Math.round(((entity instanceof LivingEntity _attributeContext ? _attributeContext.getAttributeValue(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE) : 0.0D)
+										+ (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) + (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) / 2), 1);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);
@@ -104,10 +105,10 @@ public class GloxiniaStoryOnEntityTickUpdateProcedure {
 						}
 						{
 							final Vec3 _center = new Vec3(
-									(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale((entity.getLookAngle().x))), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale((entity.getLookAngle().x))), ClipContext.Block.VISUAL, ClipContext.Fluid.NONE, entity))
 											.getBlockPos().getX()),
 									y,
-									(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale((entity.getLookAngle().z))), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+									(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale((entity.getLookAngle().z))), ClipContext.Block.VISUAL, ClipContext.Fluid.NONE, entity))
 											.getBlockPos().getZ()));
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 							for (Entity entityiterator : _entfound) {
@@ -135,7 +136,8 @@ public class GloxiniaStoryOnEntityTickUpdateProcedure {
 											}
 										}.checkGamemode(entityiterator) || entityiterator instanceof BasquiasGuardianEntity)) {
 									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
-											entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1);
+											Math.round(((entity instanceof LivingEntity _attributeContext ? _attributeContext.getAttributeValue(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE) : 0.0D)
+													+ (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) + (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) / 2));
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 										_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.NECROSIS.get(), 200, 1, false, false));
 									if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -286,7 +288,8 @@ public class GloxiniaStoryOnEntityTickUpdateProcedure {
 											}.checkGamemode(entityiterator) || entityiterator instanceof DeathThornEntity)) {
 										entityiterator.hurt(
 												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
-												entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1);
+												Math.round(((entity instanceof LivingEntity _attributeContext ? _attributeContext.getAttributeValue(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE) : 0.0D)
+														+ (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) + (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) / 2));
 									}
 								}
 							}
@@ -311,11 +314,11 @@ public class GloxiniaStoryOnEntityTickUpdateProcedure {
 						if (entity instanceof LivingEntity _entity)
 							_entity.setHealth(entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1);
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 100000, false, false));
+							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 255, false, false));
 					}
 				}
 			}
-			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 150, 250)));
+			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 150, 300)));
 		}
 		if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 			if (((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Levitation) {

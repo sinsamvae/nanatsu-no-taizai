@@ -12,11 +12,7 @@
     "specialInformation": {
       "fixedValue": []
     },
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:Weapons"
-      }
-    ],
+    "creativeTabs": [],
     "efficiency": 4.0,
     "attackSpeed": 1.0,
     "enchantability": 2,
@@ -30,6 +26,9 @@
     "blockDropsTier": "STONE",
     "blocksAffected": [],
     "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false
+    "damageOnCrafting": false,
+    "onItemInInventoryTick": {
+      "name": "DragonHandleToolInInventoryTick"
+    }
   }
 }

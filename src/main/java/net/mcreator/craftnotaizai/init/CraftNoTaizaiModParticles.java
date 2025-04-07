@@ -44,6 +44,7 @@ import net.mcreator.craftnotaizai.client.particle.DarkSnowParticle;
 import net.mcreator.craftnotaizai.client.particle.DarkSnow2Particle;
 import net.mcreator.craftnotaizai.client.particle.ChastifolRedParticlesParticle;
 import net.mcreator.craftnotaizai.client.particle.BreakerOffParticleParticle;
+import net.mcreator.craftnotaizai.client.particle.BloodParticlesParticle;
 import net.mcreator.craftnotaizai.client.particle.BlackOutParticleParticle;
 import net.mcreator.craftnotaizai.client.particle.BlackLightningParticle;
 import net.mcreator.craftnotaizai.client.particle.BasquiasParticleParticle;
@@ -98,5 +99,6 @@ public class CraftNoTaizaiModParticles {
 		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.PURGATORY_FIRE_PARTICLES.get(), PurgatoryFireParticlesParticle::provider);
 		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.WATER_FALL.get(), WaterFallParticle::provider);
 		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.ELECTRIC_PARTICLES.get(), ElectricParticlesParticle::provider);
+		event.registerSpriteSet(CraftNoTaizaiModParticleTypes.BLOOD_PARTICLES.get(), BloodParticlesParticle::provider);
 	}
 }

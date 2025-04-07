@@ -4,7 +4,7 @@
   "definition": {
     "name": "Craft No Taizai Weapons",
     "icon": {
-      "value": "CUSTOM:DragonHandle"
+      "value": "CUSTOM:DragonHandleSword"
     },
     "showSearch": false
   }

@@ -30,7 +30,7 @@ public class GolgiusAnimatedOnEntityTickUpdateProcedure {
 						_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 200, 3, false, false));
 				}
 			}
-			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 100, 250)));
+			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 100, 300)));
 		}
 	}
 }

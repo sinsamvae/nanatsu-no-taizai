@@ -79,9 +79,6 @@
             "value": -1,
             "falpha": 0.0
           },
-          "displayCondition": {
-            "name": "CommandmentReturn"
-          },
           "x": 121,
           "y": 53
         }

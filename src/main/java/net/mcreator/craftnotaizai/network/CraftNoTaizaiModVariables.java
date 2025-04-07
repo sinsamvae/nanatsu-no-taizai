@@ -286,6 +286,8 @@ public class CraftNoTaizaiModVariables {
 			clone.HighSpeedRegenerationTimer = original.HighSpeedRegenerationTimer;
 			clone.passive_regen = original.passive_regen;
 			clone.assault_mode = original.assault_mode;
+			clone.four_element = original.four_element;
+			clone.lock_on_timer = original.lock_on_timer;
 			if (!event.isWasDeath()) {
 				clone.jumbvar = original.jumbvar;
 				clone.drunk_level = original.drunk_level;
@@ -787,6 +789,8 @@ public class CraftNoTaizaiModVariables {
 		public double HighSpeedRegenerationTimer = 0;
 		public double passive_regen = 0;
 		public boolean assault_mode = false;
+		public boolean four_element = false;
+		public double lock_on_timer = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -997,6 +1001,8 @@ public class CraftNoTaizaiModVariables {
 			nbt.putDouble("HighSpeedRegenerationTimer", HighSpeedRegenerationTimer);
 			nbt.putDouble("passive_regen", passive_regen);
 			nbt.putBoolean("assault_mode", assault_mode);
+			nbt.putBoolean("four_element", four_element);
+			nbt.putDouble("lock_on_timer", lock_on_timer);
 			return nbt;
 		}
 
@@ -1210,6 +1216,8 @@ public class CraftNoTaizaiModVariables {
 			HighSpeedRegenerationTimer = nbt.getDouble("HighSpeedRegenerationTimer");
 			passive_regen = nbt.getDouble("passive_regen");
 			assault_mode = nbt.getBoolean("assault_mode");
+			four_element = nbt.getBoolean("four_element");
+			lock_on_timer = nbt.getDouble("lock_on_timer");
 		}
 	}
 
@@ -1445,6 +1453,8 @@ public class CraftNoTaizaiModVariables {
 					variables.HighSpeedRegenerationTimer = message.data.HighSpeedRegenerationTimer;
 					variables.passive_regen = message.data.passive_regen;
 					variables.assault_mode = message.data.assault_mode;
+					variables.four_element = message.data.four_element;
+					variables.lock_on_timer = message.data.lock_on_timer;
 				}
 			});
 			context.setPacketHandled(true);

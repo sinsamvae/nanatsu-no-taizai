@@ -17,7 +17,9 @@ import net.mcreator.craftnotaizai.potion.StaffOfImrisonmentEffectMobEffect;
 import net.mcreator.craftnotaizai.potion.SelflessnessEffectMobEffect;
 import net.mcreator.craftnotaizai.potion.PurgatoryFlameMobEffect;
 import net.mcreator.craftnotaizai.potion.PowerAmplifyEffectMobEffect;
+import net.mcreator.craftnotaizai.potion.PietyEffectMobEffect;
 import net.mcreator.craftnotaizai.potion.PhysicalHuntNegitiveMobEffect;
+import net.mcreator.craftnotaizai.potion.PatienceEffectMobEffect;
 import net.mcreator.craftnotaizai.potion.OverPowerEffectMobEffect;
 import net.mcreator.craftnotaizai.potion.NightmaretellerMobEffect;
 import net.mcreator.craftnotaizai.potion.NecrosisMobEffect;
@@ -32,6 +34,7 @@ import net.mcreator.craftnotaizai.potion.GlowEffectMobEffect;
 import net.mcreator.craftnotaizai.potion.FrezzeMobEffect;
 import net.mcreator.craftnotaizai.potion.FreezeCoffinPotionEffectMobEffect;
 import net.mcreator.craftnotaizai.potion.FossilizationEffectMobEffect;
+import net.mcreator.craftnotaizai.potion.BleedingEffectMobEffect;
 import net.mcreator.craftnotaizai.potion.BlackOutEffectMobEffect;
 import net.mcreator.craftnotaizai.potion.BindMobEffect;
 import net.mcreator.craftnotaizai.potion.AleEffectMobEffect;
@@ -66,4 +69,7 @@ public class CraftNoTaizaiModMobEffects {
 	public static final RegistryObject<MobEffect> GLOW_EFFECT = REGISTRY.register("glow_effect", () -> new GlowEffectMobEffect());
 	public static final RegistryObject<MobEffect> ALCOHOL_EFFECT = REGISTRY.register("alcohol_effect", () -> new AlcoholEffectMobEffect());
 	public static final RegistryObject<MobEffect> STUF_EFFECT = REGISTRY.register("stuf_effect", () -> new StufEffectMobEffect());
+	public static final RegistryObject<MobEffect> PIETY_EFFECT = REGISTRY.register("piety_effect", () -> new PietyEffectMobEffect());
+	public static final RegistryObject<MobEffect> PATIENCE_EFFECT = REGISTRY.register("patience_effect", () -> new PatienceEffectMobEffect());
+	public static final RegistryObject<MobEffect> BLEEDING_EFFECT = REGISTRY.register("bleeding_effect", () -> new BleedingEffectMobEffect());
 }

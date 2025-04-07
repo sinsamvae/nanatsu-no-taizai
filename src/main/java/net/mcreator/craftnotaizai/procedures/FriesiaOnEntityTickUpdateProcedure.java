@@ -1,6 +1,7 @@
 package net.mcreator.craftnotaizai.procedures;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
@@ -12,6 +13,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.commands.arguments.EntityAnchorArgument;
 
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
+import net.mcreator.craftnotaizai.entity.InsectEntity;
 
 public class FriesiaOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -29,15 +31,17 @@ public class FriesiaOnEntityTickUpdateProcedure {
 			entity.lookAt(EntityAnchorArgument.Anchor.EYES, new Vec3(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX()), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY()),
 					((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ())));
 			if (distance <= 6) {
-				for (int index0 = 0; index0 < (int) (3 * 1); index0++) {
-					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = CraftNoTaizaiModEntities.INSECT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
-						if (entityToSpawn != null) {
+				if (!(!world.getEntitiesOfClass(InsectEntity.class, AABB.ofSize(new Vec3(x, y, z), 25, 25, 25), e -> true).isEmpty())) {
+					for (int index0 = 0; index0 < (int) (3 * 1); index0++) {
+						if (world instanceof ServerLevel _level) {
+							Entity entityToSpawn = CraftNoTaizaiModEntities.INSECT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+							if (entityToSpawn != null) {
+							}
 						}
 					}
 				}
 			}
-			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 100, 250)));
+			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 100, 300)));
 		}
 	}
 }

@@ -10,6 +10,7 @@ import net.minecraft.world.item.ItemStack;
 
 import net.mcreator.craftnotaizai.item.WhipItem;
 import net.mcreator.craftnotaizai.item.HolyStaffCoureChouseItem;
+import net.mcreator.craftnotaizai.item.DragonHandleSwordItem;
 import net.mcreator.craftnotaizai.item.BowItem;
 import net.mcreator.craftnotaizai.item.BellStaffItem;
 
@@ -90,6 +91,24 @@ public class ItemAnimationFactory {
 					event.player.getOffhandItem().getOrCreateTag().putString("geckoAnim", "");
 					if (event.player.level().isClientSide()) {
 						((HolyStaffCoureChouseItem) event.player.getOffhandItem().getItem()).animationprocedure = animation;
+					}
+				}
+			}
+			if (mainhandItem.getItem() instanceof DragonHandleSwordItem animatable) {
+				animation = mainhandItem.getOrCreateTag().getString("geckoAnim");
+				if (!animation.isEmpty()) {
+					event.player.getMainHandItem().getOrCreateTag().putString("geckoAnim", "");
+					if (event.player.level().isClientSide()) {
+						((DragonHandleSwordItem) event.player.getMainHandItem().getItem()).animationprocedure = animation;
+					}
+				}
+			}
+			if (offhandItem.getItem() instanceof DragonHandleSwordItem animatable) {
+				animation = offhandItem.getOrCreateTag().getString("geckoAnim");
+				if (!animation.isEmpty()) {
+					event.player.getOffhandItem().getOrCreateTag().putString("geckoAnim", "");
+					if (event.player.level().isClientSide()) {
+						((DragonHandleSwordItem) event.player.getOffhandItem().getItem()).animationprocedure = animation;
 					}
 				}
 			}

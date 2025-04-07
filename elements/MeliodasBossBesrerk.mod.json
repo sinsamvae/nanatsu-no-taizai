@@ -91,7 +91,7 @@
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": "CUSTOM:DragonHandle"
+      "value": "CUSTOM:DragonHandleSword"
     },
     "livingSound": {
       "value": ""

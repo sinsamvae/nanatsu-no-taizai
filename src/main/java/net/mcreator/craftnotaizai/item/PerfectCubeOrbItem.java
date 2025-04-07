@@ -9,6 +9,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 
+import net.mcreator.craftnotaizai.procedures.PerfectCubeOrbRightclickedProcedure;
+
 public class PerfectCubeOrbItem extends Item {
 	public PerfectCubeOrbItem() {
 		super(new Item.Properties().durability(1).rarity(Rarity.COMMON));
@@ -23,6 +25,7 @@ public class PerfectCubeOrbItem extends Item {
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
 		entity.startUsingItem(hand);
+		PerfectCubeOrbRightclickedProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
 		return ar;
 	}
 }

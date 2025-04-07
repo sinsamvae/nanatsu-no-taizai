@@ -26,7 +26,7 @@ public class MaelSunShineKeybindProcedure {
 								capability.syncPlayerVariables(entity);
 							});
 						}
-						GreatestSunSkillProcedure.execute(entity);
+						GreatestSunSkillProcedure.execute(world, entity);
 						((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).AbilitySelect).getOrCreateTag().putDouble(
 								("cooldown" + new java.text.DecimalFormat("##").format((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Move + 1)), 80);
 					} else {

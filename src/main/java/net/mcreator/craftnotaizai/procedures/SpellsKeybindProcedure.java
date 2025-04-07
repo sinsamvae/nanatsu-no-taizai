@@ -7,7 +7,7 @@ public class SpellsKeybindProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		DarkDestoryKeybindProcedure.execute(world, entity);
+		DarkDestoryKeybindProcedure.execute(world, x, y, z, entity);
 		FreezeCoffinKeybindProcedure.execute(world, entity);
 		FireStormKeybindProcedure.execute(entity);
 		BusterIceKeybindProcedure.execute(entity);

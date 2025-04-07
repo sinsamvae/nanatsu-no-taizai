@@ -24,8 +24,6 @@ import net.mcreator.craftnotaizai.client.gui.MagicMenuScreen;
 import net.mcreator.craftnotaizai.client.gui.KegGuiScreen;
 import net.mcreator.craftnotaizai.client.gui.JennaGuiScreen;
 import net.mcreator.craftnotaizai.client.gui.HumanClanUiScreen;
-import net.mcreator.craftnotaizai.client.gui.GuildGuiScreen;
-import net.mcreator.craftnotaizai.client.gui.GuildAcceptGuiScreen;
 import net.mcreator.craftnotaizai.client.gui.GoddessClanScreen;
 import net.mcreator.craftnotaizai.client.gui.GiantClanScreen;
 import net.mcreator.craftnotaizai.client.gui.FairyClanUiScreen;
@@ -62,8 +60,6 @@ public class CraftNoTaizaiModScreens {
 			MenuScreens.register(CraftNoTaizaiModMenus.HUMAN_CLAN_UI.get(), HumanClanUiScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.GIANT_CLAN.get(), GiantClanScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.FAIRY_CLAN_UI.get(), FairyClanUiScreen::new);
-			MenuScreens.register(CraftNoTaizaiModMenus.GUILD_ACCEPT_GUI.get(), GuildAcceptGuiScreen::new);
-			MenuScreens.register(CraftNoTaizaiModMenus.GUILD_GUI.get(), GuildGuiScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.POSSESSION.get(), PossessionScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.DUBS_TRADE.get(), DubsTradeScreen::new);
 			MenuScreens.register(CraftNoTaizaiModMenus.GODDESS_CLAN.get(), GoddessClanScreen::new);

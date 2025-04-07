@@ -75,7 +75,8 @@ public class MelasculaBossOnEntityTickUpdateProcedure {
 										entityToSpawn.setSilent(true);
 										return entityToSpawn;
 									}
-								}.getArrow(projectileLevel, entity, entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1, 1);
+								}.getArrow(projectileLevel, entity, Math.round(((entity instanceof LivingEntity _attributeContext ? _attributeContext.getAttributeValue(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE) : 0.0D)
+										+ (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) + (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) / 2), 1);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);
@@ -84,7 +85,7 @@ public class MelasculaBossOnEntityTickUpdateProcedure {
 					});
 				}
 				if (ran == 2) {
-					if (!(!world.getEntitiesOfClass(RedDemonGeckolibEntity.class, AABB.ofSize(new Vec3(x, y, z), 300, 300, 300), e -> true).isEmpty())) {
+					if (!(!world.getEntitiesOfClass(RedDemonGeckolibEntity.class, AABB.ofSize(new Vec3(x, y, z), 25, 25, 25), e -> true).isEmpty())) {
 						y_offset = 3;
 						distance_in_blocks = 1;
 						world.addParticle((SimpleParticleType) (CraftNoTaizaiModParticleTypes.HELL_GATE_PARTICLES.get()), (x + entity.getLookAngle().x * distance_in_blocks), (entity.getY() + y_offset),
@@ -137,7 +138,8 @@ public class MelasculaBossOnEntityTickUpdateProcedure {
 											}
 										}.checkGamemode(entityiterator))) {
 									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
-											entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1);
+											Math.round(((entity instanceof LivingEntity _attributeContext ? _attributeContext.getAttributeValue(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE) : 0.0D)
+													+ (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) + (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) / 2));
 								}
 							}
 						}

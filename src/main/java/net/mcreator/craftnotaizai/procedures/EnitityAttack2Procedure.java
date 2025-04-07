@@ -1,6 +1,5 @@
 package net.mcreator.craftnotaizai.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
@@ -9,7 +8,6 @@ import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -20,19 +18,14 @@ import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.util.RandomSource;
-import net.minecraft.util.Mth;
 import net.minecraft.tags.TagKey;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.core.BlockPos;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
-import net.mcreator.craftnotaizai.entity.EarthCrawlerEntity;
 
 import javax.annotation.Nullable;
 
@@ -61,35 +54,8 @@ public class EnitityAttack2Procedure {
 		double random = 0;
 		double stage = 0;
 		double dmg = 0;
-		if (entity instanceof EarthCrawlerEntity) {
-			random = Mth.nextInt(RandomSource.create(), 1, 100);
-			if (random <= 25) {
-				if (event != null && event.isCancelable()) {
-					event.setCanceled(true);
-				} else if (event != null && event.hasResult()) {
-					event.setResult(Event.Result.DENY);
-				}
-				if (world instanceof Level _level) {
-					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.slime_block.hit")), SoundSource.NEUTRAL, (float) 0.05, 1);
-					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.slime_block.hit")), SoundSource.NEUTRAL, (float) 0.05, 1, false);
-					}
-				}
-			}
-		}
-		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).God
-				&& (damagesource.is(TagKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:magic_dmg"))) || damagesource.is(DamageTypes.MAGIC) || damagesource.is(DamageTypes.INDIRECT_MAGIC)
-						|| damagesource.is(DamageTypes.ARROW))) {
-			if (event != null && event.isCancelable()) {
-				event.setCanceled(true);
-			} else if (event != null && event.hasResult()) {
-				event.setResult(Event.Result.DENY);
-			}
-		}
-		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Full_Counter_Use
-				&& (damagesource.is(TagKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:magic_dmg"))) || damagesource.is(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))
-						|| damagesource.is(DamageTypes.INDIRECT_MAGIC) || damagesource.is(DamageTypes.MAGIC) || damagesource.is(DamageTypes.ARROW))) {
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Full_Counter_Use && (damagesource.is(DamageTypes.INDIRECT_MAGIC)
+				|| damagesource.is(DamageTypes.MAGIC) || damagesource.is(DamageTypes.ARROW) || damagesource.is(TagKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:magic_dmg"))))) {
 			if (event != null && event.isCancelable()) {
 				event.setCanceled(true);
 			} else if (event != null && event.hasResult()) {
@@ -138,7 +104,8 @@ public class EnitityAttack2Procedure {
 			dmg = Math.ceil(amount * 1.5);
 			sourceentity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))), (float) dmg);
 		}
-		if (entity.getPersistentData().getBoolean("Full Counter") && (damagesource.is(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg"))) || damagesource.is(DamageTypes.ARROW))) {
+		if (entity.getPersistentData().getBoolean("Full Counter") && (damagesource.is(DamageTypes.INDIRECT_MAGIC) || damagesource.is(DamageTypes.MAGIC) || damagesource.is(DamageTypes.ARROW)
+				|| damagesource.is(TagKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:magic_dmg"))))) {
 			if (event != null && event.isCancelable()) {
 				event.setCanceled(true);
 			} else if (event != null && event.hasResult()) {

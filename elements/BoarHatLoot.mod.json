@@ -140,7 +140,7 @@
           {
             "type": "item",
             "item": {
-              "value": "CUSTOM:DragonHandle"
+              "value": "CUSTOM:DragonHandleSword"
             },
             "weight": 6,
             "minCount": 1,

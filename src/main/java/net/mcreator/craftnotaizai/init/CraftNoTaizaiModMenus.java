@@ -24,8 +24,6 @@ import net.mcreator.craftnotaizai.world.inventory.MagicMenuMenu;
 import net.mcreator.craftnotaizai.world.inventory.KegGuiMenu;
 import net.mcreator.craftnotaizai.world.inventory.JennaGuiMenu;
 import net.mcreator.craftnotaizai.world.inventory.HumanClanUiMenu;
-import net.mcreator.craftnotaizai.world.inventory.GuildGuiMenu;
-import net.mcreator.craftnotaizai.world.inventory.GuildAcceptGuiMenu;
 import net.mcreator.craftnotaizai.world.inventory.GoddessClanMenu;
 import net.mcreator.craftnotaizai.world.inventory.GiantClanMenu;
 import net.mcreator.craftnotaizai.world.inventory.FairyClanUiMenu;
@@ -60,8 +58,6 @@ public class CraftNoTaizaiModMenus {
 	public static final RegistryObject<MenuType<HumanClanUiMenu>> HUMAN_CLAN_UI = REGISTRY.register("human_clan_ui", () -> IForgeMenuType.create(HumanClanUiMenu::new));
 	public static final RegistryObject<MenuType<GiantClanMenu>> GIANT_CLAN = REGISTRY.register("giant_clan", () -> IForgeMenuType.create(GiantClanMenu::new));
 	public static final RegistryObject<MenuType<FairyClanUiMenu>> FAIRY_CLAN_UI = REGISTRY.register("fairy_clan_ui", () -> IForgeMenuType.create(FairyClanUiMenu::new));
-	public static final RegistryObject<MenuType<GuildAcceptGuiMenu>> GUILD_ACCEPT_GUI = REGISTRY.register("guild_accept_gui", () -> IForgeMenuType.create(GuildAcceptGuiMenu::new));
-	public static final RegistryObject<MenuType<GuildGuiMenu>> GUILD_GUI = REGISTRY.register("guild_gui", () -> IForgeMenuType.create(GuildGuiMenu::new));
 	public static final RegistryObject<MenuType<PossessionMenu>> POSSESSION = REGISTRY.register("possession", () -> IForgeMenuType.create(PossessionMenu::new));
 	public static final RegistryObject<MenuType<DubsTradeMenu>> DUBS_TRADE = REGISTRY.register("dubs_trade", () -> IForgeMenuType.create(DubsTradeMenu::new));
 	public static final RegistryObject<MenuType<GoddessClanMenu>> GODDESS_CLAN = REGISTRY.register("goddess_clan", () -> IForgeMenuType.create(GoddessClanMenu::new));

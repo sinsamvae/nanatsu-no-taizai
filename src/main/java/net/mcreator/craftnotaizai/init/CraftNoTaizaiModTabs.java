@@ -213,8 +213,8 @@ public class CraftNoTaizaiModTabs {
 
 					.build());
 	public static final RegistryObject<CreativeModeTab> WEAPONS = REGISTRY.register("weapons",
-			() -> CreativeModeTab.builder().title(Component.translatable("item_group.craft_no_taizai.weapons")).icon(() -> new ItemStack(CraftNoTaizaiModItems.DRAGON_HANDLE.get())).displayItems((parameters, tabData) -> {
-				tabData.accept(CraftNoTaizaiModItems.DRAGON_HANDLE.get());
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.craft_no_taizai.weapons")).icon(() -> new ItemStack(CraftNoTaizaiModItems.DRAGON_HANDLE_SWORD.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(CraftNoTaizaiModItems.DRAGON_HANDLE_SWORD.get());
 				tabData.accept(CraftNoTaizaiModItems.LIZ_SWORD.get());
 				tabData.accept(CraftNoTaizaiModItems.LIZ_SNEATH_SWORD.get());
 				tabData.accept(CraftNoTaizaiModItems.BELL_STAFF.get());
@@ -323,7 +323,6 @@ public class CraftNoTaizaiModTabs {
 				tabData.accept(CraftNoTaizaiModItems.INSECT_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.GRAY_DEMON_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.HIDE_AND_SEEK_SPAWN_EGG.get());
-				tabData.accept(CraftNoTaizaiModItems.VINE_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.LUIGI_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.TYRANT_DRAGON_SPAWN_EGG.get());
 				tabData.accept(CraftNoTaizaiModItems.MUTILATOR_RABBITS_SPAWN_EGG.get());

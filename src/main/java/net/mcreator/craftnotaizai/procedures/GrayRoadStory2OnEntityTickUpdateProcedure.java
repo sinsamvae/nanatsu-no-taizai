@@ -49,6 +49,7 @@ public class GrayRoadStory2OnEntityTickUpdateProcedure {
 			if (distance <= 6) {
 				if (ran == 1) {
 					for (int index0 = 0; index0 < 8; index0++) {
+						delay = delay + 1;
 						CraftNoTaizaiMod.queueServerWork((int) delay, () -> {
 							{
 								Entity _shootFrom = entity;
@@ -63,7 +64,8 @@ public class GrayRoadStory2OnEntityTickUpdateProcedure {
 											entityToSpawn.setSilent(true);
 											return entityToSpawn;
 										}
-									}.getArrow(projectileLevel, entity, entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1, 1);
+									}.getArrow(projectileLevel, entity, Math.round(((entity instanceof LivingEntity _attributeContext ? _attributeContext.getAttributeValue(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE) : 0.0D)
+											+ (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) + (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) / 2), 1);
 									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 10);
 									projectileLevel.addFreshEntity(_entityToSpawn);
@@ -86,9 +88,10 @@ public class GrayRoadStory2OnEntityTickUpdateProcedure {
 									entityToSpawn.setSilent(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1, 1);
+							}.getArrow(projectileLevel, entity, Math.round(((entity instanceof LivingEntity _attributeContext ? _attributeContext.getAttributeValue(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE) : 0.0D)
+									+ (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) + (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) / 2), 1);
 							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 10);
+							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
 						}
 					}
@@ -98,7 +101,7 @@ public class GrayRoadStory2OnEntityTickUpdateProcedure {
 						final Vec3 _center = new Vec3(x, y, z);
 						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(10 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 						for (Entity entityiterator : _entfound) {
-							if (!(entity == entityiterator && entityiterator instanceof LivingEntity _livEnt28 && _livEnt28.hasEffect(CraftNoTaizaiModMobEffects.JUBAKU_ENSA_EFFECT.get()))) {
+							if (!(entity == entityiterator && entityiterator instanceof LivingEntity _livEnt32 && _livEnt32.hasEffect(CraftNoTaizaiModMobEffects.JUBAKU_ENSA_EFFECT.get()))) {
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, 255, false, false));
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())

@@ -71,7 +71,8 @@ public class DerieriBossOnEntityTickUpdateProcedure {
 										}
 									}.checkGamemode(entityiterator))) {
 								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MOB_ATTACK)),
-										(float) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) + damage));
+										(float) (Math.round(((entity instanceof LivingEntity _attributeContext ? _attributeContext.getAttributeValue(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE) : 0.0D)
+												+ (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) + (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) / 2) + damage));
 							}
 						}
 					}

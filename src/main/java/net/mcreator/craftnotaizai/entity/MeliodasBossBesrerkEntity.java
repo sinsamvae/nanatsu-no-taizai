@@ -112,7 +112,7 @@ public class MeliodasBossBesrerkEntity extends Monster implements GeoEntity {
 
 	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
 		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(CraftNoTaizaiModItems.DRAGON_HANDLE.get()));
+		this.spawnAtLocation(new ItemStack(CraftNoTaizaiModItems.DRAGON_HANDLE_SWORD.get()));
 	}
 
 	@Override

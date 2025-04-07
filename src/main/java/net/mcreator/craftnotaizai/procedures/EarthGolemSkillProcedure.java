@@ -20,6 +20,7 @@ public class EarthGolemSkillProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		double earth_golems = 0;
 		if (world instanceof ServerLevel _level) {
 			Entity entityToSpawn = CraftNoTaizaiModEntities.EARTH_GOLEM.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 			if (entityToSpawn != null) {
@@ -27,7 +28,7 @@ public class EarthGolemSkillProcedure {
 		}
 		{
 			final Vec3 _center = new Vec3(x, y, z);
-			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(10 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
 				if (entityiterator instanceof EarthGolemEntity && !(entityiterator instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false)) {
 					if (entityiterator instanceof TamableAnimal _toTame && entity instanceof Player _owner)

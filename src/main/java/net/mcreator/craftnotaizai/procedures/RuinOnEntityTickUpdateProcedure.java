@@ -36,7 +36,7 @@ public class RuinOnEntityTickUpdateProcedure {
 			if (entity instanceof RuinAnimatedEntity _datEntSetL)
 				_datEntSetL.getEntityData().set(RuinAnimatedEntity.DATA_iron_skin, true);
 		}
-		if ((entity instanceof RuinAnimatedEntity _datEntL3 && _datEntL3.getEntityData().get(RuinAnimatedEntity.DATA_iron_skin)) == true) {
+		if (entity instanceof RuinAnimatedEntity _datEntL3 && _datEntL3.getEntityData().get(RuinAnimatedEntity.DATA_iron_skin)) {
 			if (entity instanceof RuinAnimatedEntity animatable)
 				animatable.setTexture("ruin_ironskin_animated");
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -53,7 +53,7 @@ public class RuinOnEntityTickUpdateProcedure {
 			if (distance <= 6) {
 				{
 					final Vec3 _center = new Vec3((entity.getX() + entity.getLookAngle().x), (entity.getY() + entity.getLookAngle().y + 1.8), (entity.getZ() + entity.getLookAngle().z));
-					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(6 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
 						if (!(entityiterator == entity || entityiterator instanceof ItemEntity || entityiterator instanceof ExperienceOrb
 								|| (entityiterator instanceof TamableAnimal _tamIsTamedBy && entity instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false)
@@ -84,7 +84,7 @@ public class RuinOnEntityTickUpdateProcedure {
 					}
 				}
 			}
-			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 150, 250)));
+			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 150, 300)));
 		}
 	}
 }

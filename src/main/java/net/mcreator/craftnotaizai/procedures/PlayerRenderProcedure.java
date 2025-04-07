@@ -21,6 +21,8 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftnotaizai.network.CraftNoTaizaiModVariables;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModMobEffects;
+import net.mcreator.craftnotaizai.client.model.Modelyggdra_cloth;
+import net.mcreator.craftnotaizai.client.model.Modelyggdra_armor;
 import net.mcreator.craftnotaizai.client.model.Modelthe_ultimate;
 import net.mcreator.craftnotaizai.client.model.Modelnormal_fairy_wings;
 import net.mcreator.craftnotaizai.client.model.Modelnew_helbram_wings;
@@ -29,6 +31,7 @@ import net.mcreator.craftnotaizai.client.model.Modelkingwings;
 import net.mcreator.craftnotaizai.client.model.Modelhigh_goddess_wings;
 import net.mcreator.craftnotaizai.client.model.Modelgoddess_wings;
 import net.mcreator.craftnotaizai.client.model.Modelgloxiana_wings;
+import net.mcreator.craftnotaizai.client.model.Modelemeraldocto;
 import net.mcreator.craftnotaizai.client.model.Modelelaine_wing3;
 import net.mcreator.craftnotaizai.client.model.Modeldemon_wing;
 
@@ -68,13 +71,6 @@ public class PlayerRenderProcedure {
 			emptyRenderer.render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());
 		}
 		if (entity instanceof Player) {
-			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("HellBlaze")
-					|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Full Counter")) {
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 0);
-				}
-				texture = "demon_mark";
-			}
 			if ((entity.getDisplayName().getString()).equals("rednightwing762")) {
 				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 0);
@@ -104,6 +100,25 @@ public class PlayerRenderProcedure {
 					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 0);
 				}
 				texture = "clover_mark";
+			}
+			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("HellBlaze")
+					|| ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Full Counter")) {
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 0);
+				}
+				texture = "demon_mark";
+			}
+			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Thunder")) {
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 0);
+				}
+				texture = "dahaaka_mark";
+			}
+			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Elemental")) {
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 0);
+				}
+				texture = "derocchio_mark";
 			}
 			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Invasion")) {
 				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
@@ -279,6 +294,8 @@ public class PlayerRenderProcedure {
 							_evt.getMultiBufferSource(), _evt.getPackedLight());
 				}
 			}
+		}
+		if (entity instanceof Player) {
 			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Transparency_Use) {
 				if (_evt.getRenderer() instanceof LivingEntityRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					if (_evt instanceof RenderLivingEvent.Pre _pre) {
@@ -286,15 +303,30 @@ public class PlayerRenderProcedure {
 					}
 				}
 			}
-			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).FullPowerDemonMark
-					&& (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Levitation) {
-				texture = "demon_wings";
+			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).heavy_metal) {
+				texture = "metal";
+				if (_evt.getRenderer() instanceof LivingEntityRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					if (_evt instanceof RenderLivingEvent.Pre _pre) {
+						_pre.setCanceled(true);
+					}
+				}
 				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
 					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
 						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
 					}
-					Modeldemon_wing newModel = new Modeldemon_wing(context.bakeLayer(Modeldemon_wing.LAYER_LOCATION));
+					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+							_evt.getMultiBufferSource(), _evt.getPackedLight());
+				}
+			}
+			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).TheOneUltimate) {
+				texture = "the_one_ultimate";
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
+						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
+					}
+					Modelthe_ultimate newModel = new Modelthe_ultimate(context.bakeLayer(Modelthe_ultimate.LAYER_LOCATION));
 					newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
 					newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
 					newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
@@ -308,6 +340,309 @@ public class PlayerRenderProcedure {
 					poseStack.popPose();
 				}
 			}
+			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).lightningarmor) {
+				texture = "energy_armor";
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 1);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 0);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 4);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 2);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 5);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 3);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
+						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
+					}
+					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+							_evt.getMultiBufferSource(), _evt.getPackedLight());
+				}
+			}
+			if (entity instanceof LivingEntity _livEnt58 && _livEnt58.hasEffect(CraftNoTaizaiModMobEffects.FREEZE_COFFIN_POTION_EFFECT.get())) {
+				texture = "freeze_coffin";
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 1);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 0);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 4);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 2);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 5);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 3);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
+						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
+					}
+					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+							_evt.getMultiBufferSource(), _evt.getPackedLight());
+				}
+			}
+			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).fire_protection) {
+				texture = "fire_protection";
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 1);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 0);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 4);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 2);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 5);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 3);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
+						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
+					}
+					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+							_evt.getMultiBufferSource(), _evt.getPackedLight());
+				}
+			}
+			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).hard_protection) {
+				texture = "hard_protection";
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 1);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 0);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 4);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 2);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 5);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 3);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
+						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
+					}
+					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+							_evt.getMultiBufferSource(), _evt.getPackedLight());
+				}
+			}
+			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).aqua_dress) {
+				texture = "aqua_dress";
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 3);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 1);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 2);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
+						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
+					}
+					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+							_evt.getMultiBufferSource(), _evt.getPackedLight());
+				}
+			}
+			if (entity instanceof LivingEntity _livEnt84 && _livEnt84.hasEffect(CraftNoTaizaiModMobEffects.FOSSILIZATION_EFFECT.get())) {
+				texture = "stone_ban";
+				if (_evt.getRenderer() instanceof LivingEntityRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					if (_evt instanceof RenderLivingEvent.Pre _pre) {
+						_pre.setCanceled(true);
+					}
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
+						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
+					}
+					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+							_evt.getMultiBufferSource(), _evt.getPackedLight());
+				}
+			}
+			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).CriticalOver) {
+				texture = "galand";
+				if (_evt.getRenderer() instanceof LivingEntityRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					if (_evt instanceof RenderLivingEvent.Pre _pre) {
+						_pre.setCanceled(true);
+					}
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
+						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
+					}
+					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+							_evt.getMultiBufferSource(), _evt.getPackedLight());
+				}
+			}
+			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).light_chakram) {
+				texture = "light-chakram-texture";
+				int customLight = 0x000CD;
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
+						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
+					}
+					Modellight_chakram newModel = new Modellight_chakram(context.bakeLayer(Modellight_chakram.LAYER_LOCATION));
+					newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
+					newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
+					newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
+					newModel.RightArm.copyFrom(_pr.getModel().rightArm);
+					newModel.Body.copyFrom(_pr.getModel().body);
+					newModel.Head.copyFrom(_pr.getModel().head);
+					poseStack.pushPose();
+					poseStack.scale(0.9375F, 0.9375F, 0.9375F);
+					new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+							_evt.getMultiBufferSource(), _evt.getPackedLight());
+					poseStack.popPose();
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
+						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
+					}
+					Modellight_chakram newModel = new Modellight_chakram(context.bakeLayer(Modellight_chakram.LAYER_LOCATION));
+					newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
+					newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
+					newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
+					newModel.RightArm.copyFrom(_pr.getModel().rightArm);
+					newModel.Body.copyFrom(_pr.getModel().body);
+					newModel.Head.copyFrom(_pr.getModel().head);
+					poseStack.pushPose();
+					poseStack.scale(0.9375F, 0.9375F, 0.9375F);
+					new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+							_evt.getMultiBufferSource(), LightTexture.FULL_BRIGHT);
+					poseStack.popPose();
+				}
+			}
+			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Emerald_Octo) {
+				texture = "gloxiana-vines-texture";
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
+						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
+					}
+					Modelemeraldocto newModel = new Modelemeraldocto(context.bakeLayer(Modelemeraldocto.LAYER_LOCATION));
+					newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
+					newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
+					newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
+					newModel.RightArm.copyFrom(_pr.getModel().rightArm);
+					newModel.Body.copyFrom(_pr.getModel().body);
+					newModel.Head.copyFrom(_pr.getModel().head);
+					poseStack.pushPose();
+					poseStack.scale(0.9375F, 0.9375F, 0.9375F);
+					new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+							_evt.getMultiBufferSource(), _evt.getPackedLight());
+					poseStack.popPose();
+				}
+			}
+			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).yggdrasil_armor) {
+				texture = "yggdrasil_armor_texture2";
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
+						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
+					}
+					Modelyggdra_armor newModel = new Modelyggdra_armor(context.bakeLayer(Modelyggdra_armor.LAYER_LOCATION));
+					newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
+					newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
+					newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
+					newModel.RightArm.copyFrom(_pr.getModel().rightArm);
+					newModel.Body.copyFrom(_pr.getModel().body);
+					newModel.Head.copyFrom(_pr.getModel().head);
+					poseStack.pushPose();
+					poseStack.scale(0.9375F, 0.9375F, 0.9375F);
+					new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+							_evt.getMultiBufferSource(), _evt.getPackedLight());
+					poseStack.popPose();
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 7);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 1);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 10);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 4);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 8);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 2);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 11);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 5);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 9);
+				}
+				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 3);
+				}
+			}
+			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).yggdra_cloth) {
+				texture = "kings_armor_texture_3";
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
+						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
+					}
+					Modelyggdra_cloth newModel = new Modelyggdra_cloth(context.bakeLayer(Modelyggdra_cloth.LAYER_LOCATION));
+					newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
+					newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
+					newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
+					newModel.RightArm.copyFrom(_pr.getModel().rightArm);
+					newModel.Body.copyFrom(_pr.getModel().body);
+					newModel.Head.copyFrom(_pr.getModel().head);
+					poseStack.pushPose();
+					poseStack.scale(0.9375F, 0.9375F, 0.9375F);
+					new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+							_evt.getMultiBufferSource(), _evt.getPackedLight());
+					poseStack.popPose();
+				}
+			}
+		}
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Fairy) {
 			if (((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).magic).equals("Disaster")
 					&& !(entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Gloxinia) {
 				texture = "kings_wing_texturte2";
@@ -421,273 +756,30 @@ public class PlayerRenderProcedure {
 					poseStack.popPose();
 				}
 			}
-			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).heavy_metal) {
-				texture = "metal";
-				if (_evt.getRenderer() instanceof LivingEntityRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					if (_evt instanceof RenderLivingEvent.Pre _pre) {
-						_pre.setCanceled(true);
-					}
+		}
+		if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).FullPowerDemonMark
+				&& (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Levitation) {
+			texture = "demon_wings";
+			if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+				ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+				if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
+					_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
 				}
-				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
-					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
-						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
-					}
-					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
-							_evt.getMultiBufferSource(), _evt.getPackedLight());
-				}
+				Modeldemon_wing newModel = new Modeldemon_wing(context.bakeLayer(Modeldemon_wing.LAYER_LOCATION));
+				newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
+				newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
+				newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
+				newModel.RightArm.copyFrom(_pr.getModel().rightArm);
+				newModel.Body.copyFrom(_pr.getModel().body);
+				newModel.Head.copyFrom(_pr.getModel().head);
+				poseStack.pushPose();
+				poseStack.scale(0.9375F, 0.9375F, 0.9375F);
+				new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+						_evt.getMultiBufferSource(), _evt.getPackedLight());
+				poseStack.popPose();
 			}
-			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).TheOneUltimate) {
-				texture = "the_one_ultimate";
-				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
-					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
-						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
-					}
-					Modelthe_ultimate newModel = new Modelthe_ultimate(context.bakeLayer(Modelthe_ultimate.LAYER_LOCATION));
-					newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
-					newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
-					newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
-					newModel.RightArm.copyFrom(_pr.getModel().rightArm);
-					newModel.Body.copyFrom(_pr.getModel().body);
-					newModel.Head.copyFrom(_pr.getModel().head);
-					poseStack.pushPose();
-					poseStack.scale(0.9375F, 0.9375F, 0.9375F);
-					new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
-							_evt.getMultiBufferSource(), _evt.getPackedLight());
-					poseStack.popPose();
-				}
-			}
-			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).lightningarmor) {
-				texture = "energy_armor";
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 1);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 0);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 4);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 2);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 5);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 3);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
-					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
-						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
-					}
-					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
-							_evt.getMultiBufferSource(), _evt.getPackedLight());
-				}
-			}
-			if (entity instanceof LivingEntity _livEnt61 && _livEnt61.hasEffect(CraftNoTaizaiModMobEffects.FREEZE_COFFIN_POTION_EFFECT.get())) {
-				texture = "freeze_coffin";
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 1);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 0);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 4);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 2);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 5);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 3);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
-					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
-						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
-					}
-					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
-							_evt.getMultiBufferSource(), _evt.getPackedLight());
-				}
-			}
-			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).fire_protection) {
-				texture = "fire_protection";
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 1);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 0);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 4);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 2);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 5);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 3);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
-					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
-						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
-					}
-					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
-							_evt.getMultiBufferSource(), _evt.getPackedLight());
-				}
-			}
-			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).hard_protection) {
-				texture = "hard_protection";
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 1);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 0);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 4);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 2);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 5);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 3);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
-					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
-						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
-					}
-					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
-							_evt.getMultiBufferSource(), _evt.getPackedLight());
-				}
-			}
-			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).aqua_dress) {
-				texture = "aqua_dress";
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 3);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 1);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer _prmodel && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer.hidePlayerModelPiece(_prmodel.getModel(), 2);
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
-					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
-						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
-					}
-					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
-							_evt.getMultiBufferSource(), _evt.getPackedLight());
-				}
-			}
-			if (entity instanceof LivingEntity _livEnt87 && _livEnt87.hasEffect(CraftNoTaizaiModMobEffects.FOSSILIZATION_EFFECT.get())) {
-				texture = "stone_ban";
-				if (_evt.getRenderer() instanceof LivingEntityRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					if (_evt instanceof RenderLivingEvent.Pre _pre) {
-						_pre.setCanceled(true);
-					}
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
-					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
-						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
-					}
-					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
-							_evt.getMultiBufferSource(), _evt.getPackedLight());
-				}
-			}
-			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).CriticalOver) {
-				texture = "galand";
-				if (_evt.getRenderer() instanceof LivingEntityRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					if (_evt instanceof RenderLivingEvent.Pre _pre) {
-						_pre.setCanceled(true);
-					}
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
-					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
-						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
-					}
-					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
-							_evt.getMultiBufferSource(), _evt.getPackedLight());
-				}
-			}
-			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Levitation
-					&& (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).possession) {
-				texture = "goddess_wings";
-				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
-					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
-						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
-					}
-					Modelgoddess_wings newModel = new Modelgoddess_wings(context.bakeLayer(Modelgoddess_wings.LAYER_LOCATION));
-					newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
-					newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
-					newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
-					newModel.RightArm.copyFrom(_pr.getModel().rightArm);
-					newModel.Body.copyFrom(_pr.getModel().body);
-					newModel.Head.copyFrom(_pr.getModel().head);
-					poseStack.pushPose();
-					poseStack.scale(0.9375F, 0.9375F, 0.9375F);
-					new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
-							_evt.getMultiBufferSource(), _evt.getPackedLight());
-					poseStack.popPose();
-				}
-			}
-			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).light_chakram) {
-				texture = "light-chakram-texture";
-				int customLight = 0x000CD;
-				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
-					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
-						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
-					}
-					Modellight_chakram newModel = new Modellight_chakram(context.bakeLayer(Modellight_chakram.LAYER_LOCATION));
-					newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
-					newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
-					newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
-					newModel.RightArm.copyFrom(_pr.getModel().rightArm);
-					newModel.Body.copyFrom(_pr.getModel().body);
-					newModel.Head.copyFrom(_pr.getModel().head);
-					poseStack.pushPose();
-					poseStack.scale(0.9375F, 0.9375F, 0.9375F);
-					new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
-							_evt.getMultiBufferSource(), _evt.getPackedLight());
-					poseStack.popPose();
-				}
-				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
-					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
-					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
-						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
-					}
-					Modellight_chakram newModel = new Modellight_chakram(context.bakeLayer(Modellight_chakram.LAYER_LOCATION));
-					newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
-					newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
-					newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
-					newModel.RightArm.copyFrom(_pr.getModel().rightArm);
-					newModel.Body.copyFrom(_pr.getModel().body);
-					newModel.Head.copyFrom(_pr.getModel().head);
-					poseStack.pushPose();
-					poseStack.scale(0.9375F, 0.9375F, 0.9375F);
-					new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
-							_evt.getMultiBufferSource(), LightTexture.FULL_BRIGHT);
-					poseStack.popPose();
-				}
-			}
+		}
+		if (entity instanceof Player) {
 			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).goddess
 					&& (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).BP <= 12500) {
 				texture = "goddess_wings";
@@ -719,6 +811,28 @@ public class PlayerRenderProcedure {
 						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
 					}
 					Modelhigh_goddess_wings newModel = new Modelhigh_goddess_wings(context.bakeLayer(Modelhigh_goddess_wings.LAYER_LOCATION));
+					newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
+					newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
+					newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
+					newModel.RightArm.copyFrom(_pr.getModel().rightArm);
+					newModel.Body.copyFrom(_pr.getModel().body);
+					newModel.Head.copyFrom(_pr.getModel().head);
+					poseStack.pushPose();
+					poseStack.scale(0.9375F, 0.9375F, 0.9375F);
+					new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+							_evt.getMultiBufferSource(), _evt.getPackedLight());
+					poseStack.popPose();
+				}
+			}
+			if ((entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).Levitation
+					&& (entity.getCapability(CraftNoTaizaiModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftNoTaizaiModVariables.PlayerVariables())).possession) {
+				texture = "goddess_wings";
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse(("craft_no_taizai:textures/entities/" + texture + ".png")) != null) {
+						_texture = new ResourceLocation(("craft_no_taizai:textures/entities/" + texture + ".png"));
+					}
+					Modelgoddess_wings newModel = new Modelgoddess_wings(context.bakeLayer(Modelgoddess_wings.LAYER_LOCATION));
 					newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
 					newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
 					newModel.LeftArm.copyFrom(_pr.getModel().leftArm);

@@ -18,7 +18,7 @@
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,
-    "damageCount": 0,
+    "damageCount": 1,
     "recipeRemainder": {
       "value": ""
     },
@@ -32,7 +32,7 @@
       "fixedValue": []
     },
     "glowCondition": {
-      "fixedValue": false
+      "fixedValue": true
     },
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,

@@ -135,7 +135,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "craft_no_taizai:dragon_handle",
+          "name": "craft_no_taizai:dragon_handle_sword",
           "weight": 6,
           "functions": [
             {

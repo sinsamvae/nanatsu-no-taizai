@@ -50,7 +50,8 @@ public class DianeOnEntityTickUpdateProcedure {
 									entityToSpawn.setSilent(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1, 1);
+							}.getArrow(projectileLevel, entity, Math.round(((entity instanceof LivingEntity _attributeContext ? _attributeContext.getAttributeValue(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE) : 0.0D)
+									+ (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) + (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) / 2), 1);
 							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -58,13 +59,13 @@ public class DianeOnEntityTickUpdateProcedure {
 					}
 				}
 				if (ran == 2) {
-					if (!(entity instanceof LivingEntity _livEnt24 && _livEnt24.hasEffect(CraftNoTaizaiModMobEffects.HEAVY_METAL.get()))) {
+					if (!(entity instanceof LivingEntity _livEnt26 && _livEnt26.hasEffect(CraftNoTaizaiModMobEffects.HEAVY_METAL.get()))) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(CraftNoTaizaiModMobEffects.HEAVY_METAL.get(), 1200, 1, false, false));
 					}
 				}
 			}
-			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 100, 250)));
+			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 100, 300)));
 		}
 	}
 }

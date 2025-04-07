@@ -41,7 +41,6 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.craftnotaizai.procedures.FairyHelbremOnEntityTickUpdateProcedure;
-import net.mcreator.craftnotaizai.procedures.FairyHelbremEntityIsHurtProcedure;
 import net.mcreator.craftnotaizai.procedures.FairyHelbremEntityDiesProcedure;
 import net.mcreator.craftnotaizai.init.CraftNoTaizaiModEntities;
 
@@ -115,12 +114,6 @@ public class FairyHelbremAnimatedEntity extends Monster implements GeoEntity {
 	@Override
 	public SoundEvent getDeathSound() {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
-	}
-
-	@Override
-	public boolean hurt(DamageSource source, float amount) {
-		FairyHelbremEntityIsHurtProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
-		return super.hurt(source, amount);
 	}
 
 	@Override

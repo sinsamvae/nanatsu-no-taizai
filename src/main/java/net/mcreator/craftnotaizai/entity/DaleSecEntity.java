@@ -125,7 +125,7 @@ public class DaleSecEntity extends Monster implements GeoEntity {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		DaleSecEntityIsHurtProcedure.execute();
+		DaleSecEntityIsHurtProcedure.execute(this.level(), this);
 		return super.hurt(source, amount);
 	}
 

@@ -6,8 +6,6 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
@@ -42,15 +40,15 @@ public class GriamoreAnimatedOnEntityTickUpdateProcedure {
 			entity.lookAt(EntityAnchorArgument.Anchor.EYES, new Vec3(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX()), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY()),
 					((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ())));
 			if (distance <= 6) {
-				if (entity instanceof GriamoreAnimatedEntity _datEntSetL)
-					_datEntSetL.getEntityData().set(GriamoreAnimatedEntity.DATA_wall, true);
+				if (!(entity instanceof GriamoreAnimatedEntity _datEntL20 && _datEntL20.getEntityData().get(GriamoreAnimatedEntity.DATA_wall))) {
+					if (entity instanceof GriamoreAnimatedEntity _datEntSetL)
+						_datEntSetL.getEntityData().set(GriamoreAnimatedEntity.DATA_wall, true);
+				}
 			}
-			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 150, 250)));
+			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 150, 300)));
 		}
-		if ((entity instanceof GriamoreAnimatedEntity _datEntL23 && _datEntL23.getEntityData().get(GriamoreAnimatedEntity.DATA_wall)) == true) {
+		if (entity instanceof GriamoreAnimatedEntity _datEntL24 && _datEntL24.getEntityData().get(GriamoreAnimatedEntity.DATA_wall)) {
 			entity.getPersistentData().putDouble("wall", (entity.getPersistentData().getDouble("wall") + 1));
-			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 10, 1, false, false));
 			r = 1.5;
 			a = Math.random() * 12;
 			b = 90;
@@ -69,7 +67,8 @@ public class GriamoreAnimatedOnEntityTickUpdateProcedure {
 				for (Entity entityiterator : _entfound) {
 					if (!(entity == entityiterator)) {
 						entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:mana_dmg")))),
-								entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1);
+								Math.round(((entity instanceof LivingEntity _attributeContext ? _attributeContext.getAttributeValue(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE) : 0.0D)
+										+ (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) + (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) / 2));
 						entityiterator.setDeltaMovement(new Vec3(((-1.5) * entityiterator.getDeltaMovement().x()), ((-1.5) * entityiterator.getDeltaMovement().y()), ((-1.5) * entityiterator.getDeltaMovement().z())));
 					}
 				}

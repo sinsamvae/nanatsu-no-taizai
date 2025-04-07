@@ -57,4 +57,5 @@ public class CraftNoTaizaiModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> PURGATORY_FIRE_PARTICLES = REGISTRY.register("purgatory_fire_particles", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> WATER_FALL = REGISTRY.register("water_fall", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> ELECTRIC_PARTICLES = REGISTRY.register("electric_particles", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> BLOOD_PARTICLES = REGISTRY.register("blood_particles", () -> new SimpleParticleType(false));
 }

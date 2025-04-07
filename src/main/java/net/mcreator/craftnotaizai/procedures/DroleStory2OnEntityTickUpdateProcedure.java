@@ -95,7 +95,8 @@ public class DroleStory2OnEntityTickUpdateProcedure {
 									if (!entityiterator.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("craft_no_taizai:commandments")))) {
 										entityiterator.hurt(
 												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:earth_magic")))),
-												entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1);
+												Math.round(((entity instanceof LivingEntity _attributeContext ? _attributeContext.getAttributeValue(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE) : 0.0D)
+														+ (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) + (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) / 2));
 										entityiterator.setDeltaMovement(new Vec3(((entityiterator.getDeltaMovement().x() + entityiterator.getLookAngle().x) * 0), ((entityiterator.getDeltaMovement().y() + entityiterator.getLookAngle().y) * (-1.3)),
 												((entityiterator.getDeltaMovement().z() + entityiterator.getLookAngle().z) * 0)));
 									}
@@ -143,7 +144,8 @@ public class DroleStory2OnEntityTickUpdateProcedure {
 								if (!entityiterator.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("craft_no_taizai:commandments")))) {
 									entityiterator.hurt(
 											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:earth_magic")))),
-											entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1);
+											Math.round(((entity instanceof LivingEntity _attributeContext ? _attributeContext.getAttributeValue(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE) : 0.0D)
+													+ (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) + (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) / 2));
 								}
 							}
 						}

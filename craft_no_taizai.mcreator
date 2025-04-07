@@ -1393,7 +1393,7 @@
           "src/main/resources/assets/craft_no_taizai/models/item/dragon_handle.json"
         ]
       },
-      "path": "~/Weapons"
+      "path": "~/Weapons/Dragon Handle"
     },
     {
       "name": "Rhitta",
@@ -3839,14 +3839,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -5859,6 +5851,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -6586,7 +6582,7 @@
           "src/main/resources/assets/craft_no_taizai/models/item/insect_spawn_egg.json"
         ]
       },
-      "path": "~/entities/geckolibmodels/insect"
+      "path": "~/entities/insect"
     },
     {
       "name": "Friesiaarmor",
@@ -6721,25 +6717,6 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftnotaizai/network/DoubleJumpMessage.java"
-        ]
-      },
-      "path": "~/doublejump"
-    },
-    {
-      "name": "RestoreJump",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "restore_jump",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/RestoreJumpProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
         ]
       },
       "path": "~/doublejump"
@@ -7418,14 +7395,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -7495,22 +7464,6 @@
       "path": "~/entities/Weakest/hard"
     },
     {
-      "name": "Vine",
-      "type": "animatedentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "vine",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/entity/model/VineModel.java",
-          "src/main/resources/assets/craft_no_taizai/models/item/vine_spawn_egg.json",
-          "src/main/java/net/mcreator/craftnotaizai/client/renderer/VineRenderer.java",
-          "src/main/java/net/mcreator/craftnotaizai/entity/VineEntity.java"
-        ]
-      },
-      "path": "~/entities/geckolibmodels/vine"
-    },
-    {
       "name": "ElizabethArk",
       "type": "procedure",
       "compiles": true,
@@ -7543,7 +7496,16 @@
         "files": [
           "src/main/java/net/mcreator/craftnotaizai/procedures/DaleSecEntityIsHurtProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/StoryModeEntities/Season1/dale/dalesecmoves"
     },
@@ -7882,37 +7844,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/StoryModeEntities/Season1/helbrem2"
-    },
-    {
-      "name": "FairyHelbremEntityIsHurt",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fairy_helbrem_entity_is_hurt",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/FairyHelbremEntityIsHurtProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -14792,33 +14723,6 @@
       "path": "~/Magic Abilities/ten commandments/ComboStar"
     },
     {
-      "name": "ComboStar",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "combo_star",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/ComboStarProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "damagesource",
-            "type": "damagesource"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Magic Abilities/ten commandments/ComboStar/ComboStar"
-    },
-    {
       "name": "ChangeMagicComboStar",
       "type": "procedure",
       "compiles": true,
@@ -15719,6 +15623,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -15870,25 +15786,6 @@
         ]
       },
       "path": "~/Spells/Attack Spells/buster ice"
-    },
-    {
-      "name": "RenderYggdraCloth",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "render_yggdra_cloth",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/RenderYggdraClothProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Weapons/Sacred Treasure/chastiefol/Yggdra Cloth"
     },
     {
       "name": "TrueSpirtSpearKeybind",
@@ -18323,7 +18220,7 @@
           }
         ]
       },
-      "path": "~/entities/VeryHard/normal"
+      "path": "~/entities/VeryHard/normal/Gray"
     },
     {
       "name": "InfernoIncantation",
@@ -18370,7 +18267,7 @@
           "src/main/resources/assets/craft_no_taizai/models/item/gray_demon_entity_spawn_egg.json"
         ]
       },
-      "path": "~/entities/VeryHard/normal"
+      "path": "~/entities/VeryHard/normal/Gray"
     },
     {
       "name": "GilThunderAnimated",
@@ -20592,25 +20489,6 @@
       "path": "~/potion/Necrosis"
     },
     {
-      "name": "YggdrasilArmorRender",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "yggdrasil_armor_render",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/YggdrasilArmorRenderProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Weapons/Sacred Treasure/Basquias/Yggdra Armor"
-    },
-    {
       "name": "HolyTreeShard",
       "type": "item",
       "compiles": true,
@@ -20755,29 +20633,6 @@
         ]
       },
       "path": "~/skills/Rapid Movement"
-    },
-    {
-      "name": "RenderShape",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "render_shape",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/RenderShapeProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/skills/Magic Detection"
     },
     {
       "name": "ResistFire",
@@ -21293,25 +21148,6 @@
           {
             "name": "world",
             "type": "world"
-          }
-        ]
-      },
-      "path": "~/Weapons/Sacred Treasure/Basquias/Emerald Octo"
-    },
-    {
-      "name": "EmeraldOctoRender",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "emerald_octo_render",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/EmeraldOctoRenderProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -24487,7 +24323,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/model/AlbionFatModel.java"
         ]
       },
-      "path": "~/entities/VeryHard/Hard/FatAlbion"
+      "path": "~/entities/VeryHard/very hard/FatAlbion"
     },
     {
       "name": "AlbionFatOnEntityTickUpdate",
@@ -24510,7 +24346,7 @@
           }
         ]
       },
-      "path": "~/entities/VeryHard/Hard/FatAlbion"
+      "path": "~/entities/VeryHard/very hard/FatAlbion"
     },
     {
       "name": "TallAlbion",
@@ -24626,7 +24462,7 @@
           "src/main/java/net/mcreator/craftnotaizai/entity/AlbionTallEntity.java"
         ]
       },
-      "path": "~/entities/VeryHard/Hard/TallAlbion"
+      "path": "~/entities/VeryHard/very hard/TallAlbion"
     },
     {
       "name": "AlbionTallOnEntityTickUpdate",
@@ -24649,7 +24485,7 @@
           }
         ]
       },
-      "path": "~/entities/VeryHard/Hard/TallAlbion"
+      "path": "~/entities/VeryHard/very hard/TallAlbion"
     },
     {
       "name": "CommandmentVar",
@@ -24661,26 +24497,6 @@
         "return_type": "string",
         "files": [
           "src/main/java/net/mcreator/craftnotaizai/procedures/CommandmentVarProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/var"
-    },
-    {
-      "name": "CommandmentReturn",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "commandment_return",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/CommandmentReturnProcedure.java"
         ],
         "dependencies": [
           {
@@ -25299,20 +25115,6 @@
         "files": [
           "src/main/java/net/mcreator/craftnotaizai/client/screens/HealthBarAndManaBarOverlay.java"
         ]
-      },
-      "path": "~/overlay"
-    },
-    {
-      "name": "Render",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "render",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/RenderProcedure.java"
-        ],
-        "dependencies": []
       },
       "path": "~/overlay"
     },
@@ -27526,7 +27328,7 @@
           }
         ]
       },
-      "path": "~/entities/geckolibmodels/insect"
+      "path": "~/entities/insect"
     },
     {
       "name": "SevenDeadlySinsOpening",
@@ -28298,20 +28100,6 @@
         ]
       },
       "path": "~/dimensions/Istar"
-    },
-    {
-      "name": "CaveOfTrainingTimeLeftRender",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cave_of_training_time_left_render",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/CaveOfTrainingTimeLeftRenderProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/overlay"
     },
     {
       "name": "DestroyFourElementsProjectileHitsLivingEntity",
@@ -30134,29 +29922,6 @@
       "path": "~/Weapons/Sacred Treasure/LostVayne/PhysicalClone/CloneSkills"
     },
     {
-      "name": "DisplayHealth",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "display_health",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/DisplayHealthProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Ect"
-    },
-    {
       "name": "EarthGolemSkill",
       "type": "procedure",
       "compiles": true,
@@ -30278,21 +30043,6 @@
       "path": "~/Gui/Settings/Display Health"
     },
     {
-      "name": "GuildAcceptGui",
-      "type": "gui",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "guild_accept_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/world/inventory/GuildAcceptGuiMenu.java",
-          "src/main/java/net/mcreator/craftnotaizai/network/GuildAcceptGuiButtonMessage.java",
-          "src/main/java/net/mcreator/craftnotaizai/client/gui/GuildAcceptGuiScreen.java"
-        ]
-      },
-      "path": "~/Gui/guild/GuildAccept"
-    },
-    {
       "name": "GuildName",
       "type": "procedure",
       "compiles": true,
@@ -30313,154 +30063,6 @@
       "path": "~/var"
     },
     {
-      "name": "GuildGui",
-      "type": "gui",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "guild_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/world/inventory/GuildGuiMenu.java",
-          "src/main/java/net/mcreator/craftnotaizai/client/gui/GuildGuiScreen.java",
-          "src/main/java/net/mcreator/craftnotaizai/network/GuildGuiButtonMessage.java"
-        ]
-      },
-      "path": "~/Gui/guild"
-    },
-    {
-      "name": "OpenGuildGui",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_guild_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/OpenGuildGuiProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Gui/guild"
-    },
-    {
-      "name": "AcceptGuild",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "accept_guild",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/AcceptGuildProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Gui/guild/GuildAccept"
-    },
-    {
-      "name": "GuildMember",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "guild_member",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/GuildMemberProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Gui/guild/Member"
-    },
-    {
-      "name": "DenyGuild",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "deny_guild",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/DenyGuildProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Gui/guild/GuildAccept"
-    },
-    {
-      "name": "GuildMember2",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "guild_member_2",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/GuildMember2Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Gui/guild/Member"
-    },
-    {
-      "name": "GuildMember3",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "guild_member_3",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/GuildMember3Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Gui/guild/Member"
-    },
-    {
       "name": "GuildLeader",
       "type": "procedure",
       "compiles": true,
@@ -30479,65 +30081,6 @@
         ]
       },
       "path": "~/var"
-    },
-    {
-      "name": "GuildMember4",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "guild_member_4",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/GuildMember4Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Gui/guild/Member"
-    },
-    {
-      "name": "GuildMember5",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "guild_member_5",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/GuildMember5Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Gui/guild/Member"
-    },
-    {
-      "name": "LeaveGuild",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "leave_guild",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/LeaveGuildProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Gui/guild"
     },
     {
       "name": "PlayerInGuild",
@@ -31853,7 +31396,7 @@
           "src/main/java/net/mcreator/craftnotaizai/client/renderer/BlueDemonRenderer.java"
         ]
       },
-      "path": "~/entities/VeryHard/weak/Blue Demon"
+      "path": "~/entities/VeryHard/weakess/Blue Demon"
     },
     {
       "name": "BlueDemonOnEntityTickUpdate",
@@ -31876,7 +31419,7 @@
           }
         ]
       },
-      "path": "~/entities/VeryHard/weak/Blue Demon"
+      "path": "~/entities/VeryHard/weakess/Blue Demon"
     },
     {
       "name": "Story45",
@@ -33177,41 +32720,6 @@
         ]
       },
       "path": "~/Magic Abilities/ten commandments/Trick Star/AshDragon"
-    },
-    {
-      "name": "FreezeCoffinDamage",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "freeze_coffin_damage",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/FreezeCoffinDamageProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Spells/Attack Spells/freeze coffin"
     },
     {
       "name": "FreezeCoffinSkill",
@@ -35540,7 +35048,7 @@
           }
         ]
       },
-      "path": "~/StoryModeEntities/Season1/helbrem2"
+      "path": "~/StoryModeEntities/Season1/helbrem2/Sword"
     },
     {
       "name": "HelbramSword",
@@ -35554,7 +35062,7 @@
           "src/main/java/net/mcreator/craftnotaizai/client/renderer/HelbramSwordRenderer.java"
         ]
       },
-      "path": "~/StoryModeEntities/Season1/helbrem2"
+      "path": "~/StoryModeEntities/Season1/helbrem2/Sword"
     },
     {
       "name": "IncreaseProjectileWhileProjectileFlyingTick",
@@ -39935,6 +39443,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -40222,7 +39734,7 @@
           }
         ]
       },
-      "path": "~/dimensions/Istar"
+      "path": "~/entities"
     },
     {
       "name": "TornadoDiskProJectileWhileProjectileFlyingTick",
@@ -41144,33 +40656,6 @@
       "path": "~/Commandments"
     },
     {
-      "name": "RenderSunFlowerBeam",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "render_sun_flower_beam",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftnotaizai/procedures/RenderSunFlowerBeamProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "partialTick",
-            "type": "number"
-          },
-          {
-            "name": "ticks",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Weapons/Sacred Treasure/chastiefol/sunflower"
-    },
-    {
       "name": "ElaineArmorBlack",
       "type": "armor",
       "compiles": true,
@@ -41210,6 +40695,755 @@
         ]
       },
       "path": "~/Recipe/Armor"
+    },
+    {
+      "name": "RenderShapes",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "render_shapes",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/RenderShapesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "partialTick",
+            "type": "number"
+          },
+          {
+            "name": "ticks",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/system"
+    },
+    {
+      "name": "RenderOverlays",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "render_overlays",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/RenderOverlaysProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/system"
+    },
+    {
+      "name": "ThunderCarnivalProjectileWhileProjectileFlyingTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunder_carnival_projectile_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/ThunderCarnivalProjectileWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic Abilities/Six Knights Of Black/Thunder/Thunder Carnival"
+    },
+    {
+      "name": "ThunderCarnivalProjectileProjectileHitsLivingEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunder_carnival_projectile_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/ThunderCarnivalProjectileProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Magic Abilities/Six Knights Of Black/Thunder/Thunder Carnival"
+    },
+    {
+      "name": "ThunderCarnivalProjectile",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunder_carnival_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/client/renderer/ThunderCarnivalProjectileRenderer.java",
+          "src/main/java/net/mcreator/craftnotaizai/entity/ThunderCarnivalProjectileEntity.java"
+        ]
+      },
+      "path": "~/Magic Abilities/Six Knights Of Black/Thunder/Thunder Carnival"
+    },
+    {
+      "name": "ThunderCarnivalSkill",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunder_carnival_skill",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/ThunderCarnivalSkillProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Magic Abilities/Six Knights Of Black/Thunder/Thunder Carnival"
+    },
+    {
+      "name": "ThunderKeybind",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunder_keybind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/ThunderKeybindProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic Abilities/Six Knights Of Black/Thunder"
+    },
+    {
+      "name": "ChangeMagicThunder",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "change_magic_thunder",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/ChangeMagicThunderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/magic/Set_Magic_Demon"
+    },
+    {
+      "name": "IceMeteoEntity",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_meteo_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/entity/IceMeteoEntityEntity.java",
+          "src/main/java/net/mcreator/craftnotaizai/entity/model/IceMeteoEntityModel.java",
+          "src/main/resources/assets/craft_no_taizai/models/item/ice_meteo_entity_spawn_egg.json",
+          "src/main/java/net/mcreator/craftnotaizai/client/renderer/IceMeteoEntityRenderer.java"
+        ]
+      },
+      "path": "~/Magic Abilities/Six Knights Of Black/Elemental/Ice Meteo"
+    },
+    {
+      "name": "IceMeteoEntityOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_meteo_entity_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/IceMeteoEntityOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic Abilities/Six Knights Of Black/Elemental/Ice Meteo"
+    },
+    {
+      "name": "IceMeteoSkill",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_meteo_skill",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/IceMeteoSkillProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic Abilities/Six Knights Of Black/Elemental/Ice Meteo"
+    },
+    {
+      "name": "BlazeStormSkill",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blaze_storm_skill",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/BlazeStormSkillProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic Abilities/Six Knights Of Black/Elemental/Blaze Storm"
+    },
+    {
+      "name": "FourElementSkill",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "four_element_skill",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/FourElementSkillProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Magic Abilities/Six Knights Of Black/Elemental/Four Element"
+    },
+    {
+      "name": "FourElementTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "four_element_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/FourElementTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic Abilities/Six Knights Of Black/Elemental/Four Element"
+    },
+    {
+      "name": "DragonHandleSword",
+      "type": "animateditem",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_handle_sword",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/item/model/DragonHandleSwordItemModel.java",
+          "src/main/java/net/mcreator/craftnotaizai/item/DragonHandleSwordItem.java",
+          "src/main/java/net/mcreator/craftnotaizai/item/renderer/DragonHandleSwordItemRenderer.java",
+          "src/main/resources/assets/craft_no_taizai/models/item/dragon_handle_sword.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "DragonHandleToolInInventoryTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_handle_tool_in_inventory_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/DragonHandleToolInInventoryTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Weapons/Dragon Handle"
+    },
+    {
+      "name": "Sdsreset",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sdsreset",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/command/SdsresetCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "SdsResetCommand",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sds_reset_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/SdsResetCommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Reset"
+    },
+    {
+      "name": "ElementalKeybind",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "elemental_keybind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/ElementalKeybindProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic Abilities/Six Knights Of Black/Elemental"
+    },
+    {
+      "name": "ChangeMagicElement",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "change_magic_element",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/ChangeMagicElementProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/magic/Set_Magic_Demon"
+    },
+    {
+      "name": "PietyEffect",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "piety_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/potion/PietyEffectMobEffect.java"
+        ]
+      },
+      "path": "~/potion"
+    },
+    {
+      "name": "Piety",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "piety",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/PietyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Commandments"
+    },
+    {
+      "name": "PatienceEffect",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "patience_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/potion/PatienceEffectMobEffect.java"
+        ]
+      },
+      "path": "~/potion"
+    },
+    {
+      "name": "Patience",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "patience",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/PatienceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Commandments"
+    },
+    {
+      "name": "CopperDemon",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copper_demon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/entity/CopperDemonEntity.java",
+          "src/main/java/net/mcreator/craftnotaizai/client/renderer/CopperDemonRenderer.java",
+          "src/main/resources/data/craft_no_taizai/forge/biome_modifier/copper_demon_biome_modifier.json",
+          "src/main/java/net/mcreator/craftnotaizai/entity/model/CopperDemonModel.java",
+          "src/main/resources/assets/craft_no_taizai/models/item/copper_demon_spawn_egg.json"
+        ]
+      },
+      "path": "~/entities/VeryHard/Hard/Copper"
+    },
+    {
+      "name": "CopperDemonOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copper_demon_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/CopperDemonOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/entities/VeryHard/Hard/Copper"
+    },
+    {
+      "name": "PerfectCubeOrbRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "perfect_cube_orb_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/PerfectCubeOrbRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/items/Incantation Orb/perfectcube"
+    },
+    {
+      "name": "FleachCrushSkill",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fleach_crush_skill",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/FleachCrushSkillProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic Abilities/Six Knights Of Black/Whiplash/Flesh Crush"
+    },
+    {
+      "name": "BleedingEffect",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bleeding_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/potion/BleedingEffectMobEffect.java"
+        ]
+      },
+      "path": "~/potion/Bleeding"
+    },
+    {
+      "name": "EnhancementSkill",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enhancement_skill",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/EnhancementSkillProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Magic Abilities/Six Knights Of Black/Whiplash/Enhancement"
+    },
+    {
+      "name": "BleedingEffectOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bleeding_effect_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/BleedingEffectOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/potion/Bleeding"
+    },
+    {
+      "name": "BloodParticles",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_particles",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/client/particle/BloodParticlesParticle.java",
+          "src/main/resources/assets/craft_no_taizai/particles/blood_particles.json"
+        ]
+      },
+      "path": "~/particle"
+    },
+    {
+      "name": "SliverDemon",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sliver_demon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/entity/model/SliverDemonModel.java",
+          "src/main/java/net/mcreator/craftnotaizai/entity/SliverDemonEntity.java",
+          "src/main/java/net/mcreator/craftnotaizai/client/renderer/SliverDemonRenderer.java",
+          "src/main/resources/assets/craft_no_taizai/models/item/sliver_demon_spawn_egg.json",
+          "src/main/resources/data/craft_no_taizai/forge/biome_modifier/sliver_demon_biome_modifier.json"
+        ]
+      },
+      "path": "~/entities/VeryHard/weak/Silver Demon"
+    },
+    {
+      "name": "SliverDemonOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sliver_demon_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftnotaizai/procedures/SliverDemonOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/entities/VeryHard/weak/Silver Demon"
     }
   ],
   "variable_elements": [
@@ -42670,6 +42904,18 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "four_element",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "lock_on_timer",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -43140,7 +43386,9 @@
       "CUSTOM:GrayDemonEntity",
       "CUSTOM:BlueDemon",
       "CUSTOM:AndreDemonForm",
-      "CUSTOM:MuramoDemonForm"
+      "CUSTOM:MuramoDemonForm",
+      "CUSTOM:CopperDemon",
+      "CUSTOM:SliverDemon"
     ],
     "BLOCKS:minecraft:needs_diamond_tool": [
       "~CUSTOM:HolyTreeOre",
@@ -43366,7 +43614,9 @@
       "CUSTOM:AndreDemonForm",
       "CUSTOM:RedDemonGeckolib",
       "CUSTOM:GrayDemonEntity",
-      "CUSTOM:BlueDemon"
+      "CUSTOM:BlueDemon",
+      "CUSTOM:CopperDemon",
+      "CUSTOM:SliverDemon"
     ],
     "ENTITIES:mod:sds_entities": [
       "CUSTOM:Gerheade",
@@ -43459,6 +43709,38 @@
     ]
   },
   "tab_element_order": {
+    "CUSTOM:Weapons": [
+      "DragonHandleSword",
+      "LizSword",
+      "LizSneathSword",
+      "BellStaff",
+      "Whip",
+      "Bow",
+      "CurvedSword",
+      "Halbert",
+      "HendriksonSword",
+      "DemonKingSword",
+      "DreyfusSword",
+      "Katana",
+      "Scythe",
+      "JerichoSword",
+      "GolgiusSword",
+      "Twigosword",
+      "Spiraledlance",
+      "Rapier",
+      "GilThunderSword",
+      "Helbrumsword",
+      "Sequence",
+      "SawSword",
+      "Axe2",
+      "SawBlade",
+      "LongAxe",
+      "GuardSpear",
+      "DoubleSidedSpear",
+      "ZeldrisSword",
+      "EstarrosaSword",
+      "ZaratrasShield"
+    ],
     "CUSTOM:Foods": [
       "UncookedDusk",
       "CookedDuskMeat",
@@ -43562,8 +43844,8 @@
       "gui.craft_no_taizai.story_board.label_the_seven_deadly_sins": "EP1: The Seven Deadly Sins",
       "death.attack.wind_magic.player": "%1$s died whilst trying to escape %2$s",
       "advancements.sapphire.descr": "Get BP 11300",
-      "item.craft_no_taizai.manta_spawn_egg": "Mantaray Spawn Egg",
       "advancements.defeat_ban.descr": "Defeat The Sin Of Greed",
+      "item.craft_no_taizai.manta_spawn_egg": "Mantaray Spawn Egg",
       "gui.craft_no_taizai.dubs_trade.label_trade": "TRADE",
       "item.craft_no_taizai.marmas_spawn_egg": "Marmas Spawn Egg",
       "item.craft_no_taizai.dusk_bison_1_spawn_egg": "Dusk Bison Spawn Egg",
@@ -43634,7 +43916,6 @@
       "gui.craft_no_taizai.story_board.label_against_his_fellow_ally_gowther": "against his fellow ally Gowther.",
       "advancements.defeat_meliodas.descr": "Defeat The Sin Of Wrath",
       "gui.craft_no_taizai.theo_tower.label_tower_of_trail": "Tower of Trails",
-      "gui.craft_no_taizai.guild_accept_gui.label_deny": "DENY",
       "item.craft_no_taizai.king_story_1_spawn_egg": "King Spawn Egg",
       "gui.craft_no_taizai.story_board.label_empty": "Defeat Friesia",
       "item.craft_no_taizai.king_boss_animated_spawn_egg": "King Spawn Egg",
@@ -43718,7 +43999,6 @@
       "subtitles.tonado": "",
       "gamerule.craftNoTaizaiXPAmount": "xp amount",
       "gui.craft_no_taizai.horn_of_cernunos_gui.label_who_are_you": "Who Are You?",
-      "entity.craft_no_taizai.vine": "Vine",
       "item.craft_no_taizai.galand_over_boss_spawn_egg": "Galand Spawn Egg",
       "item.craft_no_taizai.royalknight_leggings": "Royalknight Leggings",
       "key.craft_no_taizai.mantaray_space": "Flying Ascend",
@@ -43826,6 +44106,7 @@
       "item.craft_no_taizai.ban_armor_chestplate": "Ban Chestplate",
       "gui.craft_no_taizai.story_board.label_ep_14_master_of_the_sun": "EP 14: Master of the Sun",
       "block.craft_no_taizai.perfect_cube": "Perfect Cube",
+      "item.craft_no_taizai.sliver_demon_spawn_egg": "Sliver Demon Spawn Egg",
       "gui.craft_no_taizai.story_board.label_ep_3the_scared_treasure_lostvay": "EP 3:The Scared Treasure Lostvayne",
       "entity.craft_no_taizai.dubs": "Dubs",
       "item.craft_no_taizai.soldier_armor_helmet": "Soldier Helmet",
@@ -43851,6 +44132,7 @@
       "gui.craft_no_taizai.story_board.label_tag_team_battle2": "tag team battle.",
       "item.craft_no_taizai.twigo_animated_spawn_egg": "Twigo Animated Spawn Egg",
       "item.craft_no_taizai.sunflower_spawn_egg": "Sunflower Spawn Egg",
+      "item.craft_no_taizai.ice_meteo_entity_spawn_egg": "Ice Meteo Entity Spawn Egg",
       "item.craft_no_taizai.red_demon_geckolib_spawn_egg": "Red Demon Spawn Egg",
       "entity.craft_no_taizai.physical_clone": "Physical Clone",
       "item.craft_no_taizai.estarossaarmor_chestplate": "Estarossa Chestplate",
@@ -43897,6 +44179,7 @@
       "item.craft_no_taizai.parada_animated_spawn_egg": "Parada Spawn Egg",
       "gui.craft_no_taizai.story_board.label_must_fight_the_holy_knights_frie1": "Must fight the holy knights Friesia and Ruin ",
       "entity.craft_no_taizai.elaine": "Elaine",
+      "effect.craft_no_taizai.piety_effect": "Piety Effect",
       "item.craft_no_taizai.twigosword": "Twigosword",
       "item.craft_no_taizai.cook_troll_ear": "Troll Ear",
       "gamerule.craftNoTaizaiRerollMagic.description": "Will Give Reroll Magic Item",
@@ -44067,6 +44350,7 @@
       "gui.craft_no_taizai.story_board.label_the_armor_giant": "The Armor Giant.",
       "gui.craft_no_taizai.story_board.label_summoned_by_gloxinia_and_drole": "summoned by Gloxinia and Drole. Escanor refuses to fight",
       "item.craft_no_taizai.double_sided_spear": "Double-Sided Spear",
+      "entity.craft_no_taizai.ice_meteo_entity": "Ice Meteo Entity",
       "item.craft_no_taizai.tyrant_dragon_spawn_egg": "Tyrant Dragon Spawn Egg",
       "gui.craft_no_taizai.story_board.label_what_have_they_come_for": "What have they come for?",
       "entity.craft_no_taizai.hendrickson_animated": "Hendrickson",
@@ -44117,6 +44401,7 @@
       "entity.craft_no_taizai.marmas": "Marmas",
       "item.craft_no_taizai.puora_spawn_egg": "Puora Spawn Egg",
       "item.craft_no_taizai.basquias_guardian_spawn_egg": "Basquias Guardian Spawn Egg",
+      "item.craft_no_taizai.dragon_handle_sword": "Dragon Handle Sword",
       "advancements.defeat_monspeet.descr": "Defeat Commandment Of Reticence",
       "gui.craft_no_taizai.story_board.label_transported_back_so_he_can_aid_h": "transported back so he can aid him in his fight against",
       "block.craft_no_taizai.glow_block": "Glow Block",
@@ -44176,6 +44461,7 @@
       "advancements.red_demon_blood.descr": "New Generation Holy Knights!",
       "item.craft_no_taizai.zeldris_armor_chestplate": "Zeldris Chestplate",
       "gui.craft_no_taizai.story_board.label_defeat_taizoo": "Defeat Taizoo",
+      "effect.craft_no_taizai.bleeding_effect": "Bleeding Effect",
       "item.craft_no_taizai.deldry_spawn_egg": "Deldry Spawn Egg",
       "entity.craft_no_taizai.insect": "Insect",
       "advancements.defeat_king.descr": "Defeat The Sin Of Sloth",
@@ -44190,6 +44476,7 @@
       "gui.craft_no_taizai.story_board.tooltip_back": "Back",
       "gui.craft_no_taizai.goddess_clan.label_empty1": "\u003e",
       "gui.craft_no_taizai.story_board.label_the_holy_knight_helbram_dispatch": "The Holy Knight Helbram dispatches assassins to crush",
+      "effect.craft_no_taizai.patience_effect": "Patience Effect",
       "item.craft_no_taizai.diane_armor_helmet": "Diane Armor Helments",
       "item.craft_no_taizai.slader_armor_leggings": "Slader Armor",
       "gui.craft_no_taizai.demon_clan.label_empty": "\u003c",
@@ -44207,7 +44494,6 @@
       "death.attack.wind_magic.item": "%1$s was killed by %2$s using %3$s",
       "gui.craft_no_taizai.story_board.label_holy_knight_guila_follows_you_to": "Holy Knight Guila follows you to the",
       "entity.craft_no_taizai.dumblebbas_animated": "Dumblebbas",
-      "gui.craft_no_taizai.guild_gui.label_leave": "LEAVE",
       "item.craft_no_taizai.dale_sec_spawn_egg": "Dale Spawn Egg",
       "gui.craft_no_taizai.story_board.label_in_order_to_take_elizabeth_back": "In order to take Elizabeth back, Meliodas teams up with",
       "item.craft_no_taizai.merlin_outfit_leggings": "Merlin Pants",
@@ -44259,7 +44545,6 @@
       "entity.craft_no_taizai.diane_animated": "Diane",
       "entity.craft_no_taizai.kaleidoscope_entity": "Kaleidoscope",
       "entity.craft_no_taizai.drole": "Drole",
-      "gui.craft_no_taizai.guild_accept_gui.label_accept": "ACCEPT",
       "gui.craft_no_taizai.story_board.label_capital_of_the_dead": "Capital of the Dead",
       "item.craft_no_taizai.serpent_icon": "Serpent Icon",
       "item.craft_no_taizai.kings_armor_chestplate": "Kings Chestplate",
@@ -44365,9 +44650,7 @@
       "gui.craft_no_taizai.story_board.label_ep_13_farewell_beloved_thief": "EP 13: Farewell, Beloved Thief",
       "gui.craft_no_taizai.clones_gui.label_clones": "Clones",
       "subtitles.graydemon_hurt": "",
-      "gui.craft_no_taizai.guild_gui.label_empty": "\u003e",
       "item.craft_no_taizai.bell_staff": "Bell Staff",
-      "gui.craft_no_taizai.guild_gui.tooltip_back": "Back",
       "gui.craft_no_taizai.demon_king_gui.label_welcome_demon_i_shall_share_bit": "I will give you a small portion of my power",
       "gui.craft_no_taizai.magic_menu.label_page_3": "Page 3.",
       "gui.craft_no_taizai.demon_stat.label_mana": "Mana",
@@ -44481,6 +44764,7 @@
       "gui.craft_no_taizai.jenna_gui.label_would_you_like_to_enter_the_cave": "You are way to fragile!",
       "gui.craft_no_taizai.story_board.label_promise_did_these_once_good_frie": "promise did these once good friends make?",
       "item.craft_no_taizai.patience_icon": "Dragon Icon",
+      "entity.craft_no_taizai.sliver_demon": "Sliver Demon",
       "item.craft_no_taizai.golgiusarmor_leggings": "Golgius Leggings",
       "item.craft_no_taizai.teleportation_orb": "Teleport Incantation Orb",
       "advancements.diamond_rank.title": "Diamond",
@@ -44507,6 +44791,7 @@
       "gui.craft_no_taizai.disaster_menu.label_slot": "Slot",
       "item.craft_no_taizai.fragment_of_eternal_darkness": "Fairy Fragment Of Eternal Darkness",
       "item.craft_no_taizai.goddess_amber": "Goddess Amber",
+      "entity.craft_no_taizai.copper_demon": "Copper Demon",
       "key.craft_no_taizai.swap_move": "Swap Move",
       "entity.craft_no_taizai.giga_pick": "Giga Pick",
       "gui.craft_no_taizai.giant_clan.label_30_health": "- Health: 25 to 35",
@@ -44598,7 +44883,6 @@
       "item.craft_no_taizai.heat_fork": "Heat_Fork",
       "item.craft_no_taizai.emptyorb": "Empty Incantation Orb",
       "gui.craft_no_taizai.story_board.label_defect_15_royale_gurard": "Defeat 10 Holy Knights",
-      "item.craft_no_taizai.vine_spawn_egg": "Vine Spawn Egg",
       "biome.craft_no_taizai.capitalofthedeadbiome_2": "Capitalofthedeadbiome",
       "gui.craft_no_taizai.story_board.label_an_injured_diane_awakens_having": "An injured Diane awakens, having trouble remembering her",
       "gui.craft_no_taizai.theo_gui.label_tower_of_trails": ". Tower Of Trails",
@@ -44696,7 +44980,6 @@
       "item.craft_no_taizai.fairy_helbram_armor_chestplate": "Helbram Chestplate",
       "gui.craft_no_taizai.side_quest_gui.label_quest": "Quest",
       "item.craft_no_taizai.aeal_heal_spawn_egg": "Aeal Heal Spawn Egg",
-      "gui.craft_no_taizai.guild_gui.label_members": "MEMBERS",
       "block.craft_no_taizai.stage_one_agave": "Agave",
       "gui.craft_no_taizai.story_board.label_zeals_memories_with_the_return": "Zeal\u0027s memories. With the return of the Demon Clan, New",
       "gamerule.craftNoTaizaiIstar.description": "will change how much stat incrase ",
@@ -44715,6 +44998,7 @@
       "block.craft_no_taizai.side_mountain": "Side Mountain",
       "entity.craft_no_taizai.cocoon_of_darkness": "Cocoon Of Darkness",
       "entity.craft_no_taizai.king_story_1": "King",
+      "item.craft_no_taizai.copper_demon_spawn_egg": "Copper Demon Spawn Egg",
       "gui.craft_no_taizai.story_board.label_meliodas_loses_elizabeth_again": "Meliodas loses Elizabeth again; Ban confronts the person",
       "gui.craft_no_taizai.story_board.label_diane_and_company_battle_the_new": "Diane and company battle the New Generation.",
       "gui.craft_no_taizai.goddess_clan.label_demon_clan": "Goddess Race",
@@ -44973,10 +45257,6 @@
                     "children": []
                   },
                   {
-                    "name": "Yggdra Cloth",
-                    "children": []
-                  },
-                  {
                     "name": "pollenGarden",
                     "children": []
                   },
@@ -45083,10 +45363,6 @@
                     "children": []
                   },
                   {
-                    "name": "Yggdra Armor",
-                    "children": []
-                  },
-                  {
                     "name": "Moon Rose",
                     "children": [
                       {
@@ -45151,6 +45427,10 @@
           },
           {
             "name": "Holy Tree Sword",
+            "children": []
+          },
+          {
+            "name": "Dragon Handle",
             "children": []
           }
         ]
@@ -45279,6 +45559,10 @@
           },
           {
             "name": "Stun",
+            "children": []
+          },
+          {
+            "name": "Bleeding",
             "children": []
           }
         ]
@@ -45413,6 +45697,10 @@
           {
             "name": "ReLoad Cords",
             "children": []
+          },
+          {
+            "name": "Reset",
+            "children": []
           }
         ]
       },
@@ -45423,19 +45711,6 @@
       {
         "name": "entities",
         "children": [
-          {
-            "name": "geckolibmodels",
-            "children": [
-              {
-                "name": "vine",
-                "children": []
-              },
-              {
-                "name": "insect",
-                "children": []
-              }
-            ]
-          },
           {
             "name": "elaine",
             "children": []
@@ -45695,7 +45970,12 @@
             "children": [
               {
                 "name": "weakess",
-                "children": []
+                "children": [
+                  {
+                    "name": "Blue Demon",
+                    "children": []
+                  }
+                ]
               },
               {
                 "name": "weak",
@@ -45705,17 +45985,31 @@
                     "children": []
                   },
                   {
-                    "name": "Blue Demon",
+                    "name": "Silver Demon",
                     "children": []
                   }
                 ]
               },
               {
                 "name": "normal",
-                "children": []
+                "children": [
+                  {
+                    "name": "Gray",
+                    "children": []
+                  }
+                ]
               },
               {
                 "name": "Hard",
+                "children": [
+                  {
+                    "name": "Copper",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "very hard",
                 "children": [
                   {
                     "name": "FatAlbion",
@@ -45862,6 +46156,10 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "insect",
+            "children": []
           }
         ]
       },
@@ -46127,10 +46425,6 @@
           },
           {
             "name": "fountainofyouth",
-            "children": []
-          },
-          {
-            "name": "needle",
             "children": []
           },
           {
@@ -46772,7 +47066,12 @@
               },
               {
                 "name": "helbrem2",
-                "children": []
+                "children": [
+                  {
+                    "name": "Sword",
+                    "children": []
+                  }
+                ]
               },
               {
                 "name": "royalegurads",
@@ -47136,19 +47435,6 @@
             "children": [
               {
                 "name": "storyvar",
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "guild",
-            "children": [
-              {
-                "name": "GuildAccept",
-                "children": []
-              },
-              {
-                "name": "Member",
                 "children": []
               }
             ]
@@ -47979,6 +48265,49 @@
                   },
                   {
                     "name": "Thunder Carnival",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Elemental",
+                "children": [
+                  {
+                    "name": "Ice Meteo",
+                    "children": []
+                  },
+                  {
+                    "name": "Blaze Storm",
+                    "children": []
+                  },
+                  {
+                    "name": "Four Element",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Whiplash",
+                "children": [
+                  {
+                    "name": "Flesh Crush",
+                    "children": []
+                  },
+                  {
+                    "name": "Enhancement",
+                    "children": []
+                  },
+                  {
+                    "name": "Body Clone",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Hypno",
+                "children": [
+                  {
+                    "name": "Hypno Stinger",
                     "children": []
                   }
                 ]

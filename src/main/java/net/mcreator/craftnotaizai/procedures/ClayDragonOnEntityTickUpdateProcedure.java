@@ -106,7 +106,8 @@ public class ClayDragonOnEntityTickUpdateProcedure {
 										}
 									}.checkGamemode(entityiterator))) {
 								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("craft_no_taizai:earth_magic")))),
-										entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1);
+										Math.round(((entity instanceof LivingEntity _attributeContext ? _attributeContext.getAttributeValue(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE) : 0.0D)
+												+ (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) + (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) / 2));
 							}
 						}
 					}

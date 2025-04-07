@@ -12,9 +12,13 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.craftnotaizai.entity.SliverDemonEntity;
 import net.mcreator.craftnotaizai.entity.RedDemonGeckolibEntity;
 import net.mcreator.craftnotaizai.entity.GrayDemonEntityEntity;
+import net.mcreator.craftnotaizai.entity.CopperDemonEntity;
 import net.mcreator.craftnotaizai.entity.BlueDemonEntity;
+import net.mcreator.craftnotaizai.entity.AlbionTallEntity;
+import net.mcreator.craftnotaizai.entity.AlbionFatEntity;
 
 import java.util.List;
 import java.util.Comparator;
@@ -23,9 +27,10 @@ public class GoddessAmberRightclickedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, ItemStack itemstack) {
 		{
 			final Vec3 _center = new Vec3(x, y, z);
-			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
-				if (entityiterator instanceof BlueDemonEntity || entityiterator instanceof GrayDemonEntityEntity || entityiterator instanceof RedDemonGeckolibEntity) {
+				if (entityiterator instanceof GrayDemonEntityEntity || entityiterator instanceof RedDemonGeckolibEntity || entityiterator instanceof AlbionTallEntity || entityiterator instanceof CopperDemonEntity
+						|| entityiterator instanceof BlueDemonEntity || entityiterator instanceof SliverDemonEntity || entityiterator instanceof AlbionFatEntity) {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
 							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.glass.break")), SoundSource.NEUTRAL, (float) 0.05, 1);

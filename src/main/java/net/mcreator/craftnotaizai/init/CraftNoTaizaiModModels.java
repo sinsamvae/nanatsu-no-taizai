@@ -36,6 +36,7 @@ import net.mcreator.craftnotaizai.client.model.Modelminecraftmob;
 import net.mcreator.craftnotaizai.client.model.Modelmerlin_boss;
 import net.mcreator.craftnotaizai.client.model.Modelmeliodasoutfit;
 import net.mcreator.craftnotaizai.client.model.Modelmantaray;
+import net.mcreator.craftnotaizai.client.model.Modellightning_sphere;
 import net.mcreator.craftnotaizai.client.model.Modellight_chakram;
 import net.mcreator.craftnotaizai.client.model.Modelkingwings;
 import net.mcreator.craftnotaizai.client.model.Modelkingswings;
@@ -193,6 +194,7 @@ public class CraftNoTaizaiModModels {
 		event.registerLayerDefinition(Modelpepple.LAYER_LOCATION, Modelpepple::createBodyLayer);
 		event.registerLayerDefinition(ModelGowther_Boss.LAYER_LOCATION, ModelGowther_Boss::createBodyLayer);
 		event.registerLayerDefinition(Modelmodel.LAYER_LOCATION, Modelmodel::createBodyLayer);
+		event.registerLayerDefinition(Modellightning_sphere.LAYER_LOCATION, Modellightning_sphere::createBodyLayer);
 		event.registerLayerDefinition(Modelkingwings.LAYER_LOCATION, Modelkingwings::createBodyLayer);
 		event.registerLayerDefinition(ModelHail_Bullet.LAYER_LOCATION, ModelHail_Bullet::createBodyLayer);
 		event.registerLayerDefinition(ModelKiller_iceberg.LAYER_LOCATION, ModelKiller_iceberg::createBodyLayer);

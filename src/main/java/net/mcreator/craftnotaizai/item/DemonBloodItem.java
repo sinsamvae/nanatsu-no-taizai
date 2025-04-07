@@ -41,7 +41,7 @@ public class DemonBloodItem extends Item {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		DemonBloodPlayerFinishesUsingItemProcedure.execute(world, entity, itemstack);
+		DemonBloodPlayerFinishesUsingItemProcedure.execute(entity);
 		return retval;
 	}
 }

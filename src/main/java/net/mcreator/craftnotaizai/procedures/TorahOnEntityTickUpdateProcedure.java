@@ -30,7 +30,7 @@ public class TorahOnEntityTickUpdateProcedure {
 						_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 280, 5));
 				}
 			}
-			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 100, 245)));
+			entity.getPersistentData().putDouble("skill_cooldown", (Mth.nextInt(RandomSource.create(), 100, 399)));
 		}
 	}
 }

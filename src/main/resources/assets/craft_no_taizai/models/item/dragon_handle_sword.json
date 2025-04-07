@@ -1,0 +1,6 @@
+{
+  "parent": "craft_no_taizai:displaysettings/dragon_handle",
+  "textures": {
+    "layer0": "craft_no_taizai:item/dragon-handle-texture"
+  }
+}

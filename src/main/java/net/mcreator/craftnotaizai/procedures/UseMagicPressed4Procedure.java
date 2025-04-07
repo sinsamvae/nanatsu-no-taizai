@@ -25,5 +25,7 @@ public class UseMagicPressed4Procedure {
 		MaelSunShineKeybindProcedure.execute(world, entity);
 		TornadoKeyBindProcedure.execute(world, entity);
 		LudocielArkKeybindProcedure.execute(world, entity);
+		ThunderKeybindProcedure.execute(world, entity);
+		ElementalKeybindProcedure.execute(world, entity);
 	}
 }

@@ -27,7 +27,6 @@ import net.mcreator.craftnotaizai.procedures.GetLevelProcedure;
 import net.mcreator.craftnotaizai.procedures.DisplaynameProcedure;
 import net.mcreator.craftnotaizai.procedures.DisplayStatButtonsProcedure;
 import net.mcreator.craftnotaizai.procedures.CommandmentVarProcedure;
-import net.mcreator.craftnotaizai.procedures.CommandmentReturnProcedure;
 import net.mcreator.craftnotaizai.procedures.AgilityVarProcedure;
 import net.mcreator.craftnotaizai.network.DemonStatButtonMessage;
 import net.mcreator.craftnotaizai.CraftNoTaizaiMod;
@@ -120,10 +119,9 @@ public class DemonStatScreen extends AbstractContainerScreen<DemonStatMenu> {
 		guiGraphics.drawString(this.font,
 
 				MagicVarProcedure.execute(entity), -93, -80, -1, false);
-		if (CommandmentReturnProcedure.execute(entity))
-			guiGraphics.drawString(this.font,
+		guiGraphics.drawString(this.font,
 
-					CommandmentVarProcedure.execute(entity), -93, -67, -1, false);
+				CommandmentVarProcedure.execute(entity), -93, -67, -1, false);
 		guiGraphics.drawString(this.font,
 
 				GetLevelProcedure.execute(entity), 40, -104, -1, false);

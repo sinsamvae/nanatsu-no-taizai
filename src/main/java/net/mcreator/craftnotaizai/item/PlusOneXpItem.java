@@ -13,7 +13,7 @@ import net.mcreator.craftnotaizai.procedures.PlusOneXpRightclickedProcedure;
 
 public class PlusOneXpItem extends Item {
 	public PlusOneXpItem() {
-		super(new Item.Properties().durability(1).rarity(Rarity.COMMON));
+		super(new Item.Properties().durability(1).rarity(Rarity.EPIC));
 	}
 
 	@Override

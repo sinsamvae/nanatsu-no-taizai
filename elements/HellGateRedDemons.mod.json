@@ -15,7 +15,7 @@
     "entityDataEntries": [],
     "modelWidth": 2.5,
     "modelHeight": 4.6,
-    "modelShadowSize": 0.5,
+    "modelShadowSize": 1.5,
     "mountedYOffset": 0.0,
     "stepHeight": 0.6,
     "hasSpawnEgg": true,
@@ -49,7 +49,7 @@
     "equipmentBoots": {
       "value": ""
     },
-    "mobBehaviourType": "Creature",
+    "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
     "attackStrength": 1,
     "attackKnockback": 0.0,

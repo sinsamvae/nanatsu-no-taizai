@@ -12,7 +12,6 @@ import net.mcreator.craftnotaizai.entity.WickedBiteEntity;
 import net.mcreator.craftnotaizai.entity.WeinheidtAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.WailioEntity;
 import net.mcreator.craftnotaizai.entity.VivianAnimatedEntity;
-import net.mcreator.craftnotaizai.entity.VineEntity;
 import net.mcreator.craftnotaizai.entity.TyrantDragonEntity;
 import net.mcreator.craftnotaizai.entity.TyrantDragonCaveEntity;
 import net.mcreator.craftnotaizai.entity.TwigoAnimatedEntity;
@@ -27,6 +26,7 @@ import net.mcreator.craftnotaizai.entity.StoryBan2AnimatedEntity;
 import net.mcreator.craftnotaizai.entity.StoneDroleEntity;
 import net.mcreator.craftnotaizai.entity.SoldierAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.SmallHawksEntity;
+import net.mcreator.craftnotaizai.entity.SliverDemonEntity;
 import net.mcreator.craftnotaizai.entity.SladerAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.SimonAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.ServantEntity;
@@ -62,6 +62,7 @@ import net.mcreator.craftnotaizai.entity.JigumoEntity;
 import net.mcreator.craftnotaizai.entity.JerichoDemonFormEntity;
 import net.mcreator.craftnotaizai.entity.JerichoAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.InsectEntity;
+import net.mcreator.craftnotaizai.entity.IceMeteoEntityEntity;
 import net.mcreator.craftnotaizai.entity.HugoAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.HowzerAnimatedEntity;
 import net.mcreator.craftnotaizai.entity.HideAndSeekEntity;
@@ -137,6 +138,7 @@ import net.mcreator.craftnotaizai.entity.DeadHelbramanimatedEntity;
 import net.mcreator.craftnotaizai.entity.DalefinalEntity;
 import net.mcreator.craftnotaizai.entity.DaleSecEntity;
 import net.mcreator.craftnotaizai.entity.DaleArmoredEntity;
+import net.mcreator.craftnotaizai.entity.CopperDemonEntity;
 import net.mcreator.craftnotaizai.entity.CocoonOfDarknessEntity;
 import net.mcreator.craftnotaizai.entity.ClayDragonEntity;
 import net.mcreator.craftnotaizai.entity.ChickenEntity;
@@ -247,13 +249,6 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof HideAndSeekEntity syncable) {
-				String animation = syncable.getSyncedAnimation();
-				if (!animation.equals("undefined")) {
-					syncable.setAnimation("undefined");
-					syncable.animationprocedure = animation;
-				}
-			}
-			if (event.getEntity() instanceof VineEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");
@@ -1220,6 +1215,27 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof ZaratrasEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof IceMeteoEntityEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof CopperDemonEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof SliverDemonEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");
